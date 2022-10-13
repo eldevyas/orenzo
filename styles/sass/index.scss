@@ -1,0 +1,14 @@
+// Global Properties
+@import "./global/colors";
+@import "./global/global";
+@import "./global/scrollbar";
+// For the Curved Marker Highlight over all the Titles' Spans. 
+@import "./global/spanHighlight";
+// For the Colored dot on the end of each sentence.
+@import "./global/colorDot";
+//  Button Styles
+@import "./components/buttons";
+//Layout
+@import './layout/header';
+// Pages
+@import "./pages/home.scss";

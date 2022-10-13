@@ -1,0 +1,27 @@
+// Colors
+$C1: #1E1E24;
+$C2: #444140;
+$C3: #EF233C;
+$C4: #17BEBB;
+$C5: #FFFFFF;
+// Gradients
+$G1: linear-gradient(135deg, #1E1E24 0%, #030303 100%);
+$G2: linear-gradient(135deg, #444140 0%, #1D1D1D 100%);
+$G3: linear-gradient(135deg, #F26274 0%, #EF233C 100%);
+$G4: linear-gradient(135deg, #16A9A6 0.01%, #17BEBB 100%);
+$G5: linear-gradient(135deg, #D9D9D9 0%, rgba(217, 217, 217, 0) 100%);
+// To CSS Variables
+:root {
+    // Colors
+    --C1: #1E1E24;
+    --C2: #444140;
+    --C3: #EF233C;
+    --C4: #17BEBB;
+    --C5: #FFFFFF;
+    // Gradients
+    --G1: linear-gradient(135deg, #1E1E24 0%, #030303 100%);
+    --G2: linear-gradient(135deg, #444140 0%, #1D1D1D 100%);
+    --G3: linear-gradient(135deg, #F26274 0%, #EF233C 100%);
+    --G4: linear-gradient(135deg, #16A9A6 0.01%, #17BEBB 100%);
+    --G5: linear-gradient(135deg, #D9D9D9 0%, rgba(217, 217, 217, 0) 100%);
+}

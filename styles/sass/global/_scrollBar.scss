@@ -1,0 +1,35 @@
+* {
+    &::-webkit-scrollbar {
+        width: 10px;
+        /* width of the entire scrollbar */
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        background: transparent;
+        /* color of the tracking area */
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgba($C2, 0.2);
+        border-radius: 0px;
+        &:hover {
+            background: $G3;
+        }
+    }
+}
+
+// body::-webkit-scrollbar {
+//     width: 10px;
+//     /* width of the entire scrollbar */
+// }
+// body::-webkit-scrollbar-track {
+//     background: transparent;
+//     background: var(--scrollbar-track-color);
+//     /* color of the tracking area */
+// }
+// body::-webkit-scrollbar-thumb {
+//     background-color: var(--scrollbar-thumb-color);
+//     border-radius: 0px;
+//     &:hover {
+//         background-color: var(--blue);
+//     }
+// }

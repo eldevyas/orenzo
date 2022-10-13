@@ -1,0 +1,39 @@
+.LandingSection {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    background-color: transparent;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    >* {
+        flex: 1;
+    }
+    .Text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        .Title {
+            margin-bottom: 1rem;
+        }
+        .Description {
+            margin-bottom: 2rem;
+        }
+        .Actions {
+            width: 100%;
+            height: auto;
+            background: transparent;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+}
