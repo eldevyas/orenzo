@@ -16,12 +16,12 @@ function DefaultButton(props: any) {
 function IconTextButton(props: any) {
     return (
         <>
-            <Button variant="text" className={"IconTextButton" + " " + props.color}>
-                
+            <Button variant="text" className={"IconTextButton" + " " + props.color} startIcon={props.icon}>
+                { props.children }
             </Button>
         </>
     )
 }
 
 
-export { DefaultButton };
+export { DefaultButton, IconTextButton };

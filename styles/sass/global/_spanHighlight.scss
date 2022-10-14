@@ -1,11 +1,8 @@
-.SpanHighlight {
-    font-weight: 900;
-}
-
-.SpanHighlight[color="blue"] {
+.SpanHighlightBlue {
     position: relative;
     color: $C4;
     z-index: 1;
+    font-weight: 900;
     &:before {
         pointer-events: none;
         z-index: 0;
@@ -20,13 +17,14 @@
     }
 }
 
-.SpanHighlight[color="red"] {
+.SpanHighlightRed {
     position: relative;
     color: $C3;
     z-index: 1;
+    font-weight: 900;
     &:before {
-        z-index: 0;
         pointer-events: none;
+        z-index: 0;
         content: "";
         position: absolute;
         bottom: 0;

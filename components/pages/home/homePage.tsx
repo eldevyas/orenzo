@@ -6,9 +6,7 @@ import LandingSection from './content/LandingSection'
 export default function HomePage() {
     return (
         <div className="HomePage">
-            <div className="Background">
-                <Image src="/img/assets/Grid.png" alt="Grid" layout="fill" objectFit='cover'/>
-            </div>
+            <div className="Background"></div>
             <Header/>
             <LandingSection/>
         </div>

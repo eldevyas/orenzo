@@ -4,14 +4,14 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -100;
+    z-index: -1;
     pointer-events: none;
     background-color: white;
-    img {
-        -webkit-mask-image: radial-gradient(ellipse 90% 80% at 25% 50%, black 10%, transparent 50%);
-        mask-image: radial-gradient(ellipse 90% 80% at 25% 50%, black 10%, transparent 50%);
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        z-index: -1;
-    }
+    background-image: url("/img/assets/Grid.png");
+    background-origin: top left;
+    background-size: cover;
+    background-repeat: repeat;
+    // -webkit-mask-image: radial-gradient(ellipse 90% 80% at 48% 78%, black 40%, transparent 50%);
+    mask-image: radial-gradient(50% 50% at 20% 50%, #FFFFFF 0%, rgba(217, 217, 217, 0) 100%), radial-gradient(50% 50% at 80% 60%, #FFFFFF 0%, rgba(217, 217, 217, 0) 100%);
+    ;
 }

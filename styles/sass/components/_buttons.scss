@@ -33,3 +33,30 @@
 .DefaultButton.Blue {
     @include DefaultButtonBlue();
 }
+
+// 
+// 
+// 
+//  Text Buttons
+@mixin IconTextButton($color) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: $color;
+    font-family: inherit;
+    padding: 0.6rem 1.25rem;
+    border-radius: 15px;
+    gap: 10px;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
+    text-transform: none;
+}
+
+.IconTextButton.Red {
+    @include IconTextButton($C3);
+}
+
+.IconTextButton.Blue {
+    @include IconTextButton($C4);
+}
