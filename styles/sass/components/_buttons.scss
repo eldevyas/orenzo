@@ -60,3 +60,26 @@
 .IconTextButton.Blue {
     @include IconTextButton($C4);
 }
+
+// 
+// 
+// Icon Button (Hamburger Menu, etc.)
+@mixin IconButton($color) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: $color;
+    aspect-ratio: 1/1;
+    // @if ($color==$C3) {}
+}
+
+.IconButton {
+    @include IconButton($C3);
+}
+
+.IconButton.White {
+    @include IconButton($C5);
+    border-color: $C5;
+    border-radius: 1rem;
+}

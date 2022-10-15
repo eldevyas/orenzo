@@ -59,3 +59,101 @@
         }
     }
 }
+
+.NavBar.Mobile {
+    width: 100%;
+    height: auto;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    .Logo {
+        width: auto;
+        height: 20px;
+        aspect-ratio: 146.37/30;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        &:hover {
+            opacity: 0.65;
+            cursor: pointer;
+        }
+        &:active {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+    .MenuButton {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        min-width: 50%;
+        height: auto;
+        // background: $G3;
+    }
+}
+
+.MobileMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $G3;
+    z-index: 1000;
+    padding: 5% 5%;
+    gap: 2rem;
+    user-select: none;
+    .Main {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        // background: $G5;
+        border-radius: 1rem;
+    }
+    .Items {
+        width: 100%;
+        height: 1100%;
+        border-radius: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 0;
+        margin-inline: auto;
+        position: relative;
+        .Item {
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: $C5;
+            z-index: 1000;
+            svg {
+                margin-bottom: 1rem;
+                pointer-events: none;
+            }
+        }
+        .Current {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: $G1;
+            display: block;
+            width: 50%;
+            height: calc(100% / 3);
+            border-radius: 1rem;
+            z-index: 0;
+            transition: all 200ms ease;
+        }
+    }
+}

@@ -154,6 +154,26 @@ a {
   text-transform: none;
 }
 
+.IconButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #EF233C;
+  aspect-ratio: 1/1;
+}
+
+.IconButton.White {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  aspect-ratio: 1/1;
+  border-color: #FFFFFF;
+  border-radius: 1rem;
+}
+
 .NavBar {
   width: 100%;
   height: auto;
@@ -214,6 +234,102 @@ a {
   text-transform: none;
   box-shadow: none;
   border-radius: 1rem;
+}
+
+.NavBar.Mobile {
+  width: 100%;
+  height: auto;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.NavBar.Mobile .Logo {
+  width: auto;
+  height: 20px;
+  aspect-ratio: 146.37/30;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.NavBar.Mobile .Logo:hover {
+  opacity: 0.65;
+  cursor: pointer;
+}
+.NavBar.Mobile .Logo:active {
+  opacity: 1;
+  cursor: pointer;
+}
+.NavBar.Mobile .MenuButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 50%;
+  height: auto;
+}
+
+.MobileMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #F26274 0%, #EF233C 100%);
+  z-index: 1000;
+  padding: 5% 5%;
+  gap: 2rem;
+  user-select: none;
+}
+.MobileMenu .Main {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+.MobileMenu .Items {
+  width: 100%;
+  height: 1100%;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 0;
+  margin-inline: auto;
+  position: relative;
+}
+.MobileMenu .Items .Item {
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  z-index: 1000;
+}
+.MobileMenu .Items .Item svg {
+  margin-bottom: 1rem;
+  pointer-events: none;
+}
+.MobileMenu .Items .Current {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #1E1E24 0%, #030303 100%);
+  display: block;
+  width: 50%;
+  height: 33.3333333333%;
+  border-radius: 1rem;
+  z-index: 0;
+  transition: all 200ms ease;
 }
 
 .HomePage {
@@ -308,13 +424,6 @@ a {
   justify-content: flex-end;
   align-items: center;
   aspect-ratio: 735/500;
-}
-@media (max-width: 790px) {
-  .HomePage .LandingSection .Image {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
 }
 .HomePage .LandingSection .Image .Wrapper {
   position: relative;
@@ -424,6 +533,19 @@ a {
     transform: translate(0, 0px);
     filter: blur(0.15vw);
     z-index: 1;
+  }
+}
+@media (max-width: 790px) {
+  .HomePage .LandingSection .Image {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .HomePage .LandingSection .Image .Wrapper {
+    width: 100% !important;
+    height: 80%;
+    aspect-ratio: 1/1 !important;
   }
 }
 
