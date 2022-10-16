@@ -72,17 +72,20 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: $color;
+    color: $color !important;
+    border-color: $color !important;
     aspect-ratio: 1/1;
-    // @if ($color==$C3) {}
+    outline-color: $color !important;
 }
 
 .IconButton {
     @include IconButton($C3);
+    border-color: $C3 !important;
+    border-radius: 1rem !important;
 }
 
 .IconButton.White {
     @include IconButton($C5);
-    border-color: $C5;
-    border-radius: 1rem;
+    border-color: $C5 !important;
+    border-radius: 1rem !important;
 }
