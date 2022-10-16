@@ -2,6 +2,8 @@ import React from "react"
 import { DefaultButton, IconTextButton } from "./../../../core/buttons";
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 
+
+
 export default function LandingSection() {
     return(
         <div className="LandingSection">
@@ -15,7 +17,7 @@ export default function LandingSection() {
                 </p>
 
                 <div className="Actions">
-                    <DefaultButton color="Red" elevation={0}>
+                    <DefaultButton color="Red" elevation={0} style={{boxShadow: "none"}}>
                         Get a quote
                     </DefaultButton>
 
