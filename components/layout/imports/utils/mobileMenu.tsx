@@ -7,7 +7,7 @@ import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import FolderOpenIcon from '@mui/icons-material/FolderOpen';
 import LocalPostOfficeIcon from '@mui/icons-material/LocalPostOffice';
 import PublicIcon from '@mui/icons-material/Public';
-
+import Image from 'next/image';
 // Items Icons
 import HomeIcon from '@mui/icons-material/Home';
 
@@ -43,25 +43,25 @@ export default function MobileMenu(props: any) {
             item.style.color = "#fff";
         }
 
-
         // Add the red color to the current item
-        setTimeout(() => {e.target.style.color = "#EF233C"}, 200);
+        setTimeout(() => {e.target.style.color = "#fff"}, 100);
 
         // Get the element of the Current Item
         let Current: any = document.getElementById("Current");
         
         // Give it the positions of the current item
         Current.style.left = TargetData.positionLeft;
-        setTimeout(() => {Current.style.top = TargetData.positionTop}, 200); // Delayed for smoother effect.
+        // Current.style.top = TargetData.positionTop;
+        setTimeout(() => {Current.style.top = TargetData.positionTop}, 100); // Delayed for smoother effect.
     }
 
     return (
         <>
             <div className="MobileMenu">
                 <div className="Main">
-                    <Button variant="outlined" className="IconButton White">
-                        <ArrowBackIcon/>
-                    </Button>
+                    <div className="Logo">
+                        <Image src="/img/white-black-logo.png" layout="fill" objectFit="cover"/>
+                    </div>
 
                     <Button variant="outlined" className="IconButton White" onClick={handleClicked}>
                         <CloseIcon className="MenuIcon"/>
@@ -79,32 +79,6 @@ export default function MobileMenu(props: any) {
                             )
                         })
                     }
-
-
-                    {/* <div className="Item">
-                        <HomeIcon/>
-                        Home
-                    </div>
-                    <div className="Item">
-                        <DesignServicesIcon/>
-                        Services
-                    </div>
-                    <div className="Item">
-                        <AutoStoriesIcon/>
-                        About us
-                    </div>
-                    <div className="Item">
-                        <FolderOpenIcon/>
-                        Portfolio
-                    </div>
-                    <div className="Item">
-                        <LocalPostOfficeIcon/>
-                        Contact
-                    </div>
-                    <div className="Item">
-                        <PublicIcon/>
-                        Language
-                    </div> */}
 
                     <div className="Current" id="Current">
 

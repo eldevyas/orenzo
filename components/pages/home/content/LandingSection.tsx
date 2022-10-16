@@ -15,7 +15,7 @@ export default function LandingSection() {
                 </p>
 
                 <div className="Actions">
-                    <DefaultButton color="Red">
+                    <DefaultButton color="Red" elevation={0}>
                         Get a quote
                     </DefaultButton>
 
