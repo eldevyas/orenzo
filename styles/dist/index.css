@@ -473,7 +473,7 @@ a {
     transform: translate(0, 0px);
   }
   50% {
-    transform: translate(0, 3px);
+    transform: translate(0, 1px);
   }
   100% {
     transform: translate(0, 0px);
@@ -571,7 +571,7 @@ a {
   transform: translateX(-50%);
   width: 100vw;
   min-height: 250px;
-  background: linear-gradient(135deg, #1E1E24 0%, #030303 100%);
+  background: #1E1E24;
   mix-blend-mode: multiply;
   display: flex;
   flex-direction: column;
@@ -582,23 +582,64 @@ a {
 }
 @media screen and (max-width: 769px) {
   .HomePage .TrustedPartners {
-    padding: 20px 20px;
+    padding: 30px 20px;
   }
 }
 .HomePage .TrustedPartners .Title {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #FFFFFF;
 }
 .HomePage .TrustedPartners .Partners {
   width: 100%;
-  /* the slides */
-  /* the parent */
+  background: #1E1E24;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
 }
-.HomePage .TrustedPartners .Partners .slick-slide {
-  margin: 0 27px;
+.HomePage .TrustedPartners .Partners::-webkit-scrollbar {
+  appearance: none;
+  display: none;
 }
-.HomePage .TrustedPartners .Partners .slick-list {
-  margin: 0 -27px;
+.HomePage .TrustedPartners .Partners::before, .HomePage .TrustedPartners .Partners::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.HomePage .TrustedPartners .Partners::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1137.5px);
+  }
+}
+.HomePage .TrustedPartners .Partners .Wrapper {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: 2175px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+.HomePage .TrustedPartners .Partners .Wrapper .Slide {
+  height: 100px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.HomePage .TrustedPartners .Partners .Wrapper .Slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /*# sourceMappingURL=index.css.map */

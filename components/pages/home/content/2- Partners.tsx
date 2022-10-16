@@ -1,24 +1,17 @@
 import React, {useState, useEffect} from 'react';
 import Image from 'next/image';
-import $ from 'jquery';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { StyledSlider, Box } from "./utils/Box.styled";
 
+
+const Companies = [
+    "/img/assets/partners/SGSB.png",
+    "/img/assets/partners/Microsoft.png",
+    "/img/assets/partners/Netflix.png",
+    "/img/assets/partners/Bonfire.png",
+    "/img/assets/partners/Google.png",
+];
 
 
 export default function TrustedPartners() {
-
-    var settings = {
-        dots: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        pauseOnHover: true
-    };
 
     return (
         <>
@@ -26,38 +19,26 @@ export default function TrustedPartners() {
                 <div className="Title">Our Trusted Partners</div>
 
                 <section className="Partners">
-
-                    <StyledSlider {...settings}>
-                        <div className="slide"><img src="/img/assets/partners/SGSB.png"/>
-                        </div>
-
-                        <div className="slide"><img src="/img/assets/partners/Microsoft.png"/>
-                        </div>
-
-                        <div className="slide"><img src="/img/assets/partners/Netflix.png"/>
-                        </div>
-
-                        <div className="slide"><img src="/img/assets/partners/Bonfire.png"/>
-                        </div>
-
-                        <div className="slide"><img src="/img/assets/partners/Google.png"/>
-                        </div>
-
-                        <div className="slide"><img src="/img/assets/partners/SGSB.png"/>
-                        </div>
-
-                        <div className="slide"><img src="/img/assets/partners/Microsoft.png"/>
-                        </div>
-
-                        <div className="slide"><img src="/img/assets/partners/Netflix.png"/>
-                        </div>
-
-                        <div className="slide"><img src="/img/assets/partners/Bonfire.png"/>
-                        </div>
-
-                        <div className="slide"><img src="/img/assets/partners/Google.png"/>
-                        </div>
-                    </StyledSlider>
+                    <div className="Wrapper">
+                            {
+                                Companies.map(Partner => {
+                                    return (
+                                        <div className='Slide'>
+                                            <img src={Partner}/>
+                                        </div>
+                                    )
+                                })
+                            }
+                            {
+                                Companies.map(Partner => {
+                                    return (
+                                        <div className='Slide'>
+                                            <img src={Partner}/>
+                                        </div>
+                                    )
+                                })
+                            }
+                    </div>
                 </section>
             </div>
         </>
