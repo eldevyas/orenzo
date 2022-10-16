@@ -31,10 +31,11 @@
         align-items: center;
         .NavButton {
             background-color: transparent;
-            color: var(--C2);
+            color: rgba($C2, 0.75);
             font-family: inherit;
             text-transform: none;
-            border-radius: 0.5rem;
+            border-radius: 1rem;
+            padding: 0.5rem 1rem;
             &:not(last-child) {
                 margin-right: 1rem;
             }
@@ -42,7 +43,8 @@
                 background-color: rgba($C2, 0.05);
             }
             &:active {
-                background-color: rgba($C2, 0);
+                background-color: transparent;
+                color: rgba($C2, 0.5);
             }
         }
         .NavButton.Active {
@@ -56,6 +58,7 @@
             text-transform: none;
             box-shadow: none;
             border-radius: 1rem;
+            padding: 0.5rem 1rem;
         }
     }
 }

@@ -216,10 +216,11 @@ a {
 }
 .NavBar .Navigation .NavButton {
   background-color: transparent;
-  color: var(--C2);
+  color: rgba(68, 65, 64, 0.75);
   font-family: inherit;
   text-transform: none;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
 }
 .NavBar .Navigation .NavButton:not(last-child) {
   margin-right: 1rem;
@@ -228,7 +229,8 @@ a {
   background-color: rgba(68, 65, 64, 0.05);
 }
 .NavBar .Navigation .NavButton:active {
-  background-color: rgba(68, 65, 64, 0);
+  background-color: transparent;
+  color: rgba(68, 65, 64, 0.5);
 }
 .NavBar .Navigation .NavButton.Active {
   color: var(--C4);
@@ -241,6 +243,7 @@ a {
   text-transform: none;
   box-shadow: none;
   border-radius: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .NavBar.Mobile {
@@ -469,7 +472,7 @@ a {
     transform: translate(0, 0px);
   }
   50% {
-    transform: translate(0, 10px);
+    transform: translate(0, 7px);
   }
   100% {
     transform: translate(0, 0px);
