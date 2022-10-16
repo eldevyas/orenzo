@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import HomePage from '../components/pages/home/homePage'
 
-
 const Home: NextPage = () => {
   return (
         <>

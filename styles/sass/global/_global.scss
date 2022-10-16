@@ -19,3 +19,7 @@ a {
     font-family: Poppins, sans-serif;
     box-sizing: border-box;
 }
+
+@mixin GlobalPadding() {
+    padding: 2.5% 10%;
+}

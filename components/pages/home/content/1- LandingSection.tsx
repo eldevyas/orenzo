@@ -1,5 +1,5 @@
 import React from "react"
-import { DefaultButton, IconTextButton } from "./../../../core/buttons";
+import { DefaultButton, IconTextButton } from "../../../core/buttons";
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 
 
