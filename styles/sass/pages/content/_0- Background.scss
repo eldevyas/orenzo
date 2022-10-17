@@ -10,8 +10,8 @@
     background-image: url("/img/assets/Grid.png");
     background-origin: top left;
     background-size: cover;
-    background-repeat: repeat;
+    background-repeat: repeat-y;
     // -webkit-mask-image: radial-gradient(ellipse 90% 80% at 48% 78%, black 40%, transparent 50%);
-    mask-image: radial-gradient(50% 50% at 20% 50%, #FFFFFF 0%, rgba(217, 217, 217, 0) 100%), radial-gradient(50% 50% at 80% 60%, #FFFFFF 0%, rgba(217, 217, 217, 0) 100%);
+    mask-image: radial-gradient(50% 50% at 20vw 50vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 70%), radial-gradient(50% 50% at 80vw 60vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 60%);
     ;
 }

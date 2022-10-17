@@ -4,8 +4,8 @@
     transform: translateX(-50%);
     width: 100vw;
     min-height: 250px;
-    background: $C1;
-    mix-blend-mode: multiply;
+    background: $G1;
+    // mix-blend-mode: multiply;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -22,7 +22,6 @@
     .Partners {
         width: 100%;
         // overflow: hidden;
-        background: $C1;
         height: auto;
         margin: auto;
         overflow: hidden;
@@ -31,19 +30,6 @@
         &::-webkit-scrollbar {
             appearance: none;
             display: none;
-        }
-        &::before,
-        &::after {
-            content: "";
-            height: 100px;
-            position: absolute;
-            width: 200px;
-            z-index: 2;
-        }
-        &::after {
-            right: 0;
-            top: 0;
-            transform: rotateZ(180deg);
         }
         $width: 150px;
         $height: 100px;
@@ -73,6 +59,10 @@
                     width: 100%;
                     height: 100%;
                     object-fit: contain;
+                    transition: all 0.5s ease;
+                    &:hover {
+                        transform: scale(1.25);
+                    }
                 }
             }
         }

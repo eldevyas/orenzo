@@ -21,18 +21,18 @@ export default function TrustedPartners() {
                 <section className="Partners">
                     <div className="Wrapper">
                             {
-                                Companies.map(Partner => {
+                                Companies.map((Partner, index) => {
                                     return (
-                                        <div className='Slide'>
+                                        <div key={index} className='Slide'>
                                             <img src={Partner}/>
                                         </div>
                                     )
                                 })
                             }
                             {
-                                Companies.map(Partner => {
+                                Companies.map((Partner, index) => {
                                     return (
-                                        <div className='Slide'>
+                                        <div key={index} className='Slide'>
                                             <img src={Partner}/>
                                         </div>
                                     )

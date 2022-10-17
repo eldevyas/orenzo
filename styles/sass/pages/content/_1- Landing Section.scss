@@ -77,27 +77,27 @@
                 z-index: 2;
                 pointer-events: none;
             }
-            >* {
-                &:not(:first-child) {
-                    &:not(.Projects) {
-                        animation-name: floating;
-                        animation-duration: 3s;
-                        animation-iteration-count: infinite;
-                        animation-timing-function: ease-in-out;
-                    }
-                    @keyframes floating {
-                        0% {
-                            transform: translate(0, 0px);
-                        }
-                        50% {
-                            transform: translate(0, random(10) + px);
-                        }
-                        100% {
-                            transform: translate(0, -0px);
-                        }
-                    }
-                }
-            }
+            // >* {
+            //     &:not(:first-child) {
+            //         &:not(.Projects) {
+            //             animation-name: floating;
+            //             animation-duration: 3s;
+            //             animation-iteration-count: infinite;
+            //             animation-timing-function: ease-in-out;
+            //         }
+            //         @keyframes floating {
+            //             0% {
+            //                 transform: translate(0, 0px);
+            //             }
+            //             50% {
+            //                 transform: translate(0, random(10) + px);
+            //             }
+            //             100% {
+            //                 transform: translate(0, -0px);
+            //             }
+            //         }
+            //     }
+            // }
             .Team {
                 position: absolute;
                 bottom: 5%;
@@ -132,44 +132,44 @@
                 width: 40%;
                 height: auto;
                 z-index: 1;
-                filter: blur(0.15vw);
-                transition: all 0.2s ease;
-                animation: SendBack 1s ease-in-out forwards;
-                &:hover {
-                    animation: ComeToFront 1s ease-in-out forwards;
-                }
-                @keyframes ComeToFront {
-                    from {
-                        transform: translate(0, 0px);
-                        filter: blur(0.15vw);
-                        z-index: 1;
-                    }
-                    50% {
-                        transform: translate(-50px, -0px);
-                        z-index: 1;
-                    }
-                    to {
-                        transform: translate(-20px, 0px);
-                        filter: blur(0vw);
-                        z-index: 6;
-                    }
-                }
-                @keyframes SendBack {
-                    from {
-                        transform: translate(-20px, 0px);
-                        filter: blur(0vw);
-                        z-index: 6;
-                    }
-                    50% {
-                        transform: translate(-50px, -0px);
-                        z-index: 1;
-                    }
-                    to {
-                        transform: translate(0, 0px);
-                        filter: blur(0.15vw);
-                        z-index: 1;
-                    }
-                }
+                // filter: blur(0.15vw);
+                // transition: all 0.2s ease;
+                // animation: SendBack 1s ease-in-out forwards;
+                // &:hover {
+                //     animation: ComeToFront 1s ease-in-out forwards;
+                // }
+                // @keyframes ComeToFront {
+                //     from {
+                //         transform: translate(0, 0px);
+                //         filter: blur(0.15vw);
+                //         z-index: 1;
+                //     }
+                //     50% {
+                //         transform: translate(-50px, -0px);
+                //         z-index: 1;
+                //     }
+                //     to {
+                //         transform: translate(-20px, 0px);
+                //         filter: blur(0vw);
+                //         z-index: 6;
+                //     }
+                // }
+                // @keyframes SendBack {
+                //     from {
+                //         transform: translate(-20px, 0px);
+                //         filter: blur(0vw);
+                //         z-index: 6;
+                //     }
+                //     50% {
+                //         transform: translate(-50px, -0px);
+                //         z-index: 1;
+                //     }
+                //     to {
+                //         transform: translate(0, 0px);
+                //         filter: blur(0.15vw);
+                //         z-index: 1;
+                //     }
+                // }
             }
         }
         @media (max-width: 790px) {

@@ -4,7 +4,8 @@ import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
 import MobileMenu from './utils/mobileMenu'
 
-
+// Framer Motion
+import { motion, AnimatePresence } from "framer-motion"
 
 export interface IOpenMenu {
     isOpen: boolean;
@@ -18,8 +19,15 @@ export default function DesktopHeader(props: any) {
     const [OpenMenu, setOpenMenu] = useState(false);
 
     const handleClick = () => {
-        setTimeout(() => {setOpenMenu(!OpenMenu)}, 500);
+        setTimeout(() => {setOpenMenu(!OpenMenu)}, 0);
     }
+
+
+
+    const initial = { opacity: 1, x: "100%", y: 0, borderRadius: "500px 0px 0px 500px"};
+    const animate =  { opacity: 1, x: 0, y: 0, borderRadius: "0px 0px 0px 0px"};
+    const exit = { opacity: 1, x: "100%", y: 0, borderRadius: "500px 0px 0px 500px"};
+
 
 
     return (
@@ -35,16 +43,23 @@ export default function DesktopHeader(props: any) {
                     </Button>
                 </div>
             </div>
-
-            { OpenMenu ? 
-            <>
-                <MobileMenu handleClicked={handleClick} />
-            </>
-            :
-            <>
-            
-            </>
-            }     
+            <AnimatePresence>
+                { OpenMenu ?
+                <motion.div className="MenuWrapper" 
+                initial={initial}
+                animate={animate}
+                exit={exit}
+                transition={{
+                    delay: 0,
+                    bordeRadius: { duration: 0 },
+                    default: { type: "Tween", stiffness: 100 }
+                  }}
+                >
+                    <MobileMenu handleClicked={handleClick} />
+                </motion.div>
+                : null
+                }
+            </AnimatePresence>
         </>
     );
 }
