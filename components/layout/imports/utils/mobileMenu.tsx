@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import Button from '@mui/material/Button';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -11,10 +11,16 @@ import Image from 'next/image';
 // Items Icons
 import HomeIcon from '@mui/icons-material/Home';
 
+import { motion } from "framer-motion";
+
 
 export default function MobileMenu(props: any) {
 
     const handleClicked = props.handleClicked;
+    const [positionX, setPositionX] = useState("");
+    const [positionY, setPositionY] = useState("");
+
+    const Container = useRef<HTMLDivElement>(null);
 
 
     const Items: {icon: any, title: string, positionLeft: string, positionTop: string}[] = [
@@ -50,17 +56,48 @@ export default function MobileMenu(props: any) {
         let Current: any = document.getElementById("Current");
         
         // Give it the positions of the current item
-        Current.style.left = TargetData.positionLeft;
+        // Current.style.left = TargetData.positionLeft;
         // Current.style.top = TargetData.positionTop;
-        setTimeout(() => {Current.style.top = TargetData.positionTop}, 100); // Delayed for smoother effect.
+        // setTimeout(() => {Current.style.top = TargetData.positionTop}, 0); // Delayed for smoother effect.
+
+        let X = TargetData.positionLeft;
+        let Y = TargetData.positionTop;
+
+        if (Container.current != null) {
+            // 👉️ TypeScript knows that ref is not null here
+            let Width = Container.current.offsetWidth
+            let Height = Container.current.offsetHeight
+
+            switch (X) {
+                case '0%':
+                    setPositionX("0px");
+                    break;
+                case '50%':
+                    setPositionX(String(Width / 2) + "px");
+                    break;
+            }
+    
+            switch (Y) {
+                case '0%':
+                    setPositionY("0px");
+                    break;
+                case 'calc(100%/3 * 1)':
+                    setPositionY(String(Height / 3 * 1) + "px");
+                    break;
+                case "calc(100%/3 * 2)":
+                    setPositionY(String(Height / 3 * 2) + "px");
+                    break;
+            }
+        }
+
     }
 
     return (
         <>
-            <div className="MobileMenu">
+            <div key="modal" className="MobileMenu">
                 <div className="Main">
                     <div className="Logo">
-                        <Image src="/img/white-black-logo.png" layout="fill" objectFit="cover"/>
+                        <Image src="/img/full-white.png" layout="fill" objectFit="cover"/>
                     </div>
 
                     <Button variant="outlined" className="IconButton White" onClick={handleClicked}>
@@ -68,7 +105,7 @@ export default function MobileMenu(props: any) {
                     </Button>
                 </div>
 
-                <div className="Items">
+                <div className="Items" ref={Container}>
                     {
                         Items.map((Item, index) => {
                             return (
@@ -80,9 +117,7 @@ export default function MobileMenu(props: any) {
                         })
                     }
 
-                    <div className="Current" id="Current">
-
-                    </div>
+                    <motion.div className="Current" id="Current" initial="false" animate={{ x: positionX, y: positionY }}></motion.div>
                 </div>
             </div>
         </>

@@ -281,23 +281,31 @@ a {
   height: auto;
 }
 
-.MobileMenu {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+.MenuWrapper {
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+.MenuWrapper .MobileMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(135deg, #F26274 0%, #EF233C 100%);
   z-index: 1000;
-  padding: 5% 5%;
+  padding: 2.5% 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   gap: 2rem;
   user-select: none;
 }
-.MobileMenu .Main {
+.MenuWrapper .MobileMenu .Main {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -306,12 +314,12 @@ a {
   height: auto;
   border-radius: 1rem;
 }
-.MobileMenu .Main .Logo {
+.MenuWrapper .MobileMenu .Main .Logo {
   position: relative;
   aspect-ratio: 150/30;
   min-height: 20px;
 }
-.MobileMenu .Items {
+.MenuWrapper .MobileMenu .Items {
   width: 100%;
   height: 1100%;
   border-radius: 1rem;
@@ -322,7 +330,7 @@ a {
   margin-inline: auto;
   position: relative;
 }
-.MobileMenu .Items .Item {
+.MenuWrapper .MobileMenu .Items .Item {
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -331,11 +339,11 @@ a {
   color: #FFFFFF;
   z-index: 1000;
 }
-.MobileMenu .Items .Item svg {
+.MenuWrapper .MobileMenu .Items .Item svg {
   margin-bottom: 1rem;
   pointer-events: none;
 }
-.MobileMenu .Items .Current {
+.MenuWrapper .MobileMenu .Items .Current {
   position: absolute;
   top: 0;
   left: 0;
@@ -373,8 +381,8 @@ a {
   background-image: url("/img/assets/Grid.png");
   background-origin: top left;
   background-size: cover;
-  background-repeat: repeat;
-  mask-image: radial-gradient(50% 50% at 20% 50%, #FFFFFF 0%, rgba(217, 217, 217, 0) 100%), radial-gradient(50% 50% at 80% 60%, #FFFFFF 0%, rgba(217, 217, 217, 0) 100%);
+  background-repeat: repeat-y;
+  mask-image: radial-gradient(50% 50% at 20vw 50vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 70%), radial-gradient(50% 50% at 80vw 60vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 60%);
 }
 .HomePage .LandingSection {
   position: relative;
@@ -462,23 +470,6 @@ a {
   z-index: 2;
   pointer-events: none;
 }
-.HomePage .LandingSection .Image .Wrapper > *:not(:first-child):not(.Projects) {
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
-@keyframes floating {
-  0% {
-    transform: translate(0, 0px);
-  }
-  50% {
-    transform: translate(0, 1px);
-  }
-  100% {
-    transform: translate(0, 0px);
-  }
-}
 .HomePage .LandingSection .Image .Wrapper .Team {
   position: absolute;
   bottom: 5%;
@@ -513,44 +504,6 @@ a {
   width: 40%;
   height: auto;
   z-index: 1;
-  filter: blur(0.15vw);
-  transition: all 0.2s ease;
-  animation: SendBack 1s ease-in-out forwards;
-}
-.HomePage .LandingSection .Image .Wrapper .Projects:hover {
-  animation: ComeToFront 1s ease-in-out forwards;
-}
-@keyframes ComeToFront {
-  from {
-    transform: translate(0, 0px);
-    filter: blur(0.15vw);
-    z-index: 1;
-  }
-  50% {
-    transform: translate(-50px, 0px);
-    z-index: 1;
-  }
-  to {
-    transform: translate(-20px, 0px);
-    filter: blur(0vw);
-    z-index: 6;
-  }
-}
-@keyframes SendBack {
-  from {
-    transform: translate(-20px, 0px);
-    filter: blur(0vw);
-    z-index: 6;
-  }
-  50% {
-    transform: translate(-50px, 0px);
-    z-index: 1;
-  }
-  to {
-    transform: translate(0, 0px);
-    filter: blur(0.15vw);
-    z-index: 1;
-  }
 }
 @media (max-width: 790px) {
   .HomePage .LandingSection .Image {
@@ -571,8 +524,7 @@ a {
   transform: translateX(-50%);
   width: 100vw;
   min-height: 250px;
-  background: #1E1E24;
-  mix-blend-mode: multiply;
+  background: linear-gradient(135deg, #1E1E24 0%, #030303 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -591,7 +543,6 @@ a {
 }
 .HomePage .TrustedPartners .Partners {
   width: 100%;
-  background: #1E1E24;
   height: auto;
   margin: auto;
   overflow: hidden;
@@ -600,18 +551,6 @@ a {
 .HomePage .TrustedPartners .Partners::-webkit-scrollbar {
   appearance: none;
   display: none;
-}
-.HomePage .TrustedPartners .Partners::before, .HomePage .TrustedPartners .Partners::after {
-  content: "";
-  height: 100px;
-  position: absolute;
-  width: 200px;
-  z-index: 2;
-}
-.HomePage .TrustedPartners .Partners::after {
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
 }
 @keyframes scroll {
   0% {
@@ -640,6 +579,10 @@ a {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transition: all 0.5s ease;
+}
+.HomePage .TrustedPartners .Partners .Wrapper .Slide img:hover {
+  transform: scale(1.25);
 }
 
 /*# sourceMappingURL=index.css.map */
