@@ -55,6 +55,7 @@ a {
   color: #17BEBB;
   z-index: 1;
   font-weight: 900;
+  white-space: nowrap;
 }
 .SpanHighlightBlue:before {
   pointer-events: none;
@@ -74,6 +75,7 @@ a {
   color: #EF233C;
   z-index: 1;
   font-weight: 900;
+  white-space: nowrap;
 }
 .SpanHighlightRed:before {
   pointer-events: none;
@@ -122,7 +124,14 @@ a {
   border-radius: 15px;
   gap: 10px;
   box-shadow: none;
-  box-shadow: 0px 100px 80px rgba(239, 35, 60, 0.07), 0px 41.7776px 33.4221px rgba(239, 35, 60, 0.0503198), 0px 22.3363px 17.869px rgba(239, 35, 60, 0.0417275), 0px 12.5216px 10.0172px rgba(239, 35, 60, 0.035), 0px 6.6501px 5.32008px rgba(239, 35, 60, 0.0282725), 0px 2.76726px 2.21381px rgba(239, 35, 60, 0.0196802);
+  filter: drop-shadow(0px 100px 80px rgba(23, 190, 187, 0.07)) drop-shadow(0px 41.7776px 33.4221px rgba(23, 190, 187, 0.0503198)) drop-shadow(0px 22.3363px 17.869px rgba(23, 190, 187, 0.0417275)) drop-shadow(0px 12.5216px 10.0172px rgba(23, 190, 187, 0.035)) drop-shadow(0px 6.6501px 5.32008px rgba(23, 190, 187, 0.0282725)) drop-shadow(0px 2.76726px 2.21381px rgba(23, 190, 187, 0.0196802));
+  transition: all 0.2s ease-in-out;
+  text-transform: none;
+}
+.DefaultButton.Blue:hover, .DefaultButton.Blue:active, .DefaultButton.Blue:focus {
+  background: linear-gradient(135deg, #16A9A6 0.01%, #17BEBB 100%);
+  background-size: 200%;
+  filter: drop-shadow(0px 100px 80px rgba(23, 190, 187, 0.07)) drop-shadow(0px 41.7776px 33.4221px rgba(23, 190, 187, 0.0503198)) drop-shadow(0px 22.3363px 17.869px rgba(23, 190, 187, 0.0417275)) drop-shadow(0px 12.5216px 10.0172px rgba(23, 190, 187, 0.035)) drop-shadow(0px 6.6501px 5.32008px rgba(23, 190, 187, 0.0282725)) drop-shadow(0px 2.76726px 2.21381px rgba(23, 190, 187, 0.0196802));
 }
 
 .IconTextButton.Red {
@@ -189,6 +198,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 2.5% 10%;
 }
 .NavBar .Logo {
   width: auto;
@@ -255,6 +265,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+  padding: 2.5% 10%;
 }
 .NavBar.Mobile .Logo {
   width: auto;
@@ -362,7 +373,6 @@ a {
   width: 100%;
   height: 100%;
   z-index: 10;
-  padding: 2.5% 10%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -380,9 +390,9 @@ a {
   background-color: white;
   background-image: url("/img/assets/Grid.png");
   background-origin: top left;
-  background-size: cover;
+  background-size: contain;
   background-repeat: repeat-y;
-  mask-image: radial-gradient(50% 50% at 20vw 50vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 70%), radial-gradient(50% 50% at 80vw 60vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 60%);
+  mask-image: radial-gradient(50% 50% at 20vw 50vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 70%), radial-gradient(50% 50% at 80vw 60vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 60%), radial-gradient(50% 50% at 70vw 180vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 60%), radial-gradient(50% 50% at 30vw 160vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 20%);
 }
 .HomePage .LandingSection {
   position: relative;
@@ -397,6 +407,12 @@ a {
   gap: 1rem;
   flex: 1;
   min-height: 90vh;
+  padding: 2.5% 10%;
+}
+@media (max-width: 767px) {
+  .HomePage .LandingSection {
+    margin-bottom: 5rem;
+  }
 }
 .HomePage .LandingSection > * {
   flex: 1;
@@ -448,7 +464,8 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  aspect-ratio: 735/500;
+  min-width: 300px;
+  min-height: 250px;
 }
 .HomePage .LandingSection .Image .Wrapper {
   position: relative;
@@ -520,11 +537,9 @@ a {
 }
 .HomePage .TrustedPartners {
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
+  width: 100%;
   min-height: 250px;
-  background: linear-gradient(135deg, #1E1E24 0%, #030303 100%);
+  background: #000;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -552,6 +567,17 @@ a {
   appearance: none;
   display: none;
 }
+.HomePage .TrustedPartners .Partners:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: linear-gradient(90deg, #000 0%, transparent 25%, transparent 75%, #000 100%);
+  pointer-events: none;
+}
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -568,6 +594,9 @@ a {
   align-items: center;
   gap: 100px;
 }
+.HomePage .TrustedPartners .Partners .Wrapper:hover {
+  animation-play-state: paused;
+}
 .HomePage .TrustedPartners .Partners .Wrapper .Slide {
   height: 100px;
   width: 150px;
@@ -583,6 +612,365 @@ a {
 }
 .HomePage .TrustedPartners .Partners .Wrapper .Slide img:hover {
   transform: scale(1.25);
+}
+.HomePage .AboutUs {
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1rem;
+  flex: 1;
+  min-height: 100vh;
+  gap: 2rem;
+  padding: 5rem 0;
+  padding: 2.5% 10%;
+}
+.HomePage .AboutUs > * {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.HomePage .AboutUs .Image {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+@media (max-width: 900px) {
+  .HomePage .AboutUs .Image {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+}
+.HomePage .AboutUs .Image .ImageContainer {
+  width: 85%;
+  min-height: 300px;
+  min-width: 300px;
+  height: 60%;
+  position: relative;
+  border-radius: 5rem;
+  overflow: hidden;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+}
+@media (max-width: 900px) {
+  .HomePage .AboutUs .Image .ImageContainer {
+    width: 100%;
+  }
+}
+.HomePage .AboutUs .Text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  position: relative;
+}
+@media (max-width: 790px) {
+  .HomePage .AboutUs .Text {
+    width: 100%;
+  }
+}
+.HomePage .AboutUs .Text .FadedText {
+  position: absolute;
+  height: auto;
+  width: 30%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-80%);
+  z-index: -1;
+  font-size: 5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  opacity: 0.1;
+}
+.HomePage .AboutUs .Text .Title {
+  margin-bottom: 1rem;
+  font-size: 2em;
+}
+@media (max-width: 790px) {
+  .HomePage .AboutUs .Text .Title {
+    font-size: 1.5em;
+  }
+}
+.HomePage .AboutUs .Text .Description {
+  margin-bottom: 2rem;
+  font-size: 1em;
+  color: #444140;
+}
+@media (max-width: 790px) {
+  .HomePage .AboutUs .Text .Description {
+    font-size: 0.85em;
+  }
+}
+.HomePage .AboutUs .Text .Actions {
+  width: 100%;
+  height: auto;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.HomePage .BusinessPerformance {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5rem 0;
+  padding: 2.5% 10%;
+}
+.HomePage .BusinessPerformance .Title {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.HomePage .BusinessPerformance .Title h1 {
+  font-size: 2em;
+}
+@media (max-width: 790px) {
+  .HomePage .BusinessPerformance .Title h1 {
+    font-size: 1.5em;
+  }
+}
+.HomePage .BusinessPerformance .Title p {
+  font-size: 1em;
+  color: #444140;
+}
+@media (max-width: 790px) {
+  .HomePage .BusinessPerformance .Title p {
+    font-size: 0.85em;
+  }
+}
+.HomePage .BusinessPerformance .Cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
+  grid-gap: 2rem;
+}
+.HomePage .BusinessPerformance .Cards .Card {
+  background: linear-gradient(137deg, #fff, #fff);
+  box-shadow: 0px 50px 150px rgba(0, 0, 0, 0.05);
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2.5rem;
+  gap: 2rem;
+  transition: all 500ms ease;
+  user-select: none;
+  color: #444140;
+}
+.HomePage .BusinessPerformance .Cards .Card .Icon {
+  width: 50px;
+  height: auto;
+  aspect-ratio: 1/1;
+  position: relative;
+  flex: 1;
+}
+.HomePage .BusinessPerformance .Cards .Card .Text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0px;
+  flex: 4;
+  gap: 1rem;
+}
+.HomePage .BusinessPerformance .Cards .Card .Text .Title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25em;
+  /* identical to box height */
+  text-align: left;
+  width: fit-content;
+  text-transform: capitalize;
+  margin: 0;
+  /* Colors/Raisin Black */
+  /* Inside auto layout */
+}
+.HomePage .BusinessPerformance .Cards .Card .Text .Description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9em;
+  text-transform: capitalize;
+}
+.HomePage .BusinessPerformance .Cards .Card.Normal {
+  background: linear-gradient(#fff, #fff);
+  color: #444140;
+}
+.HomePage .BusinessPerformance .Cards .Card.Normal:hover {
+  background: linear-gradient(135deg, #F26274 0%, #EF233C 100%) !important;
+  color: #fff;
+}
+.HomePage .BusinessPerformance .Cards .Card.Normal:hover .Icon {
+  filter: invert(1);
+}
+.HomePage .BusinessPerformance .Cards .Card.Special {
+  background: linear-gradient(135deg, #444140 0%, #1D1D1D 100%);
+  color: #fff;
+}
+.HomePage .BusinessPerformance .Cards .Card.Special .Icon {
+  filter: invert(1);
+}
+.HomePage .BusinessPerformance .Cards .Card.Special:hover {
+  background: linear-gradient(135deg, #F26274 0%, #EF233C 100%) !important;
+  color: #fff;
+}
+.HomePage .BusinessPerformance .Cards .Card.Special:hover .Icon {
+  filter: invert(1);
+}
+.HomePage .Services {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background: #1E1E24;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  padding: 2.5% 10%;
+}
+.HomePage .Services:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/img/assets/Grid3D.png");
+  z-index: 1;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.HomePage .Services .Title {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  margin-bottom: 5rem;
+  color: #fff;
+  z-index: 2;
+}
+.HomePage .Services .Title h1 {
+  font-size: 2em;
+}
+@media (max-width: 790px) {
+  .HomePage .Services .Title h1 {
+    font-size: 1.5em;
+  }
+}
+.HomePage .Services .Title p {
+  font-size: 1em;
+  color: #FFFFFF;
+  opacity: 0.5;
+  width: 80%;
+}
+@media (max-width: 790px) {
+  .HomePage .Services .Title p {
+    font-size: 0.85em;
+    width: 100%;
+  }
+}
+.HomePage .Services .Cards {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
+  grid-gap: 2rem;
+  z-index: 2;
+}
+.HomePage .Services .Cards .Card {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem;
+  border-radius: 2rem;
+  color: #FFFFFF;
+  border: 1px solid #fff;
+}
+.HomePage .Services .Cards .Card .Content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1rem;
+}
+.HomePage .Services .Cards .Card .Content .Icon {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+.HomePage .Services .Cards .Card .Content .Title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 0.9rem;
+  margin: 0;
+  text-transform: capitalize;
+}
+.HomePage .Services .Cards .Card .Content p {
+  font-size: 0.8em;
+  opacity: 0.5;
+  padding-bottom: 2rem;
+}
+.HomePage .Services .Cards .Card .Button {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  gap: 1rem;
+  font-size: 0.7em;
+}
+.HomePage .Services .Cards .Card .Button:before {
+  content: "";
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
+.HomePage .Services .Cards .Card .Button:after {
+  content: "";
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=index.css.map */

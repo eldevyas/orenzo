@@ -1,0 +1,100 @@
+.AboutUs {
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1rem;
+    flex: 1;
+    min-height: 100vh;
+    gap: 2rem;
+    padding: 5rem 0;
+    @include GlobalPadding();
+    >* {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .Image {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        @media (max-width: 900px) {
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 5rem;
+        }
+        // margin-bottom: 5rem;
+        .ImageContainer {
+            width: 85%;
+            min-height: 300px;
+            min-width: 300px;
+            height: 60%;
+            position: relative;
+            border-radius: 5rem;
+            overflow: hidden;
+            box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+            @media (max-width: 900px) {
+                width: 100%;
+            }
+        }
+    }
+    .Text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        position: relative;
+        @media (max-width: 790px) {
+            width: 100%;
+        }
+        .FadedText {
+            position: absolute;
+            height: auto;
+            width: 30%;
+            top: 50%;
+            left: 0;
+            transform: translateY(-80%);
+            z-index: -1;
+            font-size: 5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            opacity: 0.1;
+        }
+        .Title {
+            margin-bottom: 1rem;
+            font-size: 2em;
+            @media (max-width: 790px) {
+                font-size: 1.5em;
+            }
+        }
+        .Description {
+            margin-bottom: 2rem;
+            font-size: 1em;
+            color: $C2;
+            @media (max-width: 790px) {
+                font-size: 0.85em;
+            }
+        }
+        .Actions {
+            width: 100%;
+            height: auto;
+            background: transparent;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+}

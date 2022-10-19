@@ -3,6 +3,7 @@
     color: $C4;
     z-index: 1;
     font-weight: 900;
+    white-space: nowrap;
     &:before {
         pointer-events: none;
         z-index: 0;
@@ -22,6 +23,7 @@
     color: $C3;
     z-index: 1;
     font-weight: 900;
+    white-space: nowrap;
     &:before {
         pointer-events: none;
         z-index: 0;

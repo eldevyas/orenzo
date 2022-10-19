@@ -62,7 +62,7 @@ export default function MobileMenu(props: any) {
 
         let X = TargetData.positionLeft;
         let Y = TargetData.positionTop;
-
+        
         if (Container.current != null) {
             // 👉️ TypeScript knows that ref is not null here
             let Width = Container.current.offsetWidth

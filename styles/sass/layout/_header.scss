@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include GlobalPadding();
     .Logo {
         width: auto;
         height: 20px;
@@ -72,6 +73,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    @include GlobalPadding();
     .Logo {
         width: auto;
         height: 20px;
