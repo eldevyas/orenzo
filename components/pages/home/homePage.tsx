@@ -6,7 +6,7 @@ import TrustedPartners from './content/2- Partners'
 import AboutUs from './content/3- About us'
 import BusinessPerformance from './content/4- Business Perfomance'
 import Services from './content/5- Services'
-
+import Testimonials from './content/7- Testimonials'
 export default function HomePage() {
     return (
         <div className="HomePage">
@@ -17,6 +17,7 @@ export default function HomePage() {
             <AboutUs/>
             <BusinessPerformance/>
             <Services/>
+            <Testimonials/>
         </div>
     )
 }

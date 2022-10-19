@@ -7,6 +7,7 @@
     justify-content: flex-start;
     align-items: center;
     padding: 5rem 0;
+    margin-bottom: 5rem;
     @include GlobalPadding();
     .Title {
         width: 100%;
@@ -35,8 +36,11 @@
     .Cards {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
+        grid-template-columns: 1fr 1fr;
         grid-gap: 2rem;
+        @media screen and (max-width: 900px) {
+            grid-template-columns: none;
+        }
         .Card {
             // width: 45%;
             // min-width: 200px;
@@ -53,6 +57,9 @@
             transition: all 500ms ease;
             user-select: none;
             color: $C2;
+            @media (max-width: 900px) {
+                flex-direction: column;
+            }
             .Icon {
                 width: 50px;
                 height: auto;

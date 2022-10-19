@@ -1,12 +1,13 @@
 .NavBar {
     width: 100%;
     height: auto;
-    max-height: 10vh;
+    // max-height: 10vh;
     background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     @include GlobalPadding();
+    padding: 5vh 10vw;
     .Logo {
         width: auto;
         height: 20px;
@@ -72,8 +73,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
     @include GlobalPadding();
+    padding: 2.5vh 10vw;
     .Logo {
         width: auto;
         height: 20px;

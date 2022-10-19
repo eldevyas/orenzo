@@ -14,6 +14,9 @@
     gap: 2rem;
     padding: 5rem 0;
     @include GlobalPadding();
+    @media screen and (max-width: 900px) {
+        margin-bottom: 5rem;
+    }
     >* {
         flex: 1;
         display: flex;
@@ -29,7 +32,6 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            margin-bottom: 5rem;
         }
         // margin-bottom: 5rem;
         .ImageContainer {
@@ -69,7 +71,7 @@
             font-size: 5rem;
             font-weight: 900;
             text-transform: uppercase;
-            opacity: 0.1;
+            opacity: 0.05;
         }
         .Title {
             margin-bottom: 1rem;

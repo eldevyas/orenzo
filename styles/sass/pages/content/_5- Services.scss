@@ -8,6 +8,9 @@
     justify-content: flex-start;
     align-items: center;
     position: relative;
+    @include GlobalPadding;
+    padding-top: 5vh;
+    padding-bottom: 4rem;
     &:before {
         content: "";
         width: 100%;
@@ -23,7 +26,6 @@
         background-position: center;
         background-repeat: no-repeat;
     }
-    @include GlobalPadding;
     .Title {
         width: 100%;
         height: auto;
@@ -69,7 +71,24 @@
             padding: 2rem 2rem;
             border-radius: 2rem;
             color: $C5;
-            border: 1px solid #fff;
+            transition: all 0.3s ease;
+            user-select: none;
+            &:hover {
+                background: $G1;
+                cursor: pointer;
+                transform: translateY(-0.5rem);
+                // .Button {
+                //     color: $C4 !important;
+                //     &:before {
+                //         background: $C4 !important;
+                //     }
+                //     &:after {
+                //         background: $C4 !important;
+                //     }
+                // }
+            }
+            // border: 1px solid #fff;
+            @include GradientBorder;
             .Content {
                 display: flex;
                 flex-direction: column;
@@ -80,8 +99,9 @@
                 .Icon {
                     width: 100px;
                     height: 100px;
-                    background-color: #fff;
+                    // background-color: #fff;
                     border-radius: 1rem;
+                    position: relative;
                 }
                 .Title {
                     width: 100%;
