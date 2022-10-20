@@ -19,7 +19,6 @@ body {
   min-height: 500vh;
   height: 100%;
   overflow-x: hidden;
-  padding-bottom: 150vh;
 }
 
 a {
@@ -390,6 +389,128 @@ a {
   filter: brightness(0.25);
 }
 
+.Footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Footer .Content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 4rem;
+  padding: 2.5vh 10vw;
+  /*fraction*/
+}
+.Footer .Content .Identity {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 26px 0px;
+  gap: 2rem;
+}
+.Footer .Content .Identity .Logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.Footer .Content .Identity .Logo img {
+  width: 80%;
+  height: auto;
+}
+.Footer .Content .Identity p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  color: #444140;
+}
+.Footer .Content .QuickLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 26px 50px;
+  gap: 50px;
+}
+@media (max-width: 768px) {
+  .Footer .Content .QuickLinks {
+    padding: 0;
+  }
+}
+.Footer .Content .QuickLinks .Links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+.Footer .Content .Connect {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 26px 50px;
+  gap: 50px;
+}
+@media (max-width: 768px) {
+  .Footer .Content .Connect {
+    padding: 0;
+  }
+}
+.Footer .Content .Connect .Socials {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+.Footer .Content .Connect .Socials .SocialLink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25rem;
+}
+.Footer .Content .Connect .Socials .SocialLink .Icon {
+  width: 20px;
+  height: 20px;
+  transform: scale(0.75);
+}
+@media (max-width: 768px) {
+  .Footer {
+    /*breakpoint*/
+  }
+  .Footer .Content {
+    grid-template-columns: none;
+  }
+  .Footer .Info {
+    flex-direction: column !important;
+    gap: 1rem;
+  }
+}
+.Footer .Info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5vh 10vw;
+  min-height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 10vw;
+  border-top: 1px solid rgba(30, 30, 36, 0.25);
+}
+.Footer .Info p {
+  font-size: 0.8rem;
+}
+
 .HomePage {
   position: relative;
   width: 100%;
@@ -414,7 +535,7 @@ a {
   background-origin: top left;
   background-size: contain;
   background-repeat: repeat-y;
-  mask-image: radial-gradient(50% 50% at 20vw 50vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 70%), radial-gradient(50% 50% at 80vw 60vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 60%), radial-gradient(50% 50% at 70vw 180vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 60%), radial-gradient(50% 50% at 30vw 160vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 20%);
+  mask-image: radial-gradient(40vw 40vw at 20vw 50vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 70%), radial-gradient(20vw 20vw at 80vw 60vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 30%), radial-gradient(40vw 40vw at 70vw 190vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 60%), radial-gradient(50vw 50vw at 30vw 220vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 30%), radial-gradient(50vw 50vw at 50vw 280vh, rgba(255, 255, 255, 0.75) 0%, rgba(217, 217, 217, 0) 40%), radial-gradient(50vw 50vw at 50vw 620vh, rgb(255, 255, 255) 0%, rgba(217, 217, 217, 0) 40%), radial-gradient(50vw 50vw at 50vw 750vh, rgb(255, 255, 255) 0%, rgba(217, 217, 217, 0) 60%);
 }
 .HomePage .LandingSection {
   position: relative;
@@ -1201,6 +1322,8 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
+  padding: 2.5vh 10vw;
+  padding-bottom: 5rem;
 }
 .HomePage .LetsTalk .Title {
   width: 100%;
@@ -1251,19 +1374,109 @@ a {
   height: 100%;
   z-index: -1;
 }
-.HomePage .LetsTalk .HandDrawnLines svg:nth-child(1) {
+.HomePage .LetsTalk .HandDrawnLines .RedLine {
   position: absolute;
   left: -5%;
   transform: rotateZ(180deg);
-  width: 15rem;
+  width: 20vw;
   height: auto;
 }
-.HomePage .LetsTalk .HandDrawnLines svg:nth-child(2) {
+.HomePage .LetsTalk .HandDrawnLines .BlueLine {
   position: absolute;
   right: -5%;
   transform: rotateZ(0deg);
-  width: 15rem;
+  width: 20vw;
   height: auto;
+}
+.HomePage .LetsTalk .HandDrawnLines .BottomBlueLine {
+  position: absolute;
+  left: -5%;
+  bottom: 0;
+  transform: rotateZ(0deg);
+  width: 30vw;
+  height: auto;
+  opacity: 25%;
+}
+.HomePage .Mailing {
+  width: 100%;
+  min-height: 300px;
+  background: linear-gradient(135deg, #F26274 0%, #EF233C 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5vh 10vw;
+  gap: 2rem;
+}
+.HomePage .Mailing .Title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.HomePage .Mailing .Title h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  opacity: 0.75;
+}
+.HomePage .Mailing .Title p {
+  font-size: 1rem;
+  font-weight: 200;
+  color: #fff;
+}
+.HomePage .Mailing .InputField {
+  width: 100%;
+  height: auto;
+  max-width: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 789px) {
+  .HomePage .Mailing .InputField {
+    flex-direction: column;
+  }
+}
+.HomePage .Mailing .InputField input {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: none;
+  outline: none;
+  padding: 0.75rem 1.5rem;
+  flex: 4;
+  font-size: 1rem;
+  color: #fff;
+  align-self: stretch;
+}
+.HomePage .Mailing .InputField input::placeholder {
+  color: #fff;
+}
+.HomePage .Mailing .InputField .Button {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  flex: 1;
+  box-shadow: none;
+  color: #EF233C;
+  background: #FFFFFF;
+  border-radius: 0;
+  font-size: 1rem;
+  font-family: inherit;
+  text-transform: none;
+  align-self: stretch;
+  min-width: 125px;
+}
+.HomePage .Mailing .PS {
+  text-align: left;
+  width: 100%;
+  min-height: 50px;
+  max-width: 700px;
+  font-size: 0.75rem;
+  font-weight: 200;
+  color: #fff;
 }
 
 /*# sourceMappingURL=index.css.map */

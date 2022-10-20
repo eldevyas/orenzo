@@ -8,7 +8,8 @@ import BusinessPerformance from './content/4- Business Perfomance'
 import Services from './content/5- Services'
 import Testimonials from './content/7- Testimonials'
 import LetsTalk from './content/8- Let\'s Talk'
-
+import Mailing from './content/9- Mailing'
+import Footer from '../../layout/footer'
 
 
 
@@ -24,6 +25,8 @@ export default function HomePage() {
             <Services/>
             <Testimonials/>
             <LetsTalk/>
+            <Mailing/>
+            <Footer/>
         </div>
     )
 }

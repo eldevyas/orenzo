@@ -7,6 +7,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    @include GlobalPadding;
+    padding-bottom: 5rem;
     .Title {
         width: 100%;
         height: auto;
@@ -52,21 +54,28 @@
         height: 100%;
         // background: $G3;
         z-index: -1;
-        svg {
-            &:nth-child(1) {
-                position: absolute;
-                left: -5%;
-                transform: rotateZ(180deg);
-                width: 15rem;
-                height: auto;
-            }
-            &:nth-child(2) {
-                position: absolute;
-                right: -5%;
-                transform: rotateZ(0deg);
-                width: 15rem;
-                height: auto;
-            }
+        .RedLine {
+            position: absolute;
+            left: -5%;
+            transform: rotateZ(180deg);
+            width: 20vw;
+            height: auto;
+        }
+        .BlueLine {
+            position: absolute;
+            right: -5%;
+            transform: rotateZ(0deg);
+            width: 20vw;
+            height: auto;
+        }
+        .BottomBlueLine {
+            position: absolute;
+            left: -5%;
+            bottom: 0;
+            transform: rotateZ(0deg);
+            width: 30vw;
+            height: auto;
+            opacity: 25%;
         }
     }
 }

@@ -1,0 +1,117 @@
+.Footer {
+    width: 100%;
+    // background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .Content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 4rem;
+        @include GlobalPadding;
+        .Identity {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 26px 0px;
+            gap: 2rem;
+            .Logo {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                img {
+                    width: 80%;
+                    height: auto;
+                }
+            }
+            p {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 0.85rem;
+                display: flex;
+                align-items: center;
+                color: $C2;
+            }
+        }
+        .QuickLinks {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 26px 50px;
+            gap: 50px;
+            @media (max-width: 768px) {
+                padding: 0;
+            }
+            .Links {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0px;
+                gap: 0.5rem;
+                font-size: 0.85rem;
+            }
+        }
+        .Connect {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 26px 50px;
+            gap: 50px;
+            @media (max-width: 768px) {
+                padding: 0;
+            }
+            .Socials {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0px;
+                gap: 0.5rem;
+                font-size: 0.85rem;
+                .SocialLink {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 0.25rem;
+                    .Icon {
+                        width: 20px;
+                        height: 20px;
+                        transform: scale(0.75);
+                    }
+                }
+            }
+        }
+        /*fraction*/
+    }
+    @media (max-width: 768px) {
+        /*breakpoint*/
+        .Content {
+            grid-template-columns: none;
+        }
+        .Info {
+            flex-direction: column !important;
+            gap: 1rem;
+        }
+    }
+    .Info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include GlobalPadding;
+        min-height: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 2rem 10vw;
+        border-top: 1px solid rgba($C1, 0.25);
+        // background-color: red;
+        p {
+            font-size: 0.8rem;
+        }
+    }
+}

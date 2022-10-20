@@ -1,0 +1,81 @@
+.Mailing {
+    width: 100%;
+    min-height: 300px;
+    background: $G3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include GlobalPadding;
+    gap: 2rem;
+    .Title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            opacity: 0.75;
+        }
+        p {
+            font-size: 1rem;
+            font-weight: 200;
+            color: #fff;
+        }
+    }
+    .InputField {
+        width: 100%;
+        height: auto;
+        // background-color: white;
+        max-width: 700px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width: 789px) {
+            flex-direction: column;
+        }
+        input {
+            width: 100%;
+            height: 100%;
+            background-color: rgba($C5, 0.25);
+            border: none;
+            outline: none;
+            padding: 0.75rem 1.5rem;
+            flex: 4;
+            font-size: 1rem;
+            color: #fff;
+            align-self: stretch;
+            &::placeholder {
+                color: #fff;
+            }
+        }
+        .Button {
+            width: 100%;
+            // height: 100%;
+            background-color: rgba($C5, 0.1);
+            flex: 1;
+            box-shadow: none;
+            color: $C3;
+            background: $C5;
+            border-radius: 0;
+            font-size: 1rem;
+            font-family: inherit;
+            text-transform: none;
+            align-self: stretch;
+            min-width: 125px;
+        }
+    }
+    .PS {
+        text-align: left;
+        width: 100%;
+        min-height: 50px;
+        max-width: 700px;
+        font-size: 0.75rem;
+        font-weight: 200;
+        color: #fff;
+    }
+}

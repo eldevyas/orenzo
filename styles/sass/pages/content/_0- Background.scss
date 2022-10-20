@@ -12,8 +12,12 @@
     background-size: contain;
     background-repeat: repeat-y;
     // -webkit-mask-image: radial-gradient(ellipse 90% 80% at 48% 78%, black 40%, transparent 50%);
-    mask-image: radial-gradient(50% 50% at 20vw 50vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 70%), //
-    radial-gradient(50% 50% at 80vw 60vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 60%), //
-    radial-gradient(50% 50% at 70vw 180vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 60%), //
-    radial-gradient(50% 50% at 30vw 160vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 20%);
+    mask-image: radial-gradient(40vw 40vw at 20vw 50vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 70%), //
+    radial-gradient(20vw 20vw at 80vw 60vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 30%), //
+    radial-gradient(40vw 40vw at 70vw 190vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 60%), //
+    radial-gradient(50vw 50vw at 30vw 220vh, #FFFFFF 0%, rgba(217, 217, 217, 0) 30%), //
+    radial-gradient(50vw 50vw at 50vw 280vh, rgba(255, 255, 255, 0.75) 0%, rgba(217, 217, 217, 0) 40%), //
+    radial-gradient(50vw 50vw at 50vw 620vh, rgba(255, 255, 255, 1) 0%, rgba(217, 217, 217, 0) 40%), //
+    radial-gradient(50vw 50vw at 50vw 750vh, rgba(255, 255, 255, 1) 0%, rgba(217, 217, 217, 0) 60%), //
+    ;
 }
