@@ -24,4 +24,15 @@ function IconTextButton(props: any) {
 }
 
 
-export { DefaultButton, IconTextButton };
+function OutlinedButton(props: any) {
+    return (
+        <>
+            <Button variant="outlined" className={"OutlinedButton" + " " + props.color}>
+                {props.children}
+            </Button>
+        </>
+    );
+}
+
+
+export { DefaultButton, IconTextButton, OutlinedButton };
