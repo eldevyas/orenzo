@@ -24,7 +24,7 @@ export default function TrustedPartners() {
                                 Companies.map((Partner, index) => {
                                     return (
                                         <div key={index} className='Slide'>
-                                            <img src={Partner}/>
+                                            <Image alt="" src={Partner} layout="fill" objectFit="contain"/>
                                         </div>
                                     )
                                 })
@@ -33,7 +33,7 @@ export default function TrustedPartners() {
                                 Companies.map((Partner, index) => {
                                     return (
                                         <div key={index} className='Slide'>
-                                            <img src={Partner}/>
+                                            <Image alt="" src={Partner} layout="fill" objectFit="contain"/>
                                         </div>
                                     )
                                 })

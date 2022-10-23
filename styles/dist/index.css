@@ -412,14 +412,13 @@ a {
   gap: 2rem;
 }
 .Footer .Content .Identity .Logo {
+  width: auto;
+  height: 20px;
+  aspect-ratio: 146.37/30;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-.Footer .Content .Identity .Logo img {
-  width: 80%;
-  height: auto;
+  justify-content: flex-start;
+  align-items: center;
 }
 .Footer .Content .Identity p {
   font-style: normal;
@@ -746,14 +745,10 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.HomePage .TrustedPartners .Partners .Wrapper .Slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  position: relative;
   transition: all 0.5s ease;
 }
-.HomePage .TrustedPartners .Partners .Wrapper .Slide img:hover {
+.HomePage .TrustedPartners .Partners .Wrapper .Slide:hover {
   transform: scale(1.25);
 }
 .HomePage .AboutUs {
@@ -1088,21 +1083,52 @@ a {
   bottom: -1px;
   left: -1px;
   right: -1px;
-  /*1*/
-  border: 1px solid transparent;
-  /*2*/
-  background: linear-gradient(to top left, #fff, transparent, #fff) border-box;
-  /*3*/
-  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  border: 2px solid transparent;
+  background: linear-gradient(to top left, rgba(255, 255, 255, 0.15), transparent, rgba(255, 255, 255, 0.15)) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-  /*5'*/
   mask-composite: exclude;
-  /*5*/
+  pointer-events: none;
 }
 .HomePage .Services .Cards .Card:hover {
   background: linear-gradient(135deg, #1E1E24 0%, #030303 100%);
   cursor: pointer;
   transform: translateY(-0.5rem);
+  position: relative;
+}
+.HomePage .Services .Cards .Card:hover::after {
+  content: "";
+  position: absolute;
+  border-radius: 2rem;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  border: 2px solid transparent;
+  background: linear-gradient(to top left, #EF233C, transparent, #17BEBB) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  animation: LoopGradient 4s ease infinite;
+  background-size: 400% 400%;
+}
+@keyframes LoopGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.HomePage .Services .Cards .Card:hover .Button:before {
+  width: 100%;
+}
+.HomePage .Services .Cards .Card:hover .Button:after {
+  width: 100%;
 }
 .HomePage .Services .Cards .Card .Content {
   display: flex;
@@ -1147,16 +1173,18 @@ a {
 .HomePage .Services .Cards .Card .Button:before {
   content: "";
   position: relative;
-  width: 100%;
+  width: 15%;
   height: 1px;
   background-color: #fff;
+  transition: width 0.2s ease-in-out;
 }
 .HomePage .Services .Cards .Card .Button:after {
   content: "";
   position: relative;
-  width: 100%;
+  width: 15%;
   height: 1px;
   background-color: #fff;
+  transition: width 0.2s ease-in-out;
 }
 .HomePage .Testimonials {
   min-height: 100vh;
@@ -1224,11 +1252,22 @@ a {
   align-items: flex-start;
   padding: 50px;
   gap: 2rem;
-  color: rgb(var(--text-color));
-  border: 2px double transparent;
-  background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)), linear-gradient(139.26deg, #EF233C 0%, rgba(255, 255, 255, 0) 49.48%, #17BEBB 100%);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
+  position: relative;
+}
+.HomePage .Testimonials .CommentsDisplay .Comment::after {
+  content: "";
+  position: absolute;
+  border-radius: 2rem;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  border: 2px solid transparent;
+  background: linear-gradient(to top left, #EF233C, transparent, #17BEBB) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 @media (max-width: 890px) {
   .HomePage .Testimonials .CommentsDisplay .Comment {

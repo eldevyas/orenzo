@@ -1,6 +1,7 @@
 import React from 'react'
 import { DefaultButton } from './../core/buttons'; 
 import { SocialIcon } from 'react-social-icons';
+import Image from 'next/image'
 
 
 export default function Footer() {
@@ -10,7 +11,7 @@ export default function Footer() {
                 <div className="Content">
                     <div className="Identity">
                         <div className="Logo">
-                            <img src="/img/logo.png"/>
+                            <Image src="/img/logo.png" alt="Logo" layout="fill" objectFit='cover'/>
                         </div>
 
                         <p>

@@ -18,7 +18,7 @@ function Comment(props: any) {
 
                 <div className="Person">
                     <div className="Picture">
-                        <Image src="/img/assets/BusinessManUsingLaptop.png" layout="fill" objectFit="cover"/>
+                        <Image alt="" src="/img/assets/BusinessManUsingLaptop.png" layout="fill" objectFit="cover"/>
                     </div>
 
                     <div className="Name">
@@ -26,8 +26,6 @@ function Comment(props: any) {
                         <div className="Profession">Developer</div>
                     </div>
                 </div>
-                
-
             </div>
         </>
     )

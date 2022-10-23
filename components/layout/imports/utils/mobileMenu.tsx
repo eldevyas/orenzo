@@ -97,7 +97,7 @@ export default function MobileMenu(props: any) {
             <div key="modal" className="MobileMenu">
                 <div className="Main">
                     <div className="Logo">
-                        <Image src="/img/full-white.png" layout="fill" objectFit="cover"/>
+                        <Image src="/img/full-white.png" alt="" layout="fill" objectFit="cover"/>
                     </div>
 
                     <Button variant="outlined" className="IconButton White" onClick={handleClicked}>

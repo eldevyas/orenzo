@@ -19,14 +19,13 @@
             padding: 26px 0px;
             gap: 2rem;
             .Logo {
+                width: auto;
+                height: 20px;
+                aspect-ratio: 146.37/30;
+                position: relative;
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-                img {
-                    width: 80%;
-                    height: auto;
-                }
+                justify-content: flex-start;
+                align-items: center;
             }
             p {
                 font-style: normal;

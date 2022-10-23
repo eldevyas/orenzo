@@ -58,7 +58,7 @@
             align-items: flex-start;
             padding: 50px;
             gap: 2rem;
-            @include GradientColorfulBorder;
+            @include GradientBorder($C3, $C4);
             @media (max-width: 890px) {
                 padding: 2rem;
             }

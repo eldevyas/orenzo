@@ -73,20 +73,22 @@
             color: $C5;
             transition: all 0.3s ease;
             user-select: none;
-            @include GradientBorder;
+            @include GradientBorder(rgba($C5, 0.15),
+            rgba($C5, 0.15));
             &:hover {
                 background: $G1;
                 cursor: pointer;
                 transform: translateY(-0.5rem);
-                // .Button {
-                //     color: $C4 !important;
-                //     &:before {
-                //         background: $C4 !important;
-                //     }
-                //     &:after {
-                //         background: $C4 !important;
-                //     }
-                // }
+                @include AnimatedGradientBorder($C3,
+                $C4);
+                .Button {
+                    &:before {
+                        width: 100%;
+                    }
+                    &:after {
+                        width: 100%;
+                    }
+                }
             }
             // border: 1px solid #fff;
             .Content {
@@ -132,16 +134,18 @@
                 &:before {
                     content: "";
                     position: relative;
-                    width: 100%;
+                    width: 15%;
                     height: 1px;
                     background-color: #fff;
+                    transition: width 0.2s ease-in-out;
                 }
                 &:after {
                     content: "";
                     position: relative;
-                    width: 100%;
+                    width: 15%;
                     height: 1px;
                     background-color: #fff;
+                    transition: width 0.2s ease-in-out;
                 }
             }
         }

@@ -38,32 +38,13 @@ export default function DesktopHeader(props: any) {
                 <Image src="/img/logo.png" alt="Logo" layout='fill' objectFit='cover' />
             </div>
             <div className="Navigation">
-                {/* {
+                {
                     Links.map((link: any, index: number) => (
                         <ActiveButton key={index} href={link.href}>
                             {link.title}
                         </ActiveButton>
                     ))
-                } */}
-
-                <Button variant="text" className="NavButton Active">
-                    Home
-                </Button>
-
-                
-                <Button variant="text" className="NavButton">
-                    Services
-                </Button>
-
-                
-                <Button variant="text" className="NavButton">
-                    Portfolio
-                </Button>
-
-                
-                <Button variant="text" className="NavButton">
-                    About us
-                </Button>
+                }
 
                 <Button variant="contained" className="ActionButton">
                     Contact

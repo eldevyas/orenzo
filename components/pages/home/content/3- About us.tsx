@@ -8,7 +8,7 @@ export default function AboutUs() {
             <div className="AboutUs">
                 <div className="Image">
                     <div className="ImageContainer">
-                        <Image src="/img/assets/BusinessManUsingLaptop.png" layout="fill" objectFit='cover'/>
+                        <Image src="/img/assets/BusinessManUsingLaptop.png" alt="" layout="fill" objectFit='cover'/>
                     </div>
                 </div>
 

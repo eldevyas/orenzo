@@ -59,7 +59,7 @@ export default function LetsTalk() {
             <div className="LetsTalk">
                 <div className="Title">
                     <h1>
-                        Let's <span className="SpanHighlightRed">Talk</span>?
+                        Let&apos;s <span className="SpanHighlightRed">Talk</span>?
                     </h1>
                     <p>
                         Non praesent tincidunt vestibulum viverra at sociis. Nisi elit hac eget donec. Elementum purus semper at pretium. Dictum facilisi in et lacus, egestas blandit. Non lectus arcu non iaculis scelerisque. Orci lorem bibendum turpis blandit. Id erat mauris neque luctus augue porta. Et eget dis tellus cum nulla pharetra nibh. Sit hac leo enim ornare.

@@ -10,15 +10,15 @@ const NavigationLinks = [
     },
     {
         title: "Services",
-        href: "/"
+        href: "/services"
     },
     {
         title: "Portfolio",
-        href: "/"
+        href: "/portfolio"
     },
     {
         title: "About us",
-        href: "/"
+        href: "/about"
     }
 ]
 

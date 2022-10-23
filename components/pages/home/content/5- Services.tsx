@@ -18,7 +18,7 @@ const Card = (props: any) => {
                 <div className="Content">
                     <div className="Title">
                         <div className="Icon">
-                            <Image src={props.icon} layout="fill" objectFit="cover"/>
+                            <Image alt="" src={props.icon} layout="fill" objectFit="cover"/>
                         </div>
                         <h3>{props.title}</h3>
                     </div>
