@@ -63,7 +63,7 @@ export default function LandingSection() {
                     i18nKey="home.content.LandingSection.title"
                     defaults="<span className='SpanHighlightBlue'>Measurable</span> & <span className='SpanHighlightRed'>Effective</span> Results For Customers<span className='colorDot' bgColor='red'>.</span>"
                     >
-                        <span className="SpanHighlightBlue">Measurable</span> & <span className="SpanHighlightRed">Effective</span> Results For Customers<span className="colorDot" bgColor="red">.</span>
+                        <span className="SpanHighlightBlue">Measurable</span> & <span className="SpanHighlightRed">Effective</span> Results For Customers<span className="colorDot" color="red">.</span>
                     </Trans>
                 </h1>
 
