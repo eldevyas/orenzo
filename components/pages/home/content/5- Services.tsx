@@ -2,12 +2,12 @@ import React from 'react'
 import Image from 'next/image'
 
 // Icon of each Service
-import Coding from "/Public/img/assets/3D icons/Google Code.png"
-import Design from "/Public/img/assets/3D icons/Design.png"
-import Advertising from "/Public/img/assets/3D icons/Commercial.png"
-import EMarketing from "/Public/img/assets/3D icons/Goal.png"
-import Business from "/Public/img/assets/3D icons/Business.png"
-import Visual from "/Public/img/assets/3D icons/Xlarge Icons.png"
+import Coding from "/Public/img/assets/3D-icons/Google Code.png"
+import Design from "/Public/img/assets/3D-icons/Design.png"
+import Advertising from "/Public/img/assets/3D-icons/Commercial.png"
+import EMarketing from "/Public/img/assets/3D-icons/Goal.png"
+import Business from "/Public/img/assets/3D-icons/Business.png"
+import Visual from "/Public/img/assets/3D-icons/Xlarge Icons.png"
 
 
 
