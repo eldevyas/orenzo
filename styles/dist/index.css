@@ -16,7 +16,6 @@ html,
 body {
   position: absolute;
   width: 100vw;
-  min-height: 500vh;
   height: 100%;
   overflow-x: hidden;
 }
@@ -1477,6 +1476,10 @@ a {
   font-size: 0.75rem;
   font-weight: 200;
   color: #fff;
+}
+
+.ServicesPage {
+  width: 100%;
 }
 
 /*# sourceMappingURL=index.css.map */
