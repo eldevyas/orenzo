@@ -88,7 +88,6 @@ export default function BusinessPerformance() {
             <div className="Cards">
                 {
                     Cards.map((card, index) => {
-                        console.log(card)
                         return <Card key={index} title={card.title} description={card.description} icon={card.icon} class={card.class}/>
                     })
                 }

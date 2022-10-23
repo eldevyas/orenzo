@@ -8,11 +8,11 @@
         },
         "content": {
             "LandingSection": {
-                "title": "Measurable & Effective Results For Customers",
-                "description": "Our creative team is focused on stunning and results driven solutions for small to medium businesses all over the world.",
+                "title": "نتائج<Keyword1>فعالة</Keyword1> و <Keyword2>قابلة</Keyword2> للقياس للعملاء<RedDot>.</RedDot>",
+                "description": "يركز فريقنا الإبداعي على الحلول المذهلة والمدفوعة بالنتائج للشركات الصغيرة والمتوسطة في جميع أنحاء العالم.",
                 "buttons": {
-                    "primary": "Get a quote",
-                    "secondary": "Learn More"
+                    "primary": "إقتبس",
+                    "secondary": "تعلم أكثر"
                 }
             }
         }

@@ -4,6 +4,7 @@ import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import { motion } from "framer-motion";
 import zIndex from "@material-ui/core/styles/zIndex";
 import { Trans, useTranslation } from 'react-i18next'
+import Link from "next/link"
 
 export default function LandingSection() {
     const { t } = useTranslation('common');
@@ -54,30 +55,32 @@ export default function LandingSection() {
     }
 
 
+
     return(
         <div className="LandingSection">
             <div className="Text">
                 <h1 className="Title">
-                    <Trans 
-                    t={t} 
-                    i18nKey="home.content.LandingSection.title"
-                    defaults="<span className='SpanHighlightBlue'>Measurable</span> & <span className='SpanHighlightRed'>Effective</span> Results For Customers<span className='colorDot' bgColor='red'>.</span>"
-                    >
-                        <span className="SpanHighlightBlue">Measurable</span> & <span className="SpanHighlightRed">Effective</span> Results For Customers<span className="colorDot" color="red">.</span>
-                    </Trans>
+                <Trans 
+                i18nKey="home.content.LandingSection.title"
+                components={{
+                    Keyword1: <span className="SpanHighlightRed"/>,
+                    Keyword2: <span className="SpanHighlightBlue"/>,
+                    RedDot: <span className="colorDot" color="red"/>
+                }} 
+                />
                 </h1>
 
                 <p className="Description">
-                    Our creative team is focused on stunning and results driven solutions for small to medium businesses all over the world.
+                    {t('home.content.LandingSection.description')}
                 </p>
 
                 <div className="Actions">
                     <DefaultButton bgColor="Red" elevation={0} style={{boxShadow: "none"}}>
-                        Get a quote
+                        {t('home.content.LandingSection.buttons.primary')}
                     </DefaultButton>
 
                     <IconTextButton bgColor="Red" icon={<ExpandCircleDownIcon/>}>
-                        Learn More
+                        {t('home.content.LandingSection.buttons.secondary')}
                     </IconTextButton>
                 </div>
             </div>
