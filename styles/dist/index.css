@@ -43,7 +43,7 @@ a {
   /* color of the tracking area */
 }
 *::-webkit-scrollbar-thumb {
-  background: rgba(68, 65, 64, 0.2);
+  background: rgba(43, 45, 66, 0.2);
   border-radius: 200px;
 }
 *::-webkit-scrollbar-thumb:hover {
@@ -248,7 +248,7 @@ a {
 }
 .NavBar .Navigation .NavButton {
   background-color: transparent;
-  color: rgba(68, 65, 64, 0.75);
+  color: rgba(43, 45, 66, 0.75);
   font-family: inherit;
   text-transform: none;
   border-radius: 1rem;
@@ -258,11 +258,11 @@ a {
   margin-right: 1rem;
 }
 .NavBar .Navigation .NavButton:hover {
-  background-color: rgba(68, 65, 64, 0.05);
+  background-color: rgba(43, 45, 66, 0.05);
 }
 .NavBar .Navigation .NavButton:active {
   background-color: transparent;
-  color: rgba(68, 65, 64, 0.5);
+  color: rgba(43, 45, 66, 0.5);
 }
 .NavBar .Navigation .NavButton.Active {
   color: var(--C4);
@@ -428,7 +428,7 @@ a {
   font-size: 0.85rem;
   display: flex;
   align-items: center;
-  color: #444140;
+  color: #2B2D42;
 }
 .Footer .Content .QuickLinks {
   display: flex;
@@ -586,7 +586,7 @@ a {
 .HomePage .LandingSection .Text .Description {
   margin-bottom: 2rem;
   font-size: 1em;
-  color: #444140;
+  color: #2B2D42;
 }
 @media (max-width: 790px) {
   .HomePage .LandingSection .Text .Description {
@@ -853,7 +853,7 @@ a {
 .HomePage .AboutUs .Text .Description {
   margin-bottom: 2rem;
   font-size: 1em;
-  color: #444140;
+  color: #2B2D42;
 }
 @media (max-width: 790px) {
   .HomePage .AboutUs .Text .Description {
@@ -902,7 +902,7 @@ a {
 }
 .HomePage .BusinessPerformance .Title p {
   font-size: 1em;
-  color: #444140;
+  color: #2B2D42;
 }
 @media (max-width: 790px) {
   .HomePage .BusinessPerformance .Title p {
@@ -932,7 +932,7 @@ a {
   gap: 2rem;
   transition: all 500ms ease;
   user-select: none;
-  color: #444140;
+  color: #2B2D42;
 }
 @media (max-width: 900px) {
   .HomePage .BusinessPerformance .Cards .Card {
@@ -975,7 +975,7 @@ a {
 }
 .HomePage .BusinessPerformance .Cards .Card.Normal {
   background: linear-gradient(#fff, #fff);
-  color: #444140;
+  color: #2B2D42;
 }
 .HomePage .BusinessPerformance .Cards .Card.Normal:hover {
   background: linear-gradient(135deg, #F26274 0%, #EF233C 100%) !important;
@@ -1069,7 +1069,7 @@ a {
   z-index: 2;
 }
 .HomePage .Services .Cards .Card {
-  background: transparent;
+  background: rgba(43, 45, 66, 0.25);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1080,11 +1080,6 @@ a {
   transition: all 0.3s ease;
   user-select: none;
   position: relative;
-}
-.HomePage .Services .Cards .Card:hover {
-  background: linear-gradient(135deg, #1E1E24 0%, #030303 100%);
-  cursor: pointer;
-  transform: translateY(-0.5rem);
 }
 .HomePage .Services .Cards .Card::after {
   content: "";
@@ -1104,6 +1099,11 @@ a {
   /*5'*/
   mask-composite: exclude;
   /*5*/
+}
+.HomePage .Services .Cards .Card:hover {
+  background: linear-gradient(135deg, #1E1E24 0%, #030303 100%);
+  cursor: pointer;
+  transform: translateY(-0.5rem);
 }
 .HomePage .Services .Cards .Card .Content {
   display: flex;
@@ -1193,7 +1193,7 @@ a {
 }
 .HomePage .Testimonials .Title p {
   font-size: 1em;
-  color: #444140;
+  color: #2B2D42;
   width: 80%;
 }
 @media (max-width: 790px) {
@@ -1348,7 +1348,7 @@ a {
 }
 .HomePage .LetsTalk .Title p {
   font-size: 1em;
-  color: #444140;
+  color: #2B2D42;
   width: 80%;
 }
 @media (max-width: 790px) {
