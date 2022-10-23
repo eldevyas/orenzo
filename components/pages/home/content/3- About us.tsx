@@ -24,7 +24,7 @@ export default function AboutUs() {
                         Tristique vestibulum nam arcu semper aliquam eget scelerisque. Non pulvinar turpis egestas mattis. Lacus felis morbi ut quam. Lacus cras quis cras cras. Nunc tellus vivamus elit, elementum odio penatibus morbi. Dolor semper curabitur massa tincidunt lacus turpis. Aliquam condimentum turpis dolor massa nulla sit potenti luctus erat.                    
                     </p>
                     <div className="Actions">
-                        <DefaultButton color="Blue" elevation={0} style={{boxShadow: "none"}}>
+                        <DefaultButton bgColor="Blue" elevation={0} style={{boxShadow: "none"}}>
                             Contact us
                         </DefaultButton>
                     </div>

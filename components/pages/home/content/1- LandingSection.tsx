@@ -59,7 +59,7 @@ export default function LandingSection() {
         <div className="LandingSection">
             <div className="Text">
                 <h1 className="Title">
-                    <span className="SpanHighlightBlue">Measurable</span> & <span className="SpanHighlightRed">Effective</span> Results For Customers<span className="colorDot" color="red">.</span>
+                    <span className="SpanHighlightBlue">Measurable</span> & <span className="SpanHighlightRed">Effective</span> Results For Customers<span className="colorDot" bgColor="red">.</span>
                 </h1>
 
                 <p className="Description">
@@ -67,11 +67,11 @@ export default function LandingSection() {
                 </p>
 
                 <div className="Actions">
-                    <DefaultButton color="Red" elevation={0} style={{boxShadow: "none"}}>
+                    <DefaultButton bgColor="Red" elevation={0} style={{boxShadow: "none"}}>
                         Get a quote
                     </DefaultButton>
 
-                    <IconTextButton color="Red" icon={<ExpandCircleDownIcon/>}>
+                    <IconTextButton bgColor="Red" icon={<ExpandCircleDownIcon/>}>
                         Learn More
                     </IconTextButton>
                 </div>

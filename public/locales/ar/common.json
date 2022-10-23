@@ -1,0 +1,39 @@
+{
+    "home": {
+        "head": {
+            "title": "Orenzo - Digital Agency",
+            "meta": {
+                "description": "Orenzo - Digital Agency"
+            }
+        },
+        "content": {
+            "LandingSection": {
+                "title": "Measurable & Effective Results For Customers",
+                "description": "Our creative team is focused on stunning and results driven solutions for small to medium businesses all over the world.",
+                "buttons": {
+                    "primary": "Get a quote",
+                    "secondary": "Learn More"
+                }
+            }
+        }
+    },
+    "Services": {
+        "head": {
+            "title": "Orenzo - خدمات",
+            "meta": {
+                "description": "Orenzo - الوكالة الرقمية"
+            }
+        },
+        "content": {
+            "testing": {
+                "title": "هذا هو العنوان العربي",
+                "description": "أنت الآن تستعرض هذه الصفحة باللغة العربية🚀",
+                "buttons": {
+                    "English": "English Language",
+                    "Arabic": "اللغة العربية",
+                    "French": "Langue Française"
+                }
+            }
+        }
+    }
+}

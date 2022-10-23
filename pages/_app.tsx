@@ -3,7 +3,17 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import NextNProgress from "nextjs-progressbar";
 
+import { useRouter } from "next/router";
+import { appWithTranslation } from 'next-i18next';
+
+
+
+
+
+
 function MyApp({ Component, pageProps }: AppProps) {
+    const { locale } = useRouter();
+
     return (
         <>
             <Head>
@@ -32,4 +42,4 @@ function MyApp({ Component, pageProps }: AppProps) {
     )
 }
 
-export default MyApp
+export default appWithTranslation(MyApp)

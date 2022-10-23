@@ -18,7 +18,7 @@ export default function Footer() {
                             A ac mus sem in ullamcorper. Integer leo pellentesque tempor ac enim gravida dui. Netus eget nullam volutpat faucibus diam cras euismod. In blandit at magna libero, tellus eleifend.
                         </p>
 
-                        <DefaultButton color="Red">
+                        <DefaultButton bgColor="Red">
                             Contact us
                         </DefaultButton>
                     </div>

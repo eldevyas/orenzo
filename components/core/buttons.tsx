@@ -4,9 +4,11 @@ import Button from '@mui/material/Button';
 
 
 function DefaultButton(props: any) {
+    var {bgColor, ...other} = props;
+
     return(
         <>
-            <Button variant="contained" className={"DefaultButton" + " " + props.color}>
+            <Button variant="contained" className={"DefaultButton" + " " + props.bgColor} {...other}>
                 {props.children}
             </Button>
         </>
@@ -14,9 +16,10 @@ function DefaultButton(props: any) {
 }
 
 function IconTextButton(props: any) {
+    var {bgColor, ...other} = props;
     return (
         <>
-            <Button variant="text" className={"IconTextButton" + " " + props.color} startIcon={props.icon}>
+            <Button variant="text" className={"IconTextButton" + " " + props.bgColor} startIcon={props.icon} {...other}>
                 { props.children }
             </Button>
         </>
@@ -25,9 +28,11 @@ function IconTextButton(props: any) {
 
 
 function OutlinedButton(props: any) {
+    var {bgColor, ...other} = props;
+
     return (
         <>
-            <Button variant="outlined" className={"OutlinedButton" + " " + props.color}>
+            <Button variant="outlined" className={"OutlinedButton" + " " + props.bgColor} {...other}>
                 {props.children}
             </Button>
         </>

@@ -67,7 +67,7 @@ export default function LetsTalk() {
                 </div>
 
                 <div className="Buttons">
-                    <OutlinedButton color="red">
+                    <OutlinedButton bgColor="red">
                         Make an inquiry
                     </OutlinedButton>
                 </div>
