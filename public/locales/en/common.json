@@ -8,7 +8,7 @@
         },
         "content": {
             "LandingSection": {
-                "title": "Measurable & Effective Results For Customers",
+                "title": "<span className='SpanHighlightBlue'>Measurable</span> & <span className='SpanHighlightRed'>Effective</span> Results For Customers<span className='colorDot' bgColor='red'>.</span>",
                 "description": "Our creative team is focused on stunning and results driven solutions for small to medium businesses all over the world.",
                 "buttons": {
                     "primary": "Get a quote",

@@ -37,13 +37,13 @@ export default function ServicesPage() {
 
                 <Stack direction="row" spacing={2}>
                     <DefaultButton bgColor="Red" onClick= {() => {changeLocale("en")} }>
-                        English Locale
+                        {t('Services.content.testing.buttons.English')}
                     </DefaultButton>
                     <DefaultButton bgColor="Black" onClick= {() => {changeLocale("ar")} }>
-                        Arabic Locale
+                        {t('Services.content.testing.buttons.Arabic')}
                     </DefaultButton>
                     <DefaultButton bgColor="Blue" onClick= {() => {changeLocale("fr")} }>
-                        French Locale
+                        {t('Services.content.testing.buttons.French')}
                     </DefaultButton>
                 </Stack>
             </Stack>

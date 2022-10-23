@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
-
+import SelectLocal from './utils/SelectLocal';
 
 
 
@@ -45,6 +43,8 @@ export default function DesktopHeader(props: any) {
                         </ActiveButton>
                     ))
                 }
+
+                <SelectLocal/>
 
                 <Button variant="contained" className="ActionButton">
                     Contact

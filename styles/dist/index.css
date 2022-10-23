@@ -28,7 +28,7 @@ a {
 * {
   padding: 0;
   margin: 0;
-  font-family: Poppins, Cairo;
+  font-family: Poppins, Cairo, sans-serif;
   box-sizing: border-box;
 }
 
@@ -295,6 +295,7 @@ a {
   align-items: center;
   padding: 2.5vh 10vw;
   padding: 5vh 10vw;
+  z-index: 100;
 }
 .NavBar .Logo {
   width: auto;
@@ -351,6 +352,50 @@ a {
   box-shadow: none;
   border-radius: 1rem;
   padding: 0.5rem 1rem;
+}
+.NavBar .Navigation .SelectSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.NavBar .Navigation .SelectSection .NavButton {
+  width: 100%;
+}
+.NavBar .Navigation .SelectSection .ToggleGroup {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  top: 100%;
+  background: #FFFFFF;
+}
+.NavBar .Navigation .SelectSection .ToggleGroup .ToggleButton {
+  background-color: transparent;
+  color: rgba(43, 45, 66, 0.75);
+  font-family: inherit;
+  text-transform: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+.NavBar .Navigation .SelectSection .ToggleGroup .ToggleButton svg {
+  height: 15px;
+  width: auto;
+  margin-right: 0.5rem;
+}
+.NavBar .Navigation .SelectSection .ToggleGroup .ToggleButton:not(last-child) {
+  margin-right: 1rem;
+}
+.NavBar .Navigation .SelectSection .ToggleGroup .ToggleButton:hover {
+  background-color: rgba(43, 45, 66, 0.05);
+}
+.NavBar .Navigation .SelectSection .ToggleGroup .ToggleButton:active {
+  background-color: transparent;
+  color: rgba(43, 45, 66, 0.5);
 }
 
 .NavBar.Mobile {

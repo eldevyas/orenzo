@@ -3,9 +3,10 @@ import { DefaultButton, IconTextButton } from "../../../core/buttons";
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import { motion } from "framer-motion";
 import zIndex from "@material-ui/core/styles/zIndex";
-
+import { Trans, useTranslation } from 'react-i18next'
 
 export default function LandingSection() {
+    const { t } = useTranslation('common');
 
     const Man = {
         initial: { opacity: 0, y: 100},
@@ -16,8 +17,6 @@ export default function LandingSection() {
         initial: { opacity: 1, y: 10},
         animate: {  opacity: 1, y: [0, 10, -5, 5, 0]}
     }
-
-
 
     const duration = 1.2;
 
@@ -59,7 +58,13 @@ export default function LandingSection() {
         <div className="LandingSection">
             <div className="Text">
                 <h1 className="Title">
-                    <span className="SpanHighlightBlue">Measurable</span> & <span className="SpanHighlightRed">Effective</span> Results For Customers<span className="colorDot" bgColor="red">.</span>
+                    <Trans 
+                    t={t} 
+                    i18nKey="home.content.LandingSection.title"
+                    defaults="<span className='SpanHighlightBlue'>Measurable</span> & <span className='SpanHighlightRed'>Effective</span> Results For Customers<span className='colorDot' bgColor='red'>.</span>"
+                    >
+                        <span className="SpanHighlightBlue">Measurable</span> & <span className="SpanHighlightRed">Effective</span> Results For Customers<span className="colorDot" bgColor="red">.</span>
+                    </Trans>
                 </h1>
 
                 <p className="Description">

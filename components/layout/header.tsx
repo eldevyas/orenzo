@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import DesktopHeader from './imports/DesktopHeader';
 import MobileHeader from './imports/MobileHeader';
 
+
 const NavigationLogo = "";
 const NavigationLinks = [
     {
