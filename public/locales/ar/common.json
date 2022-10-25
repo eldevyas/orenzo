@@ -18,7 +18,7 @@
         },
         "content": {
             "LandingSection": {
-                "title": "نتائج<Keyword1>فعالة</Keyword1> و <Keyword2>قابلة</Keyword2> للقياس للعملاء<RedDot>.</RedDot>",
+                "title": "نتائج<RedSpan>فعالة</RedSpan> و <BlueSpan>قابلة</BlueSpan> للقياس للعملاء<RedDot>.</RedDot>",
                 "description": "يركز فريقنا الإبداعي على الحلول المذهلة والمدفوعة بالنتائج للشركات الصغيرة والمتوسطة في جميع أنحاء العالم.",
                 "buttons": {
                     "primary": "إقتبس",

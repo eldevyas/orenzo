@@ -18,7 +18,7 @@
         },
         "content": {
             "LandingSection": {
-                "title": "Des résultats <Keyword1>Mesurables</Keyword1> & <Keyword2>Efficaces</Keyword2> pour les clients<RedDot>.</RedDot>",
+                "title": "Des résultats <RedSpan>Mesurables</RedSpan> & <BlueSpan>Efficaces</BlueSpan> pour les clients<RedDot>.</RedDot>",
                 "description": "Notre équipe créative se concentre sur des solutions étonnantes et axées sur les résultats pour les petites et moyennes entreprises du monde entier.",
                 "buttons": {
                     "primary": "Obtenir un devis",

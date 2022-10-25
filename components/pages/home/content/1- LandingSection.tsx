@@ -63,8 +63,8 @@ export default function LandingSection() {
                 <Trans 
                 i18nKey="home.content.LandingSection.title"
                 components={{
-                    Keyword1: <span className="SpanHighlightRed"/>,
-                    Keyword2: <span className="SpanHighlightBlue"/>,
+                    RedSpan: <span className="SpanHighlightRed"/>,
+                    BlueSpan: <span className="SpanHighlightBlue"/>,
                     RedDot: <span className="colorDot" color="red"/>
                 }} 
                 />

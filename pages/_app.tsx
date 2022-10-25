@@ -43,4 +43,4 @@ function MyApp({ Component, pageProps }: AppProps) {
     )
 }
 
-export default appWithTranslation(withRoot(MyApp))
+export default withRoot(appWithTranslation(MyApp))

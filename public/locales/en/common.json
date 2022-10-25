@@ -18,12 +18,23 @@
         },
         "content": {
             "LandingSection": {
-                "title": "<Keyword1>Measurable</Keyword1> & <Keyword2>Effective</Keyword2> Results For Customers<RedDot>.</RedDot>",
+                "title": "<RedSpan>Measurable</RedSpan> & <BlueSpan>Effective</BlueSpan> Results For Customers<RedDot>.</RedDot>",
                 "description": "Our creative team is focused on stunning and results driven solutions for small to medium businesses all over the world.",
                 "buttons": {
                     "primary": "Get a quote",
                     "secondary": "Learn More"
                 }
+            },
+            "TrustedPartners": {
+                "title": "Our Trusted Partners"
+            },
+            "AboutUs": {
+                "title": "We are <BlueSpan>Experts</BlueSpan> in our field<BlueDot>.</BlueDot>",
+                "description": "Tristique vestibulum nam arcu semper aliquam eget scelerisque. Non pulvinar turpis egestas mattis. Lacus felis morbi ut quam. Lacus cras quis cras cras. Nunc tellus vivamus elit, elementum odio penatibus morbi. Dolor semper curabitur massa tincidunt lacus turpis. Aliquam condimentum turpis dolor massa nulla sit potenti luctus erat.",
+                "button": "Contact us"
+            },
+            "BusinessPerformance": {
+                "title": "We Can Improve <RedSpan>Your Business Performance</RedSpan> And Gain More Customers<RedDot>.</RedDot>"
             }
         }
     },

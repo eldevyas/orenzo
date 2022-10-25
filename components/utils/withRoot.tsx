@@ -16,7 +16,7 @@ const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
 function withRoot(Component: any) {
   function WithRoot(props: any) {
     // JssProvider allows customizing the JSS styling solution.
-    const { i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     return (
       <StylesProvider jss={jss}>
