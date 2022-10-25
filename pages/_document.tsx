@@ -1,7 +1,14 @@
 import React, { useEffect } from 'react';
 import { Html, Head, Main, NextScript } from 'next/document'
 import Router from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
+
+export const getServerSideProps: (locale: any) => any = async ({ locale }) => ({
+    props: {
+        ...(await serverSideTranslations(locale, ['common']))
+    }
+});
 
 
 

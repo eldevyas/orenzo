@@ -33,6 +33,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        gap: 1rem;
         .NavButton {
             background-color: transparent;
             color: rgba($C2, 0.75);
@@ -40,9 +41,6 @@
             text-transform: none;
             border-radius: 1rem;
             padding: 0.5rem 1rem;
-            &:not(last-child) {
-                margin-right: 1rem;
-            }
             &:hover {
                 background-color: rgba($C2, 0.05);
             }
@@ -90,13 +88,11 @@
                     border-radius: 1rem;
                     padding: 0.5rem 1rem;
                     width: 100%;
+                    display: flex;
+                    gap: 0.5rem;
                     svg {
                         height: 15px;
                         width: auto;
-                        margin-right: 0.5rem;
-                    }
-                    &:not(last-child) {
-                        margin-right: 1rem;
                     }
                     &:hover {
                         background-color: rgba($C2, 0.05);

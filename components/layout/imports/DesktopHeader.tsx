@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Button from '@mui/material/Button';
 import { useRouter } from 'next/router';
 import SelectLocal from './utils/SelectLocal';
-
+import { useTranslation } from 'react-i18next'
 
 
 function ActiveButton({ children, href }: {children: string; href: string}) {
@@ -28,7 +28,26 @@ function ActiveButton({ children, href }: {children: string; href: string}) {
 }
 
 export default function DesktopHeader(props: any) {
-    let Links: any = props.Links;
+    const {t} = useTranslation('common')
+
+    let Links: {title: string, href: string}[] = [
+        {
+            title: t('header.links.home'),
+            href: "/"
+        },
+        {
+            title: t('header.links.services'),
+            href: "/services"
+        },
+        {
+            title: t('header.links.portfolio'),
+            href: "/portfolio"
+        },
+        {
+            title: t('header.links.about'),
+            href: "/about"
+        }
+    ];
 
     return (
         <div className="NavBar Desktop">
@@ -44,10 +63,10 @@ export default function DesktopHeader(props: any) {
                     ))
                 }
 
-                <SelectLocal/>
+                <SelectLocal data-text={t('header.links.language')}/>
 
                 <Button variant="contained" className="ActionButton">
-                    Contact
+                    {t('header.links.contact')}
                 </Button>
             </div>
         </div>

@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import DesktopHeader from './imports/DesktopHeader';
 import MobileHeader from './imports/MobileHeader';
 
+import { useTranslation } from 'react-i18next'
+
+
 
 const NavigationLogo = "";
 const NavigationLinks = [
@@ -22,8 +25,6 @@ const NavigationLinks = [
         href: "/about"
     }
 ]
-
-
 
 class ResponsiveHeader extends React.Component<{}, { isDesktop: boolean }>  {
     constructor(props: any) {

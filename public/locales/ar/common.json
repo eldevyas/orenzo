@@ -1,4 +1,14 @@
 {
+    "header": {
+        "links": {
+            "home": "الرئيسية",
+            "services": "خدماتنا",
+            "portfolio": "مشاريعنا",
+            "about": "معلومات عنا",
+            "language": "اللغة",
+            "contact": "اتصل بنا"
+        }
+    },
     "home": {
         "head": {
             "title": "Orenzo - Digital Agency",

@@ -321,6 +321,7 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 1rem;
 }
 .NavBar .Navigation .NavButton {
   background-color: transparent;
@@ -329,9 +330,6 @@ a {
   text-transform: none;
   border-radius: 1rem;
   padding: 0.5rem 1rem;
-}
-.NavBar .Navigation .NavButton:not(last-child) {
-  margin-right: 1rem;
 }
 .NavBar .Navigation .NavButton:hover {
   background-color: rgba(43, 45, 66, 0.05);
@@ -381,14 +379,12 @@ a {
   border-radius: 1rem;
   padding: 0.5rem 1rem;
   width: 100%;
+  display: flex;
+  gap: 0.5rem;
 }
 .NavBar .Navigation .SelectSection .ToggleGroup .ToggleButton svg {
   height: 15px;
   width: auto;
-  margin-right: 0.5rem;
-}
-.NavBar .Navigation .SelectSection .ToggleGroup .ToggleButton:not(last-child) {
-  margin-right: 1rem;
 }
 .NavBar .Navigation .SelectSection .ToggleGroup .ToggleButton:hover {
   background-color: rgba(43, 45, 66, 0.05);

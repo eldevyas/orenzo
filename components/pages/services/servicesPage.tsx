@@ -6,7 +6,11 @@ import { useRouter } from 'next/router'
 import { DefaultButton } from "./../../core/buttons"
 import Stack from '@mui/material/Stack';
 import { useTranslation } from 'next-i18next';
+import { createTheme } from '@mui/material/styles';
 
+const theme = createTheme({
+  direction: 'rtl',
+});
 
 export default function ServicesPage() {
     const router = useRouter()

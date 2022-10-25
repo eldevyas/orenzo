@@ -8,7 +8,7 @@ import ExpandLess from '@mui/icons-material/ExpandLess';
 import { useRouter } from 'next/router'
 
 
-export default function VerticalToggleButtons() {
+export default function SelectLocal(props: any) {
     const [isOpen, setOpen] = React.useState(false);
 
     const router = useRouter()
@@ -27,7 +27,7 @@ export default function VerticalToggleButtons() {
     return (
         <div className="SelectSection">
             <Button className="NavButton" variant="text" startIcon={isOpen? <ExpandLessIcon/> : <ExpandMoreIcon/>} onClick={handleClick}>
-                Language
+                { props['data-text'] }
             </Button>
 
             {

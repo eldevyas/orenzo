@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import AboutPage from '../components/pages/about/aboutPage'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 
 const Page: NextPage = () => {
@@ -15,6 +16,13 @@ const Page: NextPage = () => {
         </>
     )
 }
+
+export const getServerSideProps: (locale: any) => any = async ({ locale }) => ({
+    props: {
+        ...(await serverSideTranslations(locale, ['common']))
+    }
+});
+
 
 
 export default Page
