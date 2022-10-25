@@ -8,20 +8,14 @@ import { appWithTranslation, useTranslation } from 'next-i18next';
 
 import { useEffect } from 'react'
 
-import withRoot from '../components/utils/withRoot';
-
-import { useTheme } from '@material-ui/core/styles';
-
 function MyApp({ Component, pageProps }: AppProps) {
     const { locale } = useRouter();
     const { i18n } = useTranslation();
-    const theme = useTheme();
     
     useEffect(() => {
         document.dir = i18n.dir();
         document.body.dir = i18n.dir();
-        theme.direction = i18n.dir();
-    }, [i18n, theme])
+    }, [i18n])
 
     return (
         <>
@@ -43,4 +37,4 @@ function MyApp({ Component, pageProps }: AppProps) {
     )
 }
 
-export default withRoot(appWithTranslation(MyApp))
+export default appWithTranslation(MyApp)
