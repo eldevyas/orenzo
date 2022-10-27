@@ -24,7 +24,7 @@ if (process.env.NODE_ENV !== 'production') {
   }
 }
 
-export const getServerSideProps = async ({ locale }) => ({
+export const getServerSideProps = async ({ locale }: {locale: any}) => ({
     props: {
       ...(await serverSideTranslations(locale, ['common'], null, ['en', 'fr', 'ar'])),
     },
