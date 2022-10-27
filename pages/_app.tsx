@@ -24,6 +24,12 @@ if (process.env.NODE_ENV !== 'production') {
   }
 }
 
+export const getServerSideProps = async ({ locale }) => ({
+    props: {
+      ...(await serverSideTranslations(locale, ['common'], null, ['en', 'fr', 'ar'])),
+    },
+})
+
 let Names: string[] = [
     "Sila", "Sarea", "AdsOut", "InAds", "Pekak", "Bikak", "Denads", "Minden", "JibTraffic", "Dalia"
 ]
