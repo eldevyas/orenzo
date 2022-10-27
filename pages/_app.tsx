@@ -2,6 +2,8 @@ import '/styles/dist/index.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import NextNProgress from "nextjs-progressbar";
+import { Analytics } from '@vercel/analytics/react';
+
 
 import { useRouter } from "next/router";
 
@@ -51,6 +53,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             />
 
             <Component {...pageProps} />
+            <Analytics />
         </>
     )
 }
