@@ -118,7 +118,7 @@
 @mixin OutlinedButton($color) {
     outline-color: $color !important;
     border-color: $color !important;
-    color: $color;
+    color: $color !important;
     border-width: 2.5px !important;
     display: flex;
     flex-direction: row;
@@ -128,10 +128,15 @@
     gap: 10px;
     filter: drop-shadow(0px 100px 80px rgba($color, 0.07)) drop-shadow(0px 41.7776px 33.4221px rgba($color, 0.0503198)) drop-shadow(0px 22.3363px 17.869px rgba($color, 0.0417275)) drop-shadow(0px 12.5216px 10.0172px rgba($color, 0.035)) drop-shadow(0px 6.6501px 5.32008px rgba($color, 0.0282725)) drop-shadow(0px 2.76726px 2.21381px rgba($color, 0.0196802));
     border-radius: 15px;
-    font-family: inherit;
-    font-weight: 700;
+    font-family: inherit !important;
+    font-weight: 700 !important;
+    &:hover,
+    &:active,
+    &:focus {
+        filter: drop-shadow(0px 100px 80px rgba($color, 0.07)) drop-shadow(0px 41.7776px 33.4221px rgba($color, 0.0503198)) drop-shadow(0px 22.3363px 17.869px rgba($color, 0.0417275)) drop-shadow(0px 12.5216px 10.0172px rgba($color, 0.035)) drop-shadow(0px 6.6501px 5.32008px rgba($color, 0.0282725)) drop-shadow(0px 2.76726px 2.21381px rgba($color, 0.0196802));
+    }
 }
 
-.OutlinedButton {
+.OutlinedButton.red {
     @include OutlinedButton($C3);
 }
