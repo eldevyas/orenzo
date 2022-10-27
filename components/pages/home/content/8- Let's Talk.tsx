@@ -1,6 +1,6 @@
 import React from "react"
 import { OutlinedButton } from "../../../core/buttons"
-
+import { Trans, useTranslation } from 'react-i18next'
 
 
 const HandDrawnLineRed = () => {
@@ -54,21 +54,40 @@ const HandDrawnLineTwo = () => {
 
 
 export default function LetsTalk() {
+    const { t } = useTranslation('common')
+
     return(
         <>
             <div className="LetsTalk">
                 <div className="Title">
                     <h1>
-                        Let&apos;s <span className="SpanHighlightRed">Talk</span>?
+                        <Trans 
+                            i18nKey="home.content.Contact.title"
+                            components={{
+                                BlueSpan: <span className="SpanHighlightBlue"/>,
+                                BlueDot: <span className="colorDot" color="blue"/>,
+                                RedSpan: <span className="SpanHighlightRed"/>,
+                                RedDot: <span className="colorDot" color="red"/>,
+                                br: <br/>
+                            }}
+                        />                     
                     </h1>
                     <p>
-                        Non praesent tincidunt vestibulum viverra at sociis. Nisi elit hac eget donec. Elementum purus semper at pretium. Dictum facilisi in et lacus, egestas blandit. Non lectus arcu non iaculis scelerisque. Orci lorem bibendum turpis blandit. Id erat mauris neque luctus augue porta. Et eget dis tellus cum nulla pharetra nibh. Sit hac leo enim ornare.
+                        <Trans 
+                            i18nKey="home.content.Contact.description"
+                            components={{
+                                BlueSpan: <span className="SpanHighlightBlue"/>,
+                                BlueDot: <span className="colorDot" color="blue"/>,
+                                RedSpan: <span className="SpanHighlightRed"/>,
+                                RedDot: <span className="colorDot" color="red"/>
+                            }}
+                        />                     
                     </p>
                 </div>
 
                 <div className="Buttons">
                     <OutlinedButton bgColor="red">
-                        Make an inquiry
+                        { t('home.content.Contact.button') }
                     </OutlinedButton>
                 </div>
 

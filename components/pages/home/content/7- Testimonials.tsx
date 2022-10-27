@@ -1,10 +1,13 @@
 import React from 'react'
 import Rating from '@mui/material/Rating';
 import Image from 'next/image'
+import { Trans, useTranslation } from 'react-i18next'
 
 
 
 function Comment(props: any) {
+    const {t} = useTranslation('common');
+
     return (
         <>
             <div className="Comment">
@@ -13,7 +16,7 @@ function Comment(props: any) {
                 </div>
 
                 <div className="Text">
-                    Sit adipiscing feugiat aliquam elementum tellus iaculis urna, purus pulvinar. Dolor habitasse vitae nulla ut ultrices nulla venenatis, condimentum. In augue sapien sed nascetur tellus. Nec donec eu luctus fermentum pellentesque viverra venenatis, mauris. Sit lobortis gravida vitae ipsum viverra feugiat. Sapien senectus orci.
+                    { t('home.content.Testimonials.comments.C1.comment') }
                 </div>
 
                 <div className="Person">
@@ -22,8 +25,12 @@ function Comment(props: any) {
                     </div>
 
                     <div className="Name">
-                        <div className="FullName">Yassine Chettouch</div>
-                        <div className="Profession">Developer</div>
+                        <div className="FullName">
+                            { t('home.content.Testimonials.comments.C1.name') }
+                        </div>
+                        <div className="Profession">
+                            { t('home.content.Testimonials.comments.C1.profession') }
+                        </div>
                     </div>
                 </div>
             </div>
@@ -42,17 +49,35 @@ function CommentDisplay(props: any) {
 
 
 export default function Testimonials() {
+    const {t} = useTranslation('common');
+
     return (
         <>
             <div className="Testimonials">
                 <div className="Title">
                     <h1>
-                        What Clients <span className="SpanHighlightBlue">Say</span>.
+                        <Trans 
+                            i18nKey="home.content.Testimonials.title"
+                            components={{
+                                BlueSpan: <span className="SpanHighlightBlue"/>,
+                                BlueDot: <span className="colorDot" color="blue"/>,
+                                RedSpan: <span className="SpanHighlightRed"/>,
+                                RedDot: <span className="colorDot" color="red"/>,
+                                br: <br/>
+                            }}
+                        /> 
                     </h1>
                     <p>
-                        Pellentesque nulla in adipiscing lacus curabitur.
-                        <br/>
-                        Proin id pellentesque laoreet pretium sem pharetra. 
+                        <Trans 
+                            i18nKey="home.content.Testimonials.description"
+                            components={{
+                                BlueSpan: <span className="SpanHighlightBlue"/>,
+                                BlueDot: <span className="colorDot" color="blue"/>,
+                                RedSpan: <span className="SpanHighlightRed"/>,
+                                RedDot: <span className="colorDot" color="red"/>,
+                                br: <br/>
+                            }}
+                        /> 
                     </p>
                 </div>
 

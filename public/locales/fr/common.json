@@ -9,6 +9,33 @@
             "contact": "Contact"
         }
     },
+    "footer": {
+        "": {
+            "description": "A ac mus sem in ullamcorper. Integer leo pellentesque tempor ac enim gravida dui. Netus eget nullam volutpat faucibus diam cras euismod. In blandit at magna libero, tellus eleifend.",
+            "button": "Contact us"
+        },
+        "QuickLinks": {
+            "title": "Quick Links",
+            "links": {
+                "home": "Home",
+                "services": "Services",
+                "portfolio": "Portfolio",
+                "about": "About us",
+                "language": "Language",
+                "contact": "Contact"
+            }
+        },
+        "Contact": {
+            "title": "Connect with us",
+            "platforms": {
+                "facebook": "Facebook",
+                "instagram": "Instagram",
+                "twitter": "Twitter",
+                "linkedin": "Linkedin",
+                "youtube": "Youtube"
+            }
+        }
+    },
     "home": {
         "head": {
             "title": "Orenzo - Digital Agency",
@@ -24,6 +51,96 @@
                     "primary": "Obtenir un devis",
                     "secondary": "Savoir plus"
                 }
+            },
+            "TrustedPartners": {
+                "title": "Our Trusted Partners"
+            },
+            "AboutUs": {
+                "title": "We are <BlueSpan>Experts</BlueSpan> in our field<BlueDot>.</BlueDot>",
+                "description": "Tristique vestibulum nam arcu semper aliquam eget scelerisque. Non pulvinar turpis egestas mattis. Lacus felis morbi ut quam. Lacus cras quis cras cras. Nunc tellus vivamus elit, elementum odio penatibus morbi. Dolor semper curabitur massa tincidunt lacus turpis. Aliquam condimentum turpis dolor massa nulla sit potenti luctus erat.",
+                "button": "Contact us"
+            },
+            "BusinessPerformance": {
+                "title": "We Can Improve <RedSpan>Your Business Performance</RedSpan> And Gain More Customers<RedDot>.</RedDot>",
+                "description": "Our creative team is focused on stunning and results driven solutions for small to medium businesses all over the world.",
+                "cards": {
+                    "reach": {
+                        "title": "Reach More Customers",
+                        "description": "Viverra sit nulla natoque consectetur. Convallis aenean cursus ut amet dui blandit sem id. Arcu, ac congue penatibus at. Proin quis commodo consectetur nisl sem nisl sed."
+                    },
+                    "cost": {
+                        "title": "Cost Effective",
+                        "description": "Viverra sit nulla natoque consectetur. Convallis aenean cursus ut amet dui blandit sem id. Arcu, ac congue penatibus at. Proin quis commodo consectetur nisl sem nisl sed."
+                    },
+                    "services": {
+                        "title": "Customized Services",
+                        "description": "Viverra sit nulla natoque consectetur. Convallis aenean cursus ut amet dui blandit sem id. Arcu, ac congue penatibus at. Proin quis commodo consectetur nisl sem nisl sed."
+                    },
+                    "professionals": {
+                        "title": "Trained Professionals",
+                        "description": "Viverra sit nulla natoque consectetur. Convallis aenean cursus ut amet dui blandit sem id. Arcu, ac congue penatibus at. Proin quis commodo consectetur nisl sem nisl sed."
+                    }
+                }
+            },
+            "Services": {
+                "title": "We Do <BlueSpan>Everything</BlueSpan>",
+                "description": "We work hard to provide the best quality for you and we never choose easy and faster ways to quickly break up with your project.",
+                "cards": {
+                    "programming": {
+                        "title": "Design and programming of websites and applications",
+                        "description": "This is with the highest quality in terms of design, coding and various aspects of the site, which provides our customers with modification in the future, as we take into account all the options that the customer may need so that he does not have to design the site again, which may cost money and time"
+                    },
+                    "design": {
+                        "title": "Graphic design and print",
+                        "description": "Design is part of our core personality. We develop new ideas from scratch based on available materials and information provided. We also provide customized solutions to reach our marketing goals. Through design we create the optimal communication picture that will work perfectly for the benefit of your business."
+                    },
+                    "advertising": {
+                        "title": "Advertising campaigns",
+                        "description": "Advertising campaigns improve the reach of a company's website or social media accounts, but they require a lot of experience and good planning to ensure good results."
+                    },
+                    "marketing": {
+                        "title": "E-Marketing",
+                        "description": "We market events and events through all websites and electronic platforms and ensure that the public is informed and attended"
+                    },
+                    "business": {
+                        "title": "Building a business identity",
+                        "description": "The brand identity has become the biggest strategy that generates millions of dollars for entrepreneurs, so it was necessary for the Media Man team to rely on all the foundations in their work to build a harmonious brand identity for clients"
+                    },
+                    "visual": {
+                        "title": "visual production",
+                        "description": "We have a creative team in the fields of writing, directing and editing to provide you with high services, using the latest technical technologies and innovative ideas to produce works that can remain in the public's memory for as long as possible."
+                    }
+                },
+                "more": "Find out more"
+            },
+            "Testimonials": {
+                "title": "What Clients <BlueSpan>Say</BlueSpan>.",
+                "comments": {
+                    "C1": {
+                        "name": "Yassine Chettouch",
+                        "profession": "Developer",
+                        "comment": "Sit adipiscing feugiat aliquam elementum tellus iaculis urna, purus pulvinar. Dolor habitasse vitae nulla ut ultrices nulla venenatis, condimentum. In augue sapien sed nascetur tellus. Nec donec eu luctus fermentum pellentesque viverra venenatis, mauris. Sit lobortis gravida vitae ipsum viverra feugiat. Sapien senectus orci."
+                    },
+                    "C2": {
+                        "name": "Aassim El Kihel",
+                        "profession": "Developer",
+                        "comment": "Sit adipiscing feugiat aliquam elementum tellus iaculis urna, purus pulvinar. Dolor habitasse vitae nulla ut ultrices nulla venenatis, condimentum. In augue sapien sed nascetur tellus. Nec donec eu luctus fermentum pellentesque viverra venenatis, mauris. Sit lobortis gravida vitae ipsum viverra feugiat. Sapien senectus orci."
+                    }
+                }
+            },
+            "Contact": {
+                "title": "Let's <RedSpan>Talk</RedSpan>?",
+                "description": "Non praesent tincidunt vestibulum viverra at sociis. Nisi elit hac eget donec. Elementum purus semper at pretium. Dictum facilisi in et lacus, egestas blandit. Non lectus arcu non iaculis scelerisque. Orci lorem bibendum turpis blandit. Id erat mauris neque luctus augue porta. Et eget dis tellus cum nulla pharetra nibh. Sit hac leo enim ornare.",
+                "button": "Make an inquiry"
+            },
+            "Mailing": {
+                "title": "Receive Exclusive Content in your email",
+                "description": "Get notified about company updates, news and blog posts. We hate spam.",
+                "input": {
+                    "placeholder": "Input your email",
+                    "button": "Subscribe"
+                },
+                "label": "Cancel anytime with one click. All against SPAM!"
             }
         }
     },

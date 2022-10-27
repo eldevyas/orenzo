@@ -1,8 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 import { DefaultButton } from './../../../core/buttons'
+import { Trans, useTranslation } from 'react-i18next'
 
 export default function AboutUs() {
+    const { t } = useTranslation('common');
+
     return (
         <>
             <div className="AboutUs">
@@ -17,15 +20,21 @@ export default function AboutUs() {
                         About us    
                     </div>  
                     <h1 className="Title">
-                        We are <span className="SpanHighlightBlue">Experts</span> in our field<span className="colorDot" color="blue">.</span>
+                    <Trans 
+                        i18nKey="home.content.AboutUs.title"
+                        components={{
+                            BlueSpan: <span className="SpanHighlightBlue"/>,
+                            BlueDot: <span className="colorDot" color="blue"/>
+                        }}
+                    /> 
                     </h1>
 
                     <p className="Description">
-                        Tristique vestibulum nam arcu semper aliquam eget scelerisque. Non pulvinar turpis egestas mattis. Lacus felis morbi ut quam. Lacus cras quis cras cras. Nunc tellus vivamus elit, elementum odio penatibus morbi. Dolor semper curabitur massa tincidunt lacus turpis. Aliquam condimentum turpis dolor massa nulla sit potenti luctus erat.                    
+                        { t('home.content.AboutUs.description') }   
                     </p>
                     <div className="Actions">
                         <DefaultButton bgColor="Blue" elevation={0} style={{boxShadow: "none"}}>
-                            Contact us
+                            { t('home.content.AboutUs.button') }   
                         </DefaultButton>
                     </div>
                 </div>

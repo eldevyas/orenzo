@@ -1252,7 +1252,7 @@ a {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  text-align: left;
+  text-align: start;
   gap: 1rem;
 }
 .HomePage .Services .Cards .Card .Content .Icon {
@@ -1267,7 +1267,7 @@ a {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  text-align: left;
+  text-align: start;
   font-size: 0.9rem;
   margin: 0;
   text-transform: capitalize;

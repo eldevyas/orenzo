@@ -2,9 +2,35 @@ import React from 'react'
 import { DefaultButton } from './../core/buttons'; 
 import { SocialIcon } from 'react-social-icons';
 import Image from 'next/image'
-
+import { useTranslation } from 'next-i18next'
+import Link from 'next/link'
 
 export default function Footer() {
+    const {t} = useTranslation('common')
+
+    let Links: {title: string, href: string}[] = [
+        {
+            title: t('header.links.home'),
+            href: "/"
+        },
+        {
+            title: t('header.links.services'),
+            href: "/services"
+        },
+        {
+            title: t('header.links.portfolio'),
+            href: "/portfolio"
+        },
+        {
+            title: t('header.links.about'),
+            href: "/about"
+        },
+        {
+            title: t('header.links.contact'),
+            href: "/contact"
+        }
+    ];
+
     return (
         <>
             <div className="Footer">
@@ -15,29 +41,33 @@ export default function Footer() {
                         </div>
 
                         <p>
-                            A ac mus sem in ullamcorper. Integer leo pellentesque tempor ac enim gravida dui. Netus eget nullam volutpat faucibus diam cras euismod. In blandit at magna libero, tellus eleifend.
+                            { t('footer.Info.description') }
                         </p>
 
                         <DefaultButton bgColor="Red">
-                            Contact us
+                            { t('footer.Info.button') }
                         </DefaultButton>
                     </div>
 
                     <div className="QuickLinks">
-                        <h4>Quick Links</h4>
+                        <h4>
+                            { t('footer.QuickLinks.title') }
+                        </h4>
 
                         <div className="Links">
-                            <p>Home</p>
-                            <p>Services</p>
-                            <p>Contact</p>
-                            <p>About us</p>
-                            <p>Portfolio</p>
+                            {
+                                Links.map((link, index) => {
+                                    return <Link key={index} href={link.href}>{link.title}</Link>
+                                })
+                            }
                         </div>
                         
                     </div>
 
                     <div className="Connect">
-                        <h4>Connect with us</h4>
+                        <h4>
+                            { t('footer.Contact.title') }
+                        </h4>
 
                         <div className="Socials">
                             <div className="SocialLink">

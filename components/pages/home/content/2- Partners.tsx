@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Image from 'next/image';
+import { Trans, useTranslation } from 'react-i18next'
 
 
 const Companies = [
@@ -12,13 +13,16 @@ const Companies = [
 
 
 export default function TrustedPartners() {
+    const { t } = useTranslation('common');
 
     return (
         <>
             <div className="TrustedPartners">
-                <div className="Title">Our Trusted Partners</div>
+                <div className="Title">
+                    {t('home.content.TrustedPartners.title')}
+                </div>
 
-                <section className="Partners">
+                <section className="Partners" dir="ltr">
                     <div className="Wrapper">
                             {
                                 Companies.map((Partner, index) => {

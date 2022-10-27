@@ -7,6 +7,7 @@ import FastTrack from '/public/img/assets/icons/Fast Track.png'
 import Goal from '/public/img/assets/icons/Goal.png'
 import MoneyBag from '/public/img/assets/icons/Money Bag.png'
 import Users from '/public/img/assets/icons/Users.png'
+import { Trans, useTranslation } from 'react-i18next'
 
 
 
@@ -22,6 +23,7 @@ declare global {
 
 
 const Card = (props: any) => {
+
     return (
     <>
         <div className={"Card " + props.class}>
@@ -45,30 +47,31 @@ const Card = (props: any) => {
 
 
 export default function BusinessPerformance() {
+    const { t } = useTranslation('common');
 
     const Cards: {title: string, description: string, icon: StaticImageData, class: string}[] = [
         {
-            title: "Reach more Customers",
-            description: "Viverra sit nulla natoque consectetur. Convallis aenean cursus ut amet dui blandit sem id. Arcu, ac congue penatibus at. Proin quis commodo consectetur nisl sem nisl sed.",
+            title: t('home.content.BusinessPerformance.cards.reach.title'),
+            description: t('home.content.BusinessPerformance.cards.reach.description'),
             icon: Users,
             class: "Normal"
         },
         {
-            title: "Cost Effective",
-            description: "Viverra sit nulla natoque consectetur. Convallis aenean cursus ut amet dui blandit sem id. Arcu, ac congue penatibus at. Proin quis commodo consectetur nisl sem nisl sed.",
+            title: t('home.content.BusinessPerformance.cards.cost.title'),
+            description: t('home.content.BusinessPerformance.cards.cost.description'),
             icon: MoneyBag,
             class: "Special"
 
         },
         {
-            title: "Customized Services",
-            description: "Viverra sit nulla natoque consectetur. Convallis aenean cursus ut amet dui blandit sem id. Arcu, ac congue penatibus at. Proin quis commodo consectetur nisl sem nisl sed.",
+            title: t('home.content.BusinessPerformance.cards.services.title'),
+            description: t('home.content.BusinessPerformance.cards.services.description'),
             icon: Goal,
             class: "Normal"
         },
         {
-            title: "Trained Professionals",
-            description: "Viverra sit nulla natoque consectetur. Convallis aenean cursus ut amet dui blandit sem id. Arcu, ac congue penatibus at. Proin quis commodo consectetur nisl sem nisl sed.",
+            title: t('home.content.BusinessPerformance.cards.professionals.title'),
+            description: t('home.content.BusinessPerformance.cards.professionals.description'),
             icon: FastTrack,
             class: "Normal"
         }
@@ -79,9 +82,19 @@ export default function BusinessPerformance() {
     return (
         <div className="BusinessPerformance">
             <div className="Title">
-                <h1>We Can Improve <span className="SpanHighlightRed">Your Business Performance</span> And Gain More Customers<span className="colorDot" color="red">.</span></h1>
+                <h1>
+                    <Trans 
+                        i18nKey="home.content.BusinessPerformance.title"
+                        components={{
+                            BlueSpan: <span className="SpanHighlightBlue"/>,
+                            BlueDot: <span className="colorDot" color="blue"/>,
+                            RedSpan: <span className="SpanHighlightRed"/>,
+                            RedDot: <span className="colorDot" color="red"/>
+                        }}
+                    /> 
+                </h1>
                 <p>
-                    Our creative team is focused on stunning and results driven solutions for small to medium businesses all over the world.
+                    {t('home.content.BusinessPerformance.description')}
                 </p>
             </div>
 

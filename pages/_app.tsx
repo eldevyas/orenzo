@@ -4,16 +4,34 @@ import Head from 'next/head'
 import NextNProgress from "nextjs-progressbar";
 
 import { useRouter } from "next/router";
-import { appWithTranslation, useTranslation } from 'next-i18next';
 
 import { useEffect } from 'react'
+
+// next-i18next Configuration
+import { appWithTranslation, i18n, useTranslation } from 'next-i18next';
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import nextI18NextConfig from '../next-i18next.config';
+
+if (process.env.NODE_ENV !== 'production') {
+  if (typeof window !== 'undefined') {
+    const { applyClientHMR } = require('i18next-hmr/client');
+    applyClientHMR(() => i18n);
+  } else {
+    const { applyServerHMR } = require('i18next-hmr/server');
+    applyServerHMR(() => i18n);
+  }
+}
+
+let Names: string[] = [
+    "Sila", "Sarea", "AdsOut", "InAds", "Pekak", "Bikak", "Denads", "Minden", "JibTraffic", "Dalia"
+]
 
 function MyApp({ Component, pageProps }: AppProps) {
     const { locale } = useRouter();
     const { i18n } = useTranslation();
     
     useEffect(() => {
-        document.dir = i18n.dir();
+        document.dir = i18n.dir(); 
         document.body.dir = i18n.dir();
     }, [i18n])
 
@@ -37,4 +55,4 @@ function MyApp({ Component, pageProps }: AppProps) {
     )
 }
 
-export default appWithTranslation(MyApp)
+export default appWithTranslation(MyApp, nextI18NextConfig);
