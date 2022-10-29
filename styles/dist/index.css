@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;700;800;900;1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;700;800;900;1000&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   --C1: #1E1E24;
   --C2: #444140;
@@ -28,7 +28,7 @@ a {
 * {
   padding: 0;
   margin: 0;
-  font-family: Poppins, Cairo, sans-serif;
+  font-family: Outfit, Cairo !important;
   box-sizing: border-box;
 }
 
@@ -1362,10 +1362,9 @@ a {
   min-width: 250px;
   min-height: 250px;
   flex: 1;
-  border-radius: 50px;
-  background: #FFFFFF;
+  background-color: #fff;
   box-shadow: 0px 21px 246px rgba(0, 0, 0, 0.07);
-  border-radius: 50px;
+  border-radius: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1373,6 +1372,7 @@ a {
   padding: 50px;
   gap: 2rem;
   position: relative;
+  transition: all 200ms ease;
 }
 .HomePage .Testimonials .CommentsDisplay .Comment::after {
   content: "";
@@ -1389,6 +1389,47 @@ a {
   mask-composite: exclude;
   pointer-events: none;
 }
+.HomePage .Testimonials .CommentsDisplay .Comment:hover {
+  background-color: #f9f9f9;
+  color: #2B2D42;
+  cursor: pointer;
+  transform: scale(1.01);
+  position: relative;
+}
+.HomePage .Testimonials .CommentsDisplay .Comment:hover::after {
+  content: "";
+  position: absolute;
+  border-radius: 2rem;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  border: 2px solid transparent;
+  background: linear-gradient(to top left, #EF233C, transparent, #17BEBB) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  animation: LoopGradient 4s ease infinite;
+  background-size: 400% 400%;
+}
+@keyframes LoopGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.HomePage .Testimonials .CommentsDisplay .Comment:hover .Button:before {
+  width: 100%;
+}
+.HomePage .Testimonials .CommentsDisplay .Comment:hover .Button:after {
+  width: 100%;
+}
 @media (max-width: 890px) {
   .HomePage .Testimonials .CommentsDisplay .Comment {
     padding: 2rem;
@@ -1400,7 +1441,6 @@ a {
 }
 .HomePage .Testimonials .CommentsDisplay .Comment .Text {
   font-size: 0.85em;
-  color: #1E1E24;
 }
 .HomePage .Testimonials .CommentsDisplay .Comment .Person {
   display: flex;
