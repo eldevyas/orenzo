@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import ServicesPage from '../components/pages/services/servicesPage'
+import ServicesPage from '../../components/pages/services/servicesPage'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Page: NextPage = () => {

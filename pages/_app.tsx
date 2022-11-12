@@ -58,7 +58,6 @@ function MyApp({ Component, pageProps }: AppProps) {
               options={{ showSpinner: false, easing: 'ease', speed: 500 }}
               transformCSS={(css) => {
                 // css is the default css string. You can modify it and return it or return your own css.
-                console.log(css);
                 return <style>{css}</style>;
               }}
             />

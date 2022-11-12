@@ -89,7 +89,6 @@ export default function MobileMenu(props: any) {
                     break;
             }
         }
-
     }
 
     return (
@@ -105,7 +104,7 @@ export default function MobileMenu(props: any) {
                     </Button>
                 </div>
 
-                <div className="Items" ref={Container}>
+                <div className="Items" ref={Container} dir="ltr">
                     {
                         Items.map((Item, index) => {
                             return (
