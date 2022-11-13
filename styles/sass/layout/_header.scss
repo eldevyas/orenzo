@@ -8,7 +8,7 @@
     align-items: center;
     @include GlobalPadding();
     padding: 5vh 10vw;
-    z-index: 100;
+    z-index: 100000;
     .Logo {
         width: auto;
         height: 20px;
@@ -80,6 +80,8 @@
                 height: auto;
                 top: 100%;
                 background: $C5;
+                border-radius: 1rem;
+                z-index: 1000;
                 .ToggleButton {
                     background-color: transparent;
                     color: rgba($C2, 0.75);

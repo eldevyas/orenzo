@@ -15,10 +15,11 @@ a {
 * {
     padding: 0;
     margin: 0;
-    font-family: Outfit, Cairo !important;
+    font-family: Outfit, Cairo, sans-serif !important;
     box-sizing: border-box;
 }
 
+@import './components';
 @mixin GlobalPadding() {
     padding: 2.5vh 10vw;
 }
