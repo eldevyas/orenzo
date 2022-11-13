@@ -1895,9 +1895,17 @@ a {
   width: 80%;
   height: auto;
   padding: 0 0;
-  min-height: 500px;
-  background: linear-gradient(135deg, #F26274 0%, #EF233C 100%);
+  background: transparent;
   border-radius: 2rem;
+  text-align: center;
+  padding: 2rem 0;
+  color: #1E1E24;
+}
+.DesignPage .PageContent .Banner h1 {
+  font-size: 2rem;
+}
+.DesignPage .PageContent .Banner h1:not(:last-child) {
+  margin-bottom: 5rem;
 }
 
 /*# sourceMappingURL=index.css.map */

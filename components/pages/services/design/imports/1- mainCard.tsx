@@ -41,13 +41,16 @@ export default function MainCard(props: any) {
     }
 
     function handleMouseLeave() {
-        x.set(200);
-        y.set(200);
+        x.set(0);
+        y.set(0);
+        DX.set(200);
+        DY.set(200);
     }
 
 
     return (
         <motion.div className="Wrapper"
+        transition={{ type: "spring", stiffness: 100 }}
         style={{
             ...props.style,
             display: "flex",
@@ -61,7 +64,7 @@ export default function MainCard(props: any) {
             <motion.div 
                 ref={cardRef} 
                 className="BigCard"
-                transition={{ type: "spring", stiffness: 100 }}
+                transition={{ type: "spring", stiffness: 1000 }}
                 style= {{
                     rotateX: rotateX,
                     rotateY: rotateY
@@ -87,6 +90,7 @@ export default function MainCard(props: any) {
                     <motion.div 
                     ref={circleRef}
                     className="Highlight"
+                    transition={{ type: "spring", stiffness: 1000 }}
                     style= {{x, y}}
                     />
                 </div>

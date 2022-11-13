@@ -18,6 +18,7 @@ export default function Page() {
                 <Slogan text={SloganText} variant="Light"/>
                 <Services/>
                 <Banner/>
+                <Slogan text={SloganText} variant="Light"/>
             </div>
 
             <Footer/>
