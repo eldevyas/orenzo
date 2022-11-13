@@ -3,6 +3,7 @@ import Footer from "../../../layout/footer";
 import MainCard from "./imports/1- mainCard";
 import Slogan from "../global/Slogan";
 import Services from "./imports/3- Services";
+import Banner from "./imports/4- Banner";
 
 export default function Page() {
 
@@ -16,6 +17,7 @@ export default function Page() {
                 <MainCard/>
                 <Slogan text={SloganText} variant="Light"/>
                 <Services/>
+                <Banner/>
             </div>
 
             <Footer/>

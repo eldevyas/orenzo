@@ -13,26 +13,31 @@ let ImageSources = {
 
 export default function MainCard(props: any) {
     const cardRef = useRef<HTMLInputElement>(null);
+    const circleRef = useRef<HTMLInputElement>(null);
 
-    const x = useMotionValue(200)
-    const y = useMotionValue(200)
+    const DX = useMotionValue(200)
+    const DY = useMotionValue(200)
 
-    const circleX = useSpring(0);
-    const circleY = useSpring(0);
+    const x = useMotionValue(0);
+    const y = useMotionValue(0);
 
-    const Degree = 7.5;
+    const Degree = 5;
 
-    const rotateX = useTransform(y, [0, 400], [Degree, -Degree]);
-    const rotateY = useTransform(x, [0, 400], [-Degree, Degree]);
+    const rotateX = useTransform(DX, [0, 400], [Degree, -Degree]);
+    const rotateY = useTransform(DY, [0, 400], [-Degree, Degree]);
 
     function handleMouse(event: any) {
         const rect = event.currentTarget.getBoundingClientRect();
 
-        x.set(event.clientX - rect.left);
-        y.set(event.clientY - rect.top);
+        DX.set(event.clientX - rect.left);
+        DY.set(event.clientY - rect.top);
 
-        circleX.set((event.clientX - rect.left));
-        circleY.set((event.clientY - rect.top));
+        
+        if (circleRef.current != null) {
+            x.set(event.clientX - rect.left - (circleRef.current.clientWidth / 1.75));
+            y.set(event.clientY - rect.top - (circleRef.current.clientHeight / 2.5));            
+        }
+
     }
 
     function handleMouseLeave() {
@@ -59,8 +64,7 @@ export default function MainCard(props: any) {
                 transition={{ type: "spring", stiffness: 100 }}
                 style= {{
                     rotateX: rotateX,
-                    rotateY: rotateY,
-
+                    rotateY: rotateY
                 }}
                 onMouseMove={handleMouse}
             >
@@ -81,8 +85,9 @@ export default function MainCard(props: any) {
                         <DefaultButton bgColor="White">Read More</DefaultButton>
                     </div>
                     <motion.div 
+                    ref={circleRef}
                     className="Highlight"
-                    style= {{top: circleX + "px", left: circleY + "px"}}
+                    style= {{x, y}}
                     />
                 </div>
 

@@ -1712,6 +1712,7 @@ a {
   width: 80%;
   min-height: 40vh;
   height: auto;
+  user-select: none;
 }
 .DesignPage .PageContent .Wrapper .BigCard {
   width: 100%;
@@ -1782,11 +1783,11 @@ a {
 }
 .DesignPage .PageContent .Wrapper .BigCard .Content .Highlight {
   position: absolute;
-  width: 25%;
-  padding-bottom: 25%;
+  width: 50%;
+  padding-bottom: 50%;
   border-radius: 100%;
   aspect-ratio: 1/1;
-  background: radial-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+  background: radial-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
   z-index: 1001;
   pointer-events: none;
 }
@@ -1844,7 +1845,7 @@ a {
   flex-direction: column;
   gap: 1rem;
   color: white;
-  background-color: #EF233C;
+  background-color: transparent;
   min-height: 100px;
   min-width: 100px;
   height: 100%;
@@ -1889,6 +1890,14 @@ a {
 }
 .DesignPage .PageContent .Services .Card .MiniCard .Text p {
   font-size: 0.8rem;
+}
+.DesignPage .PageContent .Banner {
+  width: 80%;
+  height: auto;
+  padding: 0 0;
+  min-height: 500px;
+  background: linear-gradient(135deg, #F26274 0%, #EF233C 100%);
+  border-radius: 2rem;
 }
 
 /*# sourceMappingURL=index.css.map */

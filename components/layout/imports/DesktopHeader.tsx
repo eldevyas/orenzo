@@ -107,7 +107,7 @@ export default function DesktopHeader(props: any) {
                                 break;
                             case "contact":
                                 return (
-                                    <Button variant="contained" className="ActionButton" onClick={() => { router.push(link.href) } }>
+                                    <Button key={index} variant="contained" className="ActionButton" onClick={() => { router.push(link.href) } }>
                                         {t('header.links.contact')}
                                     </Button>
                                 );
