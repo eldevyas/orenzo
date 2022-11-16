@@ -36,7 +36,7 @@ const ServicesList: {title: string, description: string, image: any}[] = [
 
 export default function Services() {
     return(
-        <div className="Services">
+        <div className="Services" id="services">
             {
                 ServicesList.map((Service, index) => {
                     return (

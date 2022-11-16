@@ -5,6 +5,8 @@ import { DefaultButton } from "./../../../../core/buttons"
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import { width } from "@mui/system";
 import React, { useRef} from 'react'
+import Button from '@mui/material/Button';
+import { useRouter } from "next/router"
 
 let ImageSources = {
     Main: iPad,
@@ -12,6 +14,9 @@ let ImageSources = {
 }
 
 export default function MainCard(props: any) {
+    const router = useRouter();
+
+
     const cardRef = useRef<HTMLInputElement>(null);
     const circleRef = useRef<HTMLInputElement>(null);
 
@@ -23,21 +28,22 @@ export default function MainCard(props: any) {
 
     const Degree = 5;
 
-    const rotateX = useTransform(DX, [0, 400], [Degree, -Degree]);
-    const rotateY = useTransform(DY, [0, 400], [-Degree, Degree]);
+    const rotateX = useTransform(DY, [0, 400], [Degree, -Degree]);
+    const rotateY = useTransform(DX, [0, 400], [-Degree, Degree]);
 
     function handleMouse(event: any) {
-        const rect = event.currentTarget.getBoundingClientRect();
+        if (cardRef.current != null) {
+            const rect = cardRef.current.getBoundingClientRect();
 
-        DX.set(event.clientX - rect.left);
-        DY.set(event.clientY - rect.top);
+            DX.set(event.clientX - rect.left - cardRef.current.clientWidth * 0.30);
+            DY.set(event.clientY - rect.top - cardRef.current.clientWidth * 0);
+            
 
-        
-        if (circleRef.current != null) {
-            x.set(event.clientX - rect.left - (circleRef.current.clientWidth / 1.75));
-            y.set(event.clientY - rect.top - (circleRef.current.clientHeight / 2.5));            
+            if (circleRef.current != null) {
+                x.set(event.clientX - rect.left - (circleRef.current.clientWidth / 1.75));
+                y.set(event.clientY - rect.top - (circleRef.current.clientHeight / 2.5));
+            }
         }
-
     }
 
     function handleMouseLeave() {
@@ -56,7 +62,7 @@ export default function MainCard(props: any) {
             display: "flex",
             placeItems: "center",
             placeContent: "center",
-            perspective: 1000,
+            perspective: 1400,
         }}
         onMouseMove={handleMouse}
         onMouseLeave={handleMouseLeave}
@@ -85,7 +91,7 @@ export default function MainCard(props: any) {
                             <p>Our creative design solutions are for people, not for machines. Yet made by people and machines.</p>
                         </div>
 
-                        <DefaultButton bgColor="White">Read More</DefaultButton>
+                        <DefaultButton bgColor="White" onClick={() => {router.push("#services")}}>Read More</DefaultButton>
                     </div>
                     <motion.div 
                     ref={circleRef}
@@ -93,6 +99,9 @@ export default function MainCard(props: any) {
                     transition={{ type: "spring", stiffness: 1000 }}
                     style= {{x, y}}
                     />
+
+                    <Button variant="contained" className="ClickEffect"/>
+                    
                 </div>
 
             </motion.div>
