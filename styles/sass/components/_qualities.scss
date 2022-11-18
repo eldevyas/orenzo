@@ -1,0 +1,61 @@
+@mixin QualitiesGrid($background, $color) {
+    width: 80%;
+    min-height: 500px;
+    height: auto;
+    background: $background;
+    border-radius: 2rem;
+    color: $C5;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    >.Title {
+        font-size: 2rem;
+        font-weight: 900;
+    }
+    >.Qualities {
+        width: 100%;
+        min-height: 500px;
+        background: transparent;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(15rem, 100%), 1fr));
+        gap: 2rem;
+        >.GridItem {
+            width: auto;
+            min-height: 200px;
+            // background: white;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            .Icon {
+                height: 5rem;
+                width: 5rem;
+                background-color: rgba($color, 0.25);
+                border: 0.15rem solid rgba($color, 0.5);
+                border-radius: 1rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                svg {
+                    color: $color;
+                    font-size: 2.25rem;
+                }
+            }
+            .Text {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                .Title {
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                }
+                .Description {
+                    font-size: 0.75rem;
+                    font-weight: 500;
+                    opacity: 0.75;
+                }
+            }
+        }
+    }
+}

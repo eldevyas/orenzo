@@ -4,6 +4,10 @@ import MainCard from "./imports/1- mainCard";
 import Slogan from "../global/Slogan";
 import Services from "./imports/3- Services";
 import Banner from "./imports/4- Banner";
+import Secret from "./imports/5- Secret";
+import Cases from "./imports/7 - Selected Projects";
+import Process from "./imports/6 - Process";
+import WhyUs from "./imports/8- Why us";
 
 export default function Page() {
 
@@ -19,6 +23,10 @@ export default function Page() {
                 <Services/>
                 <Banner/>
                 <Slogan text={SloganText} variant="Light"/>
+                <Secret/>
+                <Process/>
+                <Cases/>
+                <WhyUs/>
             </div>
 
             <Footer/>

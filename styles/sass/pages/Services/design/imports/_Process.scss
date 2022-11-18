@@ -1,0 +1,50 @@
+.Process {
+    width: 80%;
+    min-height: 500px;
+    border-radius: 2rem;
+    background: linear-gradient(90deg, #E6E9F0 0%, #EEF1F5 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 3rem;
+    .Title {
+        font-weight: bold;
+        font-size: 2rem;
+        color: #505050;
+    }
+    .Steps {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 30px;
+        width: 100%;
+        .Step {
+            background: #FFFFFF;
+            width: 100%;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            gap: 1rem;
+            .Title {
+                font-size: 1.65rem;
+                font-weight: bold;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+            .Description {
+                font-size: 1rem;
+                font-weight: 500;
+                max-width: 350px;
+                text-align: center;
+                opacity: 0.5;
+            }
+        }
+    }
+}

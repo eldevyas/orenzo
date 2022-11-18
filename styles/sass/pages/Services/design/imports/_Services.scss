@@ -29,14 +29,14 @@
             margin-top: auto;
             margin-bottom: auto;
             position: absolute;
-            width: 65%;
+            height: 100%;
             aspect-ratio: 1/1 !important;
             border-radius: 100%;
             background: $G5;
             &:after {
                 content: "";
                 display: block;
-                padding-bottom: 100%;
+                padding-left: 100%;
             }
         }
         .MiniCard {

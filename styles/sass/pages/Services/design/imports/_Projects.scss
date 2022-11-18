@@ -1,0 +1,5 @@
+.SelectedProjects {
+    $BG: linear-gradient(90deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    $Color: $C5;
+    @include Cases($BG, $Color);
+}
