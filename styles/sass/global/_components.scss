@@ -1,3 +1,13 @@
+//  Button Styles
+@import "./components/buttons";
+// Qualities Grid - Container with a title and a Grid of icons with some text.
+@import "./components/qualities";
+// Selected Projects Section 
+@import "./components/cases";
+// Let's Talk Section Component - Reusable
+@import "./components/LetsTalk";
+// Frequently Asked Questions
+@import "./components/FAQ";
 @mixin BigCard() {
     width: 100%;
     height: 100%;

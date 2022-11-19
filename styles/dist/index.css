@@ -33,82 +33,6 @@ a {
   box-sizing: border-box;
 }
 
-.Slogan {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.05);
-  padding: 2rem 2rem;
-  color: rgba(0, 0, 0, 0.5);
-  width: 80%;
-  border-radius: 2rem;
-  font-weight: 700;
-  font-size: 0.9rem;
-}
-
-*::-webkit-scrollbar {
-  width: 10px;
-  /* width of the entire scrollbar */
-}
-*::-webkit-scrollbar-track {
-  background: transparent;
-  background: transparent;
-  /* color of the tracking area */
-}
-*::-webkit-scrollbar-thumb {
-  background: rgba(43, 45, 66, 0.2);
-  border-radius: 200px;
-}
-*::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #F26274 0%, #EF233C 100%);
-}
-
-.SpanHighlightBlue {
-  position: relative;
-  color: #17BEBB;
-  z-index: 1;
-  font-weight: 900;
-  white-space: nowrap;
-}
-.SpanHighlightBlue:before {
-  pointer-events: none;
-  z-index: 0;
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  background-color: rgba(23, 190, 187, 0.15);
-  clip-path: polygon(69% 3%, 100% 14%, 100% 52%, 100% 100%, 71% 91%, 32% 90%, 0 100%, 0 19%, 30% 4%);
-}
-
-.SpanHighlightRed {
-  position: relative;
-  color: #EF233C;
-  z-index: 1;
-  font-weight: 900;
-  white-space: nowrap;
-}
-.SpanHighlightRed:before {
-  pointer-events: none;
-  z-index: 0;
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  background-color: rgba(239, 35, 60, 0.15);
-  clip-path: polygon(69% 3%, 100% 14%, 100% 52%, 100% 100%, 71% 91%, 32% 90%, 0 100%, 0 19%, 30% 4%);
-}
-
-.colorDot[color=red] {
-  color: #EF233C;
-}
-
-.colorDot[color=blue] {
-  color: #17BEBB;
-}
-
 .DefaultButton {
   background: linear-gradient(135deg, #444140 0%, #1D1D1D 100%);
   color: #FFFFFF;
@@ -299,6 +223,82 @@ a {
 }
 .OutlinedButton.red:hover, .OutlinedButton.red:active, .OutlinedButton.red:focus {
   filter: drop-shadow(0px 100px 80px rgba(239, 35, 60, 0.07)) drop-shadow(0px 41.7776px 33.4221px rgba(239, 35, 60, 0.0503198)) drop-shadow(0px 22.3363px 17.869px rgba(239, 35, 60, 0.0417275)) drop-shadow(0px 12.5216px 10.0172px rgba(239, 35, 60, 0.035)) drop-shadow(0px 6.6501px 5.32008px rgba(239, 35, 60, 0.0282725)) drop-shadow(0px 2.76726px 2.21381px rgba(239, 35, 60, 0.0196802));
+}
+
+.Slogan {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 2rem 2rem;
+  color: rgba(0, 0, 0, 0.5);
+  width: 80%;
+  border-radius: 2rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  /* width of the entire scrollbar */
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+  background: transparent;
+  /* color of the tracking area */
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(43, 45, 66, 0.2);
+  border-radius: 200px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #F26274 0%, #EF233C 100%);
+}
+
+.SpanHighlightBlue {
+  position: relative;
+  color: #17BEBB;
+  z-index: 1;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.SpanHighlightBlue:before {
+  pointer-events: none;
+  z-index: 0;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: rgba(23, 190, 187, 0.15);
+  clip-path: polygon(69% 3%, 100% 14%, 100% 52%, 100% 100%, 71% 91%, 32% 90%, 0 100%, 0 19%, 30% 4%);
+}
+
+.SpanHighlightRed {
+  position: relative;
+  color: #EF233C;
+  z-index: 1;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.SpanHighlightRed:before {
+  pointer-events: none;
+  z-index: 0;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: rgba(239, 35, 60, 0.15);
+  clip-path: polygon(69% 3%, 100% 14%, 100% 52%, 100% 100%, 71% 91%, 32% 90%, 0 100%, 0 19%, 30% 4%);
+}
+
+.colorDot[color=red] {
+  color: #EF233C;
+}
+
+.colorDot[color=blue] {
+  color: #17BEBB;
 }
 
 .NavBar {
@@ -2126,6 +2126,110 @@ a {
 }
 .DesignPage .PageContent .SelectedProjects .Projects .Project:hover::before {
   opacity: 1;
+}
+.DesignPage .PageContent .LetsTalk {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2.5vh 10vw;
+  padding-bottom: 5rem;
+}
+.DesignPage .PageContent .LetsTalk .Title {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  margin-bottom: 5rem;
+  color: #1E1E24;
+  z-index: 2;
+}
+.DesignPage .PageContent .LetsTalk .Title h1 {
+  font-size: 2em;
+}
+@media (max-width: 790px) {
+  .DesignPage .PageContent .LetsTalk .Title h1 {
+    font-size: 1.5em;
+  }
+}
+.DesignPage .PageContent .LetsTalk .Title p {
+  font-size: 1em;
+  color: #2B2D42;
+  width: 80%;
+}
+@media (max-width: 790px) {
+  .DesignPage .PageContent .LetsTalk .Title p {
+    font-size: 0.85em;
+    width: 100%;
+  }
+}
+.DesignPage .PageContent .LetsTalk .Buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 1rem;
+}
+.DesignPage .PageContent .LetsTalk .HandDrawnLines {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.DesignPage .PageContent .LetsTalk .HandDrawnLines .RedLine {
+  position: absolute;
+  left: -5%;
+  transform: rotateZ(180deg);
+  width: 20vw;
+  height: auto;
+}
+.DesignPage .PageContent .LetsTalk .HandDrawnLines .BlueLine {
+  position: absolute;
+  right: -5%;
+  transform: rotateZ(0deg);
+  width: 20vw;
+  height: auto;
+}
+.DesignPage .PageContent .LetsTalk .HandDrawnLines .BottomBlueLine {
+  position: absolute;
+  left: -5%;
+  bottom: 0;
+  transform: rotateZ(0deg);
+  width: 30vw;
+  height: auto;
+  opacity: 25%;
+}
+.DesignPage .PageContent .FAQ {
+  min-height: 500px;
+  width: 80%;
+  border-radius: 2rem;
+}
+.DesignPage .PageContent .FAQ .Title {
+  padding: 2rem;
+  font-weight: bold;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+.DesignPage .PageContent .FAQ .List {
+  width: 100%;
+  min-height: 500px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  transition: all 0.5s ease-in-out;
 }
 
 /*# sourceMappingURL=index.css.map */

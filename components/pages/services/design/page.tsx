@@ -8,6 +8,8 @@ import Secret from "./imports/5- Secret";
 import Cases from "./imports/7 - Selected Projects";
 import Process from "./imports/6 - Process";
 import WhyUs from "./imports/8- Why us";
+import LetsTalk from "../../home/content/8- Let's Talk";
+import FAQ from "../global/FAQ";
 
 export default function Page() {
 
@@ -27,6 +29,8 @@ export default function Page() {
                 <Process/>
                 <Cases/>
                 <WhyUs/>
+                <LetsTalk/>
+                <FAQ/>
             </div>
 
             <Footer/>

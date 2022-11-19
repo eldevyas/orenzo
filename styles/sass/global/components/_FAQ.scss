@@ -1,0 +1,22 @@
+@mixin FAQ() {
+    // background: lightgray;
+    min-height: 500px;
+    width: 80%;
+    border-radius: 2rem;
+    .Title {
+        padding: 2rem;
+        font-weight: bold;
+        font-size: 2rem;
+        color: rgba(#000, 50%);
+    }
+    .List {
+        width: 100%;
+        min-height: 500px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        transition: all 0.5s ease-in-out;
+    }
+}

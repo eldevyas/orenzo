@@ -1,0 +1,81 @@
+@mixin LetsTalk() {
+    width: 100%;
+    height: auto;
+    // min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @include GlobalPadding;
+    padding-bottom: 5rem;
+    .Title {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+        margin-bottom: 5rem;
+        color: $C1;
+        z-index: 2;
+        h1 {
+            font-size: 2em;
+            @media (max-width: 790px) {
+                font-size: 1.5em;
+            }
+        }
+        p {
+            font-size: 1em;
+            color: $C2;
+            width: 80%;
+            @media (max-width: 790px) {
+                font-size: 0.85em;
+                width: 100%;
+            }
+        }
+    }
+    .Buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 1rem;
+    }
+    .HandDrawnLines {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // background: $G3;
+        z-index: -1;
+        .RedLine {
+            position: absolute;
+            left: -5%;
+            transform: rotateZ(180deg);
+            width: 20vw;
+            height: auto;
+        }
+        .BlueLine {
+            position: absolute;
+            right: -5%;
+            transform: rotateZ(0deg);
+            width: 20vw;
+            height: auto;
+        }
+        .BottomBlueLine {
+            position: absolute;
+            left: -5%;
+            bottom: 0;
+            transform: rotateZ(0deg);
+            width: 30vw;
+            height: auto;
+            opacity: 25%;
+        }
+    }
+}
