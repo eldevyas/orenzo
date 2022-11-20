@@ -1,6 +1,7 @@
 .NavBar {
     width: 100%;
     height: auto;
+    position: relative;
     // max-height: 10vh;
     background: transparent;
     display: flex;
@@ -103,6 +104,10 @@
                         background-color: transparent;
                         color: rgba($C2, 0.5);
                     }
+                    &.Active {
+                        background: $G4;
+                        color: rgba($C5, 0.75);
+                    }
                 }
             }
         }
@@ -151,7 +156,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 100000;
     overflow: hidden;
     .MobileMenu {
         display: flex;
@@ -217,6 +222,45 @@
                 z-index: 0;
                 transition: all 100ms ease;
                 filter: brightness(0.25);
+            }
+        }
+    }
+}
+
+.NavBar[data-theme="dark"] {
+    background-color: black;
+    .Navigation {
+        .NavButton {
+            color: rgba(#fff, 75%);
+            &.Active {
+                color: rgba($C3, 75%);
+            }
+        }
+        .ActionButton {
+            background-color: rgba($C3, 0.15);
+            color: var(--C3);
+        }
+        .SelectSection {
+            .NavButton {
+                width: 100%;
+            }
+            .ToggleGroup {
+                background: $C1;
+                .ToggleButton {
+                    background-color: transparent;
+                    color: rgba($C5, 0.75);
+                    &:hover {
+                        background-color: rgba($C5, 0.05);
+                    }
+                    &:active {
+                        background-color: transparent;
+                        color: rgba($C5, 0.5);
+                    }
+                    &.Active {
+                        background: $G3;
+                        color: rgba($C5, 0.75);
+                    }
+                }
             }
         }
     }

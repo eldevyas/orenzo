@@ -1,4 +1,6 @@
 .Footer {
+    position: relative;
+    z-index: 10000;
     width: 100%;
     // background-color: #000;
     display: flex;
@@ -111,6 +113,28 @@
         // background-color: red;
         p {
             font-size: 0.8rem;
+        }
+    }
+}
+
+.Footer[data-theme="dark"] {
+    .Content {
+        .Identity {
+            p {
+                color: rgba(#fff, 50%);
+            }
+        }
+        .QuickLinks {
+            color: rgba(#fff, 100%);
+            .Links {
+                color: rgba(#fff, 50%);
+            }
+        }
+        .Connect {
+            color: rgba(#fff, 100%);
+            .Socials {
+                color: rgba(#fff, 50%);
+            }
         }
     }
 }

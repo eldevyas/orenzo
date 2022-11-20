@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 import Link from 'next/link'
 
-export default function Footer() {
+export default function Footer(props: any) {
     const {t} = useTranslation('common')
 
     let Links: {title: string, href: string}[] = [
@@ -33,11 +33,11 @@ export default function Footer() {
 
     return (
         <>
-            <div className="Footer">
+            <div className="Footer" {...props}>
                 <div className="Content">
                     <div className="Identity">
                         <div className="Logo">
-                            <Image src="/img/logo.png" alt="Logo" layout="fill" objectFit='cover'/>
+                            <Image src={ props["data-theme"] === "dark" ? "/img/white-logo.png" : "/img/logo.png" } alt="Logo" layout="fill" objectFit='cover'/>
                         </div>
 
                         <p>

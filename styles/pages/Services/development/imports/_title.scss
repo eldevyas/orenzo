@@ -1,0 +1,116 @@
+.Title:first-of-type {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    padding: 5rem 0rem;
+    height: auto;
+    position: relative;
+    z-index: 0;
+    .NavBar {
+        position: relative;
+        z-index: 10;
+    }
+    .Text {
+        width: 80%;
+        height: min-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        z-index: 2;
+        .Name {
+            height: auto !important;
+            width: 100%;
+            color: #fff;
+            text-align: center;
+            font-weight: 900;
+            font-size: 5rem;
+            @media (max-width: 1200px) {
+                font-size: 3rem;
+            }
+            @media (max-width: 876px) {
+                font-size: 2.5rem;
+            }
+        }
+        .Description {
+            font-size: clamp(1.5rem, 1rem, 1rem);
+            font-size: 1.5rem;
+            @media (max-width: 1200px) {
+                font-size: 1.25rem;
+            }
+            @media (max-width: 876px) {
+                font-size: 1rem;
+            }
+        }
+    }
+    .Image {
+        width: 120%;
+        height: auto;
+        z-index: 1;
+        position: relative;
+        direction: ltr;
+        max-height: 270vh;
+        margin-top: -30rem;
+        @media (max-width: 1200px) {
+            max-height: 200vh;
+            margin-top: -25rem;
+        }
+        @media (max-width: 876px) {
+            max-height: 125vh;
+            margin-top: -5rem;
+        }
+        svg {
+            position: relative;
+            width: 155%;
+            height: auto;
+            margin: 0 auto;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.Potential {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    padding: 5rem 0rem;
+    height: auto;
+    position: relative;
+    z-index: 0;
+    gap: 2rem;
+    text-transform: capitalize;
+    .Name {
+        height: auto !important;
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        font-weight: 900;
+        font-size: 5rem;
+        @media (max-width: 1200px) {
+            font-size: 3rem;
+        }
+        @media (max-width: 876px) {
+            font-size: 2.5rem;
+        }
+    }
+    .Description {
+        font-size: clamp(1.5rem, 1rem, 1rem);
+        font-size: 1.5rem;
+        text-align: center;
+        opacity: 50%;
+        @media (max-width: 1200px) {
+            font-size: 1.25rem;
+        }
+        @media (max-width: 876px) {
+            font-size: 1rem;
+        }
+    }
+}

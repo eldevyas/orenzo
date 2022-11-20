@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { DefaultButton } from "../../../core/buttons";
 
 function Project(props: {name: string, description: string, color: string}) {
     const Background = 'url("/img/assets/brands/backgrounds/' + props.name + '.png")';
@@ -16,6 +17,8 @@ function Project(props: {name: string, description: string, color: string}) {
                     <div className="Description">
                         {Description}
                     </div>
+
+                    <DefaultButton bgColor={"White"}> Learn more </DefaultButton>
                 </div>
             </div>
         </>
@@ -35,6 +38,8 @@ export default function SelectedProjects(props: any) {
                     <div className="Description">
                         { props.description }
                     </div>
+
+
                 </div>
 
                 <div className="Projects">

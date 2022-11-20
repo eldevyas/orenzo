@@ -1,17 +1,17 @@
 import Header from "../../../layout/header";
 import Footer from "../../../layout/footer";
+import Title from "./imports/title";
 
-export default function Page() {
-
-
+export default function DevelopmentPage() {
     return (
-        <div className ="DesignPage">
-            <Header/>
+        <div className ="DevelopmentPage">
+            <Header data-theme="dark"/>
 
             <div className="PageContent">
+                <Title/>
             </div>
 
-            <Footer/>
+            <Footer data-theme="dark"/>
         </div>
     )
 }

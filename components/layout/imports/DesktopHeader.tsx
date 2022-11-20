@@ -86,10 +86,12 @@ export default function DesktopHeader(props: any) {
         },
     ];
 
+    let LogoSource = (props["data-theme"] === "dark") ? "/img/white-logo.png" : "/img/logo.png";
+
     return (
-        <div className="NavBar Desktop">
+        <div className="NavBar Desktop" {...props}>
             <div className="Logo">
-                <Image src="/img/logo.png" alt="Logo" layout='fill' objectFit='cover' />
+                <Image src={LogoSource} alt="Logo" layout='fill' objectFit='cover' />
             </div>
             <div className="Navigation">
                 {

@@ -28,13 +28,14 @@ export default function DesktopHeader(props: any) {
     const animate =  { opacity: 1, x: 0, y: 0, borderRadius: "0px 0px 0px 0px"};
     const exit = { opacity: 1, x: "100%", y: 0, borderRadius: "500px 0px 0px 500px"};
 
+    let LogoSource = (props["data-theme"] === "dark") ? "/img/white-logo.png" : "/img/logo.png";
 
 
     return (
         <>        
-            <div className="NavBar Mobile">
+            <div className="NavBar Mobile" {...props}>
                 <div className="Logo">
-                    <Image src="/img/logo.png" alt="Logo" layout='fill' objectFit='cover' />
+                    <Image src={LogoSource} alt="Logo" layout='fill' objectFit='cover' />
                 </div>
 
                 <div className="MenuButton">

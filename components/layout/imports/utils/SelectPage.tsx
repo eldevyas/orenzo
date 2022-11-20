@@ -32,8 +32,16 @@ export default function SelectPage(props: any) {
                 <div className="ToggleGroup" style={{width: 'auto', left: 0}}>
                     {
                         Pages.map((page: any, index: number) => {
+                            let PageHref = page.href;
+                            let CurrentURL = router.pathname;
+
+                            let activeState = "" 
+                            if (CurrentURL === PageHref) {
+                                activeState = "Active";
+                            }
+
                             return (
-                                <Button key={index} className="ToggleButton" variant="text" onClick={() => {handleItemClick(page.href)}}
+                                <Button key={index} className= { "ToggleButton " + activeState } variant="text" onClick={() => {handleItemClick(page.href)}}
                                     sx={{ justifyContent: 'start', width: 'auto' }}
                                 >
                                     {page.title}
