@@ -1,0 +1,88 @@
+.TechnologyStack {
+    width: 100%;
+    min-height: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    position: relative;
+    padding: 0 10%;
+    gap: 2rem;
+    flex-wrap: wrap;
+    .Column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        min-height: 200px;
+        min-width: 200px;
+        aspect-ratio: 725/850;
+        position: relative;
+        width: calc(50% - 1rem);
+        @media screen and (max-width: 900px) {
+            width: 100%;
+            aspect-ratio: unset;
+            height: auto;
+            min-height: 50vh;
+        }
+        height: 100%;
+        background-color: #161617;
+        border-radius: 2rem;
+        &:first-child {
+            background-image: url('/img/assets/iPad.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center right;
+        }
+        .Text {
+            /* Auto layout */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 2rem;
+            padding: 2rem 2rem;
+            .Title {
+                font-weight: 700;
+                font-size: 3rem;
+                @media screen and (max-width: 768px) {
+                    font-size: 2rem;
+                }
+                display: flex;
+                align-items: flex-start;
+                background: linear-gradient(82.64deg,
+                #FF5C00 0%,
+                #FDA34B 15%,
+                #FF7882 30%,
+                #C8699E 45%,
+                #7046AA 60%,
+                #0C1DB8 85%,
+                #020F75 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: transparent;
+                max-width: 300px;
+            }
+            .Description {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1.5rem;
+                display: flex;
+                align-items: center;
+                color: #FFFFFF;
+                opacity: 0.25;
+                max-width: 300px;
+                @media screen and (max-width: 768px) {
+                    font-size: 1rem;
+                }
+            }
+        }
+        button {
+            box-shadow: none;
+            border-radius: 1rem;
+            margin: 2rem;
+        }
+    }
+}

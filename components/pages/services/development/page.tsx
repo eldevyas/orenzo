@@ -1,6 +1,11 @@
 import Header from "../../../layout/header";
 import Footer from "../../../layout/footer";
 import Title from "./imports/title";
+import TechnologyStack from "./imports/TechnologyStack";
+import WhyUs from "../design/imports/8- Why us";
+import SelectedProjects from "../global/Projects";
+import Cases from "../design/imports/7 - Selected Projects";
+import LetsTalk from "../../home/content/8- Let's Talk";
 
 export default function DevelopmentPage() {
     return (
@@ -9,6 +14,10 @@ export default function DevelopmentPage() {
 
             <div className="PageContent">
                 <Title/>
+                <TechnologyStack/>
+                <Cases/>
+                <WhyUs/>
+                <LetsTalk/>
             </div>
 
             <Footer data-theme="dark"/>

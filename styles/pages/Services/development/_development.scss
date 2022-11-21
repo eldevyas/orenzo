@@ -20,6 +20,30 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 2rem;
         @import "./imports/title";
+        @import "./imports/TechnologyStack";
+        @import "./../design/imports/Projects";
+        @import "./../design/imports/Secret";
+        @import "./../design/imports/LetsTalk";
+        .SelectedProjects {
+            background-color: #161617;
+            background-image: none;
+            position: relative;
+        }
+        .QualitiesGrid {
+            background-color: #161617;
+            background-image: none;
+        }
+        .LetsTalk {
+            position: relative;
+            .Title {
+                color: #fff;
+                p {
+                    color: #fff;
+                    opacity: 50%;
+                }
+            }
+        }
     }
 }
