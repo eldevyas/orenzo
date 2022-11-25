@@ -6,6 +6,7 @@ import WhyUs from "../design/imports/8- Why us";
 import SelectedProjects from "../global/Projects";
 import Cases from "../design/imports/7 - Selected Projects";
 import LetsTalk from "../../home/content/8- Let's Talk";
+import FAQ from "../global/FAQ";
 
 export default function DevelopmentPage() {
     return (
@@ -18,6 +19,7 @@ export default function DevelopmentPage() {
                 <Cases/>
                 <WhyUs/>
                 <LetsTalk/>
+                <FAQ/>
             </div>
 
             <Footer data-theme="dark"/>

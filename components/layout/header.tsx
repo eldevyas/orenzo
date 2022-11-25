@@ -53,7 +53,7 @@ class ResponsiveHeader extends React.Component<{}, { isDesktop: boolean }>  {
             
         return (
             <>            
-                {isDesktop ? <DesktopHeader Links={ NavigationLinks } {... this.props}/> : <MobileHeader Links={ NavigationLinks } {... this.props}/>}
+                {isDesktop ? <DesktopHeader links={ NavigationLinks } {... this.props}/> : <MobileHeader links={ NavigationLinks } {... this.props}/>}
             </>
         );
     }

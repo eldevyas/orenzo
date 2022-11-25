@@ -14,12 +14,12 @@ export interface IOpenMenu {
 
 
 export default function DesktopHeader(props: any) {
-    let Links: any = props.Links;
+  var {links, ...other} = props;
 
     const [OpenMenu, setOpenMenu] = useState(false);
 
     const handleClick = () => {
-        setTimeout(() => {setOpenMenu(!OpenMenu)}, 0);
+        setTimeout(() => {setOpenMenu(!OpenMenu)}, 200);
     }
 
 
@@ -33,7 +33,7 @@ export default function DesktopHeader(props: any) {
 
     return (
         <>        
-            <div className="NavBar Mobile" {...props}>
+            <div className="NavBar Mobile" {...other}>
                 <div className="Logo">
                     <Image src={LogoSource} alt="Logo" layout='fill' objectFit='cover' />
                 </div>
@@ -54,7 +54,7 @@ export default function DesktopHeader(props: any) {
                     delay: 0,
                     bordeRadius: { duration: 0 },
                     default: { type: "Tween", stiffness: 100 }
-                  }}
+                }}
                 >
                     <MobileMenu handleClicked={handleClick} />
                 </motion.div>

@@ -34,7 +34,7 @@ const Disclosure = (props: Props) => {
                 borderRadius: "1rem"
             }}
         >
-            <div className="text-xl font-semibold">{props.title}</div>
+            <div className="QuestionText">{props.title}</div>
             <AnimatePresence initial={false} mode="wait">
             <motion.div
                 key={isOpen ? "minus" : "plus"}
@@ -75,7 +75,7 @@ const Disclosure = (props: Props) => {
         className="Answer"
         id={props.title}
         initial={false}
-        style={{margin: "0rem 2rem", maxWidth: "600px", color: "#505050"}}
+        style={{margin: "0rem 2rem", maxWidth: "600px"}}
         animate={
         isOpen
             ? {
@@ -115,7 +115,7 @@ const Disclosure = (props: Props) => {
   );
 };
 
-export default function App() {
+export default function FAQ() {
     let defaultFAQs = [
         {
             question: "How long does it take to get started?",

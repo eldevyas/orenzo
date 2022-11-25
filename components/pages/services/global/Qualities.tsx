@@ -25,10 +25,10 @@ export default function QualitiesGrid(props: any) {
 
                 <div className="Qualities">
                     {
-                        props.items.map((quality: any, index: number) => {
+                        props.items.map((quality: any, index: Number) => {
                             return (
                                 <>
-                                    <GridItem title={quality.title} description={quality.description} icon={quality.icon}/>
+                                    <GridItem key={index} title={quality.title} description={quality.description} icon={quality.icon}/>
                                 </>
                             )
                         })

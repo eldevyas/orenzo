@@ -1,13 +1,22 @@
-@mixin FAQ() {
+@mixin FAQ($Variant) {
     // background: lightgray;
     min-height: 500px;
     width: 80%;
     border-radius: 2rem;
+    * {
+        text-align: start !important;
+    }
     .Title {
         padding: 2rem;
         font-weight: bold;
         font-size: 2rem;
         color: rgba(#000, 50%);
+        @if $Variant=="Dark" {
+            color: rgba(#fff, 50%);
+        }
+        @else if $Variant=="Light" {
+            color: rgba(#000, 50%);
+        }
     }
     .List {
         width: 100%;
@@ -18,5 +27,36 @@
         align-items: flex-start;
         gap: 2rem;
         transition: all 0.5s ease-in-out;
+        @if $Variant=="Dark" {
+            color: rgba(#fff, 50%);
+        }
+        @else if $Variant=="Light" {
+            color: rgba(#000, 50%);
+        }
+        .Question {
+            @if $Variant=="Dark" {
+                background: #161617 !important;
+            }
+            @else {
+                background: linear-gradient(90deg, #E6E9F0 0%, #EEF1F5 100%) !important;
+            }
+            .QuestionText {
+                @if $Variant=="Dark" {
+                    color: rgba(#fff, 50%) !important;
+                }
+                @else {
+                    color: rgba(#000, 50%) !important;
+                }
+            }
+        }
+        .Answer {
+            z-index: 1;
+            @if $Variant=="Dark" {
+                color: rgba(#fff, 50%) !important;
+            }
+            @else {
+                color: #505050 !important;
+            }
+        }
     }
 }

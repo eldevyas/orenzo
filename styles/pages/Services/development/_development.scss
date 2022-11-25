@@ -45,5 +45,8 @@
                 }
             }
         }
+        .FAQ {
+            @include FAQ("Dark");
+        }
     }
 }

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import LanguageIcon from '@mui/icons-material/Language';
-import { US, FR, MA } from 'country-flag-icons/react/3x2'
+import { US, FR, MA, FlagComponent } from 'country-flag-icons/react/3x2'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandLess from '@mui/icons-material/ExpandLess';
@@ -15,8 +15,8 @@ export default function SelectLocal(props: any) {
 
     const { i18n } = useTranslation();
     
-    const router = useRouter()
-    const { pathname, asPath, query } = router
+    const Router = useRouter()
+    const { pathname, asPath, query } = Router
 
     const handleClick = () => {
         setOpen(!isOpen);
@@ -24,7 +24,7 @@ export default function SelectLocal(props: any) {
 
     const handleItemClick = (LocaleString: string) => {
         setOpen(!isOpen);
-        router.push({ pathname, query }, asPath, { locale: LocaleString })
+        Router.push({ pathname, query }, asPath, { locale: LocaleString })
         console.log('%c Locale has been changed to:', 'background: #222; color: #bada55', LocaleString)
     }
 
@@ -41,7 +41,7 @@ export default function SelectLocal(props: any) {
                         console.log("Direction is RTL!")
                         return false;
                     case "default":
-                        console.log("Direction is default!")
+                        console.log("Direction is Default!")
                         return true;
             }
         } else {
@@ -52,6 +52,26 @@ export default function SelectLocal(props: any) {
     
     let LeftDir = checkDirection();
 
+    const Languages: {name: string, locale: string, flag: FlagComponent, dir: any}[] = [
+        {
+            name: "English",
+            locale: "en",
+            flag: US,
+            dir: "ltr"
+        },
+        {
+            name: "العربية",
+            locale: "ar",
+            flag: MA,
+            dir: "rtl"
+        },
+        {
+            name: "Français",
+            locale: "fr",
+            flag: FR,
+            dir: "ltr"
+        }
+    ]
 
     return (
         <div className="SelectSection">
@@ -62,20 +82,25 @@ export default function SelectLocal(props: any) {
             {
                 isOpen ?
                 <div className="ToggleGroup" style= {{width: "auto", left: `${ Direction === "ltr" ? 0 : "auto"}`, right: `${ Direction === "rtl"? 0 : "auto"}` }}>
-                    <Button className="ToggleButton" variant="text" onClick={() => {handleItemClick("en")}}>
-                        <US title="English"/>
-                        English
-                    </Button>
+                    {
+                        Languages.map((lang, index) => {
+                            let activeState = "";
 
-                    <Button className="ToggleButton" variant="text" onClick={() => {handleItemClick("ar")}}>
-                        <MA title="Arabic"/>
-                        Arabic
-                    </Button>
+                            let CurrentURL = Router.pathname;
+                            let CurrentLocale = i18n.language;
+                            let ItemLocale = lang.locale;
+                            if (CurrentLocale == ItemLocale) {
+                                activeState = "Active";
+                            }
 
-                    <Button className="ToggleButton" variant="text" onClick={() => {handleItemClick("fr")}}>
-                        <FR title="French"/>
-                        French
-                    </Button>
+                            return (
+                                <Button key={index} className={"ToggleButton " + activeState} variant="text" onClick={() => {handleItemClick(lang.locale)}} dir={lang.dir}>
+                                    <lang.flag/>
+                                    {lang.name}
+                                </Button>
+                            )
+                        })
+                    }
                 </div>
                 : null
             }
