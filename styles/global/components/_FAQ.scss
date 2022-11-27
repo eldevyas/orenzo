@@ -10,12 +10,13 @@
         padding: 2rem;
         font-weight: bold;
         font-size: 2rem;
+        z-index: 100;
         color: rgba(#000, 50%);
         @if $Variant=="Dark" {
-            color: rgba(#fff, 50%);
+            color: rgba(#fff, 50%) !important;
         }
-        @else if $Variant=="Light" {
-            color: rgba(#000, 50%);
+        @else {
+            color: rgba(#000, 50%) !important;
         }
     }
     .List {
@@ -33,30 +34,49 @@
         @else if $Variant=="Light" {
             color: rgba(#000, 50%);
         }
-        .Question {
+        .QandA {
+            border-bottom: 1px solid;
             @if $Variant=="Dark" {
-                background: #161617 !important;
+                border-color: rgba(#fff, 50%) !important;
             }
             @else {
-                background: linear-gradient(90deg, #E6E9F0 0%, #EEF1F5 100%) !important;
+                border-color: #505050 !important;
             }
-            .QuestionText {
+            .Question {
+                font-size: 1rem;
+                gap: 1rem;
+                align-items: flex-end;
+                background: transparent;
+                border-radius: 0;
+                padding: 1rem 0;
+                @if $Variant=="Dark" {
+                    // background: #161617 !important;
+                }
+                @else {
+                    // background: linear-gradient(90deg, #E6E9F0 0%, #EEF1F5 100%) !important;
+                }
+                .QuestionText {
+                    @if $Variant=="Dark" {
+                        color: rgba(#fff, 50%) !important;
+                    }
+                    @else {
+                        color: rgba(#000, 50%) !important;
+                    }
+                }
+            }
+            .Answer {
+                z-index: 1;
+                height: auto + 1rem;
                 @if $Variant=="Dark" {
                     color: rgba(#fff, 50%) !important;
                 }
                 @else {
-                    color: rgba(#000, 50%) !important;
+                    color: #505050 !important;
                 }
             }
         }
-        .Answer {
-            z-index: 1;
-            @if $Variant=="Dark" {
-                color: rgba(#fff, 50%) !important;
-            }
-            @else {
-                color: #505050 !important;
-            }
+        .QandA.open {
+            padding-bottom: 1rem;
         }
     }
 }

@@ -9,7 +9,7 @@
     align-items: center;
     @include GlobalPadding();
     padding: 5vh 10vw;
-    z-index: 100000;
+    z-index: 1000;
     .Logo {
         width: auto;
         height: 20px;
@@ -196,7 +196,6 @@
             background: transparent;
             display: flex;
             flex-direction: column;
-            padding: 2rem;
             gap: 1rem;
             justify-content: center;
             align-items: center;

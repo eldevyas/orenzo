@@ -10,19 +10,19 @@ import FAQ from "../global/FAQ";
 
 export default function DevelopmentPage() {
     return (
-        <div className ="DevelopmentPage">
-            <Header data-theme="dark"/>
+        <div className="DevelopmentPage" id="DevelopmentPage">
+            <Header data-theme="dark" />
 
             <div className="PageContent">
-                <Title/>
-                <TechnologyStack/>
-                <Cases/>
-                <WhyUs/>
-                <LetsTalk/>
-                <FAQ/>
+                <Title />
+                <TechnologyStack />
+                <Cases />
+                <WhyUs />
+                <LetsTalk />
+                <FAQ />
             </div>
 
-            <Footer data-theme="dark"/>
+            <Footer data-theme="dark" />
         </div>
-    )
+    );
 }
