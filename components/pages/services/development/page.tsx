@@ -7,6 +7,7 @@ import SelectedProjects from "../global/Projects";
 import Cases from "../design/imports/7 - Selected Projects";
 import LetsTalk from "../../home/content/8- Let's Talk";
 import FAQ from "../global/FAQ";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 export default function DevelopmentPage() {
     return (
@@ -14,12 +15,14 @@ export default function DevelopmentPage() {
             <Header data-theme="dark" />
 
             <div className="PageContent">
-                <Title />
-                <TechnologyStack />
-                <Cases />
-                <WhyUs />
-                <LetsTalk />
-                <FAQ />
+                <ParallaxProvider>
+                    <Title />
+                    <TechnologyStack />
+                    <Cases />
+                    <WhyUs />
+                    <LetsTalk />
+                    <FAQ />
+                </ParallaxProvider>
             </div>
 
             <Footer data-theme="dark" />

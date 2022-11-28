@@ -21,7 +21,6 @@
     }
     .List {
         width: 100%;
-        min-height: 500px;
         background-color: transparent;
         display: flex;
         flex-direction: column;
@@ -36,6 +35,7 @@
         }
         .QandA {
             border-bottom: 1px solid;
+            overflow: hidden;
             @if $Variant=="Dark" {
                 border-color: rgba(#fff, 50%) !important;
             }
@@ -66,7 +66,6 @@
             }
             .Answer {
                 z-index: 1;
-                height: auto + 1rem;
                 @if $Variant=="Dark" {
                     color: rgba(#fff, 50%) !important;
                 }
@@ -75,8 +74,8 @@
                 }
             }
         }
-        .QandA.open {
-            padding-bottom: 1rem;
-        }
+        // .QandA.open {
+        //     padding-bottom: 1rem;
+        // }
     }
 }

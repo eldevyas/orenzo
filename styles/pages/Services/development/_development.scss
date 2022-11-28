@@ -1,20 +1,23 @@
 .DevelopmentPage {
     background-color: #000;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    &::before {
-        content: "";
-        display: block;
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        background: #000;
-        top: 0;
-        left: 0;
-        z-index: -1;
+    // &::before {
+    //     content: "";
+    //     display: block;
+    //     position: fixed;
+    //     width: 100vw;
+    //     height: 100vh;
+    //     background: #000;
+    //     top: 0;
+    //     left: 0;
+    //     z-index: -1;
+    // }
+    // Page ScrollBar
+    &::-webkit-scrollbar {
+        appearance: none;
     }
     .PageContent {
         display: flex;
