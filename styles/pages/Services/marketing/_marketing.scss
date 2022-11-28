@@ -1,0 +1,17 @@
+.MarketingPage {
+    width: 100%;
+    .PageContent {
+        width: 100%;
+        padding: 2rem 0;
+        background-color: transparent;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2rem;
+        @include MainCard();
+        @import "./imports/StandOut";
+        @import "./imports/BestServices";
+    }
+}

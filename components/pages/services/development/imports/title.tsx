@@ -169,17 +169,23 @@ export default function Title() {
             // Give it the position of the Element with the ID of "Code"
             let CodeImage = document.querySelector("#Code");
             if (CodeImage != null) {
+                let imgData = {
+                    width: CodeImage.getBoundingClientRect().width,
+                    height: CodeImage.getBoundingClientRect().height,
+                    top: CodeImage.getBoundingClientRect().top,
+                    left: CodeImage.getBoundingClientRect().left,
+                };
+
+                // Get window Aspect Ratio
+
                 targetRef.current.style.top =
-                    CodeImage.getBoundingClientRect().top + "px";
+                    imgData.top + imgData.height + "px";
 
-                targetRef.current.style.left =
-                    CodeImage.getBoundingClientRect().left + "px";
+                targetRef.current.style.left = imgData.left + "px";
 
-                targetRef.current.style.width =
-                    CodeImage.getBoundingClientRect().width + "px";
+                targetRef.current.style.width = imgData.width + "px";
 
-                targetRef.current.style.height =
-                    CodeImage.getBoundingClientRect().height + "px";
+                targetRef.current.style.height = imgData.height + "px";
             }
         }
 

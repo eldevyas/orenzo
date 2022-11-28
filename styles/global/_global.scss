@@ -2,7 +2,6 @@
 html,
 body {
     overflow-x: hidden;
-    scroll-behavior: smooth;
 }
 
 a {
@@ -15,6 +14,7 @@ a {
     margin: 0;
     font-family: Outfit, Cairo, sans-serif !important;
     box-sizing: border-box;
+    scroll-behavior: smooth !important;
 }
 
 @import './components';
