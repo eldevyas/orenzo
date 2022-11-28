@@ -13,5 +13,12 @@
         @include MainCard();
         @import "./imports/StandOut";
         @import "./imports/BestServices";
+        @import "./imports/Why Us";
+        .LetsTalk {
+            @include LetsTalk();
+        }
+        .FAQ {
+            @include FAQ("Light");
+        }
     }
 }

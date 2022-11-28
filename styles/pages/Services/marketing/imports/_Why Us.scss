@@ -1,0 +1,24 @@
+.QualitiesGrid {
+    position: relative;
+    $BG: url("/img/assets/illustrations/Landscape.png");
+    @include QualitiesGrid($BG,
+    $C5);
+    * {
+        z-index: 1;
+    }
+    overflow: hidden;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("/img/assets/illustrations/Landscape.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: blur(0.5rem) brightness(75%);
+        z-index: 0 !important;
+    }
+}
