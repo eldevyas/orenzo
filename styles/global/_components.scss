@@ -10,6 +10,9 @@
 @import "./components/FAQ";
 // Main Card - 3D Hover Effect
 @import "./components/MainCard";
+// Date Time Picker
+@import "./components/DatePicker";
+
 @mixin BigCard() {
     width: 100%;
     height: 100%;

@@ -22,6 +22,9 @@
                 justify-content: space-between;
                 align-items: center;
                 gap: 1rem;
+                @media (max-width: 768px) {
+                    flex-wrap: wrap;
+                }
             }
             .FormGroup {
                 width: 100%;
@@ -32,23 +35,32 @@
                 justify-content: flex-start;
                 height: fit-content;
                 border-radius: 1rem;
-                overflow: hidden;
+                // overflow: hidden;
                 position: relative;
                 font-size: 0.9rem !important;
+                .Button {
+                    width: 100%;
+                    background: $C4;
+                    color: #fff;
+                    padding: 1rem 2rem;
+                    text-transform: none;
+                    border-radius: 1rem;
+                    svg {
+                        margin-inline-end: 0.5rem;
+                    }
+                }
                 .Label {
                     // padding: 0.5rem !important;
                     border-radius: 1rem;
                     display: flex;
                     justify-content: center;
-                    align-items: center;
+                    padding: 1rem;
+                    align-items: flex-start;
                     cursor: pointer;
                     background-color: rgba($color: $C1, $alpha: 0.5);
                     color: rgba(#fff, 100%);
-                    aspect-ratio: 1/1;
+                    // aspect-ratio: 1/1;
                     font-size: inherit;
-                    svg {
-                        aspect-ratio: 1/1;
-                    }
                 }
                 .FormControl {
                     width: 100%;
@@ -66,6 +78,127 @@
                     font-size: inherit;
                     &::placeholder {
                         color: rgba(#000, 25%);
+                    }
+                }
+                .SelectControl {
+                    width: 100%;
+                    border-radius: 0.5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: stretch;
+                    cursor: pointer;
+                    background-color: transparent;
+                    color: rgba(#000, 50%);
+                    border: none !important;
+                    outline: none !important;
+                    padding: 0;
+                    position: relative;
+                    font-size: inherit;
+                    box-shadow: none !important;
+                    span {
+                        display: none;
+                    }
+                    >div:first-of-type {
+                        position: relative;
+                        width: 100%;
+                        border-radius: 0rem;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        background-color: transparent;
+                        border: none !important;
+                        outline: none !important;
+                        box-shadow: none !important;
+                        font-size: inherit !important;
+                        color: inherit !important;
+                    }
+                    [class$="control"] {
+                        [ class$="ValueContainer"] {
+                            color: red;
+                            [class$="singleValue"] {
+                                color: rgba(#000, 50%);
+                                font-size: 0.9rem;
+                            }
+                            [class$="Input"] {
+                                color: rgba(#000, 50%);
+                                font-size: 0.9rem;
+                            }
+                        }
+                    }
+                    // Class ending with menu
+                    [class$="menu"] {
+                        box-shadow: none !important;
+                        border-radius: 1rem;
+                        overflow: hidden;
+                        background-color: #fcfcfc;
+                        padding: 0;
+                        [class$="MenuList"] {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+                            background-color: transparent;
+                            border: none!important;
+                            outline: none!important;
+                            padding: 0;
+                            [class$="option"] {
+                                background-color: transparent;
+                                border-radius: 1rem;
+                                padding: 1rem;
+                                &:hover,
+                                &:active,
+                                &:focus {
+                                    background: $G3;
+                                    cursor: pointer;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+                .Message {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    background-color: transparent;
+                    border: none!important;
+                    outline: none!important;
+                    padding: 1rem;
+                    resize: vertical;
+                }
+                .TimeControl {
+                    width: 100%;
+                    border: none;
+                    outline: none!important;
+                    border-radius: 1rem;
+                    color: rgba(#000, 50%) !important;
+                    >* {
+                        color: rgba(#000, 25%)!important;
+                    }
+                    >div {
+                        width: 100%;
+                        border: none !important;
+                        outline: none !important;
+                        border-radius: 1rem;
+                        box-shadow: none !important;
+                        background-color: transparent !important;
+                        padding: 1rem 1rem;
+                        input {
+                            padding: 0;
+                            color: rgba(#000, 50%);
+                            font-size: 0.9rem;
+                        }
+                        fieldset {
+                            outline: none;
+                            border: none;
+                        }
                     }
                 }
             }

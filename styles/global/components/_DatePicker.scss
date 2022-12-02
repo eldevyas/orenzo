@@ -1,0 +1,26 @@
+.MuiPickersPopper-root {
+    position: relative;
+    .MuiPaper-root {
+        box-shadow: none;
+        .MuiBox-root {
+            background-color: $C4;
+        }
+        .Mui-selected {
+            color: $C4;
+            font-weight: 700;
+            background: $G1;
+        }
+        .MuiTabs-indicator {
+            background-color: $C4;
+        }
+        .MuiClock-pin {
+            background-color: $C4;
+        }
+        .MuiClockPointer-root {
+            background-color: $C4;
+        }
+        .MuiClockPointer-thumb {
+            border-color: $C4;
+        }
+    }
+}
