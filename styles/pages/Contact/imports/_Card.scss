@@ -1,0 +1,40 @@
+    @include MainCard();
+    .Wrapper {
+        .BigCard {
+            position: relative;
+            background-image: url("/img/assets/illustrations/Background.png");
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: fit-content;
+            .Content {
+                justify-content: center;
+                align-items: center;
+                .Text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .Title {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        h1 {
+                            font-size: 2.25rem;
+                            width: 100%;
+                            margin-bottom: 1rem;
+                            text-align: center;
+                        }
+                        p {
+                            font-size: 0.8rem;
+                            width: auto;
+                            opacity: 75%;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }

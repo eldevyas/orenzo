@@ -42,12 +42,12 @@ export default function MainCard(props: any) {
                 x.set(
                     event.clientX -
                         rect.left -
-                        circleRef.current.clientWidth / 1.75
+                        circleRef.current.clientWidth / 2
                 );
                 y.set(
                     event.clientY -
                         rect.top -
-                        circleRef.current.clientHeight / 2.5
+                        circleRef.current.clientHeight / 2
                 );
             }
         }
@@ -84,28 +84,36 @@ export default function MainCard(props: any) {
                 }}
                 onMouseMove={handleMouse}
             >
-                <Image
-                    src={ImageSources.Illustration}
-                    layout="fill"
-                    objectFit="cover"
-                    alt=""
-                    className="Background"
-                />
+                {props.Illustration ? (
+                    <Image
+                        src={ImageSources.Illustration}
+                        layout="fill"
+                        objectFit="cover"
+                        alt=""
+                        className="Background"
+                    />
+                ) : null}
 
                 <div className="Content">
-                    <div className="Image">
-                        <Image
-                            src={ImageSources.Main}
-                            layout="fill"
-                            objectFit="cover"
-                            alt=""
-                        />
-                    </div>
+                    {props.Main ? (
+                        <div className="Image">
+                            <Image
+                                src={ImageSources.Main}
+                                layout="fill"
+                                objectFit="cover"
+                                alt=""
+                            />
+                        </div>
+                    ) : null}
 
                     <div className="Text">
                         <div className="Title">
                             <h1>{props.title}</h1>
-                            <p>{props.description}</p>
+                            <p
+                                dangerouslySetInnerHTML={{
+                                    __html: props.description,
+                                }}
+                            />
                         </div>
 
                         <DefaultButton
@@ -114,7 +122,7 @@ export default function MainCard(props: any) {
                                 router.push(props.href);
                             }}
                         >
-                            Read More
+                            {props.button ? props.button : "Read More"}
                         </DefaultButton>
                     </div>
                     <motion.div

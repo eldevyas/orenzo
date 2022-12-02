@@ -1,0 +1,19 @@
+.ContactPage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    .PageContent {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+        @import "./imports/Card";
+        @import "./imports/Form";
+    }
+}

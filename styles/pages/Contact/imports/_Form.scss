@@ -1,0 +1,73 @@
+    .Form {
+        width: 80%;
+        min-height: 500px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        .FormData {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: auto;
+            background-color: transparent;
+            gap: 1rem;
+            .FormRow {
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1rem;
+            }
+            .FormGroup {
+                width: 100%;
+                background-color: rgba(#000, 2.5%);
+                display: flex;
+                flex-direction: row;
+                align-items: stretch;
+                justify-content: flex-start;
+                height: fit-content;
+                border-radius: 1rem;
+                overflow: hidden;
+                position: relative;
+                font-size: 0.9rem !important;
+                .Label {
+                    // padding: 0.5rem !important;
+                    border-radius: 1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    background-color: rgba($color: $C1, $alpha: 0.5);
+                    color: rgba(#fff, 100%);
+                    aspect-ratio: 1/1;
+                    font-size: inherit;
+                    svg {
+                        aspect-ratio: 1/1;
+                    }
+                }
+                .FormControl {
+                    width: 100%;
+                    border-radius: 0.5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    background-color: transparent;
+                    color: rgba(#000, 50%);
+                    border: none;
+                    outline: none;
+                    padding: 0.5rem 1rem;
+                    position: relative;
+                    font-size: inherit;
+                    &::placeholder {
+                        color: rgba(#000, 25%);
+                    }
+                }
+            }
+        }
+    }

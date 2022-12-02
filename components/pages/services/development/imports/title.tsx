@@ -178,8 +178,7 @@ export default function Title() {
 
                 // Get window Aspect Ratio
 
-                targetRef.current.style.top =
-                    imgData.top + imgData.height + "px";
+                targetRef.current.style.top = imgData.top + "px";
 
                 targetRef.current.style.left = imgData.left + "px";
 
