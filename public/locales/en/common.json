@@ -145,7 +145,7 @@
             }
         }
     },
-    "Services": {
+    "services": {
         "head": {
             "title": "Orenzo - Services",
             "meta": {
@@ -160,6 +160,39 @@
                     "English": "English Language",
                     "Arabic": "اللغة العربية",
                     "French": "Langue Française"
+                }
+            }
+        },
+        "design": {},
+        "development": {
+            "head": {
+                "title": "Orenzo - Development Services",
+                "meta": {
+                    "description": "Orenzo - Digital Agency"
+                }
+            },
+            "content": {
+                "first": {
+                    "title": "Development",
+                    "description": "Making your product come alive"
+                },
+                "second": {
+                    "title": "Unleashing Your Potential",
+                    "description": "Okay, so your digital product is designed. What’s next? Next comes development. We know this is where things can go awry if it’s not done the right way. Not that it ever happens to us, mind you. We don’t compromise, bringing it all together in a simple solution."
+                },
+                "third": {
+                    "title": "Develop",
+                    "description": "We’ve had years of experience and developed dozens of projects. So we know what to do to achieve results that will make our clients proud."
+                },
+                "fourth": {
+                    "title": "Technology Stack",
+                    "description": "Building and transforming digital products with a range of technologies.",
+                    "button": "Read More"
+                },
+                "fifth": {
+                    "title": "Some cases we are proud of",
+                    "description": "Check out these cases to see how we work and what we achieve. A picture speaks a thousand words!",
+                    "projects": {}
                 }
             }
         }

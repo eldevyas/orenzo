@@ -1,13 +1,9 @@
 import Image from "next/image";
 import React, { useState, useRef, useEffect } from "react";
-import { Parallax, ParallaxProvider, useParallax } from "react-scroll-parallax";
-import {
-    motion,
-    useScroll,
-    useMotionValue,
-    useTransform,
-    useSpring,
-} from "framer-motion";
+import { Parallax } from "react-scroll-parallax";
+import { motion, useScroll, useTransform } from "framer-motion";
+
+import { Trans, useTranslation } from "react-i18next";
 
 function IMacImage(props: any) {
     let Height = props.Height;
@@ -117,19 +113,17 @@ function IMacImage(props: any) {
 }
 
 const Potential = (props: any) => {
+    const words = props.title.split(" "); // split the sentence into an array of words
+    const lastWord = words.pop(); // remove and store the last word
+    const sentenceWithoutLastWord = words.join(" "); // join the remaining words into a new sentence
+
     return (
-        <div className="Potential" {...props}>
+        <div className="Potential">
             <div className="Name">
-                Unleashing your <span>potential</span>
+                {sentenceWithoutLastWord} <span>{lastWord}</span>
             </div>
 
-            <div className="Description">
-                Okay, so your digital product is designed. What’s next? Next
-                comes development. We know this is where things can go awry if
-                it’s not done the right way. Not that it ever happens to us,
-                mind you. We don’t compromise, bringing it all together in a
-                simple solution.
-            </div>
+            <div className="Description">{props.description}</div>
         </div>
     );
 };
@@ -139,22 +133,19 @@ const Develop = (props: any) => {
         <div className="Develop" {...props}>
             <div className="Name">
                 <span className="brackets">{"<"}</span>
-                <span className="text">{"Develop"}</span>
+                <span className="text">{props.title}</span>
                 <span className="slash">{"/"}</span>
                 <span className="brackets">{">"}</span>
             </div>
 
-            <div className="Description">
-                We’ve had years of experience and developed dozens of projects.
-                So we know what to do to achieve results that will make our
-                clients proud.{" "}
-            </div>
+            <div className="Description">{props.description}</div>
         </div>
     );
 };
 
 export default function Title() {
     const targetRef = useRef<HTMLDivElement>(null);
+    const { t } = useTranslation("common");
 
     const { scrollYProgress } = useScroll({
         target: targetRef,
@@ -199,10 +190,12 @@ export default function Title() {
             <div className="PageTitle">
                 {/* Text of the title - Top Section */}
                 <div className="Text">
-                    <div className="Name">Development</div>
+                    <div className="Name">
+                        {t("services.development.content.first.title")}
+                    </div>
 
                     <div className="Description">
-                        Making your product come alive
+                        {t("services.development.content.first.description")}
                     </div>
                 </div>
                 {/* Image of the iMac - Parallax Animation */}
@@ -211,9 +204,19 @@ export default function Title() {
                 <IMacImage Height={Height} />
             </div>
 
-            <Potential />
+            <Potential
+                title={t("services.development.content.second.title")}
+                description={t(
+                    "services.development.content.second.description"
+                )}
+            />
 
-            <Develop />
+            <Develop
+                title={t("services.development.content.third.title")}
+                description={t(
+                    "services.development.content.third.description"
+                )}
+            />
         </>
     );
 }

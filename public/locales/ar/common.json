@@ -145,21 +145,54 @@
             }
         }
     },
-    "Services": {
+    "services": {
         "head": {
-            "title": "Orenzo - خدمات",
+            "title": "Orenzo - Services",
             "meta": {
-                "description": "Orenzo - الوكالة الرقمية"
+                "description": "Orenzo - Digital Agency"
             }
         },
         "content": {
             "testing": {
-                "title": "هذا هو العنوان العربي",
-                "description": "أنت الآن تستعرض هذه الصفحة باللغة العربية🚀",
+                "title": "This is the English title",
+                "description": "You are currently viewing this page in English 🚀",
                 "buttons": {
                     "English": "English Language",
                     "Arabic": "اللغة العربية",
                     "French": "Langue Française"
+                }
+            }
+        },
+        "design": {},
+        "development": {
+            "head": {
+                "title": "Orenzo - Development Services",
+                "meta": {
+                    "description": "Orenzo - Digital Agency"
+                }
+            },
+            "content": {
+                "first": {
+                    "title": "التطوير",
+                    "description": "اجعل منتجك ينبض بالحياة"
+                },
+                "second": {
+                    "title": "أطلق العنان لقدراتك",
+                    "description": "حسنًا ، تم تصميم منتجك الرقمي. ماذا بعد؟ يأتي بعد ذلك التطور. نحن نعلم أن هذا هو المكان الذي يمكن أن تسوء فيه الأمور إذا لم يتم بالطريقة الصحيحة. لا يعني ذلك أن هذا يحدث لنا أبدًا ، ضع في اعتبارك. نحن لا نتنازل ، ونجمع كل ذلك معًا في حل بسيط."
+                },
+                "third": {
+                    "title": "طوِّر",
+                    "description": "لدينا سنوات من الخبرة وقمنا بتطوير عشرات المشاريع. لذلك نحن نعرف ما يجب القيام به لتحقيق نتائج تجعل عملائنا فخورين."
+                },
+                "fourth": {
+                    "title": "Technology Stack",
+                    "description": "Building and transforming digital products with a range of technologies.",
+                    "button": "Read More"
+                },
+                "fifth": {
+                    "title": "Some cases we are proud of",
+                    "description": "Check out these cases to see how we work and what we achieve. A picture speaks a thousand words!",
+                    "projects": {}
                 }
             }
         }
