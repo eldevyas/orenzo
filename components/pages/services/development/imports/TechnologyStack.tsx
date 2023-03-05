@@ -4,6 +4,8 @@ import { DefaultButton } from "../../../../core/buttons";
 import CloseIcon from '@mui/icons-material/Close';
 import Chip from '@mui/material/Chip';
 import { ProgrammingRange } from "./data/programmingRange";
+import { useTranslation } from 'next-i18next';
+
 
 
 const Language = (props: any) => {
@@ -14,8 +16,15 @@ const Language = (props: any) => {
     )
 }
 
+
+
+
 export default function TechnologyStack() {
     const [isOpen, setIsOpen] = useState(false);
+    const { t } = useTranslation('common');
+
+    const title = t('Services.development.content.fourth.title');
+    const description = t('Services.development.content.fourth.description');
 
     return (
         <>
@@ -24,12 +33,8 @@ export default function TechnologyStack() {
                     </div>
                     <div className="Column">
                         <div className="Text">
-                            <div className="Title">
-                                Technology Stack
-                            </div>
-                            <div className="Description">
-                                Building and transforming digital products with a range of technologies.
-                            </div>
+                        <h1>{title}</h1>
+                        <h1>{description}</h1>
                         </div>
 
                         <DefaultButton bgColor="White" onClick={() => {setIsOpen(!isOpen)}}>Read more</DefaultButton>
