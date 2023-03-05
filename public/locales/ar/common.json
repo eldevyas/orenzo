@@ -163,6 +163,7 @@
                 }
             }
         },
+        "components": {},
         "design": {},
         "development": {
             "head": {
@@ -195,6 +196,10 @@
                     "projects": {}
                 }
             }
-        }
-    }
+        },
+        "marketing": {}
+    },
+    "about": {},
+    "portfolio": {},
+    "contact": {}
 }

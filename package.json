@@ -24,7 +24,11 @@
         "jquery": "^3.6.1",
         "jss-rtl": "^0.3.0",
         "moment": "^2.29.4",
+<<<<<<< HEAD
+        "next": "^13.2.3",
+=======
         "next": "^12.3.1",
+>>>>>>> 3ffd0be028ddde604d516a2854e29f168d3def5d
         "next-i18next": "^12.1.0",
         "nextjs-progressbar": "^0.0.16",
         "react": "^17.0.0 || ^18.2.0",
