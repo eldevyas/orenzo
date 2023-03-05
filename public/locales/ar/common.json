@@ -17,30 +17,30 @@
         "QuickLinks": {
             "title": "روابط سريعة",
             "links": {
-                "home": "Home",
-                "services": "Services",
-                "portfolio": "Portfolio",
-                "about": "About us",
-                "language": "Language",
-                "contact": "Contact"
+                "home": "الرئيسية",
+                "services": "خدماتنا",
+                "portfolio": "مشاريعنا",
+                "about": "معلومات عنا",
+                "language": "اللغة",
+                "contact": "اتصل بنا"
             }
         },
         "Contact": {
             "title": "اتصل بنا",
             "platforms": {
-                "facebook": "Facebook",
-                "instagram": "Instagram",
-                "twitter": "Twitter",
-                "linkedin": "Linkedin",
-                "youtube": "Youtube"
+                "facebook": "فيسبوك",
+                "instagram": "إنستجرام",
+                "twitter": "تويتر",
+                "linkedin": "لينكد إن",
+                "youtube": "يوتيوب"
             }
         }
     },
     "home": {
         "head": {
-            "title": "Orenzo - Digital Agency",
+            "title": "أورينزو - وكالة رقمية",
             "meta": {
-                "description": "Orenzo - Digital Agency"
+                "description": "أورينزو - وكالة رقمية"
             }
         },
         "content": {
@@ -147,15 +147,15 @@
     },
     "services": {
         "head": {
-            "title": "Orenzo - Services",
+            "title": "أورينزو - الخدمات",
             "meta": {
-                "description": "Orenzo - Digital Agency"
+                "description": "أورينزو - وكالة رقمية"
             }
         },
         "content": {
             "testing": {
-                "title": "This is the English title",
-                "description": "You are currently viewing this page in English 🚀",
+                "title": "هذا هو العنوان باللغة العربية",
+                "description": "🚀 أنت تشاهد حاليًا هذه الصفحة باللغة الإنجليزية",
                 "buttons": {
                     "English": "English Language",
                     "Arabic": "اللغة العربية",
@@ -167,9 +167,9 @@
         "design": {},
         "development": {
             "head": {
-                "title": "Orenzo - Development Services",
+                "title": "أورينزو - خدمات التطوير",
                 "meta": {
-                    "description": "Orenzo - Digital Agency"
+                    "description": "أورينزو - وكالة رقمية"
                 }
             },
             "content": {
@@ -186,13 +186,13 @@
                     "description": "لدينا سنوات من الخبرة وقمنا بتطوير عشرات المشاريع. لذلك نحن نعرف ما يجب القيام به لتحقيق نتائج تجعل عملائنا فخورين."
                 },
                 "fourth": {
-                    "title": "Technology Stack",
-                    "description": "Building and transforming digital products with a range of technologies.",
-                    "button": "Read More"
+                    "title": "التقنيات المستخدمة",
+                    "description": "نبني ونحوّل المنتجات الرقمية باستخدام مجموعة من التقنيات.",
+                    "button": "المزيد من المعلومات"
                 },
                 "fifth": {
-                    "title": "Some cases we are proud of",
-                    "description": "Check out these cases to see how we work and what we achieve. A picture speaks a thousand words!",
+                    "title": "بعض الحالات التي نفخر بها",
+                    "description": "!تفضل بزيارة هذه الحالات لترى كيف نعمل وما نحقق. فالصورة تعبر عن ألف كلمة",
                     "projects": {}
                 }
             }
