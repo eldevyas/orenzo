@@ -6,8 +6,6 @@ import Chip from '@mui/material/Chip';
 import { ProgrammingRange } from "./data/programmingRange";
 import { useTranslation } from 'next-i18next';
 
-
-
 const Language = (props: any) => {
     return (
         <>
@@ -16,9 +14,6 @@ const Language = (props: any) => {
     )
 }
 
-
-
-
 export default function TechnologyStack() {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -26,9 +21,9 @@ export default function TechnologyStack() {
     console.log(t);
 
 
-    const title = t('Services.development.content.fourth.title');
-    const description = t('Services.development.content.fourth.description');
-    const button = t('Services.development.content.fourth.button')
+    const title = t('services.development.content.fourth.title');
+    const description = t('services.development.content.fourth.description');
+    const button = t('services.development.content.fourth.button')
 
     return (
         <>
@@ -37,7 +32,7 @@ export default function TechnologyStack() {
                     </div>
                     <div className="Column">
                         <div className="Text">
-                        <h1>التقنيات المستخدمة</h1>
+                        <h1>{title}</h1>
                         <h1>{description}</h1>
                         </div>
 
