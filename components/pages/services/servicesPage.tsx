@@ -19,10 +19,6 @@ export default function ServicesPage() {
     const { t } = useTranslation('common');
     console.log(t);
 
-    const title = t('services.content.testing.title');
-    const description = t('services.content.testing.description');
-
-
     const changeLocale = (LocaleString: string) => {
         router.push({ pathname, query }, asPath, { locale: LocaleString })
         console.log('%c Locale has been changed to:', 'background: #222; color: #bada55', LocaleString)
@@ -35,8 +31,14 @@ export default function ServicesPage() {
 
             <Stack spacing={5} sx={{margin: "100px 0"}} justifyContent="center" alignItems="center">
                 <Stack spacing={1}  justifyContent="center" alignItems="center">
-                    <h1>{title}</h1>
-                    <p>{description}</p>
+                    <div className="Text">
+                        <div className="Title">
+                            {t('services.content.testing.title')}
+                        </div>
+                        <div className="Description">
+                            {t('services.content.testing.description')}
+                        </div>
+                    </div>
                 </Stack>
 
                 <Stack direction="row" spacing={2}>
