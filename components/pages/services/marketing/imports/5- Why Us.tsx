@@ -1,7 +1,7 @@
 import React from "react";
 import QualitiesGrid from "../../global/Qualities";
 
-// Used icons
+// icons Used
 import AllInclusiveIcon from "@mui/icons-material/AllInclusive";
 import NextWeekIcon from "@mui/icons-material/NextWeek";
 import BiotechTwoToneIcon from "@mui/icons-material/BiotechTwoTone";
