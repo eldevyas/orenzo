@@ -20,11 +20,6 @@ export default function TechnologyStack() {
     const { t } = useTranslation('common');
     console.log(t);
 
-
-    const title = t('services.development.content.fourth.title');
-    const description = t('services.development.content.fourth.description');
-    const button = t('services.development.content.fourth.button')
-
     return (
         <>
             <div className="TechnologyStack">
@@ -32,11 +27,16 @@ export default function TechnologyStack() {
                     </div>
                     <div className="Column">
                         <div className="Text">
-                        <h1>{title}</h1>
-                        <h1>{description}</h1>
+                            <div className="Tilte">
+                                {t('services.development.content.fourth.title')}
+                            </div>
+                            <div className="Description">
+                                {t('services.development.content.fourth.title.description')}
+                            </div>
                         </div>
-
-                        <DefaultButton bgColor="White" onClick={() => {setIsOpen(!isOpen)}}>{button}</DefaultButton>
+                        <DefaultButton bgColor="White" onClick={() => {setIsOpen(!isOpen)}}>
+                            {t('services.development.content.fourth.button')}
+                        </DefaultButton>
                     </div>
             </div>
 
