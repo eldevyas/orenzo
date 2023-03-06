@@ -17,7 +17,7 @@ const Language = (props: any) => {
 export default function TechnologyStack() {
     const [isOpen, setIsOpen] = useState(false);
 
-    const { t } = useTranslation('common.json');
+    const { t } = useTranslation('common');
     console.log(t);
 
 
