@@ -31,7 +31,7 @@ export default function TechnologyStack() {
                                 {t('services.development.content.fourth.title')}
                             </div>
                             <div className="Description">
-                                {t('services.development.content.fourth.title.description')}
+                                {t('services.development.content.fourth.description')}
                             </div>
                         </div>
                         <DefaultButton bgColor="White" onClick={() => {setIsOpen(!isOpen)}}>
