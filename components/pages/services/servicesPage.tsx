@@ -19,9 +19,12 @@ export default function ServicesPage() {
     const { t } = useTranslation('common');
     console.log(t);
 
+<<<<<<< HEAD
     const title = t('services.content.testing.title');
     const description = t('services.content.testing.description');
 
+=======
+>>>>>>> 04079481a69614ac5b4c89f1ab7758f28bbb03a9
     const changeLocale = (LocaleString: string) => {
         router.push({ pathname, query }, asPath, { locale: LocaleString })
         console.log('%c Locale has been changed to:', 'background: #222; color: #bada55', LocaleString)
@@ -34,19 +37,25 @@ export default function ServicesPage() {
 
             <Stack spacing={5} sx={{margin: "100px 0"}} justifyContent="center" alignItems="center">
                 <Stack spacing={1}  justifyContent="center" alignItems="center">
-                    <h1>{title}</h1>
-                    <p>{description}</p>
+                    <div className="Text">
+                        <div className="Title">
+                            {t('services.content.testing.title')}
+                        </div>
+                        <div className="Description">
+                            {t('services.content.testing.description')}
+                        </div>
+                    </div>
                 </Stack>
 
                 <Stack direction="row" spacing={2}>
                     <DefaultButton bgColor="Red" onClick= {() => {changeLocale("en")} }>
-                        {t('Services.content.testing.buttons.English')}
+                        {t('services.content.testing.buttons.English')}
                     </DefaultButton>
                     <DefaultButton bgColor="Black" onClick= {() => {changeLocale("ar")} }>
-                        {t('Services.content.testing.buttons.Arabic')}
+                        {t('services.content.testing.buttons.Arabic')}
                     </DefaultButton>
                     <DefaultButton bgColor="Blue" onClick= {() => {changeLocale("fr")} }>
-                        {t('Services.content.testing.buttons.French')}
+                        {t('services.content.testing.buttons.French')}
                     </DefaultButton>
                 </Stack>
             </Stack>

@@ -6,8 +6,6 @@ import Chip from '@mui/material/Chip';
 import { ProgrammingRange } from "./data/programmingRange";
 import { useTranslation } from 'next-i18next';
 
-
-
 const Language = (props: any) => {
     return (
         <>
@@ -16,15 +14,16 @@ const Language = (props: any) => {
     )
 }
 
-
-
-
 export default function TechnologyStack() {
     const [isOpen, setIsOpen] = useState(false);
-    const { t } = useTranslation('common');
 
+<<<<<<< HEAD
     const title = t('services.development.content.fourth.title');
     const description = t('services.development.content.fourth.description');
+=======
+    const { t } = useTranslation('common');
+    console.log(t);
+>>>>>>> 04079481a69614ac5b4c89f1ab7758f28bbb03a9
 
     return (
         <>
@@ -33,11 +32,16 @@ export default function TechnologyStack() {
                     </div>
                     <div className="Column">
                         <div className="Text">
-                        <h1>{title}</h1>
-                        <h1>{description}</h1>
+                            <div className="Tilte">
+                                {t('services.development.content.fourth.title')}
+                            </div>
+                            <div className="Description">
+                                {t('services.development.content.fourth.description')}
+                            </div>
                         </div>
-
-                        <DefaultButton bgColor="White" onClick={() => {setIsOpen(!isOpen)}}>Read more</DefaultButton>
+                        <DefaultButton bgColor="White" onClick={() => {setIsOpen(!isOpen)}}>
+                            {t('services.development.content.fourth.button')}
+                        </DefaultButton>
                     </div>
             </div>
 

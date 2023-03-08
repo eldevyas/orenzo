@@ -1,8 +1,6 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 
-
-
 function DefaultButton(props: any) {
     var {bgColor, ...other} = props;
 
@@ -25,7 +23,6 @@ function IconTextButton(props: any) {
         </>
     )
 }
-
 
 function OutlinedButton(props: any) {
     var {bgColor, ...other} = props;
