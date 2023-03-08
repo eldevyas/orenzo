@@ -23,8 +23,8 @@ export default function TechnologyStack() {
     const [isOpen, setIsOpen] = useState(false);
     const { t } = useTranslation('common');
 
-    const title = t('Services.development.content.fourth.title');
-    const description = t('Services.development.content.fourth.description');
+    const title = t('services.development.content.fourth.title');
+    const description = t('services.development.content.fourth.description');
 
     return (
         <>

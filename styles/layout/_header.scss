@@ -6,13 +6,13 @@
     background: transparent;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     @include GlobalPadding();
     padding: 5vh 10vw;
     z-index: 1000;
     .Logo {
         width: auto;
-        height: 20px;
+        min-height: 27.5px;
         aspect-ratio: 146.37/30;
         position: relative;
         display: flex;

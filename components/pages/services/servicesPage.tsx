@@ -19,9 +19,8 @@ export default function ServicesPage() {
     const { t } = useTranslation('common');
     console.log(t);
 
-    const title = t('Services.content.testing.title');
-    const description = t('Services.content.testing.description');
-
+    const title = t('services.content.testing.title');
+    const description = t('services.content.testing.description');
 
     const changeLocale = (LocaleString: string) => {
         router.push({ pathname, query }, asPath, { locale: LocaleString })
