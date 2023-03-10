@@ -60,15 +60,15 @@ export default function DesktopHeader(props: any) {
             type: "selectPage",
             pages: [
                 {
-                    title: "Design",
+                    title: t("header.links.servicesPages.design"),
                     href: "/services/design",
                 },
                 {
-                    title: "Development",
+                    title: t("header.links.servicesPages.development"),
                     href: "/services/development",
                 },
                 {
-                    title: "Marketing",
+                    title: t("header.links.servicesPages.marketing"),
                     href: "/services/marketing",
                 },
             ],

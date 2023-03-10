@@ -6,7 +6,12 @@
             "portfolio": "Portfolio",
             "about": "About us",
             "language": "Language",
-            "contact": "Contact"
+            "contact": "Contact",
+            "servicesPages": {
+                "design": "Design",
+                "development": "Development",
+                "marketing": "Marketing"
+            }
         }
     },
     "footer": {
@@ -22,7 +27,12 @@
                 "portfolio": "Portfolio",
                 "about": "About us",
                 "language": "Language",
-                "contact": "Contact"
+                "contact": "Contact",
+                "servicesPages": {
+                    "design": "Design",
+                    "development": "Development",
+                    "marketing": "Marketing"
+                }
             }
         },
         "Contact": {
@@ -62,23 +72,23 @@
             },
             "BusinessPerformance": {
                 "title": "We Can Improve <RedSpan>Your Business Performance</RedSpan> And Gain More Customers<RedDot>.</RedDot>",
-                "description": "Our creative team is focused on stunning and results driven solutions for small to medium businesses all over the world.",
+                "description": "Our goal is to help small and medium businesses achieve their maximum potential. We have a creative and experienced team who provide stunning and result-driven solutions. Our team works closely with our clients to understand their needs and provide customized services to help them grow and succeed in their industry.",
                 "cards": {
                     "reach": {
                         "title": "Reach More Customers",
-                        "description": "Viverra sit nulla natoque consectetur. Convallis aenean cursus ut amet dui blandit sem id. Arcu, ac congue penatibus at. Proin quis commodo consectetur nisl sem nisl sed."
+                        "description": "Boost your business with our expert social media, email, and SEO strategies. Contact us to learn more and take your business to new heights."
                     },
                     "cost": {
                         "title": "Cost Effective",
-                        "description": "Viverra sit nulla natoque consectetur. Convallis aenean cursus ut amet dui blandit sem id. Arcu, ac congue penatibus at. Proin quis commodo consectetur nisl sem nisl sed."
+                        "description": "Looking for cost-effective ways to expand your customer base? Our team can help! Contact us to learn more."
                     },
                     "services": {
                         "title": "Customized Services",
-                        "description": "Viverra sit nulla natoque consectetur. Convallis aenean cursus ut amet dui blandit sem id. Arcu, ac congue penatibus at. Proin quis commodo consectetur nisl sem nisl sed."
+                        "description": "Our team delivers customized solutions for your unique needs. From branding to digital marketing, we provide personalized expertise. Let us help bring your vision to life. Contact us today to discuss your project."
                     },
                     "professionals": {
                         "title": "Trained Professionals",
-                        "description": "Viverra sit nulla natoque consectetur. Convallis aenean cursus ut amet dui blandit sem id. Arcu, ac congue penatibus at. Proin quis commodo consectetur nisl sem nisl sed."
+                        "description": "Our team consists of trained professionals who are experts in their respective fields, ensuring that you receive top-notch service and high-quality results."
                     }
                 }
             },
@@ -115,23 +125,53 @@
             },
             "Testimonials": {
                 "title": "What Clients <BlueSpan>Say</BlueSpan>.",
-                "description": "Pellentesque nulla in adipiscing lacus curabitur. <br/> Proin id pellentesque laoreet pretium sem pharetra. ",
+                "description": "At our company, we take pride in providing exceptional service to our clients. Don't just take our word for it, though – hear what our clients have to say!",
                 "comments": {
                     "C1": {
-                        "name": "Yassine Chettouch",
-                        "profession": "Developer",
-                        "comment": "Sit adipiscing feugiat aliquam elementum tellus iaculis urna, purus pulvinar. Dolor habitasse vitae nulla ut ultrices nulla venenatis, condimentum. In augue sapien sed nascetur tellus. Nec donec eu luctus fermentum pellentesque viverra venenatis, mauris. Sit lobortis gravida vitae ipsum viverra feugiat. Sapien senectus orci."
+                        "name": "Fatima Zahra Boulmane",
+                        "profession": "Founder and CEO of AtlasTech",
+                        "comment": "Working with this agency was a fantastic experience. They were professional, responsive, and delivered high-quality work on time. I highly recommend them to anyone in need of their services."
                     },
                     "C2": {
-                        "name": "Aassim El Kihel",
-                        "profession": "Developer",
-                        "comment": "Sit adipiscing feugiat aliquam elementum tellus iaculis urna, purus pulvinar. Dolor habitasse vitae nulla ut ultrices nulla venenatis, condimentum. In augue sapien sed nascetur tellus. Nec donec eu luctus fermentum pellentesque viverra venenatis, mauris. Sit lobortis gravida vitae ipsum viverra feugiat. Sapien senectus orci."
+                        "name": "Mohammed Amine Cherif",
+                        "profession": "Co-Founder and CTO of TechSol",
+                        "comment": "I was extremely impressed with the level of expertise and attention to detail provided by this agency. They were able to understand our needs and deliver exactly what we were looking for. I would definitely work with them again."
+                    },
+                    "C3": {
+                        "name": "Sanae Benali",
+                        "profession": "Founder and CEO of WebDevMaroc",
+                        "comment": "I have worked with many agencies in the past, but this one stands out for their exceptional communication, creativity, and dedication. I am thrilled with the final result and would recommend them to anyone without hesitation."
+                    },
+                    "C4": {
+                        "name": "Ahmed El Bakkali",
+                        "profession": "Co-Founder and COO of MarocCloud",
+                        "comment": "The team at this agency was highly professional and knowledgeable. They went above and beyond to ensure that we were satisfied with their work, and the end result exceeded our expectations. I would highly recommend them to anyone looking for top-quality services."
+                    },
+                    "C5": {
+                        "name": "Hassan Belarbi",
+                        "profession": "Marketing Manager",
+                        "comment": "The Moment team exceeded my expectations! They are true professionals who care about their clients and take the time to understand their needs. The quality of their work is exceptional, and I highly recommend them."
+                    },
+                    "C6": {
+                        "name": "Salma El Moussaoui",
+                        "profession": "Small Business Owner",
+                        "comment": "I was impressed with the speed and efficiency of the Moment team. They were able to deliver high-quality work within a tight deadline, and the end result was exactly what I wanted. I will definitely be using their services again!"
+                    },
+                    "C7": {
+                        "name": "Kamal Sbai",
+                        "profession": "Graphic Designer",
+                        "comment": "I worked with the Moment team on a branding project, and I couldn't be happier with the results. They are great communicators, highly creative, and have a keen eye for detail. I highly recommend their services."
+                    },
+                    "C8": {
+                        "name": "Fatima Zahra El Ouazzani",
+                        "profession": "Entrepreneur",
+                        "comment": "I've worked with many agencies in the past, but the Moment team stands out for their professionalism, expertise, and attention to detail. They take the time to understand your needs and deliver high-quality work that exceeds your expectations. Highly recommended!"
                     }
                 }
             },
             "Contact": {
                 "title": "Let's <RedSpan>Talk</RedSpan>?",
-                "description": "Non praesent tincidunt vestibulum viverra at sociis. Nisi elit hac eget donec. Elementum purus semper at pretium. Dictum facilisi in et lacus, egestas blandit. Non lectus arcu non iaculis scelerisque. Orci lorem bibendum turpis blandit. Id erat mauris neque luctus augue porta. Et eget dis tellus cum nulla pharetra nibh. Sit hac leo enim ornare.",
+                "description": "Interested in working with us? Let's talk! We would love to hear more about your project and how we can help you achieve your goals. Contact us today to schedule a consultation and start the conversation.",
                 "button": "Make an inquiry"
             },
             "Mailing": {
@@ -163,7 +203,206 @@
                 }
             }
         },
-        "design": {},
+        "design": {
+            "head": {
+                "title": "Orenzo - Development Services",
+                "meta": {
+                    "description": "Orenzo - Digital Agency"
+                }
+            },
+            "content": {
+                "first": {
+                    "title": "Design for people",
+                    "description": "Our creative design solutions are for people, not for machines. Yet made by people and machines.",
+                    "button": "Read more",
+                    "notice": "No business has ever succeeded with poor design solutions. To us, design is the nucleus that holds business together. We’re always willing to help you build it."
+                },
+                "second": {
+                    "branding": {
+                        "title": "Branding",
+                        "description": "Establish your unique identity and stand out."
+                    },
+                    "logoDesign": {
+                        "title": "Logo Design",
+                        "description": "Make a lasting impression with a custom logo."
+                    },
+                    "uiUx": {
+                        "title": "UI/UX",
+                        "description": "Enhance user experience and make a statement."
+                    },
+                    "socialMedia": {
+                        "title": "Social Media",
+                        "description": "Boost your online presence and engage followers."
+                    },
+                    "visualProduction": {
+                        "title": "Visual Production",
+                        "description": "Communicate your message visually and effectively."
+                    },
+                    "packaging": {
+                        "title": "Packaging",
+                        "description": "Elevate your product with eye-catching packaging."
+                    }
+                },
+                "third": [{
+                        "first": "Creative Design",
+                        "second": "attracts people."
+                    },
+                    {
+                        "first": "Smart UX makes",
+                        "second": "them stay."
+                    },
+                    {
+                        "first": "At Orenzo we",
+                        "second": "deliver both."
+                    },
+                    {
+                        "first": "For you, for people,",
+                        "second": "for business."
+                    }
+                ],
+                "fourth": "No business has ever succeeded with poor design solutions. To us, design is the nucleus that holds business together. We’re always willing to help you build it.",
+                "fifth": {
+                    "title": "What's our secret?",
+                    "cards": {
+                        "TimeLessDesign": {
+                            "title": "TimeLess Design",
+                            "description": "Run your digital product for years without worries about being outdated. Our design is ahead of time."
+                        },
+                        "BusinessOrientedSolutions": {
+                            "title": "Business-oriented Solutions",
+                            "description": "We help our clients succeed concentrating our efforts on business goals and striving to achieve them no matter what."
+                        },
+                        "DeepResearch": {
+                            "title": "Deep research",
+                            "description": "We do our own research into your business area and market. Once we know all there is to know, we can give you exactly what your business needs."
+                        },
+                        "ReliablePartner": {
+                            "title": "Reliable partner",
+                            "description": "Our relationship with you is 100% transparent and built on trust. We believe friendliness is key to any successful long-term partnership."
+                        },
+                        "OutOfTheBoxDesign": {
+                            "title": "Out-of-the-box design",
+                            "description": "What we offer are custom-built solutions. We love experimenting and breaking rules! No boring old templates here."
+                        },
+                        "IncreasingValue": {
+                            "title": "Increasing value",
+                            "description": "Do you want to increase the value of your product? How about more customer loyalty and engagement? We know you do, so we create design strategies to do just that!"
+                        }
+                    }
+                },
+                "sixth": {
+                    "title": "Working Process",
+                    "process": [{
+                            "title": "Immersion",
+                            "description": "Going deep into client’s business to understand its core sense, goals and challenges to build partnership."
+                        },
+                        {
+                            "title": "Ideation",
+                            "description": "Creating first concepts of a future product and shaping up the direction."
+                        },
+                        {
+                            "title": "Wireframing",
+                            "description": "Building the foundation, structure and core elements of a digital product."
+                        },
+                        {
+                            "title": "Visual Design",
+                            "description": "Adding colors, illustrations and shapes to create visual language that resonates with customers."
+                        },
+                        {
+                            "title": "Handoff & Support",
+                            "description": "Sending all finalised deliverables and providing further support."
+                        }
+                    ]
+                },
+                "seventh": {
+                    "title": "Some cases we are proud of",
+                    "description": "Check out these cases to see how we work and what we achieve. A picture speaks a thousand words!",
+                    "projects": {
+                        "netgain": "Netgain trusted us to rebrand their whole huge website from scratch. The company helps accountants automate their processes and workflows in NetSuite so they can do their work more efficiently. The reviews on the new website have been outstanding.",
+                        "nexus": "Imagine a digital business card - it’s not in the future. Nexus is real and made to simplify lives by gathering all social media and other links in one app. We’ve been there to make a website, mobile app and promotion materials.",
+                        "slit": "We were lucky to work with Slit - a startup aiming to create a blockchain art gallery. Our creatives went through several stages of ideation and concepting before we found an adorable way to represent this business.",
+                        "bonsai": "For an ambitious Bonsai, a SaaS product created to automate freelance work, we've tailored a minimalist and trendy website that accelerates freelancers' work with accounting, client management, and more."
+                    }
+                },
+                "whyUs": {
+                    "title": "What's our secret?",
+                    "cards": {
+                        "BusinessCenteredApproach": {
+                            "title": "Business-centered approach",
+                            "description": "Everything we do is geared toward your strategic goals. Essentially, our designs are an effective way to make your business successful."
+                        },
+                        "StrongMarketingTools": {
+                            "title": "Strong marketing tools",
+                            "description": "Marketing and design are inextricably linked. We know just how to make them complement each other."
+                        },
+                        "CloseCommunication": {
+                            "title": "Close communication",
+                            "description": "We have found that keeping in touch with our clients accounts for 60% of a given project’s success."
+                        },
+                        "MeetingTheDeadlines": {
+                            "title": "Meeting the deadlines",
+                            "description": "We hate falling behind on a project just as much as our clients. That’s why we never do it."
+                        },
+                        "FutureProofResults": {
+                            "title": "Future-proof results",
+                            "description": "Fads are fine, but some things are timeless. We make every effort to stay on the cutting edge of design."
+                        },
+                        "IncreasingValue": {
+                            "title": "Exceeding Expectations",
+                            "description": "You know why we really care about your success? Because it motivates us like nothing else! So it’s a win-win situation."
+                        }
+                    }
+                },
+                "faq": {
+                    "title": "FAQ",
+                    "questions": [{
+                            "question": "How long does it take to get started?",
+                            "answer": "Our turnaround is lightning-fast. Just one week from signing off and we’re there with the kick-off meeting to get it rolling."
+                        },
+                        {
+                            "question": "What is your typical working process?",
+                            "answer": "It all starts with grabbing a cup of coffee, chilling with mates, and some quality time at the PlayStation (just kidding!). We always start a project with analysis, learning the requirements, and making estimates that will be shared in the price proposal. Then it’s off to signing off, kicking off, and getting your business to the next level with a pinch of our design magic."
+                        },
+                        {
+                            "question": "Do you work on a fixed-price basis or time and material?",
+                            "answer": "Flexibility is the key of success in this crazy world, so we try to suggest an appropriate solution for each specific case we deal with. The more clear and detailed the requirements are, the more accurate will our estimates be. This is the closest we get to the fixed-price model."
+                        },
+                        {
+                            "question": "How do you usually start new collaborations?",
+                            "answer": "Each new engagement starts with an introduction call and filling out the design/branding brief. If you have a cool project in mind, feel free to get in touch at hello@outcrowd.io"
+                        },
+                        {
+                            "question": "Do you guys work with big companies only? We’re an early-stage startup.",
+                            "answer": "We’re all for building a borderless world, so we are open to working with any project we come across. By the way, we do believe in startups, and one of those we helped develop from scratch has been sold to https://entercom.com/"
+                        },
+                        {
+                            "question": "How long it will take to get an estimate from you?",
+                            "answer": "We hate to keep you waiting. Setting up a team, making preliminary research and analysis, and getting back to you with the contract will take up to 24 hours from the moment we learn what’s needed. Efficiency is one of Outcrowd’s key values."
+                        },
+                        {
+                            "question": "Do you have a minimum engagement?",
+                            "answer": "We set no entry thresholds for people who want to work with us. But we still believe that a product that needs to be designed can’t be made within a couple of days. After all, we need some time to research, analyze and come up with a strategy. So we’ve set a minimum project duration as 30 hours and we’re waiting for you!"
+                        },
+                        {
+                            "question": "What’s the average project duration?",
+                            "answer": "Our team works full-time on every project, so the overall duration will highly depend on the initial estimate. On average, our projects last from 2 weeks to 5 months."
+                        },
+                        {
+                            "question": "Can we start the design without wireframes?",
+                            "answer": "Wireframes help to build UX without distractions. The wireframe is an essential part of the design process and we would not recommend eliminating it. Having everything polished at the wireframing stage, we can avoid many amendments and revisions at the design stage, which saves both time and money."
+                        },
+                        {
+                            "question": "What templates does Outcrowd use to create design?",
+                            "answer": "We don’t use pre-built templates or kits because there’s just no soul in them. We’re committed to building fully customized and product-based solutions that will meet the expectations of the target users. Each pixel and line is designed with love and passion by our creative minds."
+                        },
+                        {
+                            "question": "Where should I start with my business if I have an idea?",
+                            "answer": "Hey, you’ve come to the right place! Please get in touch and we’ll help you with the ideation, design, and development. Full cycle on us, no hassle for you. Easy, right?"
+                        }
+                    ]
+                }
+            }
+        },
         "development": {
             "head": {
                 "title": "Orenzo - Development Services",
@@ -192,7 +431,12 @@
                 "fifth": {
                     "title": "Some cases we are proud of",
                     "description": "Check out these cases to see how we work and what we achieve. A picture speaks a thousand words!",
-                    "projects": {}
+                    "projects": {
+                        "netgain": "Netgain trusted us to rebrand their whole huge website from scratch. The company helps accountants automate their processes and workflows in NetSuite so they can do their work more efficiently. The reviews on the new website have been outstanding.",
+                        "nexus": "Imagine a digital business card - it’s not in the future. Nexus is real and made to simplify lives by gathering all social media and other links in one app. We’ve been there to make a website, mobile app and promotion materials.",
+                        "slit": "We were lucky to work with Slit - a startup aiming to create a blockchain art gallery. Our creatives went through several stages of ideation and concepting before we found an adorable way to represent this business.",
+                        "bonsai": "For an ambitious Bonsai, a SaaS product created to automate freelance work, we've tailored a minimalist and trendy website that accelerates freelancers' work with accounting, client management, and more."
+                    }
                 }
             }
         }

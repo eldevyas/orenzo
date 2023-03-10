@@ -173,17 +173,17 @@ export default function MobileMenu(props: any) {
             positionTop: e.target.getAttribute("data-positiontop"),
             pages: [
                 {
-                    title: "Design",
+                    title: t("header.links.servicesPages.design"),
                     href: "/services/design",
                     icon: BrushIcon,
                 },
                 {
-                    title: "Development",
+                    title: t("header.links.servicesPages.development"),
                     href: "/services/development",
                     icon: TerminalIcon,
                 },
                 {
-                    title: "Marketing",
+                    title: t("header.links.servicesPages.marketing"),
                     href: "/services/marketing",
                     icon: InsightsIcon,
                 },

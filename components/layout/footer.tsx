@@ -93,7 +93,7 @@ export default function Footer(props: any) {
                             </div>
                             <div className="SocialLink">
                                 <SocialIcon
-                                    url="https://instagram.com/"
+                                    url="https://instagram.com/orenzo.agency"
                                     className="Icon"
                                 />
                                 Instagram
@@ -125,7 +125,7 @@ export default function Footer(props: any) {
 
                 <div className="Info">
                     <p>
-                        © Copyright 2022 - Designed by Orenzo - All right
+                        © Copyright 2023 - Designed by Orenzo. - All right
                         reserved
                     </p>
 
