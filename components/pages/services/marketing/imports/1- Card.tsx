@@ -8,6 +8,7 @@ export default function Card(props: any) {
         Illustration: Illustration,
         title: props.Title,
         description: props.Description,
+        button: props.Button,
         href: "#StandOut",
     };
 

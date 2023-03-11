@@ -137,53 +137,73 @@ export default function Page() {
         },
     };
     let FAQData: any = {
-        title: t("services.design.content.FAQ.title"),
+        title: t("services.marketing.content.FAQ.title"),
         questions: [
             {
-                question: t("services.design.content.FAQ.questions.0.question"),
-                answer: t("services.design.content.FAQ.questions.0.answer"),
-            },
-            {
-                question: t("services.design.content.FAQ.questions.1.question"),
-                answer: t("services.design.content.FAQ.questions.1.answer"),
-            },
-            {
-                question: t("services.design.content.FAQ.questions.2.question"),
-                answer: t("services.design.content.FAQ.questions.2.answer"),
-            },
-            {
-                question: t("services.design.content.FAQ.questions.3.question"),
-                answer: t("services.design.content.FAQ.questions.3.answer"),
-            },
-            {
-                question: t("services.design.content.FAQ.questions.4.question"),
-                answer: t("services.design.content.FAQ.questions.4.answer"),
-            },
-            {
-                question: t("services.design.content.FAQ.questions.5.question"),
-                answer: t("services.design.content.FAQ.questions.5.answer"),
-            },
-            {
-                question: t("services.design.content.FAQ.questions.6.question"),
-                answer: t("services.design.content.FAQ.questions.6.answer"),
-            },
-            {
-                question: t("services.design.content.FAQ.questions.7.question"),
-                answer: t("services.design.content.FAQ.questions.7.answer"),
-            },
-            {
-                question: t("services.design.content.FAQ.questions.8.question"),
-                answer: t("services.design.content.FAQ.questions.8.answer"),
-            },
-            {
-                question: t("services.design.content.FAQ.questions.9.question"),
-                answer: t("services.design.content.FAQ.questions.9.answer"),
+                question: t(
+                    "services.marketing.content.FAQ.questions.0.question"
+                ),
+                answer: t("services.marketing.content.FAQ.questions.0.answer"),
             },
             {
                 question: t(
-                    "services.design.content.FAQ.questions.10.question"
+                    "services.marketing.content.FAQ.questions.1.question"
                 ),
-                answer: t("services.design.content.FAQ.questions.10.answer"),
+                answer: t("services.marketing.content.FAQ.questions.1.answer"),
+            },
+            {
+                question: t(
+                    "services.marketing.content.FAQ.questions.2.question"
+                ),
+                answer: t("services.marketing.content.FAQ.questions.2.answer"),
+            },
+            {
+                question: t(
+                    "services.marketing.content.FAQ.questions.3.question"
+                ),
+                answer: t("services.marketing.content.FAQ.questions.3.answer"),
+            },
+            {
+                question: t(
+                    "services.marketing.content.FAQ.questions.4.question"
+                ),
+                answer: t("services.marketing.content.FAQ.questions.4.answer"),
+            },
+            {
+                question: t(
+                    "services.marketing.content.FAQ.questions.5.question"
+                ),
+                answer: t("services.marketing.content.FAQ.questions.5.answer"),
+            },
+            {
+                question: t(
+                    "services.marketing.content.FAQ.questions.6.question"
+                ),
+                answer: t("services.marketing.content.FAQ.questions.6.answer"),
+            },
+            {
+                question: t(
+                    "services.marketing.content.FAQ.questions.7.question"
+                ),
+                answer: t("services.marketing.content.FAQ.questions.7.answer"),
+            },
+            {
+                question: t(
+                    "services.marketing.content.FAQ.questions.8.question"
+                ),
+                answer: t("services.marketing.content.FAQ.questions.8.answer"),
+            },
+            {
+                question: t(
+                    "services.marketing.content.FAQ.questions.9.question"
+                ),
+                answer: t("services.marketing.content.FAQ.questions.9.answer"),
+            },
+            {
+                question: t(
+                    "services.marketing.content.FAQ.questions.10.question"
+                ),
+                answer: t("services.marketing.content.FAQ.questions.10.answer"),
             },
         ],
     };
