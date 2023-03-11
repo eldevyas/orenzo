@@ -19,33 +19,28 @@ function Step(props: any) {
 export default function Process(props: any) {
     const Steps: { title: String; description: String; color: String }[] = [
         {
-            title: "Immersion",
-            description:
-                "Going deep into client’s business to understand its core sense, goals and challenges to build partnership.",
+            title: props.Steps[0].title,
+            description: props.Steps[0].description,
             color: "linear-gradient(90deg, #43E97B 0%, #38F9D7 100%)",
         },
         {
-            title: "Ideation",
-            description:
-                "Creating first concepts of a future product and shaping up the direction.",
+            title: props.Steps[1].title,
+            description: props.Steps[1].description,
             color: "linear-gradient(90deg, #48C6EF 0%, #6F86D6 100%)",
         },
         {
-            title: "Wireframing",
-            description:
-                "Building the foundation, structure and core elements of a digital product.",
+            title: props.Steps[2].title,
+            description: props.Steps[2].description,
             color: "linear-gradient(90deg, #F78CA0 0%, #F9748F 19%, #FD868C 60%)",
         },
         {
-            title: "Visual Design",
-            description:
-                "Adding colors, illustrations and shapes to create visual language that resonates with customers.",
+            title: props.Steps[3].title,
+            description: props.Steps[3].description,
             color: "linear-gradient(90deg, #B8CBB8 0%, #B8CBB8 0%, #B465DA 0%, #CF6CC9 33%, #EE609C 66%, #EE609C 100%)",
         },
         {
-            title: "Handoff & Support",
-            description:
-                "Sending all finalised deliverables and providing further support.",
+            title: props.Steps[4].title,
+            description: props.Steps[4].description,
             color: "linear-gradient(90deg, #F6D365 0%, #FDA085 100%)",
         },
     ];
@@ -53,7 +48,7 @@ export default function Process(props: any) {
     return (
         <>
             <div className="Process">
-                <div className="Title">Working Process</div>
+                <div className="Title">{props.Title}</div>
 
                 <div className="Steps">
                     {Steps.map((StepItem: any, index: Number) => {

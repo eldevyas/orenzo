@@ -16,119 +16,287 @@ export default function Page() {
     const { t } = useTranslation("common");
 
     const MainCardData: any = {
-        Title: t("services.design.content.first.title"),
-        Description: t("services.design.content.first.des"),
-        Button: t("services.design.content.first.button"),
-        Slogan: t("services.design.content.first.title"),
+        Title: t("services.design.content.Card.title"),
+        Description: t("services.design.content.Card.des"),
+        Button: t("services.design.content.Card.button"),
+        Slogan: t("services.design.content.Card.title"),
     };
 
     const ServicesData: any = {
         Cards: {
             branding: {
-                title: t("services.design.content.second.branding.title"),
+                title: t("services.design.content.Services.branding.title"),
                 description: t(
-                    "services.design.content.second.branding.description"
+                    "services.design.content.Services.branding.description"
                 ),
             },
             logoDesign: {
-                title: t("services.design.content.second.logoDesign.title"),
+                title: t("services.design.content.Services.logoDesign.title"),
                 description: t(
-                    "services.design.content.second.logoDesign.description"
+                    "services.design.content.Services.logoDesign.description"
                 ),
             },
             uiUx: {
-                title: t("services.design.content.second.uiUx.title"),
+                title: t("services.design.content.Services.uiUx.title"),
                 description: t(
-                    "services.design.content.second.uiUx.description"
+                    "services.design.content.Services.uiUx.description"
                 ),
             },
             socialMedia: {
-                title: t("services.design.content.second.socialMedia.title"),
+                title: t("services.design.content.Services.socialMedia.title"),
                 description: t(
-                    "services.design.content.second.socialMedia.description"
+                    "services.design.content.Services.socialMedia.description"
                 ),
             },
             visualProduction: {
                 title: t(
-                    "services.design.content.second.visualProduction.title"
+                    "services.design.content.Services.visualProduction.title"
                 ),
                 description: t(
-                    "services.design.content.second.visualProduction.description"
+                    "services.design.content.Services.visualProduction.description"
                 ),
             },
             packaging: {
-                title: t("services.design.content.second.packaging.title"),
+                title: t("services.design.content.Services.packaging.title"),
                 description: t(
-                    "services.design.content.second.packaging.description"
+                    "services.design.content.Services.packaging.description"
                 ),
             },
         },
-        Slogan: t("services.design.content.fourth"),
+        Slogan: t("services.design.content.Notice"),
     };
 
     let BannerData: any = [
         {
-            first: t("services.design.content.third.0.first"),
-            second: t("services.design.content.third.0.second"),
+            first: t("services.design.content.Banner.0.first"),
+            second: t("services.design.content.Banner.0.second"),
         },
         {
-            first: t("services.design.content.third.1.first"),
-            second: t("services.design.content.third.1.second"),
+            first: t("services.design.content.Banner.1.first"),
+            second: t("services.design.content.Banner.1.second"),
         },
         {
-            first: t("services.design.content.third.2.first"),
-            second: t("services.design.content.third.2.second"),
+            first: t("services.design.content.Banner.2.first"),
+            second: t("services.design.content.Banner.2.second"),
         },
         {
-            first: t("services.design.content.third.3.first"),
-            second: t("services.design.content.third.3.second"),
+            first: t("services.design.content.Banner.3.first"),
+            second: t("services.design.content.Banner.3.second"),
         },
     ];
 
     let SecretData: any = {
-        Title: "What's our secret?",
+        Title: t("services.design.content.Secret.title"),
         Cards: {
             TimeLessDesign: {
-                title: t("services.design.content.fifth.TimeLessDesign.title"),
+                title: t(
+                    "services.design.content.Secret.cards.TimeLessDesign.title"
+                ),
                 description: t(
-                    "services.design.content.fifth.TimeLessDesign.description"
+                    "services.design.content.Secret.cards.TimeLessDesign.description"
                 ),
             },
             BusinessOrientedSolutions: {
                 title: t(
-                    "services.design.content.fifth.BusinessOrientedSolutions.title"
+                    "services.design.content.Secret.cards.BusinessOrientedSolutions.title"
                 ),
                 description: t(
-                    "services.design.content.fifth.BusinessOrientedSolutions.description"
+                    "services.design.content.Secret.cards.BusinessOrientedSolutions.description"
                 ),
             },
             DeepResearch: {
-                title: t("services.design.content.fifth.DeepResearch.title"),
+                title: t(
+                    "services.design.content.Secret.cards.DeepResearch.title"
+                ),
                 description: t(
-                    "services.design.content.fifth.DeepResearch.description"
+                    "services.design.content.Secret.cards.DeepResearch.description"
                 ),
             },
             ReliablePartner: {
-                title: t("services.design.content.fifth.ReliablePartner.title"),
+                title: t(
+                    "services.design.content.Secret.cards.ReliablePartner.title"
+                ),
                 description: t(
-                    "services.design.content.fifth.ReliablePartner.description"
+                    "services.design.content.Secret.cards.ReliablePartner.description"
                 ),
             },
             OutOfTheBoxDesign: {
                 title: t(
-                    "services.design.content.fifth.OutOfTheBoxDesign.title"
+                    "services.design.content.Secret.cards.OutOfTheBoxDesign.title"
                 ),
                 description: t(
-                    "services.design.content.fifth.OutOfTheBoxDesign.description"
+                    "services.design.content.Secret.cards.OutOfTheBoxDesign.description"
                 ),
             },
             IncreasingValue: {
-                title: t("services.design.content.fifth.IncreasingValue.title"),
+                title: t(
+                    "services.design.content.Secret.cards.IncreasingValue.title"
+                ),
                 description: t(
-                    "services.design.content.fifth.IncreasingValue.description"
+                    "services.design.content.Secret.cards.IncreasingValue.description"
                 ),
             },
         },
+    };
+
+    const ProcessData: any = {
+        Title: t("services.design.content.WorkingProcess.title"),
+        Steps: [
+            {
+                title: t(
+                    "services.design.content.WorkingProcess.process.0.title"
+                ),
+                description: t(
+                    "services.design.content.WorkingProcess.process.0.description"
+                ),
+            },
+            {
+                title: t(
+                    "services.design.content.WorkingProcess.process.1.title"
+                ),
+                description: t(
+                    "services.design.content.WorkingProcess.process.1.description"
+                ),
+            },
+            {
+                title: t(
+                    "services.design.content.WorkingProcess.process.2.title"
+                ),
+                description: t(
+                    "services.design.content.WorkingProcess.process.2.description"
+                ),
+            },
+            {
+                title: t(
+                    "services.design.content.WorkingProcess.process.3.title"
+                ),
+                description: t(
+                    "services.design.content.WorkingProcess.process.3.description"
+                ),
+            },
+            {
+                title: t(
+                    "services.design.content.WorkingProcess.process.4.title"
+                ),
+                description: t(
+                    "services.design.content.WorkingProcess.process.4.description"
+                ),
+            },
+        ],
+    };
+    let CasesData: any = {
+        title: t("services.design.content.Cases.title"),
+        description: t("services.design.content.Cases.description"),
+        projects: {
+            netgain: t("services.design.content.Cases.projects.netgain"),
+            nexus: t("services.design.content.Cases.projects.nexus"),
+            slit: t("services.design.content.Cases.projects.slit"),
+            bonsai: t("services.design.content.Cases.projects.bonsai"),
+        },
+    };
+    let WhyUsData: any = {
+        Title: t("services.design.content.Secret.title"),
+        Cards: {
+            TimeLessDesign: {
+                title: t(
+                    "services.design.content.Secret.cards.TimeLessDesign.title"
+                ),
+                description: t(
+                    "services.design.content.Secret.cards.TimeLessDesign.description"
+                ),
+            },
+            BusinessOrientedSolutions: {
+                title: t(
+                    "services.design.content.Secret.cards.BusinessOrientedSolutions.title"
+                ),
+                description: t(
+                    "services.design.content.Secret.cards.BusinessOrientedSolutions.description"
+                ),
+            },
+            DeepResearch: {
+                title: t(
+                    "services.design.content.Secret.cards.DeepResearch.title"
+                ),
+                description: t(
+                    "services.design.content.Secret.cards.DeepResearch.description"
+                ),
+            },
+            ReliablePartner: {
+                title: t(
+                    "services.design.content.Secret.cards.ReliablePartner.title"
+                ),
+                description: t(
+                    "services.design.content.Secret.cards.ReliablePartner.description"
+                ),
+            },
+            OutOfTheBoxDesign: {
+                title: t(
+                    "services.design.content.Secret.cards.OutOfTheBoxDesign.title"
+                ),
+                description: t(
+                    "services.design.content.Secret.cards.OutOfTheBoxDesign.description"
+                ),
+            },
+            IncreasingValue: {
+                title: t(
+                    "services.design.content.Secret.cards.IncreasingValue.title"
+                ),
+                description: t(
+                    "services.design.content.Secret.cards.IncreasingValue.description"
+                ),
+            },
+        },
+    };
+    let FAQData: any = {
+        title: t("services.design.content.FAQ.title"),
+        questions: [
+            {
+                question: t("services.design.content.FAQ.questions.0.question"),
+                answer: t("services.design.content.FAQ.questions.0.answer"),
+            },
+            {
+                question: t("services.design.content.FAQ.questions.1.question"),
+                answer: t("services.design.content.FAQ.questions.1.answer"),
+            },
+            {
+                question: t("services.design.content.FAQ.questions.2.question"),
+                answer: t("services.design.content.FAQ.questions.2.answer"),
+            },
+            {
+                question: t("services.design.content.FAQ.questions.3.question"),
+                answer: t("services.design.content.FAQ.questions.3.answer"),
+            },
+            {
+                question: t("services.design.content.FAQ.questions.4.question"),
+                answer: t("services.design.content.FAQ.questions.4.answer"),
+            },
+            {
+                question: t("services.design.content.FAQ.questions.5.question"),
+                answer: t("services.design.content.FAQ.questions.5.answer"),
+            },
+            {
+                question: t("services.design.content.FAQ.questions.6.question"),
+                answer: t("services.design.content.FAQ.questions.6.answer"),
+            },
+            {
+                question: t("services.design.content.FAQ.questions.7.question"),
+                answer: t("services.design.content.FAQ.questions.7.answer"),
+            },
+            {
+                question: t("services.design.content.FAQ.questions.8.question"),
+                answer: t("services.design.content.FAQ.questions.8.answer"),
+            },
+            {
+                question: t("services.design.content.FAQ.questions.9.question"),
+                answer: t("services.design.content.FAQ.questions.9.answer"),
+            },
+            {
+                question: t(
+                    "services.design.content.FAQ.questions.10.question"
+                ),
+                answer: t("services.design.content.FAQ.questions.10.answer"),
+            },
+        ],
     };
 
     return (
@@ -142,11 +310,11 @@ export default function Page() {
                 <Banner Data={BannerData} />
                 <Slogan text={ServicesData.Slogan} variant="Light" />
                 <Secret {...SecretData} />
-                <Process />
-                <Cases />
-                <WhyUs />
+                <Process {...ProcessData} />
+                <Cases {...CasesData} />
+                <WhyUs {...WhyUsData} />
                 <LetsTalk />
-                <FAQ />
+                <FAQ {...FAQData} />
             </div>
 
             <Footer />

@@ -3,6 +3,7 @@ import { SiSlideshare, SiTrustpilot } from "react-icons/si";
 import { BiHappy } from "react-icons/bi";
 
 import { TbBusinessplan } from "react-icons/tb";
+import { Trans } from "next-i18next";
 
 const Card = (props: any) => {
     return (
@@ -22,34 +23,30 @@ const Card = (props: any) => {
     );
 };
 
-export default function BestServices() {
+export default function BestServices(props: any) {
     const Cards: {
         title: string;
         description: string;
         class: string;
     }[] = [
         {
-            title: "Consultant Business Strategy",
-            description:
-                "Viverra sit nulla natoque consectetur. Convallis aenean cursus ut amet dui blandit sem id. Arcu, ac congue penatibus at. Proin quis commodo consectetur nisl sem nisl sed.",
+            title: props.Cards[0].Title,
+            description: props.Cards[0].Description,
             class: "Normal",
         },
         {
-            title: "Google Ads Management",
-            description:
-                "Viverra sit nulla natoque consectetur. Convallis aenean cursus ut amet dui blandit sem id. Arcu, ac congue penatibus at. Proin quis commodo consectetur nisl sem nisl sed.",
+            title: props.Cards[1].Title,
+            description: props.Cards[1].Description,
             class: "Special",
         },
         {
-            title: "Research & Discovery",
-            description:
-                "Viverra sit nulla natoque consectetur. Convallis aenean cursus ut amet dui blandit sem id. Arcu, ac congue penatibus at. Proin quis commodo consectetur nisl sem nisl sed.",
+            title: props.Cards[2].Title,
+            description: props.Cards[2].Description,
             class: "Normal",
         },
         {
-            title: "Social Media Marketing",
-            description:
-                "Viverra sit nulla natoque consectetur. Convallis aenean cursus ut amet dui blandit sem id. Arcu, ac congue penatibus at. Proin quis commodo consectetur nisl sem nisl sed.",
+            title: props.Cards[3].Title,
+            description: props.Cards[3].Description,
             class: "Normal",
         },
     ];
@@ -58,9 +55,18 @@ export default function BestServices() {
             <div className="BestServices">
                 <div className="Title">
                     <h1>
-                        We just offer the{" "}
-                        <span className="SpanHighlightBlue">Best Services</span>
-                        .
+                        <Trans
+                            i18nKey="services.marketing.content.BestServices.title"
+                            components={{
+                                RedSpan: <span className="SpanHighlightRed" />,
+                                BlueSpan: (
+                                    <span className="SpanHighlightBlue" />
+                                ),
+                                RedDot: (
+                                    <span className="colorDot" color="red" />
+                                ),
+                            }}
+                        />
                     </h1>
                     <p>
                         Our services help you create digital products and solve

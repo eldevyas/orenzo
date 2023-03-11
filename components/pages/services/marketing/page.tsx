@@ -7,22 +7,199 @@ import BestServices from "./imports/4 - Best Services";
 import WhyUs from "./imports/5- Why Us";
 import LetsTalk from "../../home/content/8- Let's Talk";
 import FAQ from "./../global/FAQ";
+import { useTranslation } from "next-i18next";
 
 export default function Page() {
+    const { t } = useTranslation("common");
+
+    const MainCardData: any = {
+        Title: t("services.marketing.content.Card.title"),
+        Description: t("services.marketing.content.Card.description"),
+        Button: t("services.marketing.content.Card.button"),
+        Slogan: t("services.marketing.content.Card.title"),
+    };
+
+    let StandOutData: any = {
+        Title: t("services.marketing.content.StandOut.title"),
+        Description: t("services.marketing.content.StandOut.description"),
+        Cards: [
+            {
+                Title: t("services.marketing.content.StandOut.cards.0.title"),
+                Description: t(
+                    "services.marketing.content.StandOut.cards.0.description"
+                ),
+            },
+            {
+                Title: t("services.marketing.content.StandOut.cards.1.title"),
+                Description: t(
+                    "services.marketing.content.StandOut.cards.1.description"
+                ),
+            },
+            {
+                Title: t("services.marketing.content.StandOut.cards.2.title"),
+                Description: t(
+                    "services.marketing.content.StandOut.cards.2.description"
+                ),
+            },
+        ],
+    };
+
+    let BestServicesData: any = {
+        Title: t("services.marketing.content.BestServices.title"),
+        Description: t("services.marketing.content.BestServices.description"),
+        Cards: [
+            {
+                Title: t(
+                    "services.marketing.content.BestServices.cards.0.title"
+                ),
+                Description: t(
+                    "services.marketing.content.BestServices.cards.0.description"
+                ),
+            },
+            {
+                Title: t(
+                    "services.marketing.content.BestServices.cards.1.title"
+                ),
+                Description: t(
+                    "services.marketing.content.BestServices.cards.1.description"
+                ),
+            },
+            {
+                Title: t(
+                    "services.marketing.content.BestServices.cards.2.title"
+                ),
+                Description: t(
+                    "services.marketing.content.BestServices.cards.2.description"
+                ),
+            },
+            {
+                Title: t(
+                    "services.marketing.content.BestServices.cards.3.title"
+                ),
+                Description: t(
+                    "services.marketing.content.BestServices.cards.3.description"
+                ),
+            },
+        ],
+    };
+
+    let WhyUsData: any = {
+        Title: t("services.marketing.content.WhyUs.title"),
+        Cards: {
+            TimeLessDesign: {
+                title: t(
+                    "services.marketing.content.WhyUs.cards.BusinessCenteredApproach.title"
+                ),
+                description: t(
+                    "services.marketing.content.WhyUs.cards.BusinessCenteredApproach.description"
+                ),
+            },
+            BusinessOrientedSolutions: {
+                title: t(
+                    "services.marketing.content.WhyUs.cards.StrongMarketingTools.title"
+                ),
+                description: t(
+                    "services.marketing.content.WhyUs.cards.StrongMarketingTools.description"
+                ),
+            },
+            DeepResearch: {
+                title: t(
+                    "services.marketing.content.WhyUs.cards.CloseCommunication.title"
+                ),
+                description: t(
+                    "services.marketing.content.WhyUs.cards.CloseCommunication.description"
+                ),
+            },
+            ReliablePartner: {
+                title: t(
+                    "services.marketing.content.WhyUs.cards.MeetingTheDeadlines.title"
+                ),
+                description: t(
+                    "services.marketing.content.WhyUs.cards.MeetingTheDeadlines.description"
+                ),
+            },
+            OutOfTheBoxDesign: {
+                title: t(
+                    "services.marketing.content.WhyUs.cards.FutureProofResults.title"
+                ),
+                description: t(
+                    "services.marketing.content.WhyUs.cards.FutureProofResults.description"
+                ),
+            },
+            IncreasingValue: {
+                title: t(
+                    "services.marketing.content.WhyUs.cards.IncreasingValue.title"
+                ),
+                description: t(
+                    "services.marketing.content.WhyUs.cards.IncreasingValue.description"
+                ),
+            },
+        },
+    };
+    let FAQData: any = {
+        title: t("services.design.content.FAQ.title"),
+        questions: [
+            {
+                question: t("services.design.content.FAQ.questions.0.question"),
+                answer: t("services.design.content.FAQ.questions.0.answer"),
+            },
+            {
+                question: t("services.design.content.FAQ.questions.1.question"),
+                answer: t("services.design.content.FAQ.questions.1.answer"),
+            },
+            {
+                question: t("services.design.content.FAQ.questions.2.question"),
+                answer: t("services.design.content.FAQ.questions.2.answer"),
+            },
+            {
+                question: t("services.design.content.FAQ.questions.3.question"),
+                answer: t("services.design.content.FAQ.questions.3.answer"),
+            },
+            {
+                question: t("services.design.content.FAQ.questions.4.question"),
+                answer: t("services.design.content.FAQ.questions.4.answer"),
+            },
+            {
+                question: t("services.design.content.FAQ.questions.5.question"),
+                answer: t("services.design.content.FAQ.questions.5.answer"),
+            },
+            {
+                question: t("services.design.content.FAQ.questions.6.question"),
+                answer: t("services.design.content.FAQ.questions.6.answer"),
+            },
+            {
+                question: t("services.design.content.FAQ.questions.7.question"),
+                answer: t("services.design.content.FAQ.questions.7.answer"),
+            },
+            {
+                question: t("services.design.content.FAQ.questions.8.question"),
+                answer: t("services.design.content.FAQ.questions.8.answer"),
+            },
+            {
+                question: t("services.design.content.FAQ.questions.9.question"),
+                answer: t("services.design.content.FAQ.questions.9.answer"),
+            },
+            {
+                question: t(
+                    "services.design.content.FAQ.questions.10.question"
+                ),
+                answer: t("services.design.content.FAQ.questions.10.answer"),
+            },
+        ],
+    };
     return (
         <div className="MarketingPage">
             <Header />
 
             <div className="PageContent">
-                <Card />
-                <Slogan text="Marketing has always been about relationships. About trust and personalised service. And about human connection. In a world that feels unpredictable and uncertain, and where you have more conversations with AI than with people, Orenzo is a shift towards human-driven marketing." />
-                <StandOut />
-                <BestServices />
-                <WhyUs />
+                <Card {...MainCardData} />
+                <Slogan text={MainCardData.Slogan} />
+                <StandOut {...StandOutData} />
+                <BestServices {...BestServicesData} />
+                <WhyUs {...WhyUsData} />
                 <LetsTalk />
-                <FAQ />
+                <FAQ {...FAQData} />
             </div>
-
             <Footer />
         </div>
     );

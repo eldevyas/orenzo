@@ -70,7 +70,8 @@
                 background-color: color.change($color, $lightness: 0%, $alpha: 0.1);
                 border-radius: 1rem;
                 padding: 1rem;
-                backdrop-filter: blur(1rem);
+                // transform: scale(1.1);
+                // backdrop-filter: blur(1rem);
             }
         }
     }
