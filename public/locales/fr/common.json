@@ -1,32 +1,42 @@
 {
     "header": {
         "links": {
-            "home": "Accueil",
+            "home": "Acceuil",
             "services": "Services",
-            "portfolio": "Portefeuille",
-            "about": "À propos",
-            "language": "Language",
-            "contact": "Contact"
+            "portfolio": "Portfeuille",
+            "about": "À propos de nous",
+            "language": "Langue",
+            "contact": "Contact",
+            "servicesPages": {
+                "design": "Désign",
+                "development": "Développement",
+                "marketing": "Marketing"
+            }
         }
     },
     "footer": {
-        "": {
-            "description": "A ac mus sem in ullamcorper. Integer leo pellentesque tempor ac enim gravida dui. Netus eget nullam volutpat faucibus diam cras euismod. In blandit at magna libero, tellus eleifend.",
-            "button": "Contact us"
+        "Info": {
+            "description": "Nous sommes Orenzo, une agence de marketing digital. Notre équipe d'experts se spécialise dans la fourniture de solutions personnalisées pour les entreprises cherchant à développer leur présence en ligne. Nous avons les compétences et l'expérience pour vous aider à atteindre vos objectifs. Contactez-nous dès aujourd'hui pour en savoir plus.",
+            "button": "Contactez-nous"
         },
         "QuickLinks": {
-            "title": "Quick Links",
+            "title": "Liens rapides",
             "links": {
-                "home": "Home",
+                "home": "Acceuil",
                 "services": "Services",
-                "portfolio": "Portfolio",
-                "about": "About us",
-                "language": "Language",
-                "contact": "Contact"
+                "portfolio": "Portfeuille",
+                "about": "À propos de nous",
+                "language": "Langue",
+                "contact": "Contactez-nous",
+                "servicesPages": {
+                    "design": "Désign",
+                    "development": "Développement",
+                    "marketing": "Commercialisation"
+                }
             }
         },
         "Contact": {
-            "title": "Connect with us",
+            "title": "Connecte-toi avec nous",
             "platforms": {
                 "facebook": "Facebook",
                 "instagram": "Instagram",
@@ -38,127 +48,400 @@
     },
     "home": {
         "head": {
-            "title": "Orenzo - Digital Agency",
-            "meta": {
-                "description": "Orenzo - Digital Agency"
-            }
-        },
-        "content": {
-            "LandingSection": {
-                "title": "Des résultats <RedSpan>Mesurables</RedSpan> & <BlueSpan>Efficaces</BlueSpan> pour les clients<RedDot>.</RedDot>",
-                "description": "Notre équipe créative se concentre sur des solutions étonnantes et axées sur les résultats pour les petites et moyennes entreprises du monde entier.",
-                "buttons": {
-                    "primary": "Obtenir un devis",
-                    "secondary": "Savoir plus"
-                }
-            },
-            "TrustedPartners": {
-                "title": "Nos partenaires de confiance"
-            },
-            "AboutUs": {
-                "title": "On est des <BlueSpan>Experts</BlueSpan> dans notre domaine<BlueDot>.</BlueDot>",
-                "description": "Tristique vestibulum nam arcu semper aliquam eget scelerisque. Non pulvinar turpis egestas mattis. Lacus felis morbi ut quam. Lacus cras quis cras cras. Nunc tellus vivamus elit, elementum odio penatibus morbi. Dolor semper curabitur massa tincidunt lacus turpis. Aliquam condimentum turpis dolor massa nulla sit potenti luctus erat.",
-                "button": "Contact us"
-            },
-            "BusinessPerformance": {
-                "title": "We Can Improve <RedSpan>Your Business Performance</RedSpan> And Gain More Customers<RedDot>.</RedDot>",
-                "description": "Our creative team is focused on stunning and results driven solutions for small to medium businesses all over the world.",
-                "cards": {
-                    "reach": {
-                        "title": "Reach More Customers",
-                        "description": "Viverra sit nulla natoque consectetur. Convallis aenean cursus ut amet dui blandit sem id. Arcu, ac congue penatibus at. Proin quis commodo consectetur nisl sem nisl sed."
-                    },
-                    "cost": {
-                        "title": "Cost Effective",
-                        "description": "Viverra sit nulla natoque consectetur. Convallis aenean cursus ut amet dui blandit sem id. Arcu, ac congue penatibus at. Proin quis commodo consectetur nisl sem nisl sed."
-                    },
-                    "services": {
-                        "title": "Customized Services",
-                        "description": "Viverra sit nulla natoque consectetur. Convallis aenean cursus ut amet dui blandit sem id. Arcu, ac congue penatibus at. Proin quis commodo consectetur nisl sem nisl sed."
-                    },
-                    "professionals": {
-                        "title": "Trained Professionals",
-                        "description": "Viverra sit nulla natoque consectetur. Convallis aenean cursus ut amet dui blandit sem id. Arcu, ac congue penatibus at. Proin quis commodo consectetur nisl sem nisl sed."
-                    }
-                }
-            },
-            "Services": {
-                "title": "We Do <BlueSpan>Everything</BlueSpan>",
-                "description": "We work hard to provide the best quality for you and we never choose easy and faster ways to quickly break up with your project.",
-                "cards": {
-                    "programming": {
-                        "title": "Design and programming of websites and applications",
-                        "description": "This is with the highest quality in terms of design, coding and various aspects of the site, which provides our customers with modification in the future, as we take into account all the options that the customer may need so that he does not have to design the site again, which may cost money and time"
-                    },
-                    "design": {
-                        "title": "Graphic design and print",
-                        "description": "Design is part of our core personality. We develop new ideas from scratch based on available materials and information provided. We also provide customized solutions to reach our marketing goals. Through design we create the optimal communication picture that will work perfectly for the benefit of your business."
-                    },
-                    "advertising": {
-                        "title": "Advertising campaigns",
-                        "description": "Advertising campaigns improve the reach of a company's website or social media accounts, but they require a lot of experience and good planning to ensure good results."
-                    },
-                    "marketing": {
-                        "title": "E-Marketing",
-                        "description": "We market events and events through all websites and electronic platforms and ensure that the public is informed and attended"
-                    },
-                    "business": {
-                        "title": "Building a business identity",
-                        "description": "The brand identity has become the biggest strategy that generates millions of dollars for entrepreneurs, so it was necessary for the Media Man team to rely on all the foundations in their work to build a harmonious brand identity for clients"
-                    },
-                    "visual": {
-                        "title": "visual production",
-                        "description": "We have a creative team in the fields of writing, directing and editing to provide you with high services, using the latest technical technologies and innovative ideas to produce works that can remain in the public's memory for as long as possible."
-                    }
-                },
-                "more": "Find out more"
-            },
-            "Testimonials": {
-                "title": "What Clients <BlueSpan>Say</BlueSpan>.",
-                "comments": {
-                    "C1": {
-                        "name": "Yassine Chettouch",
-                        "profession": "Developer",
-                        "comment": "Sit adipiscing feugiat aliquam elementum tellus iaculis urna, purus pulvinar. Dolor habitasse vitae nulla ut ultrices nulla venenatis, condimentum. In augue sapien sed nascetur tellus. Nec donec eu luctus fermentum pellentesque viverra venenatis, mauris. Sit lobortis gravida vitae ipsum viverra feugiat. Sapien senectus orci."
-                    },
-                    "C2": {
-                        "name": "Aassim El Kihel",
-                        "profession": "Developer",
-                        "comment": "Sit adipiscing feugiat aliquam elementum tellus iaculis urna, purus pulvinar. Dolor habitasse vitae nulla ut ultrices nulla venenatis, condimentum. In augue sapien sed nascetur tellus. Nec donec eu luctus fermentum pellentesque viverra venenatis, mauris. Sit lobortis gravida vitae ipsum viverra feugiat. Sapien senectus orci."
-                    }
-                }
-            },
-            "Contact": {
-                "title": "Let's <RedSpan>Talk</RedSpan>?",
-                "description": "Non praesent tincidunt vestibulum viverra at sociis. Nisi elit hac eget donec. Elementum purus semper at pretium. Dictum facilisi in et lacus, egestas blandit. Non lectus arcu non iaculis scelerisque. Orci lorem bibendum turpis blandit. Id erat mauris neque luctus augue porta. Et eget dis tellus cum nulla pharetra nibh. Sit hac leo enim ornare.",
-                "button": "Make an inquiry"
-            },
-            "Mailing": {
-                "title": "Receive Exclusive Content in your email",
-                "description": "Get notified about company updates, news and blog posts. We hate spam.",
-                "input": {
-                    "placeholder": "Input your email",
-                    "button": "Subscribe"
-                },
-                "label": "Cancel anytime with one click. All against SPAM!"
-            }
-        }
-    },
-    "Services": {
-        "head": {
-            "title": "Orenzo - Services",
+            "title": "Orenzo - Agence Digitale",
             "meta": {
                 "description": "Orenzo - Agence Digitale"
             }
         },
         "content": {
-            "testing": {
-                "title": "C'est le titre français",
-                "description": "Vous consultez actuellement cette page en français🚀",
+            "LandingSection": {
+                "title": "Résultats <RedSpan>Mesurables</RedSpan> & <BlueSpan>Efficaces</BlueSpan> Pour les Clients<RedDot>.</RedDot>",
+                "description": "Notre équipe créative se concentre sur des solutions étonnantes et axées sur les résultats pour les petites et moyennes entreprises du monde entier.",
                 "buttons": {
-                    "English": "English Language",
-                    "Arabic": "اللغة العربية",
-                    "French": "Langue Française"
+                    "primary": "Obtenir un devis",
+                    "secondary": "Apprendre encore plus"
+                }
+            },
+            "TrustedPartners": {
+                "title": "Nos Partenaires de Confiance"
+            },
+            "AboutUs": {
+                "title": "We are <BlueSpan>Experts</BlueSpan> in our field<BlueDot>.</BlueDot>\n",
+                "description": "En tant qu'experts, notre équipe d'ORENZO s'engage à aider les entreprises à atteindre leurs objectifs de marketing en ligne. Avec des années d'expérience et une passion pour rester à jour avec les dernières tendances et techniques de l'industrie, nous proposons des stratégies personnalisées adaptées aux besoins uniques de chaque client. Nous sommes fiers d'offrir un service client exceptionnel et de fournir des résultats mesurables qui aident nos clients à réussir. Contactez-nous dès aujourd'hui pour en savoir plus sur la façon dont nous pouvons aider votre entreprise à se développer.",
+                "button": "Contactez-nous"
+            },
+            "BusinessPerformance": {
+                "title": "Nous pouvons améliorer <RedSpan>les performances de votre entreprise</RedSpan> et gagner plus de clients<RedDot>.</RedDot>",
+                "description": "Notre objectif est d'aider les petites et moyennes entreprises à atteindre leur plein potentiel. Nous avons une équipe créative et expérimentée qui fournit des solutions étonnantes et axées sur les résultats. Notre équipe travaille en étroite collaboration avec nos clients pour comprendre leurs besoins et fournir des services personnalisés pour les aider à grandir et à réussir dans leur industrie.",
+                "cards": {
+                    "reach": {
+                        "title": "Atteignez plus de clients",
+                        "description": "Boostez votre entreprise avec nos stratégies expertes en médias sociaux, e-mail et SEO. Contactez-nous pour en savoir plus et propulsez votre entreprise vers de nouveaux sommets."
+                    },
+                    "cost": {
+                        "title": "Économique",
+                        "description": "Vous cherchez des moyens rentables d'élargir votre clientèle? Notre équipe peut vous aider! Contactez-nous pour en savoir plus."
+                    },
+                    "services": {
+                        "title": "Services personnalisés",
+                        "description": "Notre équipe propose des solutions personnalisées pour vos besoins uniques. De l'image de marque au marketing numérique, nous fournissons une expertise personnalisée. Laissez-nous vous aider à donner vie à votre vision. Contactez-nous dès aujourd'hui pour discuter de votre projet."
+                    },
+                    "professionals": {
+                        "title": "Professionnels formés",
+                        "description": "Our team consists of trained professionals who are experts in their respective fields, ensuring that you receive top-notch service and high-quality results.\n"
+                    }
+                }
+            },
+            "Services": {
+                "title": "Nous faisons <BlueSpan>Tout</BlueSpan>",
+                "description": "Nous travaillons dur pour vous fournir la meilleure qualité et nous ne choisissons jamais des moyens simples et rapides de rompre rapidement avec votre projet.",
+                "cards": {
+                    "programming": {
+                        "title": "Conception et programmation de sites Web et d'applications",
+                        "description": "Ceci est fait avec la plus haute qualité en termes de conception, de codage et de divers aspects du site, ce qui permet à nos clients de modifier le site à l'avenir, car nous prenons en compte toutes les options dont le client peut avoir besoin afin qu'il n'ait pas à concevoir le site à nouveau, ce qui peut coûter de l'argent et du temps."
+                    },
+                    "design": {
+                        "title": "Conception graphique et impression",
+                        "description": "La conception fait partie de notre personnalité de base. Nous développons de nouvelles idées à partir de zéro en fonction des matériaux et des informations disponibles. Nous offrons également des solutions personnalisées pour atteindre nos objectifs de marketing. Grâce à la conception, nous créons l'image de communication optimale qui fonctionnera parfaitement pour le bénéfice de votre entreprise."
+                    },
+                    "advertising": {
+                        "title": "Campagnes publicitaires",
+                        "description": "Les campagnes publicitaires améliorent la portée du site Web ou des comptes de médias sociaux d'une entreprise, mais elles nécessitent beaucoup d'expérience et une bonne planification pour garantir de bons résultats."
+                    },
+                    "marketing": {
+                        "title": "Marketing électronique",
+                        "description": "Nous commercialisons des événements et des manifestations à travers tous les sites Web et les plateformes électroniques et nous assurons que le public est informé et assiste."
+                    },
+                    "business": {
+                        "title": "Création d'une identité d'entreprise",
+                        "description": "L'identité de marque est devenue la plus grande stratégie qui génère des millions de dollars pour les entrepreneurs, il était donc nécessaire pour l'équipe de Media Man de s'appuyer sur toutes les fondations dans leur travail pour construire une identité de marque harmonieuse pour les clients."
+                    },
+                    "visual": {
+                        "title": "Production visuelle",
+                        "description": "Nous avons une équipe créative dans les domaines de l’écriture, de la réalisation et de l’édition pour vous fournir des services de haut niveau, en utilisant les dernières technologies techniques et des idées innovantes pour produire des œuvres qui peuvent rester dans la mémoire du public le plus longtemps possible.\n"
+                    }
+                },
+                "more": "En savoir plus"
+            },
+            "Testimonials": {
+                "title": "Ce que <BlueSpan>disent</BlueSpan>  nos clients.",
+                "description": "Dans notre entreprise, nous sommes fiers de fournir un service exceptionnel à nos clients. Ne nous croyez pas simplement sur parole, écoutez ce que nos clients ont à dire !",
+                "comments": {
+                    "C1": {
+                        "name": "Fatima Zahra Boulmane\n",
+                        "profession": "Le fondateur et PDG d'AtlasTech.",
+                        "comment": "Travailler avec cette agence a été une expérience fantastique. Ils étaient professionnels, réactifs et ont livré un travail de haute qualité dans les délais impartis. Je les recommande vivement à quiconque a besoin de leurs services."
+                    },
+                    "C2": {
+                        "name": "Mohammed Amine Cherif\n",
+                        "profession": "Co-Fondateur et CTO de TechSol",
+                        "comment": "J'ai été extrêmement impressionné par le niveau d'expertise et d'attention aux détails fourni par cette agence. Ils ont été en mesure de comprendre nos besoins et de livrer exactement ce que nous recherchions. Je travaillerais certainement avec eux de nouveau."
+                    },
+                    "C3": {
+                        "name": "Sanae Benali\n",
+                        "profession": "Fondateur et PDG de WebDevMaroc.",
+                        "comment": "J'ai travaillé avec de nombreuses agences par le passé, mais celle-ci se distingue par sa communication exceptionnelle, sa créativité et son dévouement. Je suis ravie du résultat final et je les recommanderais sans hésiter à quiconque."
+                    },
+                    "C4": {
+                        "name": "Ahmed El Bakkali\n",
+                        "profession": "Co-Fondateur et COO de MarocCloud",
+                        "comment": "L'équipe de cette agence était très professionnelle et compétente. Ils ont tout fait pour s'assurer que nous étions satisfaits de leur travail, et le résultat final a dépassé nos attentes. Je les recommande vivement à toute personne à la recherche de services de qualité supérieure."
+                    },
+                    "C5": {
+                        "name": "Hassan Belarbi\n",
+                        "profession": "Responsable marketing",
+                        "comment": "L'équipe de Moment a dépassé mes attentes ! Ce sont de vrais professionnels qui se soucient de leurs clients et prennent le temps de comprendre leurs besoins. La qualité de leur travail est exceptionnelle, et je les recommande vivement."
+                    },
+                    "C6": {
+                        "name": "Salma El Moussaoui\n",
+                        "profession": "Propriétaire de petite entreprise",
+                        "comment": "J'ai été impressionné par la rapidité et l'efficacité de l'équipe Moment. Ils ont été capables de fournir un travail de haute qualité dans un délai serré, et le résultat final était exactement ce que je voulais. Je vais certainement utiliser leurs services à nouveau !"
+                    },
+                    "C7": {
+                        "name": "Kamal Sbai",
+                        "profession": "Designer graphique",
+                        "comment": "J'ai travaillé avec l'équipe Moment sur un projet de branding et je ne pourrais pas être plus satisfait des résultats. Ils sont de grands communicateurs, hautement créatifs et ont un œil vif pour les détails. Je recommande fortement leurs services."
+                    },
+                    "C8": {
+                        "name": "Fatima Zahra El Ouazzani\n",
+                        "profession": "Entrepreneur",
+                        "comment": "J'ai travaillé avec de nombreuses agences dans le passé, mais l'équipe Moment se distingue par leur professionnalisme, leur expertise et leur souci du détail. Ils prennent le temps de comprendre vos besoins et fournissent un travail de haute qualité qui dépasse vos attentes. Hautement recommandé !"
+                    }
+                }
+            },
+            "Contact": {
+                "title": "<RedSpan>Parlons</RedSpan>-en?",
+                "description": "Intéressé à travailler avec nous? Parlons-en! Nous aimerions en savoir plus sur votre projet et comment nous pouvons vous aider à atteindre vos objectifs. Contactez-nous dès aujourd'hui pour planifier une consultation et commencer la conversation.",
+                "button": "Faites une demande de renseignements"
+            },
+            "Mailing": {
+                "title": "Recevoir du contenu exclusif dans votre e-mail",
+                "description": "Soyez informé des mises à jour de l'entreprise, des actualités et des articles de blog. Nous détestons le spam.",
+                "input": {
+                    "placeholder": "Entrez votre e-mail",
+                    "button": "S'abonner"
+                },
+                "label": "Annulez à tout moment en un clic. Tout contre le SPAM!"
+            }
+        }
+    },
+    "services": {
+        "head": {
+            "title": "Orenzo - Services",
+            "meta": {
+                "description": "Orenzo - Agence digitale"
+            }
+        },
+        "content": {
+            "testing": {
+                "title": "Ceci est le titre en anglais",
+                "description": "Vous êtes actuellement en train de visualiser cette page en anglais 🚀",
+                "buttons": {
+                    "English": "English Language\n",
+                    "Arabic": "اللغة العربية\n",
+                    "French": "Langue Française\n"
+                }
+            }
+        },
+        "design": {
+            "head": {
+                "title": "Orenzo - Services de Développement",
+                "meta": {
+                    "description": "Orenzo - Agence Digitale"
+                }
+            },
+            "content": {
+                "Card": {
+                    "title": "Conception pour les personnes",
+                    "description": "Nos solutions de conception créatives sont pour les personnes, pas pour les machines. Pourtant, elles sont faites par des personnes et des machines.",
+                    "button": "En savoir plus",
+                    "notice": "Aucune entreprise n'a jamais réussi avec de mauvaises solutions de conception. Pour nous, la conception est le noyau qui maintient l'entreprise ensemble. Nous sommes toujours prêts à vous aider à le construire."
+                },
+                "Services": {
+                    "branding": {
+                        "title": "Branding",
+                        "description": "Établissez votre identité unique et démarquez-vous."
+                    },
+                    "logoDesign": {
+                        "title": "Design de logo",
+                        "description": "Faites une impression durable avec un logo personnalisé."
+                    },
+                    "uiUx": {
+                        "title": "UI/UX",
+                        "description": "Améliorez l'expérience utilisateur et faites une déclaration."
+                    },
+                    "socialMedia": {
+                        "title": "Médias sociaux",
+                        "description": "Augmentez votre présence en ligne et engagez des abonnés."
+                    },
+                    "visualProduction": {
+                        "title": "Production Visuelle",
+                        "description": "Communiquez votre message visuellement et efficacement."
+                    },
+                    "packaging": {
+                        "title": "Emballage",
+                        "description": "Élevez votre produit avec un emballage accrocheur."
+                    }
+                },
+                "Notice": "Aucune entreprise n'a jamais réussi avec de mauvaises solutions de design. Pour nous, le design est le noyau qui maintient l'entreprise ensemble. Nous sommes toujours prêts à vous aider à le construire.",
+                "Secret": {
+                    "title": "Quel est notre secret?",
+                    "cards": {
+                        "TimeLessDesign": {
+                            "title": "Design intemporel",
+                            "description": "Faites fonctionner votre produit numérique pendant des années sans vous soucier d'être dépassé. Notre design est en avance sur son temps."
+                        },
+                        "BusinessOrientedSolutions": {
+                            "title": "Solutions orientées vers les affaires",
+                            "description": "Nous aidons nos clients à réussir en concentrant nos efforts sur les objectifs commerciaux et en nous efforçant de les atteindre quoi qu'il arrive."
+                        },
+                        "DeepResearch": {
+                            "title": "Recherche approfondie",
+                            "description": "Nous effectuons notre propre recherche sur votre secteur d'activité et votre marché. Une fois que nous connaissons tout ce qu'il y a à savoir, nous pouvons vous donner exactement ce dont votre entreprise a besoin."
+                        },
+                        "ReliablePartner": {
+                            "title": "Partenaire fiable",
+                            "description": "Notre relation avec vous est 100% transparente et basée sur la confiance. Nous croyons que la convivialité est la clé de tout partenariat à long terme réussi."
+                        },
+                        "OutOfTheBoxDesign": {
+                            "title": "Design original",
+                            "description": "Ce que nous offrons ce sont des solutions personnalisées. Nous aimons expérimenter et briser les règles ! Pas de vieux modèles ennuyeux ici."
+                        },
+                        "IncreasingValue": {
+                            "title": "Augmenter la valeur",
+                            "description": "Voulez-vous augmenter la valeur de votre produit ? Et que diriez-vous d'avoir plus de fidélité et d'engagement de la part des clients ? Nous savons que vous le voulez, alors nous créons des stratégies de design pour y parvenir !"
+                        }
+                    }
+                },
+                "WorkingProcess": {
+                    "title": "Processus de travail"
+                },
+                "Cases": {
+                    "title": "Quelques cas dont nous sommes fiers",
+                    "description": "Consultez ces cas pour voir comment nous travaillons et ce que nous accomplissons. Une image vaut mille mots !",
+                    "projects": {
+                        "netgain": "Netgain nous a fait confiance pour refondre leur site web complet à partir de zéro. L'entreprise aide les comptables à automatiser leurs processus et flux de travail dans NetSuite afin qu'ils puissent travailler plus efficacement. Les commentaires sur le nouveau site web ont été excellents.",
+                        "nexus": "maginez une carte de visite numérique - ce n'est pas dans le futur. Nexus est réel et conçu pour simplifier la vie en regroupant tous les liens sociaux et autres dans une seule application. Nous avons travaillé sur la création d'un site web, d'une application mobile et de supports de promotion.",
+                        "slit": "Nous avons eu la chance de travailler avec Slit - une startup visant à créer une galerie d'art blockchain. Nos créatifs ont traversé plusieurs étapes d'idéation et de conception avant que nous trouvions une façon adorable de représenter cette entreprise.",
+                        "bonsai": "Pour Bonsai, un produit SaaS créé pour automatiser le travail indépendant, nous avons conçu un site web minimaliste et tendance qui accélère le travail des travailleurs indépendants avec la comptabilité, la gestion des clients, et plus encore."
+                    }
+                },
+                "WhyUs": {
+                    "title": "Pourquoi nous ?",
+                    "cards": {
+                        "BusinessCenteredApproach": {
+                            "title": "Approche centrée sur l'entreprise",
+                            "description": "Tout ce que nous faisons est axé sur vos objectifs stratégiques. Essentiellement, nos designs sont un moyen efficace de rendre votre entreprise réussie."
+                        },
+                        "StrongMarketingTools": {
+                            "title": "Outils marketing puissants",
+                            "description": "Le marketing et le design sont indissociables. Nous savons comment les faire complémentaires."
+                        },
+                        "CloseCommunication": {
+                            "title": "Communication étroite",
+                            "description": "Nous avons constaté que le maintien d'une communication avec nos clients représente 60% du succès d'un projet donné."
+                        },
+                        "MeetingTheDeadlines": {
+                            "title": "Respect des délais",
+                            "description": "Nous détestons autant que nos clients prendre du retard sur un projet. C'est pourquoi nous ne le faisons jamais."
+                        },
+                        "FutureProofResults": {
+                            "title": "Résultats à l'épreuve du temps",
+                            "description": "Les modes sont bien, mais certaines choses sont intemporelles. Nous faisons tout notre possible pour rester à la pointe du design."
+                        },
+                        "IncreasingValue": {
+                            "title": "Dépasser les attentes",
+                            "description": "Savez-vous pourquoi nous nous soucions vraiment de votre réussite ? Parce que cela nous motive comme rien d'autre ! C'est donc une situation gagnant-gagnant."
+                        }
+                    }
+                },
+                "FAQ": {
+                    "title": "FAQ"
+                }
+            }
+        },
+        "development": {
+            "head": {
+                "title": "Orenzo - Services de développement",
+                "meta": {
+                    "description": "Orenzo - Agence numérique"
+                }
+            },
+            "content": {
+                "Title": {
+                    "title": "Développement",
+                    "description": "Donner vie à votre produit"
+                },
+                "Potential": {
+                    "title": "Libérez votre potentiel",
+                    "description": "Ok, votre produit numérique est conçu. Et maintenant ? Maintenant vient le développement. Nous savons que c'est là que les choses peuvent mal tourner si ce n'est pas fait correctement. Ce qui n'arrive jamais chez nous, bien sûr. Nous ne faisons aucun compromis et rassemblons tout cela dans une solution simple."
+                },
+                "Develop": {
+                    "title": "Développer",
+                    "description": "Nous avons des années d'expérience et avons développé des dizaines de projets. Nous savons donc quoi faire pour obtenir des résultats qui rendront nos clients fiers."
+                },
+                "TechnologyStack": {
+                    "title": "Stack technologique",
+                    "description": "Construction et transformation de produits numériques avec une gamme de technologies.",
+                    "button": "Lire la suite"
+                },
+                "Cases": {
+                    "title": "Certains cas dont nous sommes fiers",
+                    "description": "Découvrez ces cas pour voir comment nous travaillons et ce que nous accomplissons. Une image vaut mille mots !",
+                    "projects": {
+                        "netgain": "Netgain nous a fait confiance pour refondre entièrement leur immense site Web à partir de zéro. La société aide les comptables à automatiser leurs processus et flux de travail dans NetSuite afin qu'ils puissent travailler plus efficacement. Les critiques sur le nouveau site Web ont été excellentes.",
+                        "nexus": "Imaginez une carte de visite numérique - ce n'est pas pour le futur. Nexus est réel et conçu pour simplifier la vie en rassemblant tous les médias sociaux et autres liens dans une seule application. Nous avons été là pour créer un site Web, une application mobile et des supports promotionnels.",
+                        "slit": "Nous avons eu la chance de travailler avec Slit - une startup visant à créer une galerie d'art blockchain. Nos créatifs ont traversé plusieurs étapes d'idéation et de concept avant de trouver une manière adorable de représenter cette entreprise.",
+                        "bonsai": "Pour un produit SaaS ambitieux Bonsai, créé pour automatiser le travail indépendant, nous avons conçu un site Web minimaliste et tendance qui accélère le travail des travailleurs indépendants avec la comptabilité, la gestion des clients, et plus encore."
+                    }
+                },
+                "WhyUs": {
+                    "title": "Pourquoi nous ?",
+                    "cards": {
+                        "BusinessCenteredApproach": {
+                            "title": "Approche centrée sur l'entreprise",
+                            "description": "Tout ce que nous faisons est axé sur vos objectifs stratégiques. Fondamentalement, nos conceptions sont un moyen efficace de rendre votre entreprise réussie."
+                        },
+                        "StrongMarketingTools": {
+                            "title": "Outils de marketing solides",
+                            "description": "Le marketing et la conception sont inextricablement liés. Nous savons comment les faire se compléter mutuellement."
+                        },
+                        "CloseCommunication": {
+                            "title": "Communication étroite",
+                            "description": "Nous avons constaté que maintenir le contact avec nos clients représente 60 % du succès d'un projet donné."
+                        },
+                        "MeetingTheDeadlines": {
+                            "title": "Rencontre des délais",
+                            "description": "Nous détestons prendre du retard sur un projet autant que nos clients. C'est pourquoi nous ne le faisons jamais."
+                        },
+                        "FutureProofResults": {
+                            "title": "Résultats durables",
+                            "description": "Les modes sont bien, mais certaines choses sont intemporelles. Nous faisons tous les efforts pour rester à la pointe du design."
+                        },
+                        "IncreasingValue": {
+                            "title": "Dépasser les attentes",
+                            "description": "Savez-vous pourquoi nous nous soucions vraiment de votre réussite? Parce que cela nous motive comme rien d'autre! C'est donc une situation gagnant-gagnant."
+                        }
+                    }
+                },
+                "FAQ": {
+                    "title": "FAQ"
+                }
+            }
+        },
+        "marketing": {
+            "head": {
+                "title": "Orenzo - Services marketing",
+                "meta": {
+                    "description": "Orenzo - Agence digitale"
+                }
+            },
+            "content": {
+                "Card": {
+                    "title": "Marketing digital",
+                    "description": "Faites croître votre entreprise et résolvez vos problèmes.",
+                    "button": "Lire la suite",
+                    "notice": "Le marketing a toujours été une question de relations. De confiance et de service personnalisé. Et de connexion humaine. Dans un monde qui semble imprévisible et incertain, et où vous avez plus de conversations avec l'IA qu'avec les gens, Orenzo est un changement vers le marketing axé sur l'humain."
+                },
+                "StandOut": {
+                    "title": "Ce qui nous <RedSpan>démarque</RedSpan> ?",
+                    "description": "Nos services vous aident à créer des produits numériques et à résoudre vos problèmes de manière objective, stratégique, technologique et analytique. Notre service a également un grand attrait car il a une belle combinaison de couleurs et un concept minimaliste."
+                },
+                "BestServices": {
+                    "title": "Nous offrons simplement les <BlueSpan>meilleurs services</BlueSpan>.",
+                    "description": "Nos services vous aident à créer des produits numériques et à résoudre vos problèmes de manière objective, stratégique, technologique et analytique. Notre service a également un grand attrait car il a une belle combinaison de couleurs et un concept minimaliste."
+                },
+                "WhyUs": {
+                    "title": "Pourquoi nous choisir ?",
+                    "cards": {
+                        "BusinessCenteredApproach": {
+                            "title": "Approche centrée sur les entreprises",
+                            "description": "Tout ce que nous faisons est orienté vers vos objectifs stratégiques. Essentiellement, nos conceptions sont un moyen efficace de rendre votre entreprise réussie."
+                        },
+                        "StrongMarketingTools": {
+                            "title": "Outils marketing performants",
+                            "description": "Le marketing et la conception sont indissociablement liés. Nous savons comment les faire se compléter mutuellement."
+                        },
+                        "CloseCommunication": {
+                            "title": "Communication étroite",
+                            "description": "Nous avons constaté que maintenir le contact avec nos clients représente 60% du succès d'un projet donné."
+                        },
+                        "MeetingTheDeadlines": {
+                            "title": "Respect des délais",
+                            "description": "Nous détestons prendre du retard sur un projet autant que nos clients. C'est pourquoi nous ne le faisons jamais."
+                        },
+                        "FutureProofResults": {
+                            "title": "Résultats futurs",
+                            "description": "Les modes sont bien, mais certaines choses sont intemporelles. Nous faisons tout notre possible pour rester à la pointe de la conception."
+                        },
+                        "IncreasingValue": {
+                            "title": "Dépasser les attentes",
+                            "description": "Savez-vous pourquoi nous nous soucions vraiment de votre réussite? Parce que cela nous motive comme rien d'autre! C'est donc une situation gagnant-gagnant."
+                        }
+                    }
+                },
+                "FAQ": {
+                    "title": "FAQ"
                 }
             }
         }
