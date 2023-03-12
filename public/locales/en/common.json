@@ -325,7 +325,7 @@
                     }
                 },
                 "WhyUs": {
-                    "title": "What's our secret?",
+                    "title": "Why us?",
                     "cards": {
                         "BusinessCenteredApproach": {
                             "title": "Business-centered approach",
@@ -411,24 +411,24 @@
                 }
             },
             "content": {
-                "first": {
+                "Title": {
                     "title": "Development",
                     "description": "Making your product come alive"
                 },
-                "second": {
+                "Potential": {
                     "title": "Unleashing Your Potential",
                     "description": "Okay, so your digital product is designed. What’s next? Next comes development. We know this is where things can go awry if it’s not done the right way. Not that it ever happens to us, mind you. We don’t compromise, bringing it all together in a simple solution."
                 },
-                "third": {
+                "Develop": {
                     "title": "Develop",
                     "description": "We’ve had years of experience and developed dozens of projects. So we know what to do to achieve results that will make our clients proud."
                 },
-                "fourth": {
+                "TechnologyStack": {
                     "title": "Technology Stack",
                     "description": "Building and transforming digital products with a range of technologies.",
                     "button": "Read More"
                 },
-                "fifth": {
+                "Cases": {
                     "title": "Some cases we are proud of",
                     "description": "Check out these cases to see how we work and what we achieve. A picture speaks a thousand words!",
                     "projects": {
@@ -437,6 +437,83 @@
                         "slit": "We were lucky to work with Slit - a startup aiming to create a blockchain art gallery. Our creatives went through several stages of ideation and concepting before we found an adorable way to represent this business.",
                         "bonsai": "For an ambitious Bonsai, a SaaS product created to automate freelance work, we've tailored a minimalist and trendy website that accelerates freelancers' work with accounting, client management, and more."
                     }
+                },
+                "WhyUs": {
+                    "title": "Why us?",
+                    "cards": {
+                        "BusinessCenteredApproach": {
+                            "title": "Business-centered approach",
+                            "description": "Everything we do is geared toward your strategic goals. Essentially, our designs are an effective way to make your business successful."
+                        },
+                        "StrongMarketingTools": {
+                            "title": "Strong marketing tools",
+                            "description": "Marketing and design are inextricably linked. We know just how to make them complement each other."
+                        },
+                        "CloseCommunication": {
+                            "title": "Close communication",
+                            "description": "We have found that keeping in touch with our clients accounts for 60% of a given project’s success."
+                        },
+                        "MeetingTheDeadlines": {
+                            "title": "Meeting the deadlines",
+                            "description": "We hate falling behind on a project just as much as our clients. That’s why we never do it."
+                        },
+                        "FutureProofResults": {
+                            "title": "Future-proof results",
+                            "description": "Fads are fine, but some things are timeless. We make every effort to stay on the cutting edge of design."
+                        },
+                        "IncreasingValue": {
+                            "title": "Exceeding Expectations",
+                            "description": "You know why we really care about your success? Because it motivates us like nothing else! So it’s a win-win situation."
+                        }
+                    }
+                },
+                "FAQ": {
+                    "title": "FAQ",
+                    "questions": [{
+                            "question": "How long does it take to get started?",
+                            "answer": "Our turnaround is lightning-fast. Just one week from signing off and we’re there with the kick-off meeting to get it rolling."
+                        },
+                        {
+                            "question": "What is your typical working process?",
+                            "answer": "It all starts with grabbing a cup of coffee, chilling with mates, and some quality time at the PlayStation (just kidding!). We always start a project with analysis, learning the requirements, and making estimates that will be shared in the price proposal. Then it’s off to signing off, kicking off, and getting your business to the next level with a pinch of our design magic."
+                        },
+                        {
+                            "question": "Do you work on a fixed-price basis or time and material?",
+                            "answer": "Flexibility is the key of success in this crazy world, so we try to suggest an appropriate solution for each specific case we deal with. The more clear and detailed the requirements are, the more accurate will our estimates be. This is the closest we get to the fixed-price model."
+                        },
+                        {
+                            "question": "How do you usually start new collaborations?",
+                            "answer": "Each new engagement starts with an introduction call and filling out the design/branding brief. If you have a cool project in mind, feel free to get in touch at hello@outcrowd.io"
+                        },
+                        {
+                            "question": "Do you guys work with big companies only? We’re an early-stage startup.",
+                            "answer": "We’re all for building a borderless world, so we are open to working with any project we come across. By the way, we do believe in startups, and one of those we helped develop from scratch has been sold to https://entercom.com/"
+                        },
+                        {
+                            "question": "How long it will take to get an estimate from you?",
+                            "answer": "We hate to keep you waiting. Setting up a team, making preliminary research and analysis, and getting back to you with the contract will take up to 24 hours from the moment we learn what’s needed. Efficiency is one of Outcrowd’s key values."
+                        },
+                        {
+                            "question": "Do you have a minimum engagement?",
+                            "answer": "We set no entry thresholds for people who want to work with us. But we still believe that a product that needs to be designed can’t be made within a couple of days. After all, we need some time to research, analyze and come up with a strategy. So we’ve set a minimum project duration as 30 hours and we’re waiting for you!"
+                        },
+                        {
+                            "question": "What’s the average project duration?",
+                            "answer": "Our team works full-time on every project, so the overall duration will highly depend on the initial estimate. On average, our projects last from 2 weeks to 5 months."
+                        },
+                        {
+                            "question": "Can we start the design without wireframes?",
+                            "answer": "Wireframes help to build UX without distractions. The wireframe is an essential part of the design process and we would not recommend eliminating it. Having everything polished at the wireframing stage, we can avoid many amendments and revisions at the design stage, which saves both time and money."
+                        },
+                        {
+                            "question": "What templates does Outcrowd use to create design?",
+                            "answer": "We don’t use pre-built templates or kits because there’s just no soul in them. We’re committed to building fully customized and product-based solutions that will meet the expectations of the target users. Each pixel and line is designed with love and passion by our creative minds."
+                        },
+                        {
+                            "question": "Where should I start with my business if I have an idea?",
+                            "answer": "Hey, you’ve come to the right place! Please get in touch and we’ll help you with the ideation, design, and development. Full cycle on us, no hassle for you. Easy, right?"
+                        }
+                    ]
                 }
             }
         },
@@ -493,7 +570,7 @@
                     ]
                 },
                 "WhyUs": {
-                    "title": "What's our secret?",
+                    "title": "Why us?",
                     "cards": {
                         "BusinessCenteredApproach": {
                             "title": "Business-centered approach",

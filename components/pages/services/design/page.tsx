@@ -17,9 +17,9 @@ export default function Page() {
 
     const MainCardData: any = {
         Title: t("services.design.content.Card.title"),
-        Description: t("services.design.content.Card.des"),
+        Description: t("services.design.content.Card.description"),
         Button: t("services.design.content.Card.button"),
-        Slogan: t("services.design.content.Card.title"),
+        Slogan: t("services.design.content.Card.notice"),
     };
 
     const ServicesData: any = {
@@ -195,54 +195,54 @@ export default function Page() {
         },
     };
     let WhyUsData: any = {
-        Title: t("services.design.content.Secret.title"),
+        Title: t("services.design.content.WhyUs.title"),
         Cards: {
-            TimeLessDesign: {
+            BusinessCenteredApproach: {
                 title: t(
-                    "services.design.content.Secret.cards.TimeLessDesign.title"
+                    "services.design.content.WhyUs.cards.BusinessCenteredApproach.title"
                 ),
                 description: t(
-                    "services.design.content.Secret.cards.TimeLessDesign.description"
+                    "services.design.content.WhyUs.cards.BusinessCenteredApproach.description"
                 ),
             },
-            BusinessOrientedSolutions: {
+            StrongdesignTools: {
                 title: t(
-                    "services.design.content.Secret.cards.BusinessOrientedSolutions.title"
+                    "services.design.content.WhyUs.cards.StrongMarketingTools.title"
                 ),
                 description: t(
-                    "services.design.content.Secret.cards.BusinessOrientedSolutions.description"
+                    "services.design.content.WhyUs.cards.StrongMarketingTools.description"
                 ),
             },
-            DeepResearch: {
+            CloseCommunication: {
                 title: t(
-                    "services.design.content.Secret.cards.DeepResearch.title"
+                    "services.design.content.WhyUs.cards.CloseCommunication.title"
                 ),
                 description: t(
-                    "services.design.content.Secret.cards.DeepResearch.description"
+                    "services.design.content.WhyUs.cards.CloseCommunication.description"
                 ),
             },
-            ReliablePartner: {
+            MeetingTheDeadlines: {
                 title: t(
-                    "services.design.content.Secret.cards.ReliablePartner.title"
+                    "services.design.content.WhyUs.cards.MeetingTheDeadlines.title"
                 ),
                 description: t(
-                    "services.design.content.Secret.cards.ReliablePartner.description"
+                    "services.design.content.WhyUs.cards.MeetingTheDeadlines.description"
                 ),
             },
-            OutOfTheBoxDesign: {
+            FutureProofResults: {
                 title: t(
-                    "services.design.content.Secret.cards.OutOfTheBoxDesign.title"
+                    "services.design.content.WhyUs.cards.FutureProofResults.title"
                 ),
                 description: t(
-                    "services.design.content.Secret.cards.OutOfTheBoxDesign.description"
+                    "services.design.content.WhyUs.cards.FutureProofResults.description"
                 ),
             },
             IncreasingValue: {
                 title: t(
-                    "services.design.content.Secret.cards.IncreasingValue.title"
+                    "services.design.content.WhyUs.cards.IncreasingValue.title"
                 ),
                 description: t(
-                    "services.design.content.Secret.cards.IncreasingValue.description"
+                    "services.design.content.WhyUs.cards.IncreasingValue.description"
                 ),
             },
         },

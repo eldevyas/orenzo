@@ -19,13 +19,14 @@ const Language = (props: any) => {
     );
 };
 
-export default function TechnologyStack() {
+export default function TechnologyStack(props: any) {
     const [isOpen, setIsOpen] = useState(false);
     const { t } = useTranslation("common");
     console.log(t);
 
-    const title = t("services.development.content.fourth.title");
-    const description = t("services.development.content.fourth.description");
+    const Title = props.Title;
+    const Description = props.Description;
+    const Button = props.Button;
 
     return (
         <>
@@ -33,14 +34,8 @@ export default function TechnologyStack() {
                 <div className="Column"></div>
                 <div className="Column">
                     <div className="Text">
-                        <div className="Tilte">
-                            {t("services.development.content.fourth.title")}
-                        </div>
-                        <div className="Description">
-                            {t(
-                                "services.development.content.fourth.description"
-                            )}
-                        </div>
+                        <div className="Title">{Title}</div>
+                        <div className="Description">{Description}</div>
                     </div>
                     <DefaultButton
                         bgColor="White"
@@ -48,13 +43,13 @@ export default function TechnologyStack() {
                             setIsOpen(!isOpen);
                         }}
                     >
-                        {t("services.development.content.fourth.button")}
+                        {Button}
                     </DefaultButton>
                 </div>
             </div>
 
             {isOpen ? (
-                <div className="Technologies">
+                <div className="Technologies" dir="ltr">
                     <div className="Container">
                         <div className="Head">
                             <IconButton

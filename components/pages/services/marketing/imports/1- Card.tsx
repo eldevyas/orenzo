@@ -3,7 +3,7 @@ import iMac from "/public/img/assets/3D-icons/iMac.png";
 import Illustration from "/public/img/assets/illustrations/Landscape 2.png";
 
 export default function Card(props: any) {
-    const Data = {
+    const Properties = {
         Main: iMac,
         Illustration: Illustration,
         title: props.Title,
@@ -12,5 +12,5 @@ export default function Card(props: any) {
         href: "#StandOut",
     };
 
-    return <MainCard {...Data} />;
+    return <MainCard {...Properties} />;
 }

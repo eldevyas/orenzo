@@ -143,7 +143,26 @@ const Develop = (props: any) => {
     );
 };
 
-export default function Title() {
+function useMediaQuery(query: string) {
+    const [matches, setMatches] = useState(false);
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia(query);
+        setMatches(mediaQuery.matches);
+
+        const handleMatchChange = (event: MediaQueryListEvent) => {
+            setMatches(event.matches);
+        };
+
+        mediaQuery.addEventListener("change", handleMatchChange);
+        return () =>
+            mediaQuery.removeEventListener("change", handleMatchChange);
+    }, [query]);
+
+    return matches;
+}
+
+export default function Title(props: any) {
     const targetRef = useRef<HTMLDivElement>(null);
     const { t } = useTranslation("common");
 
@@ -183,20 +202,18 @@ export default function Title() {
             console.log("Image Element scroll: ", latest);
         });
     }, [scrollYProgress]);
+    const initialHeight = useMediaQuery("(min-width: 1024px)") ? 538 : 300; // choose initial height based on screen size
 
-    const Height = useTransform(scrollYProgress, [0, 1], [538, 0]);
+    const Height = useTransform(scrollYProgress, [0, 1], [initialHeight, 0]); // map scrollYProgress to a range of heights from initialHeight to 0
+
     return (
         <>
             <div className="PageTitle">
                 {/* Text of the title - Top Section */}
                 <div className="Text">
-                    <div className="Name">
-                        {t("services.development.content.first.title")}
-                    </div>
+                    <div className="Name">{props.Title.Text}</div>
 
-                    <div className="Description">
-                        {t("services.development.content.first.description")}
-                    </div>
+                    <div className="Description">{props.Title.SubText}</div>
                 </div>
                 {/* Image of the iMac - Parallax Animation */}
                 <div className="ImagePosition" ref={targetRef} />
@@ -205,17 +222,13 @@ export default function Title() {
             </div>
 
             <Potential
-                title={t("services.development.content.second.title")}
-                description={t(
-                    "services.development.content.second.description"
-                )}
+                title={props.Potential.Title}
+                description={props.Potential.Description}
             />
 
             <Develop
-                title={t("services.development.content.third.title")}
-                description={t(
-                    "services.development.content.third.description"
-                )}
+                title={props.Develop.Title}
+                description={props.Develop.Description}
             />
         </>
     );
