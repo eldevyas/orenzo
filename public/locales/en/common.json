@@ -55,7 +55,7 @@
         },
         "content": {
             "LandingSection": {
-                "title": "<RedSpan>Measurable</RedSpan> & <BlueSpan>Effective</BlueSpan> Results For Customers<RedDot>.</RedDot>",
+                "title": "We <BlueSpan>Design</BlueSpan>, We <RedSpan>Create</RedSpan>. We Are Digital Agency.",
                 "description": "Our creative team is focused on stunning and results driven solutions for small to medium businesses all over the world.",
                 "buttons": {
                     "primary": "Get a quote",
@@ -67,7 +67,7 @@
             },
             "AboutUs": {
                 "title": "We are <BlueSpan>Experts</BlueSpan> in our field<BlueDot>.</BlueDot>",
-                "description": "As experts, our team at ORENZO is committed to helping businesses achieve their online marketing goals. With years of experience and a passion for staying up-to-date with the latest industry trends and techniques, we provide customized strategies tailored to each client's unique needs. We pride ourselves on exceptional customer service and delivering measurable results that help our clients succeed. Contact us today to learn more about how we can help your business grow.",
+                "description": "As experts, our team at Orenzo is committed to helping businesses achieve their online marketing goals. With years of experience and a passion for staying up-to-date with the latest industry trends and techniques, we provide customized strategies tailored to each client's unique needs. We pride ourselves on exceptional customer service and delivering measurable results that help our clients succeed. Contact us today to learn more about how we can help your business grow.",
                 "button": "Contact us"
             },
             "BusinessPerformance": {
@@ -114,7 +114,7 @@
                     },
                     "business": {
                         "title": "Building a business identity",
-                        "description": "The brand identity has become the biggest strategy that generates millions of dollars for entrepreneurs, so it was necessary for the Media Man team to rely on all the foundations in their work to build a harmonious brand identity for clients"
+                        "description": "The brand identity has become the biggest strategy that generates millions of dollars for entrepreneurs, so it was necessary for the Orenzo team to rely on all the foundations in their work to build a harmonious brand identity for clients"
                     },
                     "visual": {
                         "title": "visual production",
@@ -243,23 +243,6 @@
                         "description": "Elevate your product with eye-catching packaging."
                     }
                 },
-                "Banner": [{
-                        "first": "Creative Design",
-                        "second": "attracts people."
-                    },
-                    {
-                        "first": "Smart UX makes",
-                        "second": "them stay."
-                    },
-                    {
-                        "first": "At Orenzo we",
-                        "second": "deliver both."
-                    },
-                    {
-                        "first": "For you, for people,",
-                        "second": "for business."
-                    }
-                ],
                 "Notice": "No business has ever succeeded with poor design solutions. To us, design is the nucleus that holds business together. We’re always willing to help you build it.",
                 "Secret": {
                     "title": "What's our secret?",
@@ -292,27 +275,28 @@
                 },
                 "WorkingProcess": {
                     "title": "Working Process",
-                    "process": [{
+                    "process": {
+                        "0": {
                             "title": "Immersion",
                             "description": "Going deep into client’s business to understand its core sense, goals and challenges to build partnership."
                         },
-                        {
+                        "1": {
                             "title": "Ideation",
                             "description": "Creating first concepts of a future product and shaping up the direction."
                         },
-                        {
+                        "2": {
                             "title": "Wireframing",
                             "description": "Building the foundation, structure and core elements of a digital product."
                         },
-                        {
+                        "3": {
                             "title": "Visual Design",
                             "description": "Adding colors, illustrations and shapes to create visual language that resonates with customers."
                         },
-                        {
+                        "4": {
                             "title": "Handoff & Support",
                             "description": "Sending all finalised deliverables and providing further support."
                         }
-                    ]
+                    }
                 },
                 "Cases": {
                     "title": "Some cases we are proud of",
@@ -355,51 +339,70 @@
                 },
                 "FAQ": {
                     "title": "FAQ",
-                    "questions": [{
+                    "questions": {
+                        "0": {
                             "question": "How long does it take to get started?",
                             "answer": "Our turnaround is lightning-fast. Just one week from signing off and we’re there with the kick-off meeting to get it rolling."
                         },
-                        {
+                        "1": {
                             "question": "What is your typical working process?",
                             "answer": "It all starts with grabbing a cup of coffee, chilling with mates, and some quality time at the PlayStation (just kidding!). We always start a project with analysis, learning the requirements, and making estimates that will be shared in the price proposal. Then it’s off to signing off, kicking off, and getting your business to the next level with a pinch of our design magic."
                         },
-                        {
+                        "2": {
                             "question": "Do you work on a fixed-price basis or time and material?",
                             "answer": "Flexibility is the key of success in this crazy world, so we try to suggest an appropriate solution for each specific case we deal with. The more clear and detailed the requirements are, the more accurate will our estimates be. This is the closest we get to the fixed-price model."
                         },
-                        {
+                        "3": {
                             "question": "How do you usually start new collaborations?",
-                            "answer": "Each new engagement starts with an introduction call and filling out the design/branding brief. If you have a cool project in mind, feel free to get in touch at hello@outcrowd.io"
+                            "answer": "Each new engagement starts with an introduction call and filling out the design/branding brief. If you have a cool project in mind, feel free to get in touch at hello@orenzo.co"
                         },
-                        {
+                        "4": {
                             "question": "Do you guys work with big companies only? We’re an early-stage startup.",
                             "answer": "We’re all for building a borderless world, so we are open to working with any project we come across. By the way, we do believe in startups, and one of those we helped develop from scratch has been sold to https://entercom.com/"
                         },
-                        {
+                        "5": {
                             "question": "How long it will take to get an estimate from you?",
                             "answer": "We hate to keep you waiting. Setting up a team, making preliminary research and analysis, and getting back to you with the contract will take up to 24 hours from the moment we learn what’s needed. Efficiency is one of Outcrowd’s key values."
                         },
-                        {
+                        "6": {
                             "question": "Do you have a minimum engagement?",
                             "answer": "We set no entry thresholds for people who want to work with us. But we still believe that a product that needs to be designed can’t be made within a couple of days. After all, we need some time to research, analyze and come up with a strategy. So we’ve set a minimum project duration as 30 hours and we’re waiting for you!"
                         },
-                        {
+                        "7": {
                             "question": "What’s the average project duration?",
                             "answer": "Our team works full-time on every project, so the overall duration will highly depend on the initial estimate. On average, our projects last from 2 weeks to 5 months."
                         },
-                        {
+                        "8": {
                             "question": "Can we start the design without wireframes?",
                             "answer": "Wireframes help to build UX without distractions. The wireframe is an essential part of the design process and we would not recommend eliminating it. Having everything polished at the wireframing stage, we can avoid many amendments and revisions at the design stage, which saves both time and money."
                         },
-                        {
+                        "9": {
                             "question": "What templates does Outcrowd use to create design?",
                             "answer": "We don’t use pre-built templates or kits because there’s just no soul in them. We’re committed to building fully customized and product-based solutions that will meet the expectations of the target users. Each pixel and line is designed with love and passion by our creative minds."
                         },
-                        {
+                        "10": {
                             "question": "Where should I start with my business if I have an idea?",
                             "answer": "Hey, you’ve come to the right place! Please get in touch and we’ll help you with the ideation, design, and development. Full cycle on us, no hassle for you. Easy, right?"
                         }
-                    ]
+                    }
+                },
+                "Banner": {
+                    "0": {
+                        "first": "Creative Design",
+                        "second": "attracts people."
+                    },
+                    "1": {
+                        "first": "Smart UX makes",
+                        "second": "them stay."
+                    },
+                    "2": {
+                        "first": "At Orenzo we",
+                        "second": "deliver both."
+                    },
+                    "3": {
+                        "first": "For you, for people,",
+                        "second": "for business."
+                    }
                 }
             }
         },
@@ -469,51 +472,52 @@
                 },
                 "FAQ": {
                     "title": "FAQ",
-                    "questions": [{
+                    "questions": {
+                        "0": {
                             "question": "How long does it take to get started?",
                             "answer": "Our turnaround is lightning-fast. Just one week from signing off and we’re there with the kick-off meeting to get it rolling."
                         },
-                        {
+                        "1": {
                             "question": "What is your typical working process?",
                             "answer": "It all starts with grabbing a cup of coffee, chilling with mates, and some quality time at the PlayStation (just kidding!). We always start a project with analysis, learning the requirements, and making estimates that will be shared in the price proposal. Then it’s off to signing off, kicking off, and getting your business to the next level with a pinch of our design magic."
                         },
-                        {
+                        "2": {
                             "question": "Do you work on a fixed-price basis or time and material?",
                             "answer": "Flexibility is the key of success in this crazy world, so we try to suggest an appropriate solution for each specific case we deal with. The more clear and detailed the requirements are, the more accurate will our estimates be. This is the closest we get to the fixed-price model."
                         },
-                        {
+                        "3": {
                             "question": "How do you usually start new collaborations?",
-                            "answer": "Each new engagement starts with an introduction call and filling out the design/branding brief. If you have a cool project in mind, feel free to get in touch at hello@outcrowd.io"
+                            "answer": "Each new engagement starts with an introduction call and filling out the design/branding brief. If you have a cool project in mind, feel free to get in touch at hello@orenzo.co"
                         },
-                        {
+                        "4": {
                             "question": "Do you guys work with big companies only? We’re an early-stage startup.",
                             "answer": "We’re all for building a borderless world, so we are open to working with any project we come across. By the way, we do believe in startups, and one of those we helped develop from scratch has been sold to https://entercom.com/"
                         },
-                        {
+                        "5": {
                             "question": "How long it will take to get an estimate from you?",
                             "answer": "We hate to keep you waiting. Setting up a team, making preliminary research and analysis, and getting back to you with the contract will take up to 24 hours from the moment we learn what’s needed. Efficiency is one of Outcrowd’s key values."
                         },
-                        {
+                        "6": {
                             "question": "Do you have a minimum engagement?",
                             "answer": "We set no entry thresholds for people who want to work with us. But we still believe that a product that needs to be designed can’t be made within a couple of days. After all, we need some time to research, analyze and come up with a strategy. So we’ve set a minimum project duration as 30 hours and we’re waiting for you!"
                         },
-                        {
+                        "7": {
                             "question": "What’s the average project duration?",
                             "answer": "Our team works full-time on every project, so the overall duration will highly depend on the initial estimate. On average, our projects last from 2 weeks to 5 months."
                         },
-                        {
+                        "8": {
                             "question": "Can we start the design without wireframes?",
                             "answer": "Wireframes help to build UX without distractions. The wireframe is an essential part of the design process and we would not recommend eliminating it. Having everything polished at the wireframing stage, we can avoid many amendments and revisions at the design stage, which saves both time and money."
                         },
-                        {
+                        "9": {
                             "question": "What templates does Outcrowd use to create design?",
                             "answer": "We don’t use pre-built templates or kits because there’s just no soul in them. We’re committed to building fully customized and product-based solutions that will meet the expectations of the target users. Each pixel and line is designed with love and passion by our creative minds."
                         },
-                        {
+                        "10": {
                             "question": "Where should I start with my business if I have an idea?",
                             "answer": "Hey, you’ve come to the right place! Please get in touch and we’ll help you with the ideation, design, and development. Full cycle on us, no hassle for you. Easy, right?"
                         }
-                    ]
+                    }
                 }
             }
         },
@@ -534,40 +538,42 @@
                 "StandOut": {
                     "title": "What makes us <RedSpan>Stand Out</RedSpan>?",
                     "description": "Our services help you create digital products and solve your problems objectively, strategy, technology and analysis.Our service also has a high appeal because it has a beautiful color combination and a minimalist concept.",
-                    "cards": [{
+                    "cards": {
+                        "0": {
                             "title": "+20k",
                             "description": "Active Engagements"
                         },
-                        {
+                        "1": {
                             "title": "+10k",
                             "description": "Happy Clients"
                         },
-                        {
+                        "2": {
                             "title": "+5k",
                             "description": "Trusted Companies"
                         }
-                    ]
+                    }
                 },
                 "BestServices": {
                     "title": "We Just Offer The <BlueSpan>Best Services</BlueSpan>.",
                     "description": "Our services help you create digital products and solve your problems objectively, strategy, technology and analysis. Our service also has a high appeal because it has a beautiful color combination and a minimalist concept",
-                    "cards": [{
+                    "cards": {
+                        "0": {
                             "title": "Consultant Business Strategy",
                             "description": "Looking to improve your business strategy? Our consultants can help. With years of experience in the industry, we offer expert advice and tailored solutions to help you reach your goals."
                         },
-                        {
+                        "1": {
                             "title": "Google Ads Management",
                             "description": "It includes setting up ads, selecting keywords, targeting specific audiences, monitoring performance, and adjusting strategies to maximize ROI. A Google Ads Management agency can help businesses create effective ad campaigns and achieve their marketing goals."
                         },
-                        {
+                        "2": {
                             "title": "Research & Discovery",
                             "description": "Our team utilizes a variety of research methods to uncover key findings and identify opportunities for growth. By leveraging our expertise in data analysis and market research, we can help you make informed decisions and stay ahead of the competition."
                         },
-                        {
+                        "3": {
                             "title": "Social Media Marketing",
                             "description": "Looking to promote your business on social media? Our team can help! We specialize in developing and executing customized social media strategies that are tailored to your specific needs and goals."
                         }
-                    ]
+                    }
                 },
                 "WhyUs": {
                     "title": "Why us?",
@@ -599,52 +605,7 @@
                     }
                 },
                 "FAQ": {
-                    "title": "FAQ",
-                    "questions": [{
-                            "question": "How long does it take to get started?",
-                            "answer": "Our turnaround is lightning-fast. Just one week from signing off and we’re there with the kick-off meeting to get it rolling."
-                        },
-                        {
-                            "question": "What is your typical working process?",
-                            "answer": "It all starts with grabbing a cup of coffee, chilling with mates, and some quality time at the PlayStation (just kidding!). We always start a project with analysis, learning the requirements, and making estimates that will be shared in the price proposal. Then it’s off to signing off, kicking off, and getting your business to the next level with a pinch of our design magic."
-                        },
-                        {
-                            "question": "Do you work on a fixed-price basis or time and material?",
-                            "answer": "Flexibility is the key of success in this crazy world, so we try to suggest an appropriate solution for each specific case we deal with. The more clear and detailed the requirements are, the more accurate will our estimates be. This is the closest we get to the fixed-price model."
-                        },
-                        {
-                            "question": "How do you usually start new collaborations?",
-                            "answer": "Each new engagement starts with an introduction call and filling out the design/branding brief. If you have a cool project in mind, feel free to get in touch at hello@outcrowd.io"
-                        },
-                        {
-                            "question": "Do you guys work with big companies only? We’re an early-stage startup.",
-                            "answer": "We’re all for building a borderless world, so we are open to working with any project we come across. By the way, we do believe in startups, and one of those we helped develop from scratch has been sold to https://entercom.com/"
-                        },
-                        {
-                            "question": "How long it will take to get an estimate from you?",
-                            "answer": "We hate to keep you waiting. Setting up a team, making preliminary research and analysis, and getting back to you with the contract will take up to 24 hours from the moment we learn what’s needed. Efficiency is one of Outcrowd’s key values."
-                        },
-                        {
-                            "question": "Do you have a minimum engagement?",
-                            "answer": "We set no entry thresholds for people who want to work with us. But we still believe that a product that needs to be designed can’t be made within a couple of days. After all, we need some time to research, analyze and come up with a strategy. So we’ve set a minimum project duration as 30 hours and we’re waiting for you!"
-                        },
-                        {
-                            "question": "What’s the average project duration?",
-                            "answer": "Our team works full-time on every project, so the overall duration will highly depend on the initial estimate. On average, our projects last from 2 weeks to 5 months."
-                        },
-                        {
-                            "question": "Can we start the design without wireframes?",
-                            "answer": "Wireframes help to build UX without distractions. The wireframe is an essential part of the design process and we would not recommend eliminating it. Having everything polished at the wireframing stage, we can avoid many amendments and revisions at the design stage, which saves both time and money."
-                        },
-                        {
-                            "question": "What templates does Outcrowd use to create design?",
-                            "answer": "We don’t use pre-built templates or kits because there’s just no soul in them. We’re committed to building fully customized and product-based solutions that will meet the expectations of the target users. Each pixel and line is designed with love and passion by our creative minds."
-                        },
-                        {
-                            "question": "Where should I start with my business if I have an idea?",
-                            "answer": "Hey, you’ve come to the right place! Please get in touch and we’ll help you with the ideation, design, and development. Full cycle on us, no hassle for you. Easy, right?"
-                        }
-                    ]
+                    "title": "FAQ"
                 }
             }
         }

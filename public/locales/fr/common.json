@@ -274,7 +274,29 @@
                     }
                 },
                 "WorkingProcess": {
-                    "title": "Processus de travail"
+                    "title": "Processus de travail",
+                    "process": {
+                        "0": {
+                            "title": "Immersion",
+                            "description": "Approfondir les activités du client pour comprendre son sens fondamental, ses objectifs et ses défis pour établir un partenariat."
+                        },
+                        "1": {
+                            "title": "Idéation",
+                            "description": "Créer les premiers concepts d'un futur produit et façonner la direction."
+                        },
+                        "2": {
+                            "title": "Maquette filaire",
+                            "description": "Construire les fondations, la structure et les éléments de base d'un produit numérique."
+                        },
+                        "3": {
+                            "title": "Conception visuelle",
+                            "description": "Ajouter des couleurs, des illustrations et des formes pour créer un langage visuel qui résonne avec les clients."
+                        },
+                        "4": {
+                            "title": "Transfert et assistance",
+                            "description": "Envoi de tous les livrables finalisés et fourniture d'un soutien supplémentaire."
+                        }
+                    }
                 },
                 "Cases": {
                     "title": "Quelques cas dont nous sommes fiers",
@@ -316,7 +338,71 @@
                     }
                 },
                 "FAQ": {
-                    "title": "FAQ"
+                    "title": "FAQ",
+                    "questions": {
+                        "0": {
+                            "question": "Combien de temps faut-il pour démarrer ?",
+                            "answer": "Notre délai d'exécution est ultra-rapide. Juste une semaine après la signature et nous sommes là avec la réunion de lancement pour le lancer."
+                        },
+                        "1": {
+                            "question": "Quel est votre processus de travail typique ?",
+                            "answer": "Tout commence par prendre une tasse de café, se détendre avec des amis et passer du temps de qualité sur la PlayStation (je plaisante !). Nous commençons toujours un projet par une analyse, apprenons les exigences et faisons des estimations qui seront partagées dans la proposition de prix. Ensuite, c'est parti pour signer, démarrer et faire passer votre entreprise au niveau supérieur avec une pincée de notre magie du design."
+                        },
+                        "2": {
+                            "question": "Travaillez-vous au forfait ou en régie ?",
+                            "answer": "La flexibilité est la clé du succès dans ce monde fou, nous essayons donc de proposer une solution appropriée pour chaque cas spécifique que nous traitons. Plus les exigences seront claires et détaillées, plus nos estimations seront précises. C'est ce qui se rapproche le plus du modèle à prix fixe."
+                        },
+                        "3": {
+                            "question": "Comment démarrez-vous généralement de nouvelles collaborations ?",
+                            "answer": "Chaque nouvel engagement commence par un appel d'introduction et le remplissage du dossier de conception/de marque. Si vous avez un projet sympa en tête, n'hésitez pas à nous contacter à hello@orenzo.co"
+                        },
+                        "4": {
+                            "question": "Travaillez-vous uniquement avec de grandes entreprises ? Nous sommes une start-up en démarrage.",
+                            "answer": "Nous sommes tous pour la construction d'un monde sans frontières, nous sommes donc ouverts à travailler avec n'importe quel projet que nous rencontrons. Soit dit en passant, nous croyons aux startups, et l'une de celles que nous avons aidé à développer à partir de zéro a été vendue à https://entercom.com/"
+                        },
+                        "5": {
+                            "question": "Combien de temps faudra-t-il pour obtenir une estimation de votre part ?",
+                            "answer": "Nous détestons vous faire attendre. Mettre en place une équipe, effectuer des recherches et des analyses préliminaires et vous revenir avec le contrat prendra jusqu'à 24 heures à partir du moment où nous apprenons ce qui est nécessaire. L'efficacité est l'une des valeurs clés d'Orenzo."
+                        },
+                        "6": {
+                            "question": "Avez-vous un engagement minimum ?",
+                            "answer": "Nous ne fixons aucun seuil d'entrée pour les personnes qui souhaitent travailler avec nous. Mais nous croyons toujours qu'un produit qui doit être conçu ne peut pas être fabriqué en quelques jours. Après tout, nous avons besoin de temps pour rechercher, analyser et élaborer une stratégie. Nous avons donc fixé une durée minimale de projet à 30 heures et nous vous attendons !"
+                        },
+                        "7": {
+                            "question": "Quelle est la durée moyenne d'un projet ?",
+                            "answer": "Notre équipe travaille à temps plein sur chaque projet, la durée globale dépendra donc fortement de l'estimation initiale. En moyenne, nos projets durent de 2 semaines à 5 mois."
+                        },
+                        "8": {
+                            "question": "Peut-on commencer la conception sans wireframes ?",
+                            "answer": "Les wireframes aident à construire UX sans distractions. Le wireframe est une partie essentielle du processus de conception et nous ne recommandons pas de l'éliminer. En ayant tout peaufiné au stade du wireframing, nous pouvons éviter de nombreux amendements et révisions au stade de la conception, ce qui permet d'économiser du temps et de l'argent."
+                        },
+                        "9": {
+                            "question": "Quels modèles Orenzo utilise-t-il pour créer le design ?",
+                            "answer": "Nous n'utilisons pas de modèles ou de kits prédéfinis car ils n'ont tout simplement pas d'âme. Nous nous engageons à construire des solutions entièrement personnalisées et basées sur des produits qui répondront aux attentes des utilisateurs cibles. Chaque pixel et ligne est conçu avec amour et passion par nos esprits créatifs."
+                        },
+                        "10": {
+                            "question": "Par où commencer avec mon entreprise si j'ai une idée ?",
+                            "answer": "Hé, vous êtes au bon endroit ! Veuillez nous contacter et nous vous aiderons dans l'idéation, la conception et le développement. Cycle complet sur nous, pas de tracas pour vous. Facile, non ?"
+                        }
+                    }
+                },
+                "Banner": {
+                    "0": {
+                        "first": "La conception créative",
+                        "second": "attire les gens."
+                    },
+                    "1": {
+                        "first": "UX intelligent",
+                        "second": "les fait rester."
+                    },
+                    "2": {
+                        "first": "Chez Orenzo, nous",
+                        "second": "livrons les deux."
+                    },
+                    "3": {
+                        "first": "Pour vous, pour les gens,",
+                        "second": "pour le business."
+                    }
                 }
             }
         },
@@ -385,7 +471,53 @@
                     }
                 },
                 "FAQ": {
-                    "title": "FAQ"
+                    "title": "FAQ",
+                    "questions": {
+                        "0": {
+                            "question": "Combien de temps faut-il pour démarrer ?",
+                            "answer": "Notre délai d'exécution est ultra-rapide. Juste une semaine après la signature et nous sommes là avec la réunion de lancement pour le lancer."
+                        },
+                        "1": {
+                            "question": "Quel est votre processus de travail typique ?",
+                            "answer": "Tout commence par prendre une tasse de café, se détendre avec des amis et passer du temps de qualité sur la PlayStation (je plaisante !). Nous commençons toujours un projet par une analyse, apprenons les exigences et faisons des estimations qui seront partagées dans la proposition de prix. Ensuite, c'est parti pour signer, démarrer et faire passer votre entreprise au niveau supérieur avec une pincée de notre magie du design."
+                        },
+                        "2": {
+                            "question": "Travaillez-vous au forfait ou en régie ?",
+                            "answer": "La flexibilité est la clé du succès dans ce monde fou, nous essayons donc de proposer une solution appropriée pour chaque cas spécifique que nous traitons. Plus les exigences seront claires et détaillées, plus nos estimations seront précises. C'est ce qui se rapproche le plus du modèle à prix fixe."
+                        },
+                        "3": {
+                            "question": "Comment démarrez-vous généralement de nouvelles collaborations ?",
+                            "answer": "Chaque nouvel engagement commence par un appel d'introduction et le remplissage du dossier de conception/de marque. Si vous avez un projet sympa en tête, n'hésitez pas à nous contacter à hello@orenzo.co"
+                        },
+                        "4": {
+                            "question": "Travaillez-vous uniquement avec de grandes entreprises ? Nous sommes une start-up en démarrage.",
+                            "answer": "Nous sommes tous pour la construction d'un monde sans frontières, nous sommes donc ouverts à travailler avec n'importe quel projet que nous rencontrons. Soit dit en passant, nous croyons aux startups, et l'une de celles que nous avons aidé à développer à partir de zéro a été vendue à https://entercom.com/"
+                        },
+                        "5": {
+                            "question": "Combien de temps faudra-t-il pour obtenir une estimation de votre part ?",
+                            "answer": "Nous détestons vous faire attendre. Mettre en place une équipe, effectuer des recherches et des analyses préliminaires et vous revenir avec le contrat prendra jusqu'à 24 heures à partir du moment où nous apprenons ce qui est nécessaire. L'efficacité est l'une des valeurs clés d'Orenzo."
+                        },
+                        "6": {
+                            "question": "Avez-vous un engagement minimum ?",
+                            "answer": "Nous ne fixons aucun seuil d'entrée pour les personnes qui souhaitent travailler avec nous. Mais nous croyons toujours qu'un produit qui doit être conçu ne peut pas être fabriqué en quelques jours. Après tout, nous avons besoin de temps pour rechercher, analyser et élaborer une stratégie. Nous avons donc fixé une durée minimale de projet à 30 heures et nous vous attendons !"
+                        },
+                        "7": {
+                            "question": "Quelle est la durée moyenne d'un projet ?",
+                            "answer": "Notre équipe travaille à temps plein sur chaque projet, la durée globale dépendra donc fortement de l'estimation initiale. En moyenne, nos projets durent de 2 semaines à 5 mois."
+                        },
+                        "8": {
+                            "question": "Peut-on commencer la conception sans wireframes ?",
+                            "answer": "Les wireframes aident à construire UX sans distractions. Le wireframe est une partie essentielle du processus de conception et nous ne recommandons pas de l'éliminer. En ayant tout peaufiné au stade du wireframing, nous pouvons éviter de nombreux amendements et révisions au stade de la conception, ce qui permet d'économiser du temps et de l'argent."
+                        },
+                        "9": {
+                            "question": "Quels modèles Orenzo utilise-t-il pour créer le design ?",
+                            "answer": "Nous n'utilisons pas de modèles ou de kits prédéfinis car ils n'ont tout simplement pas d'âme. Nous nous engageons à construire des solutions entièrement personnalisées et basées sur des produits qui répondront aux attentes des utilisateurs cibles. Chaque pixel et ligne est conçu avec amour et passion par nos esprits créatifs."
+                        },
+                        "10": {
+                            "question": "Par où commencer avec mon entreprise si j'ai une idée ?",
+                            "answer": "Hé, vous êtes au bon endroit ! Veuillez nous contacter et nous vous aiderons dans l'idéation, la conception et le développement. Cycle complet sur nous, pas de tracas pour vous. Facile, non ?"
+                        }
+                    }
                 }
             }
         },
@@ -405,11 +537,43 @@
                 },
                 "StandOut": {
                     "title": "Ce qui nous <RedSpan>démarque</RedSpan> ?",
-                    "description": "Nos services vous aident à créer des produits numériques et à résoudre vos problèmes de manière objective, stratégique, technologique et analytique. Notre service a également un grand attrait car il a une belle combinaison de couleurs et un concept minimaliste."
+                    "description": "Nos services vous aident à créer des produits numériques et à résoudre vos problèmes de manière objective, stratégique, technologique et analytique. Notre service a également un grand attrait car il a une belle combinaison de couleurs et un concept minimaliste.",
+                    "cards": {
+                        "0": {
+                            "title": "+20k",
+                            "description": "Engagements actifs"
+                        },
+                        "1": {
+                            "title": "+10k",
+                            "description": "Clients heureux"
+                        },
+                        "2": {
+                            "title": "+5k",
+                            "description": "Entreprises de confiance"
+                        }
+                    }
                 },
                 "BestServices": {
                     "title": "Nous offrons simplement les <BlueSpan>meilleurs services</BlueSpan>.",
-                    "description": "Nos services vous aident à créer des produits numériques et à résoudre vos problèmes de manière objective, stratégique, technologique et analytique. Notre service a également un grand attrait car il a une belle combinaison de couleurs et un concept minimaliste."
+                    "description": "Nos services vous aident à créer des produits numériques et à résoudre vos problèmes de manière objective, stratégique, technologique et analytique. Notre service a également un grand attrait car il a une belle combinaison de couleurs et un concept minimaliste.",
+                    "cards": {
+                        "0": {
+                            "title": "Consultante en Stratégie d'Entreprise",
+                            "description": "Vous cherchez à améliorer votre stratégie commerciale? Nos consultants peuvent vous aider. Avec des années d'expérience dans l'industrie, nous offrons des conseils d'experts et des solutions sur mesure pour vous aider à atteindre vos objectifs."
+                        },
+                        "1": {
+                            "title": "Gestion des annonces Google",
+                            "description": "Cela comprend la configuration d'annonces, la sélection de mots-clés, le ciblage d'audiences spécifiques, le suivi des performances et l'ajustement des stratégies pour maximiser le retour sur investissement. Une agence de gestion Google Ads peut aider les entreprises à créer des campagnes publicitaires efficaces et à atteindre leurs objectifs marketing."
+                        },
+                        "2": {
+                            "title": "Recherche et découverte",
+                            "description": "Notre équipe utilise une variété de méthodes de recherche pour découvrir les principaux résultats et identifier les opportunités de croissance. En tirant parti de notre expertise en analyse de données et en études de marché, nous pouvons vous aider à prendre des décisions éclairées et à garder une longueur d'avance sur la concurrence."
+                        },
+                        "3": {
+                            "title": "Marketing des médias sociaux",
+                            "description": "Vous souhaitez promouvoir votre entreprise sur les réseaux sociaux ? Notre équipe peut vous aider! Nous nous spécialisons dans le développement et l'exécution de stratégies de médias sociaux personnalisées adaptées à vos besoins et objectifs spécifiques."
+                        }
+                    }
                 },
                 "WhyUs": {
                     "title": "Pourquoi nous choisir ?",
