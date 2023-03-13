@@ -78,4 +78,79 @@
         font-weight: 200;
         color: #fff;
     }
+    .Alert {
+        background-color: rgba($C1, 0.92);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        width: 350px;
+        position: fixed;
+        top: 10%;
+        left: 35%;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        animation: Opacity 0.5s ease-in-out;
+        @keyframes Opacity {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .Heading {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: start;
+            color: #fff;
+            width: 100%;
+            .CloseIcon {
+                cursor: pointer;
+                background-color: rgba($C1, 0.5);
+                padding: 1rem;
+                display: flex;
+                border-radius: 10px;
+                font-weight: 600;
+            }
+        }
+        .Container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .Thanks {
+                font-size: 3.5rem;
+                font-weight: 700;
+                color: #fff;
+                margin-top: 80px;
+                text-align: center;
+            }
+            .Msg {
+                font-size: 1rem;
+                font-weight: 200;
+                color: rgba(white, 0.7);
+            }
+        }
+        .FollowUs {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: rgba(white, 1);
+        }
+        .SocialMedia {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            width: 50%;
+            .SocialMediaIcon {
+                background-color: rgba(white, 0.3);
+                padding: 5px;
+                border-radius: 50%;
+                font-size: 2.5rem;
+            }
+        }
+    }
 }

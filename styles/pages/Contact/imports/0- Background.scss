@@ -1,0 +1,17 @@
+.Background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-color: white;
+    background-image: url("/img/assets/Grid.png");
+    background-origin: top left;
+    background-size: cover;
+    background-repeat: repeat-y;
+    mask-image: radial-gradient(40vw 40vw at 20vw 50vh, #000 0%, rgba(217, 217, 217, 0) 70%), //
+    radial-gradient(20vw 20vw at 80vw 60vh, #000 0%, rgba(217, 217, 217, 0) 30%), //
+    ;
+}

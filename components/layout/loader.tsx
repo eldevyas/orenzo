@@ -142,9 +142,10 @@ export default function Loader(props: any) {
         : { opacity: "0", visibility: "hidden" };
 
     return (
-        <div className="Loader" id="Loader" style={style}>
-            <LightLogo />
-            <div className={"loader"}></div>
-        </div>
+        // <div className="Loader" id="Loader" style={style}>
+        //     <LightLogo />
+        //     <div className={"loader"}></div>
+        // </div>
+        <></>
     );
 }

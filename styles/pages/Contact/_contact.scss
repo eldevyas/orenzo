@@ -1,3 +1,52 @@
+// TextColor
+$Color: rgba($C1, 100%);
+$DimmedColor: rgba($C2, 100%);
+// 
+// 
+// Mixins
+@mixin Page($Variant) {
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 4rem;
+    background: $Variant;
+    min-height: 500px;
+    .Title {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 3rem;
+        max-width: 800px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: $DimmedColor;
+        span {
+            color: $Color;
+        }
+    }
+    .Buttons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: center;
+        gap: 2rem;
+        .DefaultButton {
+            padding: 1.25rem 1.25rem*2;
+            font-size: 1.25rem;
+            &.White {
+                background: $C1;
+                color: $C3;
+            }
+        }
+    }
+}
+
+// 
+// 
 .ContactPage {
     position: relative;
     display: flex;
@@ -6,15 +55,100 @@
     height: auto;
     justify-content: flex-start;
     align-items: center;
+    @import "./imports/0-\ Background.scss";
+    min-height: 100vh;
+    max-height: 100vh;
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: auto;
     .PageContent {
         width: 100%;
-        max-width: 700px;
+        // max-width: 700px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         gap: 2rem;
-        @import "./imports/Card";
-        @import "./imports/Form";
+        @include GlobalPadding();
+        .Container {
+            width: 100%;
+            // max-width: 700px;
+            min-height: 500px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            gap: 20px;
+            .FirstPage {
+                @include Page("transparent");
+            }
+            .DealPage {
+                position: relative;
+                @include Page("transparent");
+                .Actions {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: stretch;
+                    gap: 2rem;
+                    .WhiteRipple {
+                        color: $C5;
+                        border-radius: 1rem;
+                    }
+                    .RedRipple {
+                        color: $C3;
+                        border-radius: 1rem;
+                    }
+                    &__Button {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 1rem 2rem;
+                        border-radius: 1rem;
+                        gap: 1rem;
+                        &.__Calendly {
+                            background: $G3;
+                            // color: $C5 !important;
+                            .ButtonTitle {
+                                color: $C5;
+                                font-size: 2rem;
+                                text-align: center;
+                                font-weight: 900;
+                            }
+                            .ButtonDescription {
+                                color: $C5;
+                                font-size: 1rem;
+                                text-align: center;
+                                opacity: 75%;
+                            }
+                        }
+                        &.__Email {
+                            background: $C1;
+                            .ButtonTitle {
+                                color: $C3;
+                                font-size: 2rem;
+                                text-align: center;
+                                font-weight: 900;
+                            }
+                            .ButtonDescription {
+                                color: $C5;
+                                font-size: 1rem;
+                                text-align: center;
+                                opacity: 75%;
+                            }
+                        }
+                    }
+                }
+            }
+            .RockPage {
+                position: relative;
+                @include Page("transparent");
+            }
+        }
     }
 }

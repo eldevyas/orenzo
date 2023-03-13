@@ -53,7 +53,7 @@ export default function DesktopHeader(props: any) {
                                 : "/logo/PNG/Wide Logo - Light.png"
                         }
                         alt="Logo"
-                        fill
+                        layout="fill"
                         style={{
                             objectFit: "cover",
                             // transform: "scale(1.25)"

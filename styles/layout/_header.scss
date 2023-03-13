@@ -11,21 +11,7 @@
     padding: 5vh 10vw;
     z-index: 1000;
     .Logo {
-        width: auto;
-        min-height: 27.5px;
-        aspect-ratio: 146.37/30;
-        position: relative;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        &:hover {
-            opacity: 0.65;
-            cursor: pointer;
-        }
-        &:active {
-            opacity: 1;
-            cursor: pointer;
-        }
+        @include Logo();
     }
     .Navigation {
         min-width: 100px;
@@ -126,21 +112,7 @@
     @include GlobalPadding();
     padding: 2.5vh 10vw;
     .Logo {
-        width: auto;
-        height: 20px;
-        aspect-ratio: 146.37/30;
-        position: relative;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        &:hover {
-            opacity: 0.65;
-            cursor: pointer;
-        }
-        &:active {
-            opacity: 1;
-            cursor: pointer;
-        }
+        @include Logo();
     }
     .MenuButton {
         display: flex;
@@ -184,9 +156,7 @@
             // background: $G5;
             border-radius: 1rem;
             .Logo {
-                position: relative;
-                aspect-ratio: 150/30;
-                min-height: 20px;
+                @include Logo();
             }
         }
         .ListView {

@@ -2,16 +2,18 @@
 @import "./global/colors";
 @import "./global/global";
 @import "./global/scrollBar";
-// For the Curved Marker Highlight over all the Titles' Spans. 
+@import "./global/loader";
 @import "./global/spanHighlight";
-// For the Colored dot on the end of each sentence.
 @import "./global/colorDot";
+// 
+// 
 //Layout
 @import './layout/header';
 @import './layout/footer';
+// 
+// 
 // Pages
 @import "./pages/Home/home";
 @import "./pages/Services/services";
 @import "./pages/Contact/contact";
 // Loading Style
-@import "./global/loader";

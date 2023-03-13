@@ -2,20 +2,17 @@ import React, { useState, useEffect } from "react";
 import Header from "../../layout/header";
 import Image from "next/image";
 import Footer from "../../layout/footer";
-import Card from "./imports/Card";
-import Form from "./imports/Form";
+import Container from "./import/Container";
 
 export default function ContactPage() {
     return (
         <div className="ContactPage">
             <div className="Background"></div>
-            <Header />
+            <Header data-theme="light" />
             <div className="PageContent">
-                <Card />
-                <Form />
+                <Container />
             </div>
-
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }
