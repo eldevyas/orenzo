@@ -1,0 +1,52 @@
+.Team {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10%;
+
+    .Left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1rem;
+
+        .Title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: $C1;
+        }
+
+        .WhoAreWe,
+        .OurMission {
+            .Title {
+                font-size: 1.3rem;
+                font-weight: 600;
+                color: $C1;
+            }
+
+            .Description {
+                font-size: 1rem;
+                font-weight: 300;
+                color: $C1;
+            }
+        }
+    }
+
+    .Right {
+        width: 100%;
+        // background-color: black;
+        position: relative;
+
+        img {
+            backdrop-filter: blue;
+            width: 100%;
+            height: 100%;
+            z-index: 1000000;
+        }
+    }
+
+
+}
