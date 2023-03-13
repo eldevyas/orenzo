@@ -1,80 +1,126 @@
-import { SiBootstrap, SiCss3, SiFlutter, SiGit, SiHtml5, SiJava, SiJavascript, SiJson, SiLaravel, SiMetrodeparis, SiNextdotjs, SiNodedotjs, SiPhp, SiPrestashop, SiReact, SiShopify, SiStrapi, SiSwift, SiSymfony, SiVuedotjs, SiWebflow, SiWoocommerce, SiWordpress } from "react-icons/si";
-
-export const ProgrammingRange : {
-    name : String,
-    logo : any
+import {
+    SiBootstrap,
+    SiCss3,
+    SiFlutter,
+    SiGit,
+    SiHtml5,
+    SiJavascript,
+    SiJson,
+    SiLaravel,
+    SiMetrodeparis,
+    SiNextdotjs,
+    SiNodedotjs,
+    SiPhp,
+    SiPrestashop,
+    SiReact,
+    SiShopify,
+    SiStrapi,
+    SiSwift,
+    SiSymfony,
+    SiVuedotjs,
+    SiWebflow,
+    SiWoocommerce,
+    SiWordpress,
+} from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+export const ProgrammingRange: {
+    name: String;
+    logo: any;
 }[] = [
     {
         name: "Webflow",
-        logo: SiWebflow
-    }, {
+        logo: SiWebflow,
+    },
+    {
         name: "Wordpress",
-        logo: SiWordpress
-    }, {
+        logo: SiWordpress,
+    },
+    {
         name: "PHP",
-        logo: SiPhp
-    }, {
+        logo: SiPhp,
+    },
+    {
         name: "Swift",
-        logo: SiSwift
-    }, {
+        logo: SiSwift,
+    },
+    {
         name: "React",
-        logo: SiReact
-    }, {
+        logo: SiReact,
+    },
+    {
         name: "Next.js",
-        logo: SiNextdotjs
-    }, {
+        logo: SiNextdotjs,
+    },
+    {
         name: "Git",
-        logo: SiGit
-    }, {
+        logo: SiGit,
+    },
+    {
         name: "JSON",
-        logo: SiJson
-    }, {
+        logo: SiJson,
+    },
+    {
         name: "Strapi",
-        logo: SiStrapi
-    }, {
+        logo: SiStrapi,
+    },
+    {
         name: "Symfony",
-        logo: SiSymfony
-    }, {
+        logo: SiSymfony,
+    },
+    {
         name: "JavaScript",
-        logo: SiJavascript
-    }, {
+        logo: SiJavascript,
+    },
+    {
         name: "API",
-        logo: SiMetrodeparis
-    }, {
+        logo: SiMetrodeparis,
+    },
+    {
         name: "HTML",
-        logo: SiHtml5
-    }, {
+        logo: SiHtml5,
+    },
+    {
         name: "Shopify",
-        logo: SiShopify
-    }, {
+        logo: SiShopify,
+    },
+    {
         name: "CSS",
-        logo: SiCss3
-    }, {
+        logo: SiCss3,
+    },
+    {
         name: "Vue.js",
-        logo: SiVuedotjs
-    }, {
+        logo: SiVuedotjs,
+    },
+    {
         name: "Node.js",
-        logo: SiNodedotjs
-    }, {
+        logo: SiNodedotjs,
+    },
+    {
         name: "JAVA",
-        logo: SiJava
-    }, {
+        logo: FaJava,
+    },
+    {
         name: "Flutter",
-        logo: SiFlutter
-    }, {
+        logo: SiFlutter,
+    },
+    {
         name: "Bootstrap",
-        logo: SiBootstrap
-    }, {
+        logo: SiBootstrap,
+    },
+    {
         name: "Custom JS",
-        logo: SiJavascript
-    }, {
+        logo: SiJavascript,
+    },
+    {
         name: "WooCommerce",
-        logo: SiWoocommerce
-    }, {
+        logo: SiWoocommerce,
+    },
+    {
         name: "PrestaShop",
-        logo: SiPrestashop
-    }, {
+        logo: SiPrestashop,
+    },
+    {
         name: "Laravel",
-        logo: SiLaravel
-    }
-]
+        logo: SiLaravel,
+    },
+];
