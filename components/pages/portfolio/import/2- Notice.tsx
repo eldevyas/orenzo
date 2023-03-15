@@ -1,5 +1,11 @@
 import React from "react";
+import Slogan from "../../services/global/Slogan";
 
 export default function Notice(props: any) {
-    return <div className="Notice">Notice</div>;
+    const SloganText = props.Text;
+    return (
+        <div className="Notice">
+            <Slogan text={SloganText} variant="Wide Dark" />
+        </div>
+    );
 }

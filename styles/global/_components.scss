@@ -30,4 +30,11 @@
     border-radius: 2rem;
     font-weight: 700;
     font-size: 0.9rem;
+    &.Dark {
+        color: rgba(#fff, 50%);
+        background-color: rgba(#fff, 5%);
+    }
+    &.Wide {
+        width: 80%;
+    }
 }

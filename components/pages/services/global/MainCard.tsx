@@ -13,6 +13,8 @@ export default function MainCard(props: any) {
         Illustration: props.Illustration,
     };
 
+    console.log(ImageSources);
+
     const router = useRouter();
 
     const cardRef = useRef<HTMLInputElement>(null);
@@ -77,10 +79,19 @@ export default function MainCard(props: any) {
             <motion.div
                 ref={cardRef}
                 className="BigCard"
-                transition={{ type: "spring", stiffness: 1000 }}
-                style={{
-                    rotateX: rotateX,
-                    rotateY: rotateY,
+                transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 20,
+                }}
+                // style={{
+                //     rotateX: rotateX,
+                //     rotateY: rotateY,
+                // }}
+                initial="false"
+                animate={{
+                    rotateX: rotateX.get(),
+                    rotateY: rotateY.get(),
                 }}
                 onMouseMove={handleMouse}
             >
@@ -91,12 +102,21 @@ export default function MainCard(props: any) {
                         objectFit="cover"
                         alt=""
                         className="Background"
+                        style={{
+                            transform: "translateZ(-50px)",
+                        }}
                     />
                 ) : null}
 
                 <div className="Content">
                     {props.Main ? (
-                        <div className="Image">
+                        <div
+                            className="Image"
+                            style={{
+                                transform:
+                                    "perspective(500px) translateZ(20px)",
+                            }}
+                        >
                             <Image
                                 src={ImageSources.Main}
                                 layout="fill"
@@ -106,14 +126,15 @@ export default function MainCard(props: any) {
                         </div>
                     ) : null}
 
-                    <div className="Text">
+                    <div
+                        className="Text"
+                        style={{
+                            transform: "perspective(500px) translateZ(20px)",
+                        }}
+                    >
                         <div className="Title">
                             <h1>{props.title}</h1>
-                            <p
-                                dangerouslySetInnerHTML={{
-                                    __html: props.description,
-                                }}
-                            />
+                            <p>{props.description}</p>
                         </div>
 
                         <DefaultButton
@@ -126,10 +147,11 @@ export default function MainCard(props: any) {
                         </DefaultButton>
                     </div>
                     <motion.div
+                        dir="ltr"
                         ref={circleRef}
                         className="Highlight"
                         transition={{ type: "spring", stiffness: 1000 }}
-                        style={{ x, y }}
+                        style={{ left: x, top: y }}
                     />
 
                     <Button variant="contained" className="ClickEffect" />

@@ -13,6 +13,7 @@ export interface IOpenMenu {
 }
 
 export default function DesktopHeader(props: any) {
+    const router = useRouter();
     var { links, ...other } = props;
     const { locale } = useRouter();
 
@@ -41,7 +42,12 @@ export default function DesktopHeader(props: any) {
     return (
         <>
             <div className="NavBar Mobile" {...other}>
-                <div className="Logo">
+                <div
+                    className="Logo"
+                    onClick={() => {
+                        router.push("/");
+                    }}
+                >
                     <Image
                         src={
                             props["data-theme"] === "dark"
@@ -82,7 +88,15 @@ export default function DesktopHeader(props: any) {
                         transition={{
                             delay: 0,
                             bordeRadius: { duration: 0 },
-                            default: { type: "Tween", stiffness: 100 },
+                            default: {
+                                type: "spring",
+                                stiffness: 25,
+                                damping: 10,
+                                mass: 1,
+                                duration: 0,
+                                ease: "easeInOutQuad",
+                                delay: 0,
+                            },
                         }}
                     >
                         <MobileMenu handleClicked={handleClick} />

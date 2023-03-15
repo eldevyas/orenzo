@@ -97,7 +97,12 @@ export default function DesktopHeader(props: any) {
 
     return (
         <div className="NavBar Desktop" {...props}>
-            <div className="Logo">
+            <div
+                className="Logo"
+                onClick={() => {
+                    router.push("/");
+                }}
+            >
                 <Image
                     src={
                         props["data-theme"] === "dark"

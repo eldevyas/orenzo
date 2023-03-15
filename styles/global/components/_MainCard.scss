@@ -13,6 +13,8 @@
             overflow: hidden;
             padding: 2rem 2rem;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+            transform-style: preserve-3d;
+            /* Added */
             img {
                 pointer-events: none;
                 z-index: 0 !important;
