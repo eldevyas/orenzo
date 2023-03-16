@@ -1,6 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { DefaultButton } from "../../../core/buttons";
 import ImagesGrid from "./util/ImagesGrid";
+import Projects from "./util/ProjectsData";
+
+//
+// Icons
+import DesignIcon from "@mui/icons-material/DesignServices";
+import DevelopmentIcon from "@mui/icons-material/Terminal";
+import MarketingIcon from "@mui/icons-material/Whatshot";
 
 enum Pages {
     PAGE_1 = "Design",
@@ -10,47 +17,22 @@ enum Pages {
 
 export default function Gallery() {
     const [ActivePage, setActivePage] = useState<Pages>(Pages.PAGE_1);
+    const [windowWidth, setWindowWidth] = useState(0);
+
+    useEffect(() => {
+        setWindowWidth(window.innerWidth);
+
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     const SwitchPage = (Page: Pages) => {
         setActivePage(Page);
     };
 
-    const Images = [
-        {
-            Title: "Wielder - Mobile Application",
-            Description:
-                "Wielder is a mobile application in which you can manage all your tasks very easily. We tried to create a universal tool for your personal and work to-do lists where you can manage separate tasks/habits and track your progress.",
-            Image: "/img/assets/portfolio/design/Wielder.webp",
-        },
-        {
-            Title: "Milkow",
-            Description:
-                'The name is a combination of the words "milk" and "cow", which is easy to read, and immediately carries a descriptor.',
-            Image: "/img/assets/portfolio/design/Milkow.webp",
-        },
-        {
-            Title: "Organic Tea",
-            Description:
-                "We were hired by this French organic tea company to experiment on their rebranding, including visual identity elements, packaging, promotional items and such. You're looking at the results of our tests.",
-            Image: "/img/assets/portfolio/design/Organic Tea.webp",
-        },
-        {
-            Title: "Face Cleanser",
-            Description:
-                "Cosmetics Packaging Design | Packaging Design | Label Design",
-            Image: "/img/assets/portfolio/design/Face Cleanser.jpg",
-        },
-        {
-            Title: "DaiSushi",
-            Description: "Food Landing Page",
-            Image: "/img/assets/portfolio/design/DaiSushi.webp",
-        },
-        {
-            Title: "Restaurant App",
-            Description: "Exploration design for Restaurant App.",
-            Image: "/img/assets/portfolio/design/Restaurant App.webp",
-        },
-    ];
+    const Images = Projects;
 
     return (
         <div className={"Gallery"}>
@@ -62,7 +44,13 @@ export default function Gallery() {
                         setActivePage(Pages.PAGE_1);
                     }}
                 >
-                    Design
+                    {windowWidth < 1000 ? (
+                        <DesignIcon />
+                    ) : (
+                        <>
+                            <DesignIcon /> Design
+                        </>
+                    )}
                 </DefaultButton>
                 <DefaultButton
                     bgColor={ActivePage === Pages.PAGE_2 ? "Blue" : "Black"}
@@ -71,7 +59,13 @@ export default function Gallery() {
                         setActivePage(Pages.PAGE_2);
                     }}
                 >
-                    Development
+                    {windowWidth < 1000 ? (
+                        <DevelopmentIcon />
+                    ) : (
+                        <>
+                            <DevelopmentIcon /> Development
+                        </>
+                    )}
                 </DefaultButton>
                 <DefaultButton
                     bgColor={ActivePage === Pages.PAGE_3 ? "Blue" : "Black"}
@@ -80,11 +74,27 @@ export default function Gallery() {
                         setActivePage(Pages.PAGE_3);
                     }}
                 >
-                    Marketing
+                    {windowWidth < 1000 ? (
+                        <MarketingIcon />
+                    ) : (
+                        <>
+                            <MarketingIcon /> Marketing
+                        </>
+                    )}
                 </DefaultButton>
             </div>
 
-            <ImagesGrid Page={ActivePage} Pages={Pages} Images={Images} />
+            <ImagesGrid
+                Page={ActivePage}
+                Pages={Pages}
+                Images={
+                    ActivePage === "Design"
+                        ? Images.Design
+                        : ActivePage === "Development"
+                        ? Images.Development
+                        : Images.Marketing
+                }
+            />
         </div>
     );
 }

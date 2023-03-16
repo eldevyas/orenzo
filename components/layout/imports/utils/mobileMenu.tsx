@@ -277,8 +277,8 @@ export default function MobileMenu(props: any) {
                         <Image
                             src={
                                 locale == "ar"
-                                    ? "/logo/PNG/Arabic Wide Logo - Dark.png"
-                                    : "/logo/PNG/Wide Logo - Dark.png"
+                                    ? "/logo/PNG/Arabic Wide Logo - Bold Dark.png"
+                                    : "/logo/PNG/Wide Logo - Bold Dark.png"
                             }
                             alt="Logo"
                             layout="fill"
