@@ -10,7 +10,9 @@ const Card = (props: any) => {
         <>
             <div className={"Card" + " " + props.class}>
                 <div className="Icon">
-                    <div className="Text">01</div>
+                    <div className="Text">
+                        {props.index < 10 ? `0${props.index}` : props.index}
+                    </div>
                 </div>
 
                 <div className="Text">
@@ -68,13 +70,7 @@ export default function BestServices(props: any) {
                             }}
                         />
                     </h1>
-                    <p>
-                        Our services help you create digital products and solve
-                        your problems objectively, strategy, technology and
-                        analysis. Our service also has a high appeal because it
-                        has a beautiful color combination and a minimalist
-                        concept.
-                    </p>
+                    <p>{props.Description}</p>
                 </div>
 
                 <div className="Cards">
@@ -82,6 +78,7 @@ export default function BestServices(props: any) {
                         return (
                             <Card
                                 key={index}
+                                index={index + 1}
                                 title={card.title}
                                 description={card.description}
                                 class={card.class}

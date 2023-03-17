@@ -16,7 +16,7 @@ export default function Page() {
         Title: t("services.marketing.content.Card.title"),
         Description: t("services.marketing.content.Card.description"),
         Button: t("services.marketing.content.Card.button"),
-        Slogan: t("services.marketing.content.Card.title"),
+        Slogan: t("services.marketing.content.Card.notice"),
     };
 
     let StandOutData: any = {

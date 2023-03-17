@@ -1,0 +1,23 @@
+.Video {
+    position: relative;
+    width: 100%;
+    height: auto;
+    @include GlobalPadding();
+    .VideoContainer {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+        border-radius: 2rem;
+        aspect-ratio: 16/9;
+        width: 100%;
+        overflow: hidden;
+        >div {
+            position: relative;
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+}

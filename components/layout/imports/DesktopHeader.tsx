@@ -5,7 +5,7 @@ import { Router, useRouter } from "next/router";
 import SelectLocal from "./utils/SelectLocal";
 import SelectPage from "./utils/SelectPage";
 import { useTranslation } from "react-i18next";
-import { motion, useScroll, useInView } from "framer-motion";
+import { motion, useScroll, useInView, useSpring } from "framer-motion";
 
 function ActiveButton({ children, href }: { children: string; href: string }) {
     const router = useRouter();
@@ -39,11 +39,19 @@ function ActiveButton({ children, href }: { children: string; href: string }) {
 function ScrollComponent() {
     const { scrollYProgress } = useScroll();
 
+    const scaleX = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001,
+    });
+
     return (
-        <motion.div
-            className="ScrollComponent"
-            style={{ scaleX: scrollYProgress }}
-        />
+        <motion.div className="ScrollComponent">
+            <motion.div
+                className="ScrollComponent__Indicator"
+                style={{ scaleX }}
+            />
+        </motion.div>
     );
 }
 
@@ -124,81 +132,83 @@ export default function DesktopHeader(props: any) {
     ];
 
     return (
-        <div
-            ref={HeaderRef}
-            className={`NavBar Desktop ${isFixed ? "Fixed" : ""}`}
-            {...props}
-        >
+        <>
             <ScrollComponent />
             <div
-                className="Logo"
-                onClick={() => {
-                    router.push("/");
-                }}
+                ref={HeaderRef}
+                className={`NavBar Desktop ${isFixed ? "Fixed" : ""}`}
+                {...props}
             >
-                <Image
-                    src={
-                        props["data-theme"] === "dark"
-                            ? locale == "ar"
-                                ? "/logo/PNG/Arabic Wide Logo - Dark.png"
-                                : "/logo/PNG/Wide Logo - Dark.png"
-                            : locale == "ar"
-                            ? "/logo/PNG/Arabic Wide Logo - Light.png"
-                            : "/logo/PNG/Wide Logo - Light.png"
-                    }
-                    alt="Logo"
-                    layout="fill"
-                    style={{
-                        objectFit: "cover",
-                        // transform: "scale(1.25)",
+                <div
+                    className="Logo"
+                    onClick={() => {
+                        router.push("/");
                     }}
-                    priority
-                />
+                >
+                    <Image
+                        src={
+                            props["data-theme"] === "dark"
+                                ? locale == "ar"
+                                    ? "/logo/PNG/Arabic Wide Logo - Dark.png"
+                                    : "/logo/PNG/Wide Logo - Dark.png"
+                                : locale == "ar"
+                                ? "/logo/PNG/Arabic Wide Logo - Light.png"
+                                : "/logo/PNG/Wide Logo - Light.png"
+                        }
+                        alt="Logo"
+                        layout="fill"
+                        style={{
+                            objectFit: "cover",
+                            // transform: "scale(1.25)",
+                        }}
+                        priority
+                    />
+                </div>
+                <div className="Navigation">
+                    {Links.map((link: any, index: number) => {
+                        switch (link.type) {
+                            case "selectLocal":
+                                return (
+                                    <SelectLocal
+                                        key={index}
+                                        data-text={t("header.links.language")}
+                                    />
+                                );
+                                break;
+                            case "selectPage":
+                                return (
+                                    <SelectPage
+                                        key={index}
+                                        data-text={t("header.links.services")}
+                                        pages={link.pages}
+                                    />
+                                );
+                                break;
+                            case "contact":
+                                return (
+                                    <Button
+                                        key={index}
+                                        variant="contained"
+                                        className="ActionButton"
+                                        onClick={() => {
+                                            router.push(link.href);
+                                        }}
+                                    >
+                                        {t("header.links.contact")}
+                                    </Button>
+                                );
+                                break;
+                            case "default":
+                                return (
+                                    <ActiveButton key={index} href={link.href}>
+                                        {link.title}
+                                    </ActiveButton>
+                                );
+                                break;
+                        }
+                    })}
+                </div>
             </div>
-            <div className="Navigation">
-                {Links.map((link: any, index: number) => {
-                    switch (link.type) {
-                        case "selectLocal":
-                            return (
-                                <SelectLocal
-                                    key={index}
-                                    data-text={t("header.links.language")}
-                                />
-                            );
-                            break;
-                        case "selectPage":
-                            return (
-                                <SelectPage
-                                    key={index}
-                                    data-text={t("header.links.services")}
-                                    pages={link.pages}
-                                />
-                            );
-                            break;
-                        case "contact":
-                            return (
-                                <Button
-                                    key={index}
-                                    variant="contained"
-                                    className="ActionButton"
-                                    onClick={() => {
-                                        router.push(link.href);
-                                    }}
-                                >
-                                    {t("header.links.contact")}
-                                </Button>
-                            );
-                            break;
-                        case "default":
-                            return (
-                                <ActiveButton key={index} href={link.href}>
-                                    {link.title}
-                                </ActiveButton>
-                            );
-                            break;
-                    }
-                })}
-            </div>
-        </div>
+        </>
     );
 }

@@ -1,3 +1,4 @@
+import { useTranslation } from "next-i18next";
 import Footer from "../../layout/footer";
 import Header from "../../layout/header";
 import LetsTalk from "../home/content/8- Let's Talk";
@@ -7,15 +8,20 @@ import Notice from "./import/2- Notice";
 import Gallery from "./import/3- Gallery";
 
 export default function PortfolioPage() {
+    const { t } = useTranslation("common");
     const Properties = {
         Card: {
-            Title: "Portfolio",
-            Description:
-                "Partner with us to elevate your business in the Digital World",
-            Button: "Discover",
+            Title: t("portfolio.content.MainCard.Title"),
+            Description: t("portfolio.content.MainCard.Description"),
+            Button: t("portfolio.content.MainCard.Button"),
         },
         Notice: {
-            Text: "Welcome to Orenzo, a digital agency that helps businesses thrive in the digital age. We are a team of skilled professionals with a passion for creativity and innovation. Our goal is to provide you with exceptional digital solutions that drive results and help your business grow. Let us help you take your online presence to the next level.",
+            Text: t("portfolio.content.Notice"),
+        },
+        Gallery: {
+            Design: t("portfolio.content.Gallery.Design"),
+            Development: t("portfolio.content.Gallery.Development"),
+            Marketing: t("portfolio.content.Gallery.Marketing"),
         },
     };
 
@@ -26,7 +32,7 @@ export default function PortfolioPage() {
                 <div className="PageContent">
                     <Card {...Properties.Card} />
                     <Notice {...Properties.Notice} />
-                    <Gallery />
+                    <Gallery {...Properties.Gallery}/>
                     <LetsTalk />
                     <Mailing />
                 </div>

@@ -15,7 +15,7 @@ enum Pages {
     PAGE_3 = "Marketing",
 }
 
-export default function Gallery() {
+export default function Gallery(props: any) {
     const [ActivePage, setActivePage] = useState<Pages>(Pages.PAGE_1);
     const [windowWidth, setWindowWidth] = useState(0);
 
@@ -35,7 +35,7 @@ export default function Gallery() {
     const Images = Projects;
 
     return (
-        <div className={"Gallery"}>
+        <div className={"Gallery"} id="Gallery">
             <div className="ToggleGroup">
                 <DefaultButton
                     bgColor={ActivePage === Pages.PAGE_1 ? "Blue" : "Black"}
@@ -48,7 +48,7 @@ export default function Gallery() {
                         <DesignIcon />
                     ) : (
                         <>
-                            <DesignIcon /> Design
+                            <DesignIcon /> {props.Design}
                         </>
                     )}
                 </DefaultButton>
@@ -63,7 +63,7 @@ export default function Gallery() {
                         <DevelopmentIcon />
                     ) : (
                         <>
-                            <DevelopmentIcon /> Development
+                            <DevelopmentIcon /> {props.Development}
                         </>
                     )}
                 </DefaultButton>
@@ -78,7 +78,7 @@ export default function Gallery() {
                         <MarketingIcon />
                     ) : (
                         <>
-                            <MarketingIcon /> Marketing
+                            <MarketingIcon /> {props.Marketing}
                         </>
                     )}
                 </DefaultButton>

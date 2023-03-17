@@ -1,30 +1,50 @@
-import React from 'react'
-import Card from '../services/design/imports/1- Card';
-import WhyUs from '../services/design/imports/8- Why us';
-import LetsTalk from '../home/content/8- Let\'s Talk';
-import FAQ from '../services/global/FAQ';
+import React, { useEffect, useState } from "react";
+import WhyUs from "../services/design/imports/8- Why us";
+import LetsTalk from "../home/content/8- Let's Talk";
+import FAQ from "../services/global/FAQ";
 import { useTranslation } from "next-i18next";
-import Slogan from '../services/global/Slogan';
-import Team from './imports/Team';
+import Slogan from "../services/global/Slogan";
+import Card from "./imports/1. Card";
+import Team from "./imports/3. Team";
+import Mailing from "../home/content/9- Mailing";
+import Video from "./imports/2. Video";
+//
+//
+//
 const AboutPage = () => {
     const { t } = useTranslation("common");
+    const [Properties, setProperties] = useState<any>({
+        MainCard: {
+            Title: t("about.content.MainCard.Title"),
+            Description: t("about.content.MainCard.Description"),
+            Button: t("about.content.MainCard.Button"),
+        },
+        Notice: t("about.content.Notice"),
+        Team: {
+            Title: t("about.content.Team.Title"),
+            FirstSubTitle: t("about.content.Team.FirstSubtitle"),
+            FirstDescription: t("about.content.Team.FirstDescription"),
+            SecondSubTitle: t("about.content.Team.SecondSubtitle"),
+            SecondDescription: t("about.content.Team.SecondDescription"),
+        },
+        Video: {
+            Source: "https://www.youtube.com/watch?v=A4Wrgh9XCkc",
+        },
+    });
 
-    const MainCardData: any = {
-        Title: "Digital Marketing",
-        Description: "Make your business grow and solve your problem.",
-        Button: "Read more",
-        Slogan: t("services.marketing.content.Card.title"),
-    };
+    const MainCardData: any = {};
     return (
-        <div className='PageContent'>
-            <Card {...MainCardData} />
-            <Slogan text="Marketing has always been about relationships. About trust and personalised service. And about human connection. In a world that feels unpredictable and uncertain, and where you have more conversations with AI than with people, Orenzo is a shift towards human-driven marketing." />
+        <div className="PageContent">
+            <Card {...Properties!.MainCard} />
+            <Slogan text={Properties!.Notice} />
             {/* Video needs to be here*/}
-
-            <Team />
+            <Video {...Properties!.Video} />
+            {/*  */}
+            <Team {...Properties!.Team} />
             <LetsTalk />
+            <Mailing />
         </div>
-    )
-}
+    );
+};
 
-export default AboutPage
+export default AboutPage;

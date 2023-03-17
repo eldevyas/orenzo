@@ -4,6 +4,7 @@ import Image from "next/image";
 import HomePage from "../components/pages/home/homePage";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { DefaultButton } from "../components/core/buttons";
+import { BsWhatsapp } from "react-icons/bs";
 
 export const getServerSideProps: (locale: any) => any = async ({ locale }) => ({
     props: {
@@ -28,7 +29,13 @@ const Home: NextPage = () => {
             <DefaultButton
                 className="WhatsAppButton"
                 bgColor="White"
-                onClick={() => {}}
+                startIcon={<BsWhatsapp />}
+                onClick={() => {
+                    window.open(
+                        "https://api.whatsapp.com/send?phone=212708878407",
+                        "_blank"
+                    );
+                }}
             >
                 Message us
             </DefaultButton>

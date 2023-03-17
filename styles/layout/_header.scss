@@ -1,3 +1,24 @@
+.ScrollComponent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-left: auto;
+    // right: 0;
+    width: 100%;
+    height: 0.25rem;
+    background: $G5;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    &__Indicator {
+        background: $G3;
+        height: 100%;
+        width: 100%;
+    }
+}
+
 .NavBar {
     width: 100%;
     height: auto;
@@ -23,16 +44,6 @@
     }
     .Logo {
         @include Logo();
-    }
-    .ScrollComponent {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        margin-left: auto;
-        // right: 0;
-        width: 100%;
-        height: 0.25rem;
-        background: $G3;
     }
     .Navigation {
         min-width: 100px;

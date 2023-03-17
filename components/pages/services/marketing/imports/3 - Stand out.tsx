@@ -27,17 +27,17 @@ export default function StandOut(props: any) {
     }[] = [
         {
             title: props.Cards[0].Title,
-            description: props.Cards[0].Title,
+            description: props.Cards[0].Description,
             icon: <SiSlideshare />,
         },
         {
             title: props.Cards[1].Title,
-            description: props.Cards[1].Title,
+            description: props.Cards[1].Description,
             icon: <BiHappy />,
         },
         {
             title: props.Cards[2].Title,
-            description: props.Cards[2].Title,
+            description: props.Cards[2].Description,
             icon: <SiTrustpilot />,
         },
     ];
