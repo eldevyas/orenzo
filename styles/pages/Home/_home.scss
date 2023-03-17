@@ -1,3 +1,12 @@
+.WhatsAppButton {
+    position: fixed;
+    bottom: 5vh;
+    right: 5vh;
+    z-index: 1000;
+    border-radius: 1rem;
+    @include DefaultButton($C4);
+}
+
 .HomePage {
     position: relative;
     width: 100%;

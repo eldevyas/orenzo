@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Button from "@mui/material/Button";
 import { Router, useRouter } from "next/router";
 import SelectLocal from "./utils/SelectLocal";
 import SelectPage from "./utils/SelectPage";
 import { useTranslation } from "react-i18next";
+import { motion, useScroll, useInView } from "framer-motion";
 
 function ActiveButton({ children, href }: { children: string; href: string }) {
     const router = useRouter();
@@ -35,10 +36,37 @@ function ActiveButton({ children, href }: { children: string; href: string }) {
     );
 }
 
+function ScrollComponent() {
+    const { scrollYProgress } = useScroll();
+
+    return (
+        <motion.div
+            className="ScrollComponent"
+            style={{ scaleX: scrollYProgress }}
+        />
+    );
+}
+
 export default function DesktopHeader(props: any) {
+    const HeaderRef = useRef<HTMLDivElement>(null);
+    const [isFixed, setIsFixed] = useState(false);
     const { t } = useTranslation("common");
     const { locale } = useRouter();
     const router = useRouter();
+
+    useEffect(() => {
+        HeaderRef.current!.focus();
+        if (
+            window != undefined &&
+            HeaderRef != null &&
+            HeaderRef.current != null
+        ) {
+            window.addEventListener("scroll", () => {
+                const scrollY = window.pageYOffset;
+                setIsFixed(scrollY > 50);
+            });
+        }
+    }, []);
 
     let Links: {
         title: string;
@@ -96,7 +124,12 @@ export default function DesktopHeader(props: any) {
     ];
 
     return (
-        <div className="NavBar Desktop" {...props}>
+        <div
+            ref={HeaderRef}
+            className={`NavBar Desktop ${isFixed ? "Fixed" : ""}`}
+            {...props}
+        >
+            <ScrollComponent />
             <div
                 className="Logo"
                 onClick={() => {

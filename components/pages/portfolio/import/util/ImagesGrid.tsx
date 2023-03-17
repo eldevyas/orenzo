@@ -58,18 +58,25 @@ const CustomImage = (props: any) => {
                             </>
                         }
                     >
-                        <Image
+                        <motion.div
+                            className="NextImage"
                             layoutId="ExpandableImage"
-                            src={Source}
-                            alt={Title}
-                            layout="fill"
-                            style={{
-                                objectFit: "cover",
-                            }}
-                            onLoadingComplete={() => {
-                                setIsLoaded(true);
-                            }}
-                        />
+                            // style={{
+                            //     aspectRatio: `${Width}/${Height} !important`,
+                            // }}
+                        >
+                            <Image
+                                src={Source}
+                                alt={Title}
+                                layout="fill"
+                                style={{
+                                    objectFit: "cover",
+                                }}
+                                onLoadingComplete={() => {
+                                    setIsLoaded(true);
+                                }}
+                            />
+                        </motion.div>
                         {isLoaded ? (
                             <>
                                 <div className="Overlay">
@@ -110,17 +117,21 @@ const CustomImage = (props: any) => {
                             aspectRatio: `${Width}/${Height} !important`,
                         }}
                     >
-                        <Image
+                        <motion.div
+                            className="NextImage"
                             layoutId="ExpandableImage"
-                            src={Source}
-                            alt={Title}
-                            layout="responsive"
-                            height={Height}
-                            width={Width}
-                            style={{
-                                objectFit: "fill",
-                            }}
-                        />
+                        >
+                            <Image
+                                src={Source}
+                                alt={Title}
+                                layout="responsive"
+                                height={Height}
+                                width={Width}
+                                style={{
+                                    objectFit: "fill",
+                                }}
+                            />
+                        </motion.div>
                         <IconButton
                             className="CloseButton"
                             onClick={() => {

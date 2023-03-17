@@ -2,6 +2,7 @@
     width: 100%;
     height: auto;
     position: relative;
+    top: 0;
     // max-height: 10vh;
     background: transparent;
     display: flex;
@@ -10,8 +11,28 @@
     @include GlobalPadding();
     padding: 5vh 10vw;
     z-index: 1000;
+    // transition: all 300ms ease;
+    &.Fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 0rem 10vw;
+        backdrop-filter: blur(1rem) brightness(250%);
+        background-color: rgba(#fff, 75%);
+    }
     .Logo {
         @include Logo();
+    }
+    .ScrollComponent {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        margin-left: auto;
+        // right: 0;
+        width: 100%;
+        height: 0.25rem;
+        background: $G3;
     }
     .Navigation {
         min-width: 100px;
@@ -66,7 +87,7 @@
                 width: 100%;
                 height: auto;
                 top: 100%;
-                background: $C5;
+                background: #F2F2F2;
                 border-radius: 1rem;
                 z-index: 1000;
                 .ToggleButton {
