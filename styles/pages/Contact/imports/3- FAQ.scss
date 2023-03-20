@@ -1,0 +1,5 @@
+        .FAQ {
+            @include FAQ("Dark");
+            // background-color: black;
+            z-index: 10;
+        }

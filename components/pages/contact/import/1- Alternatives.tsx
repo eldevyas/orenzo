@@ -1,5 +1,7 @@
 import { Button } from "@mui/material";
 import React, { useRef } from "react";
+import { BsWhatsapp } from "react-icons/bs";
+import { IoCalendarSharp } from "react-icons/io5";
 
 export default function Alternatives(props: any) {
     let Title = props.Title;
@@ -43,7 +45,7 @@ export default function Alternatives(props: any) {
 
     return (
         <div className="PageContent__Alternatives">
-            <div className="PageContent__Alternatives__Heading">
+            <div className="PageContent__Alternatives__Heading TorchLightEffect">
                 <div className="PageContent__Alternatives__Heading__Title">
                     {Title}
                 </div>
@@ -72,6 +74,7 @@ export default function Alternatives(props: any) {
                         <Button
                             variant="text"
                             className="PageContent__Alternatives__Cards__Card__Content__ActionButton"
+                            startIcon={<BsWhatsapp />}
                         >
                             {Cards.WhatsApp.Button}
                         </Button>
@@ -93,6 +96,7 @@ export default function Alternatives(props: any) {
                         <Button
                             variant="text"
                             className="PageContent__Alternatives__Cards__Card__Content__ActionButton"
+                            startIcon={<IoCalendarSharp />}
                         >
                             {Cards.Calendly.Button}
                         </Button>

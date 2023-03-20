@@ -1,0 +1,156 @@
+.Mailing {
+    width: 100%;
+    min-height: 300px;
+    background: $G3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include GlobalPadding;
+    gap: 2rem;
+    .Title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            opacity: 0.75;
+        }
+        p {
+            font-size: 1rem;
+            font-weight: 200;
+            color: #fff;
+        }
+    }
+    .InputField {
+        width: 100%;
+        height: auto;
+        // background-color: white;
+        max-width: 700px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width: 789px) {
+            flex-direction: column;
+        }
+        input {
+            width: 100%;
+            height: 100%;
+            background-color: rgba($C5, 0.25);
+            border: none;
+            outline: none;
+            padding: 0.75rem 1.5rem;
+            flex: 4;
+            font-size: 1rem;
+            color: #fff;
+            align-self: stretch;
+            &::placeholder {
+                color: #fff;
+            }
+        }
+        .Button {
+            width: 100%;
+            // height: 100%;
+            background-color: rgba($C5, 0.1);
+            flex: 1;
+            box-shadow: none;
+            color: $C3;
+            background: $C5;
+            border-radius: 0;
+            font-size: 1rem;
+            font-family: inherit;
+            text-transform: none;
+            align-self: stretch;
+            min-width: 125px;
+        }
+    }
+    .PS {
+        text-align: left;
+        width: 100%;
+        min-height: 50px;
+        max-width: 700px;
+        font-size: 0.75rem;
+        font-weight: 200;
+        color: #fff;
+    }
+    .Alert {
+        background-color: rgba($C1, 0.92);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        width: 350px;
+        position: fixed;
+        top: 10%;
+        left: 35%;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        animation: Opacity 0.5s ease-in-out;
+        @keyframes Opacity {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .Heading {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: start;
+            color: #fff;
+            width: 100%;
+            .CloseIcon {
+                cursor: pointer;
+                background-color: rgba($C1, 0.5);
+                padding: 1rem;
+                display: flex;
+                border-radius: 10px;
+                font-weight: 600;
+            }
+        }
+        .Container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .Thanks {
+                font-size: 3.5rem;
+                font-weight: 700;
+                color: #fff;
+                margin-top: 80px;
+                text-align: center;
+            }
+            .Msg {
+                font-size: 1rem;
+                font-weight: 200;
+                color: rgba(white, 0.7);
+            }
+        }
+        .FollowUs {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: rgba(white, 1);
+        }
+        .SocialMedia {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            width: 50%;
+            .SocialMediaIcon {
+                background-color: rgba(white, 0.3);
+                padding: 5px;
+                border-radius: 50%;
+                font-size: 2.5rem;
+            }
+        }
+    }
+}

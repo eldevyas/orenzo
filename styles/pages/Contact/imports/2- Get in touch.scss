@@ -1,3 +1,133 @@
 &__GetInTouch {
     position: relative;
+    width: 100%;
+    height: auto;
+    color: $C5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    // pointer-events: none;
+    // background-color: #000;
+    @include GlobalPadding();
+    &__Heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1rem;
+        max-width: 500px;
+        &__Title {
+            font-size: 2.25rem;
+            font-weight: 600;
+        }
+        &__Description {
+            font-size: 1.25rem;
+            line-height: 1.5;
+            color: rgba($C5, 75%);
+            font-weight: 600;
+        }
+    }
+    &__Form {
+        position: relative;
+        width: 100%;
+        background-color: transparent;
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        // max-width: 800px;
+        /* Set a maximum width for the grid to prevent it from becoming too wide */
+        &__Field {
+            width: 100%;
+            height: auto;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 0.5rem;
+            &:nth-child(3) {
+                grid-auto-rows: max-content;
+            }
+            &__Label {
+                font-size: 1.25rem;
+                font-weight: 600;
+                color: rgba($C5, 50%);
+            }
+            &__Container {
+                position: relative;
+                width: 100%;
+                height: auto;
+                background-color: rgba(255, 255, 255, 0.1);
+                // border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 0px;
+                pointer-events: all;
+                &:has(.Focused) {
+                    background-color: rgba($C5, 50%);
+                }
+                &::before,
+                &::after {
+                    border-radius: inherit;
+                    content: "";
+                    height: 100%;
+                    left: 0px;
+                    opacity: 0;
+                    position: absolute;
+                    top: 0px;
+                    transition: opacity 500ms;
+                    width: 100%;
+                    pointer-events: none;
+                }
+                &::before {
+                    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.1), transparent 40%);
+                    z-index: 3;
+                }
+                &::after {
+                    background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.04), transparent 40%);
+                    z-index: 1;
+                }
+                &:hover {
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+                &__Input {
+                    position: relative;
+                    display: block;
+                    padding: 1rem 1rem;
+                    background-color: #333;
+                    outline: none;
+                    border: none;
+                    width: calc(100% - 2px);
+                    height: calc(100% - 2px);
+                    font-size: 1rem;
+                    inset: 1px;
+                    color: rgba($C5, 50%);
+                    z-index: 2;
+                    &:focus,
+                    &:active {
+                        background-color: #222;
+                        // border: 1px solid rgba($C5, 50%);
+                        color: rgba($C5, 50%);
+                    }
+                    &.react-select {
+                        &-container {
+                            background: #333;
+                            padding: 0;
+                            background-color: #333;
+                        }
+                        &__control {
+                            background: #333;
+                            // padding: 1rem;
+                        }
+                        &__value-container {
+                            background: #333;
+                            padding: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

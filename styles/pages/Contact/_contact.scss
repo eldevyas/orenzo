@@ -6,7 +6,7 @@
     height: auto;
     justify-content: flex-start;
     align-items: center;
-    @import "./imports/0-\ Background.scss";
+    @import "./imports/0- Background.scss";
     overflow-x: hidden;
     overflow-y: auto;
     background-color: black;
@@ -17,8 +17,10 @@
         justify-content: flex-start;
         align-items: center;
         gap: 2rem;
-        @include GlobalPadding();
         @import "./imports/1- Alternatives.scss";
         @import "./imports/2- Get in touch.scss";
+        @import "./imports/3- FAQ.scss";
+        @import "./imports/4- Mailing.scss";
+        z-index: 10;
     }
 }
