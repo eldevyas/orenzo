@@ -4,7 +4,7 @@
             "home": "Acceuil",
             "services": "Services",
             "portfolio": "Portfeuille",
-            "about": "À propos de nous",
+            "about": "Qui sommes-nous?",
             "language": "Langue",
             "contact": "Contact",
             "servicesPages": {
@@ -25,7 +25,7 @@
                 "home": "Acceuil",
                 "services": "Services",
                 "portfolio": "Portfeuille",
-                "about": "À propos de nous",
+                "about": "Qui sommes-nous?\n",
                 "language": "Langue",
                 "contact": "Contactez-nous",
                 "servicesPages": {
@@ -66,7 +66,7 @@
                 "title": "Nos Partenaires de Confiance"
             },
             "AboutUs": {
-                "title": "We are <BlueSpan>Experts</BlueSpan> in our field<BlueDot>.</BlueDot>\n",
+                "title": "Nous sommes <BlueSpan>Experts</BlueSpan> dans notre domaine<BlueDot>.</BlueDot>",
                 "description": "En tant qu'experts, notre équipe d'ORENZO s'engage à aider les entreprises à atteindre leurs objectifs de marketing en ligne. Avec des années d'expérience et une passion pour rester à jour avec les dernières tendances et techniques de l'industrie, nous proposons des stratégies personnalisées adaptées aux besoins uniques de chaque client. Nous sommes fiers d'offrir un service client exceptionnel et de fournir des résultats mesurables qui aident nos clients à réussir. Contactez-nous dès aujourd'hui pour en savoir plus sur la façon dont nous pouvons aider votre entreprise à se développer.",
                 "button": "Contactez-nous"
             },
@@ -212,8 +212,8 @@
             },
             "content": {
                 "Card": {
-                    "title": "Conception pour les personnes",
-                    "description": "Nos solutions de conception créatives sont pour les personnes, pas pour les machines. Pourtant, elles sont faites par des personnes et des machines.",
+                    "title": "Le design pour les gens",
+                    "description": "Nos solutions de design créatives sont destinées aux gens, pas aux machines. Pourtant fait par des gens et des machines.",
                     "button": "En savoir plus",
                     "notice": "Aucune entreprise n'a jamais réussi avec de mauvaises solutions de conception. Pour nous, la conception est le noyau qui maintient l'entreprise ensemble. Nous sommes toujours prêts à vous aider à le construire."
                 },
@@ -227,7 +227,7 @@
                         "description": "Faites une impression durable avec un logo personnalisé."
                     },
                     "uiUx": {
-                        "title": "UI/UX",
+                        "title": "Interface utilisateur/expérience utilisateur",
                         "description": "Améliorez l'expérience utilisateur et faites une déclaration."
                     },
                     "socialMedia": {
@@ -607,6 +607,50 @@
                 "FAQ": {
                     "title": "FAQ"
                 }
+            }
+        }
+    },
+    "portfolio": {
+        "head": {
+            "title": "Orenzo - Portfolio",
+            "meta": {
+                "description": "Vous cherchez une agence digitale qui donne des résultats ? Consultez la page du portefeuille d'Orenzo pour voir comment nous avons aidé des entreprises comme la vôtre à se développer grâce à la conception Web, à l'image de marque, au marketing numérique, etc. Notre équipe d'experts élabore des solutions personnalisées qui engagent votre public et génèrent des conversions. Parcourez notre portefeuille aujourd'hui pour voir comment nous pouvons vous aider à faire passer votre présence en ligne au niveau supérieur."
+            }
+        },
+        "content": {
+            "MainCard": {
+                "Title": "Portfolio",
+                "Description": "Associez-vous à nous pour élever votre entreprise dans le monde numérique",
+                "Button": "Découvrir"
+            },
+            "Notice": "Bienvenue chez Orenzo, une agence numérique qui aide les entreprises à prospérer à l'ère numérique. Nous sommes une équipe de professionnels qualifiés passionnés par la créativité et l'innovation. Notre objectif est de vous fournir des solutions numériques exceptionnelles qui génèrent des résultats et aident votre entreprise à se développer. Laissez-nous vous aider à faire passer votre présence en ligne au niveau supérieur.",
+            "Gallery": {
+                "Design": "Désign",
+                "Development": "Développement",
+                "Marketing": "Marketing"
+            }
+        }
+    },
+    "about": {
+        "head": {
+            "title": "À propos d'Orenzo",
+            "meta": {
+                "description": "En tant qu'experts, notre équipe chez Orenzo s'engage à aider les entreprises à atteindre leurs objectifs de marketing en ligne. Avec des années d'expérience et une passion pour rester à jour avec les dernières tendances et techniques de l'industrie, nous proposons des stratégies personnalisées adaptées aux besoins uniques de chaque client. Nous sommes fiers d'offrir un service client exceptionnel et de fournir des résultats mesurables qui aident nos clients à réussir. Contactez-nous dès aujourd'hui pour en savoir plus sur la façon dont nous pouvons aider votre entreprise à se développer."
+            }
+        },
+        "content": {
+            "MainCard": {
+                "Title": "Nous sommes Orenzo.",
+                "Description": "Associez-vous à nous pour élever votre entreprise dans le monde numérique",
+                "Button": "En savoir plus"
+            },
+            "Notice": "Bienvenue chez Orenzo, une agence numérique qui aide les entreprises à prospérer à l'ère numérique. Nous sommes une équipe de professionnels qualifiés passionnés par la créativité et l'innovation. Notre objectif est de vous fournir des solutions numériques exceptionnelles qui génèrent des résultats et aident votre entreprise à se développer. Laissez-nous vous aider à faire passer votre présence en ligne au niveau supérieur.",
+            "Team": {
+                "Title": "L'équipe <BlueSpan>Orenzo</BlueSpan><BlueDot>.</BlueDot>",
+                "FirstSubtitle": "Qui sommes nous?",
+                "FirstDescription": "Nous sommes une équipe de concepteurs, de développeurs, de gestionnaires de données, de spécialistes du marketing et de personnes talentueuses. Notre grande préoccupation est le travail que nous créons et nous amusons à faire.",
+                "SecondSubtitle": "Quelle est notre mission ?",
+                "SecondDescription": "C'est simple ! Votre travail est notre mission. Nous travaillons dur chaque jour pour concevoir des solutions innovantes qui vous aident à collecter plus, à réaliser plus et à développer votre incroyable entreprise dans le monde entier. Nous croyons que ce que nous faisons peut aider à changer le monde."
             }
         }
     }
