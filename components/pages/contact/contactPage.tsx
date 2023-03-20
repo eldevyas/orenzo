@@ -67,6 +67,7 @@ export default function ContactPage() {
                     Label: "Message",
                     Placeholder: "Let us know more about your project",
                 },
+                Button: "Get in touch",
             },
         },
         FAQ: {

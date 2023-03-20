@@ -1,7 +1,104 @@
 import React from "react";
 import Select from "react-select";
-import Creatable, { useCreatable } from "react-select/creatable";
+import { DefaultButton } from "../../../core/buttons";
+// import Creatable, { useCreatable } from "react-select/creatable";
+let Styles = {
+    control: (base: any, state: any) => ({
+        ...base,
+        backgroundColor: state.isFocused ? "#222" : "#333",
+        borderColor: state.isFocused
+            ? "rgba(255, 255, 255, 0.5)"
+            : "rgba(255, 255, 255, 0.5)",
+        color: state.isFocused
+            ? "rgba(255, 255, 255, 0.5)"
+            : "rgba(255, 255, 255, 0.5)",
+        boxShadow: "none",
+        borderRadius: "0px",
+        outline: "none",
+        border: "none",
+        // padding: "1rem",
+        zIndex: 200,
+        inset: "1px",
+        width: "calc(100% - 2px)",
+        height: "calc(100% - 2px)",
+    }),
+    menu: (base: any, state: any) => ({
+        ...base,
+        backgroundColor: "#222",
+        borderColor: state.isFocused ? "#fff" : "#fff",
+        color: state.isFocused ? "#17BEBB" : "#fff",
+        // boxShadow: "none",
+        borderRadius: "0px",
+        zIndex: "250 !important",
+        overflow: "hidden",
+        padding: 0,
+    }),
+    option: (base: any, state: any) => ({
+        ...base,
+        backgroundColor: state.isSelected ? "#000" : "transparent",
+        borderColor: state.isSelected ? "#f5f5f5" : "#fff",
+        color: state.isSelected ? "#fff" : "#ccc",
+        fontFamily: "Outfit, sans-serif",
+        fontSize: "1rem",
+        fontWeight: "400",
+        padding: "1rem",
+        borderRadius: "0px",
+        zIndex: "250 !important",
+        // hover
+        "&:hover": {
+            backgroundColor: state.isFocused ? "#17BEBB" : "transparent",
+            borderColor: state.isFocused ? "#f5f5f5" : "#fff",
+            color: state.isFocused || state.isSelected ? "#fff" : "#303030",
+        },
+        "&:active": {
+            backgroundColor: state.isFocused ? "#17BEBB" : "transparent",
+            borderColor: state.isFocused ? "#f5f5f5" : "#fff",
+        },
+        // selected option
+        "&:selected": {
+            backgroundColor: "#555",
+            borderColor: state.isFocused ? "#f5f5f5" : "#fff",
+        },
+    }),
+    // ValueContainer
+    valueContainer: (base: any, state: any) => ({
+        ...base,
+        // value
+        padding: 0,
+        color: "#fff",
+        zIndex: 200,
+    }),
+    // ValueContainer
+    singleValue: (base: any, state: any) => ({
+        ...base,
+        // value
+        color: "rgba(255,255,255,0.5)",
+        padding: "1rem",
+        zIndex: 200,
 
+        fontSize: "1rem",
+    }),
+    placeholder: (base: any, state: any) => ({
+        ...base,
+        // value
+        color: "rgba(255,255,255,0.5)",
+        padding: "1rem",
+        zIndex: 200,
+
+        fontSize: "1rem",
+    }),
+    indicatorSeparator: (base: any, state: any) => ({
+        ...base,
+        display: "none",
+        zIndex: 200,
+    }),
+    menuList: (base: any, state: any) => ({
+        ...base,
+        // display: "none",
+        zIndex: 200,
+        padding: 0,
+    }),
+};
 interface Properties {
     Title: string;
     Description: string;
@@ -156,9 +253,50 @@ export default function GetInTouch(props: Properties) {
                                 e.target.classList.remove("Focused");
                             }}
                             options={InterestOptions}
+                            styles={Styles}
                         />
                     </div>
                 </div>
+                <div className="PageContent__GetInTouch__Form__Field">
+                    <div className="PageContent__GetInTouch__Form__Field__Label">
+                        {props.Form.Budget.Label}
+                    </div>
+                    <div className="PageContent__GetInTouch__Form__Field__Container">
+                        <Select
+                            placeholder={props.Form.Budget.Placeholder}
+                            className="PageContent__GetInTouch__Form__Field__Container__Input react-select-container"
+                            classNamePrefix="react-select"
+                            onFocus={(e: any) => {
+                                e.target.classList.add("Focused");
+                            }}
+                            onBlur={(e: any) => {
+                                e.target.classList.remove("Focused");
+                            }}
+                            options={BudgetOptions}
+                            styles={Styles}
+                        />
+                    </div>
+                </div>
+                <div className="PageContent__GetInTouch__Form__Field">
+                    <div className="PageContent__GetInTouch__Form__Field__Label">
+                        {props.Form.Message.Label}
+                    </div>
+                    <div className="PageContent__GetInTouch__Form__Field__Container">
+                        <textarea
+                            placeholder={props.Form.Message.Placeholder}
+                            className="PageContent__GetInTouch__Form__Field__Container__Input"
+                            onFocus={(e: any) => {
+                                e.target.classList.add("Focused");
+                            }}
+                            onBlur={(e: any) => {
+                                e.target.classList.remove("Focused");
+                            }}
+                        />
+                    </div>
+                </div>
+            </div>
+            <div className="PageContent__GetInTouch__FormAction">
+                <DefaultButton bgColor="Blue">Send Message</DefaultButton>
             </div>
         </div>
     );
