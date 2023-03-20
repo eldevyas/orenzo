@@ -29,7 +29,6 @@
         "next-i18next": "^12.1.0",
         "nextjs-progressbar": "^0.0.16",
         "react": "^17.0.0 || ^18.2.0",
-        "react-animated-cursor": "^2.5.2",
         "react-dom": "18.2.0",
         "react-grid-gallery": "^1.0.0",
         "react-icons": "^4.6.0",
