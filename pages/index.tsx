@@ -25,20 +25,6 @@ const Home: NextPage = () => {
             </Head>
 
             <HomePage />
-
-            <DefaultButton
-                className="WhatsAppButton"
-                bgColor="White"
-                startIcon={<BsWhatsapp />}
-                onClick={() => {
-                    window.open(
-                        "https://api.whatsapp.com/send?phone=212708878407",
-                        "_blank"
-                    );
-                }}
-            >
-                Message us
-            </DefaultButton>
         </>
     );
 };

@@ -11,6 +11,7 @@ import React, { useEffect } from "react";
 import { appWithTranslation, i18n, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import nextI18NextConfig from "../next-i18next.config";
+import AnimatedCursor from "react-animated-cursor";
 
 if (process.env.NODE_ENV !== "production") {
     if (typeof window !== "undefined") {
@@ -96,6 +97,8 @@ function MyApp({ Component, pageProps }: AppProps) {
                     return <style>{css}</style>;
                 }}
             />
+
+            <AnimatedCursor />
 
             <Component {...pageProps} />
 

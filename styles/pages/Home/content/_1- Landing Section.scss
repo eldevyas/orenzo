@@ -50,11 +50,10 @@
             width: 100%;
             height: auto;
             background: transparent;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 1rem;
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            // grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
         }
     }
     .Image {
@@ -119,7 +118,7 @@
                 left: -20%;
                 width: 50%;
                 height: auto;
-                z-index: 5;
+                z-index: 50;
                 animation-delay: 200ms;
             }
             .Experience {
@@ -147,44 +146,6 @@
                 width: 40%;
                 height: auto;
                 z-index: 1;
-                // filter: blur(0.15vw);
-                // transition: all 0.2s ease;
-                // animation: SendBack 1s ease-in-out forwards;
-                // &:hover {
-                //     animation: ComeToFront 1s ease-in-out forwards;
-                // }
-                // @keyframes ComeToFront {
-                //     from {
-                //         transform: translate(0, 0px);
-                //         filter: blur(0.15vw);
-                //         z-index: 1;
-                //     }
-                //     50% {
-                //         transform: translate(-50px, -0px);
-                //         z-index: 1;
-                //     }
-                //     to {
-                //         transform: translate(-20px, 0px);
-                //         filter: blur(0vw);
-                //         z-index: 6;
-                //     }
-                // }
-                // @keyframes SendBack {
-                //     from {
-                //         transform: translate(-20px, 0px);
-                //         filter: blur(0vw);
-                //         z-index: 6;
-                //     }
-                //     50% {
-                //         transform: translate(-50px, -0px);
-                //         z-index: 1;
-                //     }
-                //     to {
-                //         transform: translate(0, 0px);
-                //         filter: blur(0.15vw);
-                //         z-index: 1;
-                //     }
-                // }
             }
         }
         @media (max-width: 790px) {
@@ -196,6 +157,10 @@
                 width: 100% !important;
                 height: 80%;
                 aspect-ratio: 1/1 !important;
+                // .Team {
+                //     bottom: -20%;
+                //     width: 70%;
+                // }
             }
         }
     }

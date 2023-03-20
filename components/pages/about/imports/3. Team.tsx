@@ -4,7 +4,7 @@ import { DefaultButton } from "../../../core/buttons";
 import { Trans } from "next-i18next";
 const Team = (props: any) => {
     return (
-        <div className="Team">
+        <div className="TeamSection">
             <div className="Text">
                 {/* <div className="FadedText">About us</div> */}
                 <h1 className="Title">

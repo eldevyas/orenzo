@@ -84,10 +84,10 @@ export default function MainCard(props: any) {
                     stiffness: 300,
                     damping: 20,
                 }}
-                // style={{
-                //     rotateX: rotateX,
-                //     rotateY: rotateY,
-                // }}
+                style={{
+                    rotateX: rotateX,
+                    rotateY: rotateY,
+                }}
                 initial="false"
                 animate={{
                     rotateX: rotateX.get(),

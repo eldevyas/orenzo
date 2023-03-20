@@ -1,17 +1,40 @@
-.Background {
+// .Background {
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     z-index: -1;
+//     pointer-events: none;
+//     background-color: black;
+//     background-image: url("/img/assets/Grid.png");
+//     background-origin: top left;
+//     background-size: cover;
+//     background-repeat: repeat-y;
+//     // mask-image: radial-gradient(40vw 40vw at 20vw 50vh, #000 0%, rgba(217, 217, 217, 0) 70%), //
+//     // radial-gradient(20vw 20vw at 80vw 60vh, #000 0%, rgba(217, 217, 217, 0) 30%), //
+//     // ;
+// }
+.BackgroundTiles {
+    position: absolute;
+    z-index: 0;
+    background-color: black;
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    pointer-events: none;
-    background-color: white;
-    background-image: url("/img/assets/Grid.png");
-    background-origin: top left;
-    background-size: cover;
-    background-repeat: repeat-y;
-    mask-image: radial-gradient(40vw 40vw at 20vw 50vh, #000 0%, rgba(217, 217, 217, 0) 70%), //
-    radial-gradient(20vw 20vw at 80vw 60vh, #000 0%, rgba(217, 217, 217, 0) 30%), //
-    ;
+    // pointer-events: none;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
+    overflow: hidden;
+    // --mouse-x: 10px;
+    // --mouse-y: 10px;
+    will-change: mask;
+    transform: translateZ(0);
+    -webkit-mask-image: radial-gradient( 600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 100%), transparent 75%);
+    mask-image: radial-gradient( 600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 100%), transparent 75%);
+    transition: all 300ms ease;
+    .Tile {
+        outline: 1px solid #333;
+        aspect-ratio: 1/1;
+    }
 }

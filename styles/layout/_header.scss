@@ -292,7 +292,15 @@
 }
 
 .NavBar[data-theme="dark"] {
-    background-color: black;
+    &.Fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 0rem 10vw;
+        backdrop-filter: blur(1rem) brightness(50%);
+        background-color: rgba(#000, 75%);
+    }
     .Navigation {
         .NavButton {
             color: rgba(#fff, 75%);

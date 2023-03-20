@@ -1,0 +1,123 @@
+&__Alternatives {
+    position: relative;
+    width: 100%;
+    height: auto;
+    color: $C5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    pointer-events: none;
+    &__Heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1rem;
+        max-width: 550px;
+        &__Title {
+            font-size: 2.25rem;
+            font-weight: 600;
+        }
+        &__Description {
+            font-size: 1.25rem;
+            line-height: 1.5;
+            color: rgba($C5, 75%);
+            font-weight: 600;
+        }
+    }
+    &__Cards {
+        // position: relative;
+        width: 100%;
+        background-color: transparent;
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+        &__Card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            // cursor: pointer;
+            border-radius: 0px;
+            &::before,
+            &::after {
+                border-radius: inherit;
+                content: "";
+                height: 100%;
+                left: 0px;
+                opacity: 0;
+                position: absolute;
+                top: 0px;
+                transition: opacity 500ms;
+                width: 100%;
+                pointer-events: none;
+            }
+            &::before {
+                background: radial-gradient( 800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 35%), transparent 40%);
+                z-index: 3;
+            }
+            &::after {
+                background: radial-gradient( 600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 1), transparent 40%);
+                z-index: 1;
+            }
+            &:hover {
+                &::before {
+                    opacity: 1;
+                }
+            }
+            &:nth-child(1) {
+                background: $G4;
+            }
+            &:nth-child(2) {
+                background: $G3;
+            }
+            &__Content {
+                // background-color: rgb(23, 23, 23);
+                border-radius: inherit;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                // inset: 1px;
+                padding: 2rem;
+                // position: absolute;
+                z-index: 2;
+                gap: 1rem;
+                &__Text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    // pointer-events: all;
+                    gap: 0.5rem;
+                    &__Title {
+                        font-size: 2.25rem;
+                        font-weight: 600;
+                    }
+                    &__Description {
+                        font-size: 0.85rem;
+                        line-height: 1.5;
+                        color: rgba($C5, 75%);
+                        font-weight: 600;
+                    }
+                }
+                &__ActionButton {
+                    position: relative;
+                    padding: 0.5rem 1rem;
+                    background: $G5;
+                    color: $C5;
+                    font-size: 0.85rem;
+                    border-radius: 0;
+                    border: 1px solid #eee;
+                    pointer-events: all;
+                }
+            }
+        }
+    }
+}

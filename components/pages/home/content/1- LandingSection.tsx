@@ -5,13 +5,21 @@ import { motion } from "framer-motion";
 import zIndex from "@material-ui/core/styles/zIndex";
 import { Trans, useTranslation } from "react-i18next";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { BsWhatsapp } from "react-icons/bs";
+import CallIcon from "@mui/icons-material/Call";
 
 export default function LandingSection() {
     const { t } = useTranslation("common");
+    const { locale } = useRouter();
+    const Router = useRouter();
 
     const Man = {
         initial: { opacity: 0, y: 100 },
-        animate: { opacity: 1, y: 0 },
+        animate: {
+            opacity: 1,
+            y: 0,
+        },
     };
 
     const Card = {
@@ -77,6 +85,10 @@ export default function LandingSection() {
                         bgColor="Red"
                         elevation={0}
                         style={{ boxShadow: "none" }}
+                        onClick={() => {
+                            return Router.push("/contact");
+                        }}
+                        // startIcon={<CallIcon />}
                     >
                         {t("home.content.LandingSection.buttons.primary")}
                     </DefaultButton>
@@ -84,6 +96,9 @@ export default function LandingSection() {
                     <IconTextButton
                         bgColor="Red"
                         icon={<ExpandCircleDownIcon />}
+                        onClick={() => {
+                            Router.push("#Partners");
+                        }}
                     >
                         {t("home.content.LandingSection.buttons.secondary")}
                     </IconTextButton>
@@ -126,7 +141,14 @@ export default function LandingSection() {
                             repeat: Infinity,
                             duration: 6,
                         }}
-                        src="/img/assets/Team.png"
+                        // src={"/img/assets/Experience.png"}
+                        src={
+                            locale == "en"
+                                ? "/img/assets/Team.png"
+                                : locale == "ar"
+                                ? "/img/assets/Team-AR.png"
+                                : "/img/assets/Team-FR.png"
+                        }
                         className="Team"
                     />
 
@@ -147,7 +169,13 @@ export default function LandingSection() {
                             repeat: Infinity,
                             duration: 6,
                         }}
-                        src="/img/assets/Clients.png"
+                        src={
+                            locale == "en"
+                                ? "/img/assets/Clients.png"
+                                : locale == "ar"
+                                ? "/img/assets/Clients-AR.png"
+                                : "/img/assets/Clients-FR.png"
+                        }
                         className="Clients"
                     />
 
@@ -166,7 +194,13 @@ export default function LandingSection() {
                             bottom: 20,
                         }}
                         dragSnapToOrigin={true}
-                        src="/img/assets/Projects.png"
+                        src={
+                            locale == "en"
+                                ? "/img/assets/Projects.png"
+                                : locale == "ar"
+                                ? "/img/assets/Projects-AR.png"
+                                : "/img/assets/Projects-FR.png"
+                        }
                         className="Projects"
                     />
 
@@ -187,7 +221,13 @@ export default function LandingSection() {
                             repeat: Infinity,
                             duration: 6,
                         }}
-                        src="/img/assets/Experience.png"
+                        src={
+                            locale == "en"
+                                ? "/img/assets/Experience.png"
+                                : locale == "ar"
+                                ? "/img/assets/Experience-AR.png"
+                                : "/img/assets/Experience-FR.png"
+                        }
                         className="Experience"
                     />
                 </motion.div>
