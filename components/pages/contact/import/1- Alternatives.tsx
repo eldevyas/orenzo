@@ -75,6 +75,7 @@ export default function Alternatives(props: any) {
                             variant="text"
                             className="PageContent__Alternatives__Cards__Card__Content__ActionButton"
                             startIcon={<IoCalendarSharp />}
+                            dir="ltr"
                         >
                             {Cards.Calendly.Button}
                         </Button>
@@ -97,6 +98,7 @@ export default function Alternatives(props: any) {
                             variant="text"
                             className="PageContent__Alternatives__Cards__Card__Content__ActionButton"
                             startIcon={<BsWhatsapp />}
+                            dir="ltr"
                         >
                             {Cards.WhatsApp.Button}
                         </Button>

@@ -1,156 +1,169 @@
-&__GetInTouch {
-    position: relative;
-    width: 100%;
-    height: auto;
-    color: $C5;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    gap: 2rem;
-    // pointer-events: none;
-    // background-color: #000;
-    @include GlobalPadding();
-    &__Heading {
+    &__GetInTouch {
+        position: relative;
+        width: 100%;
+        height: auto;
+        color: $C5;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: flex-start;
-        gap: 1rem;
-        max-width: 500px;
-        &__Title {
-            font-size: 2.25rem;
-            font-weight: 600;
-        }
-        &__Description {
-            font-size: 1.25rem;
-            line-height: 1.5;
-            color: rgba($C5, 75%);
-            font-weight: 600;
-        }
-    }
-    &__Form {
-        position: relative;
-        width: 100%;
-        background-color: transparent;
-        /**
-   * User input values.
-   */
-        --grid-layout-gap: 2rem;
-        --grid-column-count: 2;
-        --grid-item--min-width: 200px;
-        /**
-   * Calculated values.
-                    */
-        --gap-count: calc(var(--grid-column-count) - 1);
-        --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
-        --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
-        grid-gap: var(--grid-layout-gap);
-        // grid-gap: 2rem;
-        &__Field {
-            width: 100%;
-            height: auto;
-            position: relative;
+        align-items: stretch;
+        gap: 2rem;
+        // pointer-events: none;
+        // background-color: #000;
+        @include GlobalPadding();
+        &__Heading {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
             justify-content: flex-start;
-            gap: 0.5rem;
-            @media screen and (min-width: 1024px) {
-                &:nth-child(5) {
-                    grid-column: 1 / 3;
-                    grid-row: 3 / 3;
-                }
-            }
-            &__Label {
-                font-size: 1.25rem;
+            align-items: flex-start;
+            gap: 1rem;
+            max-width: 500px;
+            &__Title {
+                font-size: 2.25rem;
                 font-weight: 600;
-                color: rgba($C5, 50%);
             }
-            &__Container {
-                position: relative;
+            &__Description {
+                font-size: 1.25rem;
+                line-height: 1.5;
+                color: rgba($C5, 75%);
+                font-weight: 600;
+            }
+        }
+        &__Form {
+            position: relative;
+            width: 100%;
+            background-color: transparent;
+            /**
+   * User input values.
+   */
+            --grid-layout-gap: 2rem;
+            --grid-column-count: 2;
+            --grid-item--min-width: 200px;
+            /**
+   * Calculated values.
+                    */
+            --gap-count: calc(var(--grid-column-count) - 1);
+            --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+            --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+            grid-gap: var(--grid-layout-gap);
+            // grid-gap: 2rem;
+            &__Field {
                 width: 100%;
                 height: auto;
-                background-color: rgba(255, 255, 255, 0.1);
-                // border: 1px solid rgba(255, 255, 255, 0.1);
-                border-radius: 0px;
-                pointer-events: all;
-                &:has(.Focused) {
-                    background-color: rgba($C5, 50%);
-                }
-                &::before,
-                &::after {
-                    border-radius: inherit;
-                    content: "";
-                    height: 100%;
-                    left: 0px;
-                    opacity: 0;
-                    position: absolute;
-                    top: 0px;
-                    transition: opacity 500ms;
-                    width: 100%;
-                    pointer-events: none;
-                }
-                &::before {
-                    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.1), transparent 40%);
-                    z-index: 3;
-                }
-                &::after {
-                    background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.04), transparent 40%);
-                    z-index: 1;
-                }
-                &:hover {
-                    &::before {
-                        opacity: 1;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 0.5rem;
+                @media screen and (min-width: 1024px) {
+                    &:nth-child(5) {
+                        grid-column: 1 / 3;
+                        grid-row: 3 / 3;
                     }
                 }
-                &__Input {
-                    position: relative;
-                    display: block;
-                    padding: 1rem 1rem;
-                    background-color: #333;
-                    outline: none;
-                    border: none;
-                    width: calc(100% - 2px);
-                    height: calc(100% - 2px);
-                    font-size: 1rem;
-                    inset: 1px;
+                &__Label {
+                    font-size: 1.25rem;
+                    font-weight: 600;
                     color: rgba($C5, 50%);
-                    z-index: 2;
-                    &:focus,
-                    &:active {
-                        background-color: #222;
-                        // border: 1px solid rgba($C5, 50%);
-                        color: rgba($C5, 50%);
-                    }
-                    &.react-select-container {
-                        padding: 0;
-                        position: relative;
-                        z-index: 200;
-                    }
                 }
-                // .react-select__menu {
-                //     position: relative;
-                //     // z-index: 9999;
-                // }
-                // // .react-select__menu-list {
-                // //     position: relative;
-                // //     // z-index: 9999;
-                // // }
+                &__Container {
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+                    background-color: rgba(255, 255, 255, 0.1);
+                    // border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 0px;
+                    pointer-events: all;
+                    &:has(.Focused) {
+                        background-color: rgba($C5, 50%);
+                    }
+                    &::before,
+                    &::after {
+                        border-radius: inherit;
+                        content: "";
+                        height: 100%;
+                        left: 0px;
+                        opacity: 0;
+                        position: absolute;
+                        top: 0px;
+                        transition: opacity 500ms;
+                        width: 100%;
+                        pointer-events: none;
+                    }
+                    &::before {
+                        background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.1), transparent 40%);
+                        z-index: 3;
+                    }
+                    &::after {
+                        background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.04), transparent 40%);
+                        z-index: 1;
+                    }
+                    &:hover {
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+                    &__Input {
+                        position: relative;
+                        display: block;
+                        padding: 1rem 1rem;
+                        background-color: #333;
+                        outline: none;
+                        border: none;
+                        width: calc(100% - 2px);
+                        height: calc(100% - 2px);
+                        font-size: 1rem;
+                        inset: 1px;
+                        color: rgba($C5, 50%);
+                        z-index: 2;
+                        &:focus,
+                        &:active {
+                            background-color: #222;
+                            // border: 1px solid rgba($C5, 50%);
+                            color: rgba($C5, 50%);
+                        }
+                        &.react-select-container {
+                            padding: 0;
+                            position: relative;
+                            z-index: 200;
+                        }
+                    }
+                    textarea {
+                        resize: vertical;
+                    }
+                    // .react-select__menu {
+                    //     position: relative;
+                    //     // z-index: 9999;
+                    // }
+                    // // .react-select__menu-list {
+                    // //     position: relative;
+                    // //     // z-index: 9999;
+                    // // }
+                }
+            }
+        }
+        &__FormAction {
+            width: 100%;
+            height: auto;
+            --grid-layout-gap: 2rem;
+            --grid-column-count: 2;
+            --grid-item--min-width: 200px;
+            /*** Calculated values.*/
+            --gap-count: calc(var(--grid-column-count) - 1);
+            --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+            --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+            grid-gap: var(--grid-layout-gap);
+            .DefaultButton {
+                border-radius: 0;
+                @media screen and (min-width: 1024px) {
+                    grid-column: 2 / 3;
+                    grid-row: 1 / 1;
+                }
             }
         }
     }
-    &__FormAction {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: flex-end;
-        .DefaultButton {
-            border-radius: 0;
-        }
-    }
-}
