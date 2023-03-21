@@ -18,6 +18,7 @@ let Styles = {
         border: "none",
         // padding: "1rem",
         zIndex: 200,
+        position: "relative",
         inset: "1px",
         width: "calc(100% - 2px)",
         height: "calc(100% - 2px)",
@@ -29,7 +30,7 @@ let Styles = {
         color: state.isFocused ? "#17BEBB" : "#fff",
         // boxShadow: "none",
         borderRadius: "0px",
-        zIndex: "250 !important",
+        zIndex: 250,
         overflow: "hidden",
         padding: 0,
     }),
@@ -75,7 +76,6 @@ let Styles = {
         color: "rgba(255,255,255,0.5)",
         padding: "1rem",
         zIndex: 200,
-
         fontSize: "1rem",
     }),
     placeholder: (base: any, state: any) => ({

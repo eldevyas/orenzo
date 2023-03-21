@@ -60,28 +60,6 @@ export default function Alternatives(props: any) {
             >
                 <div
                     className="PageContent__Alternatives__Cards__Card"
-                    ref={CardOne}
-                >
-                    <div className="PageContent__Alternatives__Cards__Card__Content">
-                        <div className="PageContent__Alternatives__Cards__Card__Content__Text">
-                            <div className="PageContent__Alternatives__Cards__Card__Content__Text__Title">
-                                {Cards.WhatsApp.Title}
-                            </div>
-                            <div className="PageContent__Alternatives__Cards__Card__Content__Text__Description">
-                                {Cards.WhatsApp.Description}
-                            </div>
-                        </div>
-                        <Button
-                            variant="text"
-                            className="PageContent__Alternatives__Cards__Card__Content__ActionButton"
-                            startIcon={<BsWhatsapp />}
-                        >
-                            {Cards.WhatsApp.Button}
-                        </Button>
-                    </div>
-                </div>
-                <div
-                    className="PageContent__Alternatives__Cards__Card"
                     ref={CardTwo}
                 >
                     <div className="PageContent__Alternatives__Cards__Card__Content">
@@ -99,6 +77,28 @@ export default function Alternatives(props: any) {
                             startIcon={<IoCalendarSharp />}
                         >
                             {Cards.Calendly.Button}
+                        </Button>
+                    </div>
+                </div>
+                <div
+                    className="PageContent__Alternatives__Cards__Card"
+                    ref={CardOne}
+                >
+                    <div className="PageContent__Alternatives__Cards__Card__Content">
+                        <div className="PageContent__Alternatives__Cards__Card__Content__Text">
+                            <div className="PageContent__Alternatives__Cards__Card__Content__Text__Title">
+                                {Cards.WhatsApp.Title}
+                            </div>
+                            <div className="PageContent__Alternatives__Cards__Card__Content__Text__Description">
+                                {Cards.WhatsApp.Description}
+                            </div>
+                        </div>
+                        <Button
+                            variant="text"
+                            className="PageContent__Alternatives__Cards__Card__Content__ActionButton"
+                            startIcon={<BsWhatsapp />}
+                        >
+                            {Cards.WhatsApp.Button}
                         </Button>
                     </div>
                 </div>

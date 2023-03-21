@@ -127,8 +127,18 @@
                     }
                     &.react-select-container {
                         padding: 0;
+                        position: relative;
+                        z-index: 200;
                     }
                 }
+                // .react-select__menu {
+                //     position: relative;
+                //     // z-index: 9999;
+                // }
+                // // .react-select__menu-list {
+                // //     position: relative;
+                // //     // z-index: 9999;
+                // // }
             }
         }
     }

@@ -46,8 +46,6 @@ export default function Background(props) {
                 ImageMask += (Index == LightEffects.length - 1 ? Mask : Mask + ", ");
             })
 
-            console.log(ImageMask);
-
             // Set among all browsers;
             Wrapper.current.style.webkitMaskImage = ImageMask;
             Wrapper.current.style.MozMaskImage = ImageMask;
@@ -91,6 +89,7 @@ export default function Background(props) {
 
         return () => {
             window.removeEventListener("resize", CreateGrid);
+            window.removeEventListener("mousemove", handleMouseMove);
         };
     }, []);
 
