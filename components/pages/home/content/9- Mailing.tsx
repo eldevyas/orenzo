@@ -9,6 +9,23 @@ export default function Mailing() {
     const { t } = useTranslation("common");
     const [showAlert, setShowAlert] = useState(false);
 
+    const handleSubscribe = async (event) => {
+        const { t } = useTranslation("common");
+        const [showAlert, setShowAlert] = useState(false);
+
+        const handleSubscribe = () => {
+            const emailInput = document.querySelector('input[name="email"]');
+            const email = emailInput.value;
+            saveToGoogleSheets(email); // call a function to save the email to Google Sheets
+            setShowAlert(true);
+        };
+
+        const saveToGoogleSheets = (email) => {
+            // call a Google Sheets API to save the email
+            // implementation depends on the API you are using
+            console.log(`Saving email ${email} to Google Sheets`);
+        };
+
     return (
         <>
             <div className="Mailing">
