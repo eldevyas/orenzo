@@ -620,7 +620,7 @@
         "content": {
             "MainCard": {
                 "Title": "Portfolio",
-                "Description": "Partner with us to elevate yoru business in the Digital World",
+                "Description": "Partner with us to elevate your business in the Digital World",
                 "Button": "Discover"
             },
             "Notice": "Welcome to Orenzo, a digital agency that helps businesses thrive in the digital age. We are a team of skilled professionals with a passion for creativity and innovation. Our goal is to provide you with exceptional digital solutions that drive results and help your business grow. Let us help you take your online presence to the next level.",
@@ -635,13 +635,13 @@
         "head": {
             "title": "About Orenzo",
             "meta": {
-                "description": ""
+                "description": "As experts, our team at Orenzo is committed to helping businesses achieve their online marketing goals. With years of experience and a passion for staying up-to-date with the latest industry trends and techniques, we provide customized strategies tailored to each client's unique needs. We pride ourselves on exceptional customer service and delivering measurable results that help our clients succeed. Contact us today to learn more about how we can help your business grow."
             }
         },
         "content": {
             "MainCard": {
                 "Title": "We are Orenzo.",
-                "Description": "Partner with us to elevate yoru business in the Digital World",
+                "Description": "Partner with us to elevate your business in the Digital World",
                 "Button": "Read More"
             },
             "Notice": "Welcome to Orenzo, a digital agency that helps businesses thrive in the digital age. We are a team of skilled professionals with a passion for creativity and innovation. Our goal is to provide you with exceptional digital solutions that drive results and help your business grow. Let us help you take your online presence to the next level.",
@@ -651,6 +651,63 @@
                 "FirstDescription": "We are a team of designers, developers, data managers, marketers and talented individuals. Our big concern is the work we create and have fun doing.",
                 "SecondSubtitle": "What is our mission?",
                 "SecondDescription": "It's simple ! Your work is our mission. We work hard every day to design innovative solutions that help you collect more, achieve more, and grow your amazing business around the world. We believe that what we do can help change the world."
+            }
+        }
+    },
+    "contact": {
+        "Alternatives": {
+            "Title": "Hey👋🏻, can't wait to chat about your project?",
+            "Description": "No worries! You can hit us up on WhatsApp 📱 or schedule a meeting on Calendly 🗓️ with just a few clicks. It's that easy! But if you'd rather fill out the form, that's cool too. We're here to help you bring your ideas to life! 😊",
+            "Cards": {
+                "WhatsApp": {
+                    "Title": "Need quick assistance?",
+                    "Description": "We're just a message away! Click the button below to get in touch with our team via WhatsApp.",
+                    "Button": "Message Us Now"
+                },
+                "Calendly": {
+                    "Title": "Schedule a Meeting",
+                    "Description": "Want to discuss your project in detail? Click the button below to schedule a meeting with our team on Calendly.",
+                    "Button": "Schedule Now"
+                }
+            }
+        },
+        "GetInTouch": {
+            "Title": "We'd love to hear from you, Let's get in touch👇🏻",
+            "Description": "We're here to help you bring your ideas to life! 😊",
+            "Form": {
+                "Name": {
+                    "Label": "Full Name",
+                    "Placeholder": "Enter your name"
+                },
+                "Email": {
+                    "Label": "Your Email",
+                    "Placeholder": "Enter your email"
+                },
+                "Interest": {
+                    "Label": "Interest",
+                    "Placeholder": "Choose an option",
+                    "Options": {
+                        "Design": "Design",
+                        "Development": "Development",
+                        "Marketing": "Marketing",
+                        "Other": "Other"
+                    }
+                },
+                "Budget": {
+                    "Label": "Project Budget",
+                    "Placeholder": "Select your budget",
+                    "Options": {
+                        "-1000": "Under $1000",
+                        "1000-5000": "$1000 to $5000",
+                        "5000-10000": "$5000 to $10000",
+                        "+10000": "+$10000"
+                    }
+                },
+                "Message": {
+                    "Label": "Message",
+                    "Placeholder": "Let us know more about your project"
+                },
+                "Button": "Get in touch"
             }
         }
     }

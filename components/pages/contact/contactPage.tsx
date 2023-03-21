@@ -9,65 +9,88 @@ import FAQ from "../services/global/FAQ";
 import { useTranslation } from "next-i18next";
 import GetInTouch from "./import/2- Get in touch";
 
-export default function ContactPage() {
+const ContactPage = () => {
     const { t } = useTranslation("common");
     const Properties = {
         Alternatives: {
-            Title: "Hey👋🏻, can't wait to chat about your project? ",
-            Description:
-                "No worries! You can hit us up on WhatsApp 📱 or schedule a meeting on Calendly 🗓️ with just a few clicks. It's that easy! But if you'd rather fill out the form, that's cool too. We're here to help you bring your ideas to life! 😊",
+            Title: t("contact.Alternatives.Title"),
+            Description: t("contact.Alternatives.Description"),
             Cards: {
                 WhatsApp: {
-                    Title: "Need quick assistance?",
-                    Description:
-                        "We're just a message away! Click the button below to get in touch with our team via WhatsApp.",
-                    Button: "Message Us Now",
+                    Title: t("contact.Alternatives.Cards.WhatsApp.Title"),
+                    Description: t(
+                        "contact.Alternatives.Cards.WhatsApp.Description"
+                    ),
+                    Button: t("contact.Alternatives.Cards.WhatsApp.Button"),
                 },
                 Calendly: {
-                    Title: "Schedule a Meeting",
-                    Description:
-                        "Want to discuss your project in detail? Click the button below to schedule a meeting with our team on Calendly.",
-                    Button: "Schedule Now",
+                    Title: t("contact.Alternatives.Cards.Calendly.Title"),
+                    Description: t(
+                        "contact.Alternatives.Cards.Calendly.Description"
+                    ),
+                    Button: t("contact.Alternatives.Cards.Calendly.Button"),
                 },
             },
         },
         GetInTouch: {
-            Title: "We'd love to hear from you, Let's get in touch👇🏻",
-            Description: "We're here to help you bring your ideas to life! 😊",
+            Title: t("contact.GetInTouch.Title"),
+            Description: t("contact.GetInTouch.Description"),
             Form: {
                 Name: {
-                    Label: "Full Name",
-                    Placeholder: "Enter our name",
+                    Label: t("contact.GetInTouch.Form.Name.Label"),
+                    Placeholder: t("contact.GetInTouch.Form.Name.Placeholder"),
                 },
                 Email: {
-                    Label: "Your Email",
-                    Placeholder: "Enter your email",
+                    Label: t("contact.GetInTouch.Form.Email.Label"),
+                    Placeholder: t("contact.GetInTouch.Form.Email.Placeholder"),
                 },
                 Interest: {
-                    Label: "Interest",
-                    Placeholder: "Choose an option",
+                    Label: t("contact.GetInTouch.Form.Interest.Label"),
+                    Placeholder: t(
+                        "contact.GetInTouch.Form.Interest.Placeholder"
+                    ),
                     Options: {
-                        Design: "Design",
-                        Development: "Development",
-                        Marketing: "Marketing",
-                        Other: "Other",
+                        Design: t(
+                            "contact.GetInTouch.Form.Interest.Options.Design"
+                        ),
+                        Development: t(
+                            "contact.GetInTouch.Form.Interest.Options.Development"
+                        ),
+                        Marketing: t(
+                            "contact.GetInTouch.Form.Interest.Options.Marketing"
+                        ),
+                        Other: t(
+                            "contact.GetInTouch.Form.Interest.Options.Other"
+                        ),
                     },
                 },
                 Budget: {
-                    Label: "Project Budget",
-                    Placeholder: "Select your budget",
+                    Label: t("contact.GetInTouch.Form.Budget.Label"),
+                    Placeholder: t(
+                        "contact.GetInTouch.Form.Budget.Placeholder"
+                    ),
                     Options: {
-                        "-1000": "Under $1000",
-                        "1000-5000": "$1000 to $5000",
-                        "5000-10000": "$5000 to $10000",
-                        "+10000": "+$10000",
+                        "-1000": t(
+                            "contact.GetInTouch.Form.Budget.Options.-1000"
+                        ),
+                        "1000-5000": t(
+                            "contact.GetInTouch.Form.Budget.Options.1000-5000"
+                        ),
+                        "5000-10000": t(
+                            "contact.GetInTouch.Form.Budget.Options.5000-10000"
+                        ),
+                        "+10000": t(
+                            "contact.GetInTouch.Form.Budget.Options.+10000"
+                        ),
                     },
                 },
                 Message: {
-                    Label: "Message",
-                    Placeholder: "Let us know more about your project",
+                    Label: t("contact.GetInTouch.Form.Message.Label"),
+                    Placeholder: t(
+                        "contact.GetInTouch.Form.Message.Placeholder"
+                    ),
                 },
-                Button: "Get in touch",
+                Button: t("contact.GetInTouch.Form.Button"),
             },
         },
         FAQ: {
@@ -144,6 +167,7 @@ export default function ContactPage() {
             ],
         },
     };
+
     return (
         <div className="ContactPage">
             {/* <div className="Background"></div> */}
@@ -158,4 +182,6 @@ export default function ContactPage() {
             <Footer data-theme="dark" />
         </div>
     );
-}
+};
+
+export default ContactPage;

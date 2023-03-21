@@ -612,7 +612,7 @@
     },
     "portfolio": {
         "head": {
-            "title": "Orenzo - Portfolio",
+            "title": "Orenzo - Portfeuille",
             "meta": {
                 "description": "Vous cherchez une agence digitale qui donne des résultats ? Consultez la page du portefeuille d'Orenzo pour voir comment nous avons aidé des entreprises comme la vôtre à se développer grâce à la conception Web, à l'image de marque, au marketing numérique, etc. Notre équipe d'experts élabore des solutions personnalisées qui engagent votre public et génèrent des conversions. Parcourez notre portefeuille aujourd'hui pour voir comment nous pouvons vous aider à faire passer votre présence en ligne au niveau supérieur."
             }
@@ -651,6 +651,63 @@
                 "FirstDescription": "Nous sommes une équipe de concepteurs, de développeurs, de gestionnaires de données, de spécialistes du marketing et de personnes talentueuses. Notre grande préoccupation est le travail que nous créons et nous amusons à faire.",
                 "SecondSubtitle": "Quelle est notre mission ?",
                 "SecondDescription": "C'est simple ! Votre travail est notre mission. Nous travaillons dur chaque jour pour concevoir des solutions innovantes qui vous aident à collecter plus, à réaliser plus et à développer votre incroyable entreprise dans le monde entier. Nous croyons que ce que nous faisons peut aider à changer le monde."
+            }
+        }
+    },
+    "contact": {
+        "Alternatives": {
+            "Title": "Hé👋🏻, hâte de discuter de votre projet ?",
+            "Description": "Pas de soucis! Vous pouvez nous contacter sur WhatsApp 📱 ou planifier une réunion sur Calendly 🗓️ en quelques clics. C'est si facile! Mais si vous préférez remplir le formulaire, c'est cool aussi. Nous sommes là pour vous aider à donner vie à vos idées ! 😊",
+            "Cards": {
+                "WhatsApp": {
+                    "Title": "Besoin d'une aide rapide?",
+                    "Description": "Nous ne sommes qu'à un message de vous ! Cliquez sur le bouton ci-dessous pour entrer en contact avec notre équipe via WhatsApp.",
+                    "Button": "Contactez-nous"
+                },
+                "Calendly": {
+                    "Title": "Planifier une réunion",
+                    "Description": "Vous souhaitez discuter de votre projet en détail ? Cliquez sur le bouton ci-dessous pour planifier une réunion avec notre équipe sur Calendly.",
+                    "Button": "Planifier maintenant"
+                }
+            }
+        },
+        "GetInTouch": {
+            "Title": "Nous serions ravis de vous entendre, prenons contact👇🏻",
+            "Description": "Nous sommes là pour vous aider à donner vie à vos idées ! 😊",
+            "Form": {
+                "Name": {
+                    "Label": "Nom complet",
+                    "Placeholder": "Saisissez votre nom"
+                },
+                "Email": {
+                    "Label": "Votre e-mail",
+                    "Placeholder": "Entrez votre email"
+                },
+                "Interest": {
+                    "Label": "Intérêt",
+                    "Placeholder": "Choisissez une option",
+                    "Options": {
+                        "Design": "Désign",
+                        "Development": "Développement",
+                        "Marketing": "Marketing",
+                        "Other": "Autre"
+                    }
+                },
+                "Budget": {
+                    "Label": "Budget du projet",
+                    "Placeholder": "Choisissez votre budjet",
+                    "Options": {
+                        "-1000": "Moins de 10,000 Dh",
+                        "1000-5000": "10,000 Dh à 50,000 Dh",
+                        "5000-10000": "50,000 Dh à 100,000 Dh",
+                        "+10000": "+100,000 Dh"
+                    }
+                },
+                "Message": {
+                    "Label": "Message",
+                    "Placeholder": "Faites-nous en savoir plus sur votre projet"
+                },
+                "Button": "Entrer en contact"
             }
         }
     }

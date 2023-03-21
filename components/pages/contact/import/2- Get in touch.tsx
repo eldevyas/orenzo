@@ -135,6 +135,7 @@ interface Properties {
             Label: string;
             Placeholder: string;
         };
+        Button: string;
     };
 }
 
@@ -296,7 +297,9 @@ export default function GetInTouch(props: Properties) {
                 </div>
             </div>
             <div className="PageContent__GetInTouch__FormAction">
-                <DefaultButton bgColor="Blue">Send Message</DefaultButton>
+                <DefaultButton bgColor="Blue">
+                    {props.Form.Button}
+                </DefaultButton>
             </div>
         </div>
     );
