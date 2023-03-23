@@ -55,7 +55,7 @@
         },
         "content": {
             "LandingSection": {
-                "title": "نتائج <RedSpan> قابلة للقياس </RedSpan> و <BlueSpan> فعالة </BlueSpan> للعملاء: إليكم التفاصيل",
+                "title": "نتائج <RedSpan> قابلة للقياس </RedSpan> و <BlueSpan> فعالة </BlueSpan> للعملاء",
                 "description": "فريقنا الإبداعي متخصص في تقديم حلول مذهلة ومبتكرة للشركات الصغيرة والمتوسطة في جميع أنحاء العالم.",
                 "buttons": {
                     "primary": "احصل على عرض أسعار",
