@@ -1,7 +1,16 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
 import LanguageIcon from "@mui/icons-material/Language";
-import { US, FR, MA, FlagComponent } from "country-flag-icons/react/3x2";
+import {
+    US,
+    FR,
+    MA,
+    FlagComponent,
+    GB,
+    AE,
+    SA,
+    CA
+} from "country-flag-icons/react/3x2";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandLess from "@mui/icons-material/ExpandLess";
@@ -66,14 +75,14 @@ export default function SelectLocal(props: any) {
         {
             name: "English",
             locale: "en",
-            flag: US,
+            flag: GB,
             dir: "ltr",
         },
         {
             name: "العربية",
             locale: "ar",
-            flag: MA,
-            dir: "rtl",
+            flag: AE,
+            dir: "ltr",
         },
         {
             name: "Français",
@@ -83,6 +92,34 @@ export default function SelectLocal(props: any) {
         },
     ];
 
+    // // First, define an object that maps country codes to flags
+    // const flagMap: any = {
+    //     US: US,
+    //     GB: GB,
+    //     MA: MA,
+    //     FR: FR,
+    //     AE: AE,
+    // };
+
+    // // Get the user's country code using a geolocation API
+    // const getUserCountryCode = async () => {
+    //     const response = await fetch("https://ipapi.co/country/");
+    //     const countryCode = await response.text();
+    //     return countryCode.trim();
+    // };
+
+    // // Update the flag for each language based on the user's country code
+    // const updateUserFlags = async () => {
+    //     const userCountryCode = await getUserCountryCode();
+    //     Languages.forEach((language) => {
+    //         const flag = flagMap[userCountryCode] || language.flag; // fallback to language flag if no country-specific flag is available
+    //         language.flag = flag;
+    //     });
+    // };
+
+    // // Call updateUserFlags to update the flags when the page loads
+    // updateUserFlags();
+
     return (
         <div className="SelectSection">
             <Button
@@ -90,6 +127,7 @@ export default function SelectLocal(props: any) {
                 variant="text"
                 startIcon={isOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                 onClick={handleClick}
+                dir="ltr"
             >
                 {props["data-text"]}
             </Button>

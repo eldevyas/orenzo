@@ -43,6 +43,7 @@ export default function SelectPage(props: any) {
                 variant="text"
                 startIcon={isOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                 onClick={handleClick}
+                dir="ltr"
             >
                 {props["data-text"]}
             </Button>

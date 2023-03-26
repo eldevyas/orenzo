@@ -8,6 +8,7 @@ import Mailing from "../home/content/9- Mailing";
 import FAQ from "../services/global/FAQ";
 import { useTranslation } from "next-i18next";
 import GetInTouch from "./import/2- Get in touch";
+import { Formik, Form, Field } from "formik";
 
 const ContactPage = () => {
     const { t } = useTranslation("common");

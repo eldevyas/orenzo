@@ -69,6 +69,13 @@
                     font-weight: 600;
                     color: rgba($C5, 50%);
                 }
+                // Error
+                &__Error {
+                    color: $C3;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    opacity: 75%;
+                }
                 &__Container {
                     position: relative;
                     width: 100%;
@@ -127,8 +134,16 @@
                         }
                         &.react-select-container {
                             padding: 0;
-                            position: relative;
+                            // position: relative;
+                        }
+                        &.Interest {
                             z-index: 200;
+                        }
+                        &.Budget {
+                            z-index: 210;
+                        }
+                        &.MuiInputBase-root {
+                            padding: 0;
                         }
                     }
                     textarea {

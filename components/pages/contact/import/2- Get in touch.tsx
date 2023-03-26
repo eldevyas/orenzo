@@ -1,160 +1,48 @@
-import React from "react";
-import Select from "react-select";
+// import Select from "react-select";
 import { DefaultButton } from "../../../core/buttons";
-// import Creatable, { useCreatable } from "react-select/creatable";
-let Styles = {
-    control: (base: any, state: any) => ({
-        ...base,
-        backgroundColor: state.isFocused ? "#222" : "#333",
-        borderColor: state.isFocused
-            ? "rgba(255, 255, 255, 0.5)"
-            : "rgba(255, 255, 255, 0.5)",
-        color: state.isFocused
-            ? "rgba(255, 255, 255, 0.5)"
-            : "rgba(255, 255, 255, 0.5)",
-        boxShadow: "none",
-        borderRadius: "0px",
-        outline: "none",
-        border: "none",
-        // padding: "1rem",
-        zIndex: 200,
-        position: "relative",
-        inset: "1px",
-        width: "calc(100% - 2px)",
-        height: "calc(100% - 2px)",
-    }),
-    menu: (base: any, state: any) => ({
-        ...base,
-        backgroundColor: "#222",
-        borderColor: state.isFocused ? "#fff" : "#fff",
-        color: state.isFocused ? "#17BEBB" : "#fff",
-        // boxShadow: "none",
-        borderRadius: "0px",
-        zIndex: 250,
-        overflow: "hidden",
-        padding: 0,
-    }),
-    option: (base: any, state: any) => ({
-        ...base,
-        backgroundColor: state.isSelected ? "#000" : "transparent",
-        borderColor: state.isSelected ? "#f5f5f5" : "#fff",
-        color: state.isSelected ? "#fff" : "#ccc",
-        fontFamily: "Outfit, sans-serif",
-        fontSize: "1rem",
-        fontWeight: "400",
-        padding: "1rem",
-        borderRadius: "0px",
-        zIndex: "250 !important",
-        // hover
-        "&:hover": {
-            backgroundColor: state.isFocused ? "#17BEBB" : "transparent",
-            borderColor: state.isFocused ? "#f5f5f5" : "#fff",
-            color: state.isFocused || state.isSelected ? "#fff" : "#303030",
-        },
-        "&:active": {
-            backgroundColor: state.isFocused ? "#17BEBB" : "transparent",
-            borderColor: state.isFocused ? "#f5f5f5" : "#fff",
-        },
-        // selected option
-        "&:selected": {
-            backgroundColor: "#555",
-            borderColor: state.isFocused ? "#f5f5f5" : "#fff",
-        },
-    }),
-    // ValueContainer
-    valueContainer: (base: any, state: any) => ({
-        ...base,
-        // value
-        padding: 0,
-        color: "#fff",
-        zIndex: 200,
-    }),
-    // ValueContainer
-    singleValue: (base: any, state: any) => ({
-        ...base,
-        // value
-        color: "rgba(255,255,255,0.5)",
-        padding: "1rem",
-        zIndex: 200,
-        fontSize: "1rem",
-    }),
-    placeholder: (base: any, state: any) => ({
-        ...base,
-        // value
-        color: "rgba(255,255,255,0.5)",
-        padding: "1rem",
-        zIndex: 200,
-
-        fontSize: "1rem",
-    }),
-    indicatorSeparator: (base: any, state: any) => ({
-        ...base,
-        display: "none",
-        zIndex: 200,
-    }),
-    menuList: (base: any, state: any) => ({
-        ...base,
-        // display: "none",
-        zIndex: 200,
-        padding: 0,
-    }),
-};
-interface Properties {
-    Title: string;
-    Description: string;
-    Form: {
-        Name: {
-            Label: string;
-            Placeholder: string;
-        };
-        Email: {
-            Label: string;
-            Placeholder: string;
-        };
-        Interest: {
-            Label: string;
-            Placeholder: string;
-            Options: {
-                Design: string;
-                Development: string;
-                Marketing: string;
-                Other: string;
-            };
-        };
-        Budget: {
-            Label: string;
-            Placeholder: string;
-            Options: {
-                "-1000": string;
-                "1000-5000": string;
-                "5000-10000": string;
-                "+10000": string;
-            };
-        };
-        Message: {
-            Label: string;
-            Placeholder: string;
-        };
-        Button: string;
-    };
-}
+import { Properties } from "./Utils/FormProps";
+import * as Yup from "yup";
+import * as React from "react";
+import { styled } from "@mui/material/styles";
+import axios from "axios";
+import {
+    Formik,
+    FormikHelpers,
+    FormikProps,
+    Form,
+    Field,
+    FieldProps,
+    useFormik,
+} from "formik"; // import Creatable, { useCreatable } from "react-select/creatable";
 
 export default function GetInTouch(props: Properties) {
     let Title = props.Title;
     let Description = props.Description;
 
     const InterestOptions = [
-        { value: "Design", label: props.Form.Interest.Options.Design },
+        {
+            value: "Design",
+            label: props.Form.Interest.Options.Design,
+        },
         {
             value: "Development",
             label: props.Form.Interest.Options.Development,
         },
-        { value: "Marketing", label: props.Form.Interest.Options.Marketing },
-        { value: "Other", label: props.Form.Interest.Options.Other },
+        {
+            value: "Marketing",
+            label: props.Form.Interest.Options.Marketing,
+        },
+        {
+            value: "Other",
+            label: props.Form.Interest.Options.Other,
+        },
     ];
 
     const BudgetOptions = [
-        { value: "-10,000 Dh", label: props.Form.Budget.Options["-1000"] },
+        {
+            value: "-10,000 Dh",
+            label: props.Form.Budget.Options["-1000"],
+        },
         {
             value: "10,000 Dh - 50,000 Dh",
             label: props.Form.Budget.Options["1000-5000"],
@@ -163,10 +51,13 @@ export default function GetInTouch(props: Properties) {
             value: "50,000 Dh - 100,000 Dh",
             label: props.Form.Budget.Options["5000-10000"],
         },
-        { value: "+100,000 Dh", label: props.Form.Budget.Options["+10000"] },
+        {
+            value: "+100,000 Dh",
+            label: props.Form.Budget.Options["+10000"],
+        },
     ];
 
-    const ElementsRef = React.useRef<HTMLDivElement>(null);
+    const ElementsRef = React.useRef<HTMLFormElement>(null);
     const handleMouseMove = (e: any) => {
         if (ElementsRef != null) {
             const Elements: any = ElementsRef.current!.getElementsByClassName(
@@ -186,6 +77,46 @@ export default function GetInTouch(props: Properties) {
         }
     };
 
+    const formik: any = useFormik({
+        initialValues: {
+            fullName: "",
+            email: "",
+            interest: [],
+            budget: [],
+            message: "",
+        },
+        validationSchema: Yup.object().shape({
+            fullName: Yup.string()
+                .min(2, "Too Short!")
+                .max(80, "Too Long!")
+                .required("Required"),
+            email: Yup.string().email("Invalid Email").required("Required"),
+            interest: Yup.string().required("Required"),
+            budget: Yup.string().required("Required"),
+            message: Yup.string().optional(),
+        }),
+        onSubmit: (values) => {
+            alert(JSON.stringify(values, null, 2));
+            axios
+                .post(
+                    "https://sheet.best/api/sheets/059df18e-304a-4cce-a8c2-f0dcf45e5b56",
+                    {
+                        "Full Name": values.fullName,
+                        Email: values.email,
+                        Interest: values.interest,
+                        Budget: values.budget,
+                        Message: values.message,
+                    }
+                )
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        },
+    });
+
     return (
         <div className="PageContent__GetInTouch">
             <div className="PageContent__GetInTouch__Heading TorchLightEffect">
@@ -197,10 +128,11 @@ export default function GetInTouch(props: Properties) {
                 </div>
             </div>
 
-            <div
+            <form
                 className="PageContent__GetInTouch__Form"
                 ref={ElementsRef}
                 onMouseMove={handleMouseMove}
+                onSubmit={formik.handleSubmit}
             >
                 <div className="PageContent__GetInTouch__Form__Field">
                     <div className="PageContent__GetInTouch__Form__Field__Label">
@@ -208,16 +140,37 @@ export default function GetInTouch(props: Properties) {
                     </div>
                     <div className="PageContent__GetInTouch__Form__Field__Container">
                         <input
+                            name="fullName"
                             type="text"
+                            value={formik.values.fullName}
                             placeholder={props.Form.Name.Placeholder}
                             className="PageContent__GetInTouch__Form__Field__Container__Input"
-                            onFocus={(e) => {
+                            onChange={formik.handleChange}
+                            onFocus={(e: {
+                                target: {
+                                    classList: {
+                                        add: (arg0: string) => void;
+                                    };
+                                };
+                            }) => {
                                 e.target.classList.add("Focused");
                             }}
-                            onBlur={(e) => {
+                            onBlur={(e: {
+                                target: {
+                                    classList: {
+                                        remove: (arg0: string) => void;
+                                    };
+                                };
+                            }) => {
                                 e.target.classList.remove("Focused");
+                                formik.handleBlur;
                             }}
                         />
+                    </div>
+                    <div className="PageContent__GetInTouch__Form__Field__Error">
+                        {formik.touched.fullName && formik.errors.fullName ? (
+                            <div>{formik.errors.fullName}</div>
+                        ) : null}
                     </div>
                 </div>
                 <div className="PageContent__GetInTouch__Form__Field">
@@ -226,16 +179,37 @@ export default function GetInTouch(props: Properties) {
                     </div>
                     <div className="PageContent__GetInTouch__Form__Field__Container">
                         <input
-                            type="text"
+                            name="email"
+                            type="email"
+                            value={formik.values.email}
                             placeholder={props.Form.Email.Placeholder}
                             className="PageContent__GetInTouch__Form__Field__Container__Input"
-                            onFocus={(e) => {
+                            onChange={formik.handleChange}
+                            onFocus={(e: {
+                                target: {
+                                    classList: {
+                                        add: (arg0: string) => void;
+                                    };
+                                };
+                            }) => {
                                 e.target.classList.add("Focused");
                             }}
-                            onBlur={(e) => {
+                            onBlur={(e: {
+                                target: {
+                                    classList: {
+                                        remove: (arg0: string) => void;
+                                    };
+                                };
+                            }) => {
                                 e.target.classList.remove("Focused");
+                                formik.handleBlur;
                             }}
                         />
+                    </div>
+                    <div className="PageContent__GetInTouch__Form__Field__Error">
+                        {formik.touched.email && formik.errors.email ? (
+                            <div>{formik.errors.email}</div>
+                        ) : null}
                     </div>
                 </div>
                 <div className="PageContent__GetInTouch__Form__Field">
@@ -243,19 +217,35 @@ export default function GetInTouch(props: Properties) {
                         {props.Form.Interest.Label}
                     </div>
                     <div className="PageContent__GetInTouch__Form__Field__Container">
-                        <Select
+                        <select
+                            id="interest"
+                            name="interest"
+                            value={formik.values.interest}
                             placeholder={props.Form.Interest.Placeholder}
-                            className="PageContent__GetInTouch__Form__Field__Container__Input react-select-container"
-                            classNamePrefix="react-select"
+                            className="PageContent__GetInTouch__Form__Field__Container__Input"
+                            onChange={formik.handleChange}
                             onFocus={(e: any) => {
                                 e.target.classList.add("Focused");
                             }}
                             onBlur={(e: any) => {
                                 e.target.classList.remove("Focused");
+                                formik.handleBlur;
                             }}
-                            options={InterestOptions}
-                            styles={Styles}
-                        />
+                        >
+                            <option value={""} disabled>
+                                {props.Form.Interest.Placeholder}
+                            </option>
+                            {InterestOptions.map((Option, Index) => (
+                                <option value={Option.label} key={Index}>
+                                    {Option.label}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className="PageContent__GetInTouch__Form__Field__Error">
+                        {formik.touched.interest && formik.errors.interest ? (
+                            <div>{formik.errors.interest}</div>
+                        ) : null}
                     </div>
                 </div>
                 <div className="PageContent__GetInTouch__Form__Field">
@@ -263,19 +253,35 @@ export default function GetInTouch(props: Properties) {
                         {props.Form.Budget.Label}
                     </div>
                     <div className="PageContent__GetInTouch__Form__Field__Container">
-                        <Select
+                        <select
+                            id="budget"
+                            name="budget"
+                            value={formik.values.budget}
                             placeholder={props.Form.Budget.Placeholder}
-                            className="PageContent__GetInTouch__Form__Field__Container__Input react-select-container"
-                            classNamePrefix="react-select"
+                            className="PageContent__GetInTouch__Form__Field__Container__Input"
+                            onChange={formik.handleChange}
                             onFocus={(e: any) => {
                                 e.target.classList.add("Focused");
                             }}
                             onBlur={(e: any) => {
                                 e.target.classList.remove("Focused");
+                                formik.handleBlur;
                             }}
-                            options={BudgetOptions}
-                            styles={Styles}
-                        />
+                        >
+                            <option value={""} disabled>
+                                {props.Form.Interest.Placeholder}
+                            </option>
+                            {BudgetOptions.map((Option, Index) => (
+                                <option value={Option.label} key={Index}>
+                                    {Option.label}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className="PageContent__GetInTouch__Form__Field__Error">
+                        {formik.touched.budget && formik.errors.budget ? (
+                            <div>{formik.errors.budget}</div>
+                        ) : null}
                     </div>
                 </div>
                 <div className="PageContent__GetInTouch__Form__Field">
@@ -284,20 +290,31 @@ export default function GetInTouch(props: Properties) {
                     </div>
                     <div className="PageContent__GetInTouch__Form__Field__Container">
                         <textarea
+                            id="message"
+                            name="message"
+                            value={formik.values.message}
+                            rows={6}
                             placeholder={props.Form.Message.Placeholder}
                             className="PageContent__GetInTouch__Form__Field__Container__Input"
+                            onChange={formik.handleChange}
                             onFocus={(e: any) => {
                                 e.target.classList.add("Focused");
                             }}
                             onBlur={(e: any) => {
                                 e.target.classList.remove("Focused");
+                                formik.handleBlur;
                             }}
                         />
                     </div>
+                    <div className="PageContent__GetInTouch__Form__Field__Error">
+                        {formik.touched.message && formik.errors.message ? (
+                            <div>{formik.errors.message}</div>
+                        ) : null}
+                    </div>
                 </div>
-            </div>
+            </form>
             <div className="PageContent__GetInTouch__FormAction">
-                <DefaultButton bgColor="Blue">
+                <DefaultButton bgColor="Blue" onClick={formik.handleSubmit}>
                     {props.Form.Button}
                 </DefaultButton>
             </div>
