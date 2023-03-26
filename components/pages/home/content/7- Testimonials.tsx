@@ -60,7 +60,7 @@ export default function Testimonials() {
             FullName: t("home.content.Testimonials.comments.C3.name"),
             Profession: t("home.content.Testimonials.comments.C3.profession"),
             Picture: "/logo/JPG/Logo - Bold Dark.jpg",
-            Stars: 4.5,
+            Stars: 4,
             Comment: t("home.content.Testimonials.comments.C3.comment"),
         },
         {
@@ -74,7 +74,7 @@ export default function Testimonials() {
             FullName: t("home.content.Testimonials.comments.C5.name"),
             Profession: t("home.content.Testimonials.comments.C5.profession"),
             Picture: "/logo/JPG/Logo - Bold Dark.jpg",
-            Stars: 3.5,
+            Stars: 4,
             Comment: t("home.content.Testimonials.comments.C5.comment"),
         },
         {

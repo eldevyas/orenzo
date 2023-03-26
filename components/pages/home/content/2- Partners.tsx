@@ -3,11 +3,7 @@ import Image from "next/image";
 import { Trans, useTranslation } from "react-i18next";
 
 const Companies = [
-    "/img/assets/partners/SGSB.png",
-    "/img/assets/partners/Microsoft.png",
-    "/img/assets/partners/Netflix.png",
-    "/img/assets/partners/Bonfire.png",
-    "/img/assets/partners/Google.png",
+    "/img/assets/partners/RoyalAir.png"
 ];
 
 export default function TrustedPartners() {
