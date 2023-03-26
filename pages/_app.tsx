@@ -11,7 +11,11 @@ import React, { useEffect } from "react";
 import { appWithTranslation, i18n, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import nextI18NextConfig from "../next-i18next.config";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+//
+//
+//
 if (process.env.NODE_ENV !== "production") {
     if (typeof window !== "undefined") {
         const { applyClientHMR } = require("i18next-hmr/client");
