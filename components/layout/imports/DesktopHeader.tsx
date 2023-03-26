@@ -6,6 +6,15 @@ import SelectLocal from "./utils/SelectLocal";
 import SelectPage from "./utils/SelectPage";
 import { useTranslation } from "react-i18next";
 import { motion, useScroll, useInView, useSpring } from "framer-motion";
+//
+//
+//
+//
+// Logo Sources
+import Arabic_Wide_Logo_Dark from "/public/logo/PNG/Arabic Wide Logo - Dark.png";
+import Wide_Logo_Dark from "/public/logo/PNG/Wide Logo - Dark.png";
+import Arabic_Wide_Logo_Light from "/public/logo/PNG/Arabic Wide Logo - Light.png";
+import Wide_Logo_Light from "/public/logo/PNG/Wide Logo - Light.png";
 
 function ActiveButton({ children, href }: { children: string; href: string }) {
     const router = useRouter();
@@ -149,18 +158,17 @@ export default function DesktopHeader(props: any) {
                         src={
                             props["data-theme"] === "dark"
                                 ? locale == "ar"
-                                    ? "/logo/PNG/Arabic Wide Logo - Dark.png"
-                                    : "/logo/PNG/Wide Logo - Dark.png"
+                                    ? Arabic_Wide_Logo_Dark
+                                    : Wide_Logo_Dark
                                 : locale == "ar"
-                                ? "/logo/PNG/Arabic Wide Logo - Light.png"
-                                : "/logo/PNG/Wide Logo - Light.png"
+                                ? Arabic_Wide_Logo_Light
+                                : Wide_Logo_Light
                         }
                         alt="Logo"
                         layout="fill"
-                        style={{
-                            objectFit: "cover",
-                            // transform: "scale(1.25)",
-                        }}
+                        // style={{
+                        //     objectFit: "cover",
+                        // }}
                         priority
                     />
                 </div>

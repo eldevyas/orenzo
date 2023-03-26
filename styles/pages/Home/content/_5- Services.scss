@@ -75,6 +75,8 @@
             user-select: none;
             @include GradientBorder(rgba($C5, 0.15),
             rgba($C5, 0.15));
+            transform: translate3d(0, 0, 0);
+            will-change: transform;
             &:hover {
                 background: $G1;
                 cursor: pointer;

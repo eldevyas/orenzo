@@ -41,12 +41,14 @@
                     min-height: 250px;
                     max-width: 100%;
                     position: relative;
+                    transform: translateZ(50px);
                 }
                 .Text {
                     height: auto;
                     width: 100%;
                     z-index: 100;
                     pointer-events: none;
+                    transform: translateZ(50px);
                     .Title {
                         color: white;
                         margin-bottom: 2rem;
@@ -98,6 +100,18 @@
                     color: #fff;
                     pointer-events: visiblePainted;
                     cursor: default;
+                }
+                .Glow {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    z-index: 100;
+                    background: var(--glow-bg);
+                    opacity: var(--glow-opacity);
+                    will-change: opacity;
+                    transition: opacity 0.5s ease;
                 }
             }
         }

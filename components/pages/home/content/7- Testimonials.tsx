@@ -3,6 +3,7 @@ import Rating from "@mui/material/Rating";
 import Image from "next/image";
 import { Trans, useTranslation } from "react-i18next";
 import Slider from "react-slick";
+import { i18n } from "next-i18next";
 
 function Comment(props: any) {
     const { t } = useTranslation("common");
@@ -38,6 +39,7 @@ function Comment(props: any) {
 
 export default function Testimonials() {
     const { t } = useTranslation("common");
+    const Direction: any = i18n?.dir();
 
     const Comments: any = [
         {
@@ -88,13 +90,14 @@ export default function Testimonials() {
         className: "CommentsDisplay",
         dots: true,
         infinite: true,
-        centerMode: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        centerPadding: "100px",
-        swipeToSlide: true,
         variableWidth: true,
         speed: 500,
+        // swipeToSlide: true,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
+        accessibility: true,
     };
 
     return (
@@ -139,19 +142,16 @@ export default function Testimonials() {
                     </p>
                 </div>
 
-                {/* <div className="CommentsDisplay"></div> */}
                 <Slider {...settings}>
                     {/* For Each */}
                     {Comments.map((element: any, index: number) => {
-                        return <Comment {...element} key={index} />;
+                        return (
+                            <div className="Slide" key={index}>
+                                <Comment {...element} />
+                            </div>
+                        );
                     })}
                 </Slider>
-
-                {/* <div className="Summary">
-                    <div className="Index Active"></div>
-                    <div className="Index"></div>
-                    <div className="Index"></div>
-                </div> */}
             </div>
         </>
     );
