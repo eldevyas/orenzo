@@ -14,7 +14,7 @@ export default function Alternatives(props: any) {
         // Leave "Bonjour" as is in the morning
     } else if (hour >= 18 || hour < 6) {
         // Replace "Bonjour" with "Bonsoir" in the evening
-        Title = Title.replace("Bonjour", "afeen");
+        Title = Title.replace("Bonjour", "Bonsoir");
     }
 
 
