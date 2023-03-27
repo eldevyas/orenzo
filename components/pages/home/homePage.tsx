@@ -25,8 +25,8 @@ export default function HomePage() {
     return (
         <div className="HomePage">
             <div className="Background"></div>
-            <Header />
             <div className="Section Section__1" ref={Section_1}>
+                <Header />
                 <LandingSection />
             </div>
             <div className="Section Section__2" ref={Section_2}>

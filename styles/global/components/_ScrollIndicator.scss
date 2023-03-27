@@ -1,55 +1,56 @@
-    .ScrollIndicator__Container {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: transparent;
-        z-index: 1000;
-        pointer-events: none;
-        &__Element {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translate(-50%);
-            min-width: 10px;
-            min-height: 100px;
-            background-color: transparent;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 5px;
-            &__Item {
+.Section {
+    width: 100%;
+}
+
+.ScrollIndicator__Container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: 1000;
+    pointer-events: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    &__Element {
+        position: relative;
+        min-width: 10px;
+        min-height: 100px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        &__Item {
+            position: relative;
+            will-change: transform;
+            transition: all 0.3s ease;
+            pointer-events: all;
+            &__Dot {
                 position: relative;
+                width: 10px;
+                height: 10px;
                 will-change: transform;
                 transition: all 0.3s ease;
                 pointer-events: all;
-                &__Dot {
-                    position: relative;
-                    width: 10px;
-                    height: 10px;
-                    will-change: transform;
-                    transition: all 0.3s ease;
-                    pointer-events: all;
-                    &:hover {
-                        transform: scale(1.5);
-                        cursor: pointer;
-                    }
+                &:hover {
+                    transform: scale(1.5);
+                    cursor: pointer;
                 }
                 &.Inactive {
-                    &__Dot {
-                        background: rgba($color: #fff, $alpha: 0.1);
-                        backdrop-filter: invert(10%);
-                    }
+                    background: rgba($color: #fff, $alpha: 0.1);
+                    backdrop-filter: invert(10%);
                 }
                 &.Active {
-                    &__Dot {
-                        background: $G3;
-                    }
+                    background: $G3;
                 }
             }
         }
     }
+}

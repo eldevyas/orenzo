@@ -4,8 +4,17 @@ import { BsWhatsapp } from "react-icons/bs";
 import { IoCalendarSharp } from "react-icons/io5";
 
 export default function Alternatives(props: any) {
+    const now = new Date();
+    const hour = now.getHours();
+
     let Title = props.Title;
     let Description = props.Description;
+
+    if (hour >= 6 && hour < 12) {
+        Title = Title.replace("Hé", "Bonjour");
+    } else if (hour >= 18 || hour < 6) {
+        Title = Title.replace("Hé", "Bonsoir");
+    }
 
     let Cards = {
         WhatsApp: {
