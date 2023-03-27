@@ -112,6 +112,7 @@
                     opacity: var(--glow-opacity);
                     will-change: opacity;
                     transition: opacity 0.5s ease;
+                    pointer-events: none;
                 }
             }
         }
