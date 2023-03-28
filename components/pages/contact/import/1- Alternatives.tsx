@@ -11,10 +11,12 @@ export default function Alternatives(props: any) {
     let Description = props.Description;
 
     if (hour >= 6 && hour < 12) {
-        Title = Title.replace("Hé", "Bonjour");
+        // Leave "Bonjour" as is in the morning
     } else if (hour >= 18 || hour < 6) {
-        Title = Title.replace("Hé", "Bonsoir");
+        // Replace "Bonjour" with "Bonsoir" in the evening
+        Title = Title.replace("Bonjour", "Bonsoir");
     }
+
 
     let Cards = {
         WhatsApp: {
