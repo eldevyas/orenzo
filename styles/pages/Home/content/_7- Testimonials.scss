@@ -1,5 +1,6 @@
 @use 'sass:color';
 .Testimonials {
+    position: relative;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -38,14 +39,12 @@
         }
     }
     .CommentsDisplay {
-        // position: relative;
-        // width: 100%;
-        // min-height: 400px;
-        // display: flex;
-        // flex-direction: row;
-        // flex-wrap: wrap;
-        // height: auto;
-        // gap: 2rem;
+        position: relative;
+        top: 0;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
         .slick-dots {
             position: relative;
             min-width: 100px;
@@ -142,12 +141,13 @@
                     padding: 0px;
                     gap: 25px;
                     .Picture {
-                        width: 3.5rem;
-                        height: 3.5rem;
+                        min-width: 3.5rem;
+                        min-height: 3.5rem;
                         // background: url(.png);
                         position: relative;
                         border-radius: 50px;
                         overflow: hidden;
+                        aspect-ratio: 1/1;
                     }
                     .Name {
                         display: flex;

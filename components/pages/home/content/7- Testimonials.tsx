@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Rating from "@mui/material/Rating";
 import Image from "next/image";
 import { Trans, useTranslation } from "react-i18next";
@@ -7,10 +7,11 @@ import { i18n } from "next-i18next";
 
 function Comment(props: any) {
     const { t } = useTranslation("common");
+    const Direction: any = i18n?.dir();
 
     return (
         <>
-            <div className="Comment">
+            <div className="Comment" dir={Direction}>
                 <div className="Stars">
                     <Rating name="read-only" value={props.Stars} readOnly />
                 </div>
@@ -24,6 +25,7 @@ function Comment(props: any) {
                             src={props.Picture}
                             layout="fill"
                             objectFit="cover"
+                            priority
                         />
                     </div>
 
@@ -39,7 +41,17 @@ function Comment(props: any) {
 
 export default function Testimonials() {
     const { t } = useTranslation("common");
-    const Direction: any = i18n?.dir();
+    const settings = {
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,
+        speed: 500,
+        autoplay: true,
+        autoplaySpeed: 3000,
+    };
+    const [Settings, setSettings] = useState(settings);
 
     const Comments: any = [
         {
@@ -84,21 +96,25 @@ export default function Testimonials() {
             Stars: 5,
             Comment: t("home.content.Testimonials.comments.C6.comment"),
         },
+        {
+            FullName: t("home.content.Testimonials.comments.C7.name"),
+            Profession: t("home.content.Testimonials.comments.C7.profession"),
+            Picture: "/logo/JPG/Logo - Bold Dark.jpg",
+            Stars: 5,
+            Comment: t("home.content.Testimonials.comments.C7.comment"),
+        },
+        {
+            FullName: t("home.content.Testimonials.comments.C8.name"),
+            Profession: t("home.content.Testimonials.comments.C8.profession"),
+            Picture: "/logo/JPG/Logo - Bold Dark.jpg",
+            Stars: 5,
+            Comment: t("home.content.Testimonials.comments.C8.comment"),
+        },
     ];
 
-    const settings = {
-        className: "CommentsDisplay",
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        variableWidth: true,
-        speed: 500,
-        // swipeToSlide: true,
-        // autoplay: true,
-        // autoplaySpeed: 2000,
-        accessibility: true,
-    };
+    useEffect(() => {
+        setSettings(settings);
+    }, []);
 
     return (
         <>
@@ -142,8 +158,7 @@ export default function Testimonials() {
                     </p>
                 </div>
 
-                <Slider {...settings}>
-                    {/* For Each */}
+                <Slider className="CommentsDisplay" {...Settings}>
                     {Comments.map((element: any, index: number) => {
                         return (
                             <div className="Slide" key={index}>
