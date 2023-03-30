@@ -41,6 +41,7 @@ function Comment(props: any) {
 
 export default function Testimonials() {
     const { t } = useTranslation("common");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const settings = {
         dots: true,
         infinite: true,
@@ -50,6 +51,7 @@ export default function Testimonials() {
         speed: 500,
         autoplay: true,
         autoplaySpeed: 3000,
+        centerMode: true,
     };
     const [Settings, setSettings] = useState(settings);
 
@@ -114,12 +116,12 @@ export default function Testimonials() {
 
     useEffect(() => {
         setSettings(settings);
-    }, []);
+    }, [settings]);
 
     return (
         <>
             <div className="Testimonials">
-                <div className="Title">
+                <div className="Title TorchLightEffect">
                     <h1>
                         <Trans
                             i18nKey="home.content.Testimonials.title"

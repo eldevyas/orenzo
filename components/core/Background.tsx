@@ -33,9 +33,14 @@ export default function Background(props: any) {
                 Wrapper!.current!.style.setProperty("--mouse-x", `${x}px`);
                 Wrapper!.current!.style.setProperty("--mouse-y", `${y}px`);
             }
-            let LightEffects = [
-                "radial-gradient( 600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 100%), transparent 75%)",
-            ];
+            let LightEffects = [];
+            let InteractiveMask =
+                "radial-gradient( 600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 100%), transparent 75%)";
+
+            if (!props["no-interaction"]) {
+                LightEffects.push(InteractiveMask);
+            }
+
             let Elements = document.querySelectorAll(".TorchLightEffect");
             let ImageMask = "";
 
@@ -96,13 +101,18 @@ export default function Background(props: any) {
         CreateGrid();
 
         window.addEventListener("resize", CreateGrid);
-        window.addEventListener("mousemove", handleMouseMove);
+        if (!props["no-interaction"]) {
+            window.addEventListener("mousemove", handleMouseMove);
+        }
 
         return () => {
             window.removeEventListener("resize", CreateGrid);
-            window.removeEventListener("mousemove", handleMouseMove);
+            if (!props["no-interaction"]) {
+                window.removeEventListener("mousemove", handleMouseMove);
+            }
+            MakeLightEffects();
         };
-    }, []);
+    }, [props]);
 
     return (
         <div

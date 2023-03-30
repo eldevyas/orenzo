@@ -25,7 +25,7 @@ export default function HomePage() {
 
     return (
         <div className="HomePage">
-            <Background data-theme="light" />
+            <Background data-theme="light" no-interaction />
             <div className="Section Section__1" ref={Section_1}>
                 <Header />
                 <LandingSection />

@@ -10,7 +10,7 @@ export default function AboutUs() {
         <>
             <div className="AboutUs">
                 <div className="Image">
-                    <div className="ImageContainer">
+                    <div className="ImageContainer TorchLightEffect">
                         <Image
                             src="/img/assets/BusinessManUsingLaptop.png"
                             alt=""
@@ -20,7 +20,7 @@ export default function AboutUs() {
                     </div>
                 </div>
 
-                <div className="Text">
+                <div className="Text TorchLightEffect">
                     <div className="FadedText">About us</div>
                     <h1 className="Title">
                         <Trans

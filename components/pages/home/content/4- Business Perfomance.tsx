@@ -89,7 +89,7 @@ export default function BusinessPerformance() {
 
     return (
         <div className="BusinessPerformance">
-            <div className="Title">
+            <div className="Title TorchLightEffect">
                 <h1>
                     <Trans
                         i18nKey="home.content.BusinessPerformance.title"

@@ -64,7 +64,7 @@ export default function LandingSection() {
 
     return (
         <div className="LandingSection">
-            <div className="Text">
+            <div className="Text TorchLightEffect">
                 <h1 className="Title">
                     <Trans
                         i18nKey="home.content.LandingSection.title"
@@ -107,7 +107,7 @@ export default function LandingSection() {
 
             <div className="Image">
                 <motion.div className="Wrapper">
-                    <div className="ManWrapper">
+                    <div className="ManWrapper TorchLightEffect">
                         <motion.img
                             initial={Man.initial}
                             animate={Man.animate}
