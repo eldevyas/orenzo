@@ -64,7 +64,7 @@ export default function LandingSection() {
 
     return (
         <div className="LandingSection">
-            <div className="Text TorchLightEffect">
+            <div className="Text">
                 <h1 className="Title">
                     <Trans
                         i18nKey="home.content.LandingSection.title"
@@ -76,7 +76,7 @@ export default function LandingSection() {
                     />
                 </h1>
 
-                <p className="Description">
+                <p className="Description TorchLightEffect">
                     {t("home.content.LandingSection.description")}
                 </p>
 

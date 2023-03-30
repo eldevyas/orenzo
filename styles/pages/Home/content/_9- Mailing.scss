@@ -8,6 +8,8 @@
     align-items: center;
     @include GlobalPadding;
     gap: 2rem;
+    position: relative;
+    z-index: 2;
     .Title {
         display: flex;
         flex-direction: column;

@@ -10,10 +10,11 @@
     align-items: stretch;
     gap: 1rem;
     flex: 1;
-    min-height: 100vh;
+    // min-height: 100vh;
     gap: 2rem;
-    padding: 5rem 0;
     @include GlobalPadding();
+    padding-top: 10rem;
+    padding-bottom: 10rem;
     @media screen and (max-width: 900px) {
         margin-bottom: 5rem;
     }
