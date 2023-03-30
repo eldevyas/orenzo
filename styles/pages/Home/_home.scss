@@ -1,12 +1,3 @@
-.WhatsAppButton {
-    position: fixed;
-    bottom: 5vh;
-    right: 5vh;
-    z-index: 1000;
-    border-radius: 1rem;
-    @include DefaultButton($C4);
-}
-
 .HomePage {
     position: relative;
     width: 100%;
@@ -17,9 +8,6 @@
     justify-content: flex-start;
     align-items: flex-start;
     max-width: 100vw;
-    // 
-    // Home Page Background Grid 
-    @import './content/0- Background';
     //
     // Home Page Content (Sections and more...)*
     @import "./content/1- Landing Section";
@@ -31,4 +19,13 @@
     @import "./content/7- Testimonials";
     @import "./content/8- Let's Talk";
     @import "./content/9- Mailing";
+    .Section {
+        &__1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: stretch;
+            min-height: 100vh;
+        }
+    }
 }

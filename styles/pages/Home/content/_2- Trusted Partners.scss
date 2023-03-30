@@ -22,8 +22,6 @@
     &__Partners {
         width: 100%;
         height: auto;
-        margin: 0 auto;
-        overflow: hidden;
         position: relative;
         &__Wrapper {
             position: relative;
@@ -40,12 +38,18 @@
                     min-height: 100px;
                     min-width: 200px;
                     padding: 1rem;
+                    max-width: 100vw;
+                    max-height: 10vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: stretch;
                     &__Logo {
                         position: relative;
                         border-radius: 1rem;
                         // background: white;
-                        aspect-ratio: 3/2;
+                        // aspect-ratio: 3/2;
                         width: 100%;
+                        max-width: 100vh;
                         // $OC: $C5;
                         // filter: brightness(1000%) grayscale(100%)/* To change the image color to the white */
                         // opacity(0.1)/* To apply the color all over the image */

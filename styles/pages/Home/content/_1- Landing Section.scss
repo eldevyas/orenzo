@@ -10,7 +10,6 @@
     align-items: stretch;
     gap: 1rem;
     flex: 1;
-    // min-height: 90vh;
     @include GlobalPadding();
     @media (max-width: 767px) {
         margin-bottom: 5rem;
@@ -64,7 +63,7 @@
         min-height: 250px;
         .Wrapper {
             position: relative;
-            width: 100%;
+            width: 80%;
             height: auto;
             aspect-ratio: 600/500;
             background: $G3;

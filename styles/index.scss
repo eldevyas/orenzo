@@ -13,6 +13,7 @@
 // 
 // 
 // Pages
+@include Background();
 @import "./pages/Home/home";
 @import "./pages/Services/services";
 @import "./pages/Portfolio/portfolio";

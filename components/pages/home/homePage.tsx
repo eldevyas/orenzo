@@ -11,6 +11,7 @@ import LetsTalk from "./content/8- Let's Talk";
 import Mailing from "./content/9- Mailing";
 import Footer from "../../layout/footer";
 import Scroll_Indicator from "../../core/Scroll-Indicator";
+import Background from "../../core/Background";
 
 export default function HomePage() {
     const Section_1 = React.useRef<HTMLDivElement>(null);
@@ -24,7 +25,7 @@ export default function HomePage() {
 
     return (
         <div className="HomePage">
-            <div className="Background"></div>
+            <Background data-theme="light" />
             <div className="Section Section__1" ref={Section_1}>
                 <Header />
                 <LandingSection />
