@@ -80,6 +80,7 @@ export default function GetInTouch(props: Properties) {
     const formik: any = useFormik({
         initialValues: {
             fullName: "",
+            phoneNumber: "",
             email: "",
             interest: [],
             budget: [],
@@ -90,6 +91,7 @@ export default function GetInTouch(props: Properties) {
                 .min(2, "Too Short!")
                 .max(80, "Too Long!")
                 .required("Required"),
+            phoneNumber: Yup.string().required("Required"),
             email: Yup.string().email("Invalid Email").required("Required"),
             interest: Yup.string().required("Required"),
             budget: Yup.string().required("Required"),
@@ -102,6 +104,7 @@ export default function GetInTouch(props: Properties) {
                     "https://sheet.best/api/sheets/059df18e-304a-4cce-a8c2-f0dcf45e5b56",
                     {
                         "Full Name": values.fullName,
+                        "Phone Number": values.phoneNumber,
                         Email: values.email,
                         Interest: values.interest,
                         Budget: values.budget,
@@ -170,6 +173,40 @@ export default function GetInTouch(props: Properties) {
                     <div className="PageContent__GetInTouch__Form__Field__Error">
                         {formik.touched.fullName && formik.errors.fullName ? (
                             <div>{formik.errors.fullName}</div>
+                        ) : null}
+                    </div>
+                    <div className="PageContent__GetInTouch__Form__Field__Container">
+                        <input
+                            name="phoneNumber"
+                            type="tel"
+                            value={formik.values.phoneNumber}
+                            placeholder={props.Form.PhoneNumber.Placeholder}
+                            className="PageContent__GetInTouch__Form__Field__Container__Input"
+                            onChange={formik.handleChange}
+                            onFocus={(e: {
+                                target: {
+                                    classList: {
+                                        add: (arg0: string) => void;
+                                    };
+                                };
+                            }) => {
+                                e.target.classList.add("Focused");
+                            }}
+                            onBlur={(e: {
+                                target: {
+                                    classList: {
+                                        remove: (arg0: string) => void;
+                                    };
+                                };
+                            }) => {
+                                e.target.classList.remove("Focused");
+                                formik.handleBlur;
+                            }}
+                        />
+                    </div>
+                    <div className="PageContent__GetInTouch__Form__Field__Error">
+                        {formik.touched.phoneNumber && formik.errors.phoneNumber ? (
+                            <div>{formik.errors.phoneNumber}</div>
                         ) : null}
                     </div>
                 </div>

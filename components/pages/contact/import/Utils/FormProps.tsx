@@ -6,6 +6,10 @@ interface Properties {
             Label: string;
             Placeholder: string;
         };
+        PhoneNumber: {
+            Label: string;
+            Placeholder: string;
+        };
         Email: {
             Label: string;
             Placeholder: string;
