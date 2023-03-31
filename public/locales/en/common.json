@@ -675,39 +675,43 @@
             "Title": "We'd love to hear from you, Let's get in touch👇🏻",
             "Description": "We're here to help you bring your ideas to life! 😊",
             "Form": {
-                "Name": {
-                    "Label": "Full Name",
-                    "Placeholder": "Enter your name"
-                },
-                "Email": {
-                    "Label": "Your Email",
-                    "Placeholder": "Enter your email"
-                },
-                "Interest": {
-                    "Label": "Interest",
-                    "Placeholder": "Choose an option",
-                    "Options": {
-                        "Design": "Design",
-                        "Development": "Development",
-                        "Marketing": "Marketing",
-                        "Other": "Other"
-                    }
-                },
-                "Budget": {
-                    "Label": "Project Budget",
-                    "Placeholder": "Select your budget",
-                    "Options": {
-                        "-1000": "Under $1000",
-                        "1000-5000": "$1000 to $5000",
-                        "5000-10000": "$5000 to $10000",
-                        "+10000": "+$10000"
-                    }
-                },
-                "Message": {
-                    "Label": "Message",
-                    "Placeholder": "Let us know more about your project"
-                },
-                "Button": "Get in touch"
+              "Name": {
+                "Label": "Full Name",
+                "Placeholder": "Enter your name"
+              },
+              "Number": {
+                "Label": "Phone Number",
+                "Placeholder": "Enter your Phone Number"
+              },
+              "Email": {
+                "Label": "Your Email",
+                "Placeholder": "Enter your email"
+              },
+              "Interest": {
+                "Label": "Interest",
+                "Placeholder": "Choose an option",
+                "Options": {
+                  "Design": "Design",
+                  "Development": "Development",
+                  "Marketing": "Marketing",
+                  "Other": "Other"
+                }
+              },
+              "Budget": {
+                "Label": "Project Budget",
+                "Placeholder": "Select your budget",
+                "Options": {
+                  "-1000": "Under $1000",
+                  "1000-5000": "$1000 to $5000",
+                  "5000-10000": "$5000 to $10000",
+                  "+10000": "+$10000"
+                }
+              },
+              "Message": {
+                "Label": "Message",
+                "Placeholder": "Let us know more about your project"
+              },
+              "Button": "Get in touch"
             }
         }
     }

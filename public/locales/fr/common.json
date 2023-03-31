@@ -675,39 +675,43 @@
             "Title": "Nous serions ravis de vous entendre, prenons contact👇🏻",
             "Description": "Nous sommes là pour vous aider à donner vie à vos idées ! 😊",
             "Form": {
-                "Name": {
-                    "Label": "Nom complet",
-                    "Placeholder": "Saisissez votre nom"
-                },
-                "Email": {
-                    "Label": "Votre e-mail",
-                    "Placeholder": "Entrez votre email"
-                },
-                "Interest": {
-                    "Label": "Intérêt",
-                    "Placeholder": "Choisissez une option",
-                    "Options": {
-                        "Design": "Désign",
-                        "Development": "Développement",
-                        "Marketing": "Marketing",
-                        "Other": "Autre"
-                    }
-                },
-                "Budget": {
-                    "Label": "Budget du projet",
-                    "Placeholder": "Choisissez votre budjet",
-                    "Options": {
-                        "-1000": "Moins de 10,000 Dh",
-                        "1000-5000": "10,000 Dh à 50,000 Dh",
-                        "5000-10000": "50,000 Dh à 100,000 Dh",
-                        "+10000": "+100,000 Dh"
-                    }
-                },
-                "Message": {
-                    "Label": "Message",
-                    "Placeholder": "Faites-nous en savoir plus sur votre projet"
-                },
-                "Button": "Entrer en contact"
+              "Name": {
+                "Label": "Nom complet",
+                "Placeholder": "Saisissez votre nom"
+              },
+              "Number": {
+                "Label": "Numéro de téléphone",
+                "Placeholder": "Entrez votre numéro de téléphone"
+              },
+              "Email": {
+                "Label": "Votre e-mail",
+                "Placeholder": "Entrez votre email"
+              },
+              "Interest": {
+                "Label": "Intérêt",
+                "Placeholder": "Choisissez une option",
+                "Options": {
+                  "Design": "Désign",
+                  "Development": "Développement",
+                  "Marketing": "Marketing",
+                  "Other": "Autre"
+                }
+              },
+              "Budget": {
+                "Label": "Budget du projet",
+                "Placeholder": "Choisissez votre budjet",
+                "Options": {
+                  "-1000": "Moins de 10,000 Dh",
+                  "1000-5000": "10,000 Dh à 50,000 Dh",
+                  "5000-10000": "50,000 Dh à 100,000 Dh",
+                  "+10000": "+100,000 Dh"
+                }
+              },
+              "Message": {
+                "Label": "Message",
+                "Placeholder": "Faites-nous en savoir plus sur votre projet"
+              },
+              "Button": "Entrer en contact"
             }
         }
     }
