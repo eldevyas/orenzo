@@ -142,36 +142,88 @@ export default function Background(props) {
         const Context = Canvas.getContext("2d");
 
         let Count = 25;
-        let Height = document.body.clientHidth;
+        let Height = document.body.clientHeight;
         let Width = document.body.clientWidth;
         let Columns = Math.floor(Width / Count);
         let Rows = Math.floor(Height / Count);
         let TileSize = Count;
+        let Radius = 500;
 
-        let SmallUnits = 0;
 
-        const DrawGrid = () => {
-            for (var i = 0; i <= Height; i = i + Count) {
-                // Vertical Lines
-                Context.moveTo(i, 0);
-                Context.lineTo(i, Height)
+        Canvas.height = Height;
+        Canvas.width = Width;
 
-                // Horizontal Lines
-                Context.moveTo(0, i);
-                Context.lineTo(i, Width)
+        const drawGrid = () => {
+            const smallUnits = () => {
+                for (let i = 0; i <= Canvas.width; i = i + 5) {
+                    // Vertical Lines
+                    Context.moveTo(i, 0);
+                    Context.lineTo(i, Canvas.height);
+                }
+
+                for (let i = 0; i <= Canvas.height; i = i + 5) {
+                    // Horizontal Lines
+                    Context.moveTo(0, i);
+                    Context.lineTo(Canvas.width, i);
+                }
 
                 // Stroke Style
-                Context.strokeStyle = "#000";
+                Context.strokeStyle = "#f0f0f0";
                 Context.stroke();
-            }
-        }
+            };
 
-        DrawGrid();
+            const majorUnits = () => {
+                Context.beginPath();
+
+                for (let i = 0; i <= Canvas.width; i = i + 30) {
+                    // Vertical Lines
+                    Context.moveTo(i, 0);
+                    Context.lineTo(i, Canvas.height);
+                }
+
+                for (let i = 0; i <= Canvas.height; i = i + 30) {
+                    // Horizontal Lines
+                    Context.moveTo(0, i);
+                    Context.lineTo(Canvas.width, i);
+                }
+
+                // Stroke Style
+                Context.strokeStyle = "#c0c0c0";
+                Context.stroke();
+            };
+
+            smallUnits();
+            majorUnits();
+        };
+
+        drawGrid();
+
+        // function drawMask(x, y) {
+        //     const gradient = Context.createRadialGradient(x, y, 0, x, y, Radius);
+        //     gradient.addColorStop(0, "rgba(0,0,0,0)");
+        //     gradient.addColorStop(1, "rgba(0,0,0,1)");
+        //     Context.fillStyle = gradient;
+        //     Context.fillRect(0, 0, Canvas.width, Canvas.height);
+        // }
+
+        // function handleMouseMove(event) {
+        //     const x = event.clientX;
+        //     const y = event.clientY;
+        //     drawMask(x, y);
+        // }
+
+        // window.addEventListener("mousemove", handleMouseMove);
+
+        // return () => {
+        //     window.removeEventListener("mousemove", handleMouseMove);
+        // };
 
     }, []);
 
     return (
         <canvas
+            // width={610}
+            // height={610}
             className={
                 "Background" +
                 " " +
