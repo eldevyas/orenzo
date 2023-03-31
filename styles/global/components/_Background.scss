@@ -1,47 +1,65 @@
-@mixin Background() {
-    .Background {
-        position: absolute;
-        z-index: 0;
-        background-color: black;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        &.__Dark {
-            background-color: black;
-        }
-        &.__Light {
-            background-color: white;
-        }
-        &__Tiles {
+    @mixin Background() {
+        .Background {
             position: absolute;
+            z-index: 0;
             background-color: black;
             width: 100%;
             height: 100%;
-            pointer-events: none;
-            display: grid;
-            grid-gap: 0;
-            gap: 0;
-            grid-template-columns: repeat(var(--columns), 1fr);
-            grid-template-rows: repeat(var(--rows), 1fr);
-            overflow: hidden;
-            // --mouse-x: 10px;
-            // --mouse-y: 10px;
-            will-change: mask-image;
-            transform: translateZ(0);
-            -webkit-mask-image: radial-gradient( 600px circle at center center, rgba(255, 255, 255, 100%), transparent 75%);
-            mask-image: radial-gradient( 600px circle at center center, rgba(255, 255, 255, 100%), transparent 75%);
-            transition: all 300ms ease;
-            .Tile {
-                outline: 1px solid #303030;
-                aspect-ratio: 1/1;
-                margin: 0;
+            z-index: 0;
+            &.__Dark {
+                background-color: black;
             }
             &.__Light {
                 background-color: white;
-                .Tile {
-                    outline: 1px solid #eee;
+            }
+            // &__Tiles {
+            //     position: absolute;
+            //     background-color: black;
+            //     width: 100%;
+            //     height: 100%;
+            //     pointer-events: none;
+            //     display: grid;
+            //     grid-gap: 0;
+            //     gap: 0;
+            //     grid-template-columns: repeat(var(--columns), 1fr);
+            //     grid-template-rows: repeat(var(--rows), 1fr);
+            //     overflow: hidden;
+            //     // --mouse-x: 10px;
+            //     // --mouse-y: 10px;
+            //     will-change: mask-image;
+            //     transform: translateZ(0);
+            //     -webkit-mask-image: radial-gradient( 600px circle at center center, rgba(255, 255, 255, 100%), transparent 75%);
+            //     mask-image: radial-gradient( 600px circle at center center, rgba(255, 255, 255, 100%), transparent 75%);
+            //     transition: all 300ms ease;
+            //     .Tile {
+            //         outline: 1px solid #303030;
+            //         aspect-ratio: 1/1;
+            //         margin: 0;
+            //     }
+            //     &.__Light {
+            //         background-color: white;
+            //         .Tile {
+            //             outline: 1px solid #eee;
+            //         }
+            //     }
+            // }
+            &__Tiles {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                --square-size: calc(100vw / 10);
+                background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #303030 0) 0 0/var(--square-size) var(--square-size);
+                &.__Light {
+                    background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #eee 0) 0 0/var(--square-size) var(--square-size);
+                }
+                @media screen and (min-width: 1200px) {
+                    --square-size: calc(100vw / 25);
+                }
+                @media screen and (min-width: 768px) {
+                    --square-size: calc(100vw / 50);
                 }
             }
         }
     }
-}

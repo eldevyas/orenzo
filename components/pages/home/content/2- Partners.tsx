@@ -20,17 +20,46 @@ export default function TrustedPartners() {
     //
     //
     const { t } = useTranslation("common");
+    const responsiveSettings = [
+        {
+            breakpoint: 1024, // For large desktops and laptops
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                infinite: true,
+                dots: false,
+            },
+        },
+        {
+            breakpoint: 768, // For tablets and medium-sized desktops
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: false,
+            },
+        },
+        {
+            breakpoint: 480, // For small devices such as mobiles
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+                dots: false,
+            },
+        },
+    ];
+
     const Options = {
         dots: false,
         infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        variableWidth: true,
-        speed: 500,
+        slidesToShow: 5,
+        slidesToScroll: 5,
         autoplay: true,
-        autoplaySpeed: 2000,
-        ease: "linear",
+        autoplaySpeed: 3000,
+        pauseOnHover: false,
         centerMode: true,
+        responsive: responsiveSettings,
     };
     return (
         <>

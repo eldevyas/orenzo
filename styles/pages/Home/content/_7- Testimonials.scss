@@ -41,9 +41,18 @@
         position: relative;
         top: 0;
         width: 100%;
-        left: 50%;
-        transform: translateX(-50%);
+        // left: 50%;
+        // transform: translateX(-50%);
         z-index: 100;
+        @media (max-width: 767px) {
+            .slick-list {
+                height: min-content !important;
+                max-height: 400px;
+            }
+            .slick-track {
+                height: min-content !important;
+            }
+        }
         .slick-dots {
             position: relative;
             min-width: 100px;

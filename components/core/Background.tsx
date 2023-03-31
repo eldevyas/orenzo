@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 type CSSStyleDeclarationWithVendorPrefixes = CSSStyleDeclaration & {
     webkitMaskImage?: string;
@@ -26,7 +26,7 @@ export default function Background(props: any) {
         let Rows = Math.floor(document.body.clientHeight / Count);
 
         const MakeLightEffects = () => {
-            if (Wrapper != null) {
+            if (Wrapper.current != null) {
                 const WrapperRect = Wrapper?.current?.getBoundingClientRect();
                 const x = WrapperRect!.x + WrapperRect!.width / 2;
                 const y = WrapperRect!.y + WrapperRect!.height / 2;
@@ -46,11 +46,21 @@ export default function Background(props: any) {
 
             Elements.forEach((Element) => {
                 const { x, y, width, height } = Element.getBoundingClientRect();
+
+                let Percentage = 75;
+                if (width > 300 && props["data-theme"] == "light") {
+                    Percentage = 50;
+                }
+
+                if (height > 300 && props["data-theme"] == "light") {
+                    Percentage = 50;
+                }
+
                 const centerX = x + width / 2;
                 const centerY = y + height / 2;
 
                 LightEffects.push(
-                    `radial-gradient( ${width}px circle at ${centerX}px ${centerY}px, rgba(255, 255, 255, 100%), transparent 75%)`
+                    `radial-gradient( ${width}px circle at ${centerX}px ${centerY}px, rgba(255, 255, 255, 100%), transparent ${Percentage}%)`
                 );
             });
 
@@ -59,60 +69,29 @@ export default function Background(props: any) {
                     Index == LightEffects.length - 1 ? Mask : Mask + ", ";
             });
 
-            const wrapperStyle = Wrapper!.current!
-                .style as CSSStyleDeclarationWithVendorPrefixes;
+            const wrapperStyle = Wrapper?.current
+                ?.style as CSSStyleDeclarationWithVendorPrefixes;
 
             // Set among all browsers;
-            wrapperStyle.webkitMaskImage = ImageMask;
-            wrapperStyle.MozMaskImage = ImageMask;
-            wrapperStyle.msMaskImage = ImageMask;
-            wrapperStyle.OMaskImage = ImageMask;
-            wrapperStyle.maskImage = ImageMask;
+            wrapperStyle!.webkitMaskImage = ImageMask;
+            wrapperStyle!.MozMaskImage = ImageMask;
+            wrapperStyle!.msMaskImage = ImageMask;
+            wrapperStyle!.OMaskImage = ImageMask;
+            wrapperStyle!.maskImage = ImageMask;
         };
 
         MakeLightEffects();
-
-        const CreateTile = (index: number) => {
-            const Tile = document.createElement("div");
-
-            Tile.classList.add("Tile");
-
-            return Tile;
-        };
-
-        const CreateTiles = (quantity: number) => {
-            Array.from(Array(quantity)).map((tile, index) => {
-                Wrapper!.current!.appendChild(CreateTile(index));
-            });
-        };
-        const CreateGrid = () => {
-            Wrapper!.current!.innerHTML = "";
-
-            let Count = 25;
-
-            let Columns: number = Math.floor(document.body.clientWidth / Count);
-            let Rows: number = Math.floor(document.body.clientHeight / Count);
-
-            Wrapper!.current!.style.setProperty("--columns", String(Columns));
-            Wrapper!.current!.style.setProperty("--rows", String(Rows));
-
-            CreateTiles(Columns * Rows);
-        };
-        CreateGrid();
-
-        window.addEventListener("resize", CreateGrid);
+        //
         if (!props["no-interaction"]) {
             window.addEventListener("mousemove", handleMouseMove);
         }
-
         return () => {
-            window.removeEventListener("resize", CreateGrid);
+            // window.removeEventListener("resize", CreateGrid);
             if (!props["no-interaction"]) {
                 window.removeEventListener("mousemove", handleMouseMove);
             }
-            MakeLightEffects();
         };
-    }, [props]);
+    });
 
     return (
         <div
@@ -123,12 +102,12 @@ export default function Background(props: any) {
             }
         >
             <div
+                ref={Wrapper}
                 className={
                     "Background__Tiles" +
                     " " +
                     (props["data-theme"] == "dark" ? "__Dark" : "__Light")
                 }
-                ref={Wrapper}
             ></div>
         </div>
     );
