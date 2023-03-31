@@ -80,7 +80,7 @@ export default function GetInTouch(props: Properties) {
     const formik: any = useFormik({
         initialValues: {
             fullName: "",
-            phoneNumber: "",
+            Number: "",
             email: "",
             interest: [],
             budget: [],
@@ -91,20 +91,20 @@ export default function GetInTouch(props: Properties) {
                 .min(2, "Too Short!")
                 .max(80, "Too Long!")
                 .required("Required"),
-            phoneNumber: Yup.string().required("Required"),
+            Number: Yup.string().required("Required"),
             email: Yup.string().email("Invalid Email").required("Required"),
             interest: Yup.string().required("Required"),
             budget: Yup.string().required("Required"),
             message: Yup.string().optional(),
         }),
-        onSubmit: (values) => {
+        onSubmit: (values: { fullName: any; Number: any; email: any; interest: any; budget: any; message: any; }) => {
             alert(JSON.stringify(values, null, 2));
             axios
                 .post(
                     "https://sheet.best/api/sheets/059df18e-304a-4cce-a8c2-f0dcf45e5b56",
                     {
                         "Full Name": values.fullName,
-                        "Phone Number": values.phoneNumber,
+                        "Number": values.Number,
                         Email: values.email,
                         Interest: values.interest,
                         Budget: values.budget,
