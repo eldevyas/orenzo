@@ -6,6 +6,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { DefaultButton } from "../components/core/buttons";
 import { BsWhatsapp } from "react-icons/bs";
 import Background from "../components/core/Background";
+import Header from "../components/layout/header";
+import Footer from "../components/layout/footer";
 
 export const getServerSideProps: (locale: any) => any = async ({ locale }) => ({
     props: {
@@ -21,7 +23,9 @@ const Experimental: NextPage = () => {
             </Head>
 
             <div className="ExperimentalPage">
-                <Background data-theme="dark" />
+                <Header />
+                <Background data-theme="light" />
+                <Footer />
             </div>
         </>
     );

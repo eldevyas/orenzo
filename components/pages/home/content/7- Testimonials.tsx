@@ -114,9 +114,9 @@ export default function Testimonials() {
         },
     ];
 
-    useEffect(() => {
-        setSettings(settings);
-    }, [settings]);
+    // useEffect(() => {
+    //     setSettings(settings);
+    // }, [settings]);
 
     return (
         <>
