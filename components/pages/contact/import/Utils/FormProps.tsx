@@ -6,7 +6,7 @@ interface Properties {
             Label: string;
             Placeholder: string;
         };
-        PhoneNumber: {
+        Number: {
             Label: string;
             Placeholder: string;
         };

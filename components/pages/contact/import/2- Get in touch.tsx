@@ -177,10 +177,10 @@ export default function GetInTouch(props: Properties) {
                     </div>
                     <div className="PageContent__GetInTouch__Form__Field__Container">
                         <input
-                            name="phoneNumber"
+                            name="Number"
                             type="tel"
-                            value={formik.values.phoneNumber}
-                            placeholder={props.Form.PhoneNumber.Placeholder}
+                            value={formik.values.Number}
+                            placeholder={props.Form.Number.Placeholder}
                             className="PageContent__GetInTouch__Form__Field__Container__Input"
                             onChange={formik.handleChange}
                             onFocus={(e: {
@@ -205,8 +205,8 @@ export default function GetInTouch(props: Properties) {
                         />
                     </div>
                     <div className="PageContent__GetInTouch__Form__Field__Error">
-                        {formik.touched.phoneNumber && formik.errors.phoneNumber ? (
-                            <div>{formik.errors.phoneNumber}</div>
+                        {formik.touched.Number && formik.errors.Number ? (
+                            <div>{formik.errors.Number}</div>
                         ) : null}
                     </div>
                 </div>
