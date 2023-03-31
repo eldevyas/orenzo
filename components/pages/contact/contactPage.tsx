@@ -45,6 +45,12 @@ const ContactPage = () => {
                     Label: t("contact.GetInTouch.Form.Email.Label"),
                     Placeholder: t("contact.GetInTouch.Form.Email.Placeholder"),
                 },
+                PhoneNumber: {
+                    Label: t("contact.GetInTouch.Form.Number.Label"),
+                    Placeholder: t(
+                        "contact.GetInTouch.Form.Number.Placeholder"
+                    ),
+                },
                 Interest: {
                     Label: t("contact.GetInTouch.Form.Interest.Label"),
                     Placeholder: t(
