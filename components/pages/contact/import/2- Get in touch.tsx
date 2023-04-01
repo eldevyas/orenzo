@@ -97,14 +97,21 @@ export default function GetInTouch(props: Properties) {
             budget: Yup.string().required("Required"),
             message: Yup.string().optional(),
         }),
-        onSubmit: (values: { fullName: any; Number: any; email: any; interest: any; budget: any; message: any; }) => {
+        onSubmit: (values: {
+            fullName: any;
+            Number: any;
+            email: any;
+            interest: any;
+            budget: any;
+            message: any;
+        }) => {
             alert(JSON.stringify(values, null, 2));
             axios
                 .post(
                     "https://sheet.best/api/sheets/059df18e-304a-4cce-a8c2-f0dcf45e5b56",
                     {
                         "Full Name": values.fullName,
-                        "Number": values.Number,
+                        Number: values.Number,
                         Email: values.email,
                         Interest: values.interest,
                         Budget: values.budget,
@@ -175,12 +182,17 @@ export default function GetInTouch(props: Properties) {
                             <div>{formik.errors.fullName}</div>
                         ) : null}
                     </div>
+                </div>
+                <div className="PageContent__GetInTouch__Form__Field">
+                    <div className="PageContent__GetInTouch__Form__Field__Label">
+                        {props.Form.PhoneNumber.Label}
+                    </div>
                     <div className="PageContent__GetInTouch__Form__Field__Container">
                         <input
                             name="Number"
                             type="tel"
                             value={formik.values.Number}
-                            placeholder={props.Form.Number.Placeholder}
+                            placeholder={props.Form.PhoneNumber.Placeholder}
                             className="PageContent__GetInTouch__Form__Field__Container__Input"
                             onChange={formik.handleChange}
                             onFocus={(e: {
