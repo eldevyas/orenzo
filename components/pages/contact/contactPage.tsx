@@ -99,6 +99,11 @@ const ContactPage = () => {
                 },
                 Button: t("contact.GetInTouch.Form.Button"),
             },
+            Modal: {
+                Title: "Thank You!",
+                Subtitle:
+                    "We have received your message and will get back to you as soon as possible.",
+            },
         },
         FAQ: {
             title: t("services.design.content.FAQ.title"),

@@ -1,8 +1,7 @@
-// import Select from "react-select";
+import React, { useState, useEffect, useRef } from "react";
 import { DefaultButton } from "../../../core/buttons";
 import { Properties } from "./Utils/FormProps";
 import * as Yup from "yup";
-import * as React from "react";
 import { styled } from "@mui/material/styles";
 import axios from "axios";
 import {
@@ -13,9 +12,18 @@ import {
     Field,
     FieldProps,
     useFormik,
-} from "formik"; // import Creatable, { useCreatable } from "react-select/creatable";
-
+} from "formik";
+import SendIcon from "@mui/icons-material/Send";
+import LoadingButton from "@mui/lab/LoadingButton";
+//
+import { motion, AnimatePresence } from "framer-motion";
+//
+//
+//
 export default function GetInTouch(props: Properties) {
+    const [isLoading, setLoading] = useState<boolean>(false);
+    const [showModal, setShowModal] = useState<boolean>(false);
+    const messageRef = useRef<HTMLDivElement>(null);
     let Title = props.Title;
     let Description = props.Description;
 
@@ -106,6 +114,7 @@ export default function GetInTouch(props: Properties) {
             message: any;
         }) => {
             alert(JSON.stringify(values, null, 2));
+            setLoading(true);
             axios
                 .post(
                     "https://sheet.best/api/sheets/059df18e-304a-4cce-a8c2-f0dcf45e5b56",
@@ -120,253 +129,313 @@ export default function GetInTouch(props: Properties) {
                 )
                 .then(function (response) {
                     console.log(response);
+                    handleOpenModal();
                 })
                 .catch(function (error) {
                     console.log(error);
+                    setLoading(false);
                 });
         },
     });
 
-    return (
-        <div className="PageContent__GetInTouch">
-            <div className="PageContent__GetInTouch__Heading TorchLightEffect">
-                <div className="PageContent__GetInTouch__Heading__Title">
-                    {Title}
-                </div>
-                <div className="PageContent__GetInTouch__Heading__Description">
-                    {Description}
-                </div>
-            </div>
+    const handleOpenModal = () => {
+        setShowModal(true);
+    };
 
-            <form
-                className="PageContent__GetInTouch__Form"
-                ref={ElementsRef}
-                onMouseMove={handleMouseMove}
-                onSubmit={formik.handleSubmit}
-            >
-                <div className="PageContent__GetInTouch__Form__Field">
-                    <div className="PageContent__GetInTouch__Form__Field__Label">
-                        {props.Form.Name.Label}
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
+
+    const handleClickOutside = (event: any) => {
+        if (messageRef.current && !messageRef.current.contains(event.target)) {
+            // Clicked outside of message container, hide modal
+            handleCloseModal();
+        }
+    };
+
+    return (
+        <>
+            <div className="PageContent__GetInTouch">
+                <div className="PageContent__GetInTouch__Heading TorchLightEffect">
+                    <div className="PageContent__GetInTouch__Heading__Title">
+                        {Title}
                     </div>
-                    <div className="PageContent__GetInTouch__Form__Field__Container">
-                        <input
-                            name="fullName"
-                            type="text"
-                            value={formik.values.fullName}
-                            placeholder={props.Form.Name.Placeholder}
-                            className="PageContent__GetInTouch__Form__Field__Container__Input"
-                            onChange={formik.handleChange}
-                            onFocus={(e: {
-                                target: {
-                                    classList: {
-                                        add: (arg0: string) => void;
-                                    };
-                                };
-                            }) => {
-                                e.target.classList.add("Focused");
-                            }}
-                            onBlur={(e: {
-                                target: {
-                                    classList: {
-                                        remove: (arg0: string) => void;
-                                    };
-                                };
-                            }) => {
-                                e.target.classList.remove("Focused");
-                                formik.handleBlur;
-                            }}
-                        />
-                    </div>
-                    <div className="PageContent__GetInTouch__Form__Field__Error">
-                        {formik.touched.fullName && formik.errors.fullName ? (
-                            <div>{formik.errors.fullName}</div>
-                        ) : null}
+                    <div className="PageContent__GetInTouch__Heading__Description">
+                        {Description}
                     </div>
                 </div>
-                <div className="PageContent__GetInTouch__Form__Field">
-                    <div className="PageContent__GetInTouch__Form__Field__Label">
-                        {props.Form.PhoneNumber.Label}
-                    </div>
-                    <div className="PageContent__GetInTouch__Form__Field__Container">
-                        <input
-                            name="Number"
-                            type="tel"
-                            value={formik.values.Number}
-                            placeholder={props.Form.PhoneNumber.Placeholder}
-                            className="PageContent__GetInTouch__Form__Field__Container__Input"
-                            onChange={formik.handleChange}
-                            onFocus={(e: {
-                                target: {
-                                    classList: {
-                                        add: (arg0: string) => void;
+
+                <form
+                    className="PageContent__GetInTouch__Form"
+                    ref={ElementsRef}
+                    onMouseMove={handleMouseMove}
+                    onSubmit={formik.handleSubmit}
+                >
+                    <div className="PageContent__GetInTouch__Form__Field">
+                        <div className="PageContent__GetInTouch__Form__Field__Label">
+                            {props.Form.Name.Label}
+                        </div>
+                        <div className="PageContent__GetInTouch__Form__Field__Container">
+                            <input
+                                name="fullName"
+                                type="text"
+                                value={formik.values.fullName}
+                                placeholder={props.Form.Name.Placeholder}
+                                className="PageContent__GetInTouch__Form__Field__Container__Input"
+                                onChange={formik.handleChange}
+                                onFocus={(e: {
+                                    target: {
+                                        classList: {
+                                            add: (arg0: string) => void;
+                                        };
                                     };
-                                };
-                            }) => {
-                                e.target.classList.add("Focused");
-                            }}
-                            onBlur={(e: {
-                                target: {
-                                    classList: {
-                                        remove: (arg0: string) => void;
+                                }) => {
+                                    e.target.classList.add("Focused");
+                                }}
+                                onBlur={(e: {
+                                    target: {
+                                        classList: {
+                                            remove: (arg0: string) => void;
+                                        };
                                     };
-                                };
-                            }) => {
-                                e.target.classList.remove("Focused");
-                                formik.handleBlur;
-                            }}
-                        />
+                                }) => {
+                                    e.target.classList.remove("Focused");
+                                    formik.handleBlur;
+                                }}
+                            />
+                        </div>
+                        <div className="PageContent__GetInTouch__Form__Field__Error">
+                            {formik.touched.fullName &&
+                            formik.errors.fullName ? (
+                                <div>{formik.errors.fullName}</div>
+                            ) : null}
+                        </div>
                     </div>
-                    <div className="PageContent__GetInTouch__Form__Field__Error">
-                        {formik.touched.Number && formik.errors.Number ? (
-                            <div>{formik.errors.Number}</div>
-                        ) : null}
-                    </div>
-                </div>
-                <div className="PageContent__GetInTouch__Form__Field">
-                    <div className="PageContent__GetInTouch__Form__Field__Label">
-                        {props.Form.Email.Label}
-                    </div>
-                    <div className="PageContent__GetInTouch__Form__Field__Container">
-                        <input
-                            name="email"
-                            type="email"
-                            value={formik.values.email}
-                            placeholder={props.Form.Email.Placeholder}
-                            className="PageContent__GetInTouch__Form__Field__Container__Input"
-                            onChange={formik.handleChange}
-                            onFocus={(e: {
-                                target: {
-                                    classList: {
-                                        add: (arg0: string) => void;
+                    <div className="PageContent__GetInTouch__Form__Field">
+                        <div className="PageContent__GetInTouch__Form__Field__Label">
+                            {props.Form.PhoneNumber.Label}
+                        </div>
+                        <div className="PageContent__GetInTouch__Form__Field__Container">
+                            <input
+                                name="Number"
+                                type="tel"
+                                value={formik.values.Number}
+                                placeholder={props.Form.PhoneNumber.Placeholder}
+                                className="PageContent__GetInTouch__Form__Field__Container__Input"
+                                onChange={formik.handleChange}
+                                onFocus={(e: {
+                                    target: {
+                                        classList: {
+                                            add: (arg0: string) => void;
+                                        };
                                     };
-                                };
-                            }) => {
-                                e.target.classList.add("Focused");
-                            }}
-                            onBlur={(e: {
-                                target: {
-                                    classList: {
-                                        remove: (arg0: string) => void;
+                                }) => {
+                                    e.target.classList.add("Focused");
+                                }}
+                                onBlur={(e: {
+                                    target: {
+                                        classList: {
+                                            remove: (arg0: string) => void;
+                                        };
                                     };
-                                };
-                            }) => {
-                                e.target.classList.remove("Focused");
-                                formik.handleBlur;
-                            }}
-                        />
+                                }) => {
+                                    e.target.classList.remove("Focused");
+                                    formik.handleBlur;
+                                }}
+                            />
+                        </div>
+                        <div className="PageContent__GetInTouch__Form__Field__Error">
+                            {formik.touched.Number && formik.errors.Number ? (
+                                <div>{formik.errors.Number}</div>
+                            ) : null}
+                        </div>
                     </div>
-                    <div className="PageContent__GetInTouch__Form__Field__Error">
-                        {formik.touched.email && formik.errors.email ? (
-                            <div>{formik.errors.email}</div>
-                        ) : null}
+                    <div className="PageContent__GetInTouch__Form__Field">
+                        <div className="PageContent__GetInTouch__Form__Field__Label">
+                            {props.Form.Email.Label}
+                        </div>
+                        <div className="PageContent__GetInTouch__Form__Field__Container">
+                            <input
+                                name="email"
+                                type="email"
+                                value={formik.values.email}
+                                placeholder={props.Form.Email.Placeholder}
+                                className="PageContent__GetInTouch__Form__Field__Container__Input"
+                                onChange={formik.handleChange}
+                                onFocus={(e: {
+                                    target: {
+                                        classList: {
+                                            add: (arg0: string) => void;
+                                        };
+                                    };
+                                }) => {
+                                    e.target.classList.add("Focused");
+                                }}
+                                onBlur={(e: {
+                                    target: {
+                                        classList: {
+                                            remove: (arg0: string) => void;
+                                        };
+                                    };
+                                }) => {
+                                    e.target.classList.remove("Focused");
+                                    formik.handleBlur;
+                                }}
+                            />
+                        </div>
+                        <div className="PageContent__GetInTouch__Form__Field__Error">
+                            {formik.touched.email && formik.errors.email ? (
+                                <div>{formik.errors.email}</div>
+                            ) : null}
+                        </div>
                     </div>
-                </div>
-                <div className="PageContent__GetInTouch__Form__Field">
-                    <div className="PageContent__GetInTouch__Form__Field__Label">
-                        {props.Form.Interest.Label}
-                    </div>
-                    <div className="PageContent__GetInTouch__Form__Field__Container">
-                        <select
-                            id="interest"
-                            name="interest"
-                            value={formik.values.interest}
-                            placeholder={props.Form.Interest.Placeholder}
-                            className="PageContent__GetInTouch__Form__Field__Container__Input"
-                            onChange={formik.handleChange}
-                            onFocus={(e: any) => {
-                                e.target.classList.add("Focused");
-                            }}
-                            onBlur={(e: any) => {
-                                e.target.classList.remove("Focused");
-                                formik.handleBlur;
-                            }}
-                        >
-                            <option value={""} disabled>
-                                {props.Form.Interest.Placeholder}
-                            </option>
-                            {InterestOptions.map((Option, Index) => (
-                                <option value={Option.label} key={Index}>
-                                    {Option.label}
+                    <div className="PageContent__GetInTouch__Form__Field">
+                        <div className="PageContent__GetInTouch__Form__Field__Label">
+                            {props.Form.Interest.Label}
+                        </div>
+                        <div className="PageContent__GetInTouch__Form__Field__Container">
+                            <select
+                                id="interest"
+                                name="interest"
+                                value={formik.values.interest}
+                                placeholder={props.Form.Interest.Placeholder}
+                                className="PageContent__GetInTouch__Form__Field__Container__Input"
+                                onChange={formik.handleChange}
+                                onFocus={(e: any) => {
+                                    e.target.classList.add("Focused");
+                                }}
+                                onBlur={(e: any) => {
+                                    e.target.classList.remove("Focused");
+                                    formik.handleBlur;
+                                }}
+                            >
+                                <option value={""} disabled>
+                                    {props.Form.Interest.Placeholder}
                                 </option>
-                            ))}
-                        </select>
+                                {InterestOptions.map((Option, Index) => (
+                                    <option value={Option.label} key={Index}>
+                                        {Option.label}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                        <div className="PageContent__GetInTouch__Form__Field__Error">
+                            {formik.touched.interest &&
+                            formik.errors.interest ? (
+                                <div>{formik.errors.interest}</div>
+                            ) : null}
+                        </div>
                     </div>
-                    <div className="PageContent__GetInTouch__Form__Field__Error">
-                        {formik.touched.interest && formik.errors.interest ? (
-                            <div>{formik.errors.interest}</div>
-                        ) : null}
-                    </div>
-                </div>
-                <div className="PageContent__GetInTouch__Form__Field">
-                    <div className="PageContent__GetInTouch__Form__Field__Label">
-                        {props.Form.Budget.Label}
-                    </div>
-                    <div className="PageContent__GetInTouch__Form__Field__Container">
-                        <select
-                            id="budget"
-                            name="budget"
-                            value={formik.values.budget}
-                            placeholder={props.Form.Budget.Placeholder}
-                            className="PageContent__GetInTouch__Form__Field__Container__Input"
-                            onChange={formik.handleChange}
-                            onFocus={(e: any) => {
-                                e.target.classList.add("Focused");
-                            }}
-                            onBlur={(e: any) => {
-                                e.target.classList.remove("Focused");
-                                formik.handleBlur;
-                            }}
-                        >
-                            <option value={""} disabled>
-                                {props.Form.Interest.Placeholder}
-                            </option>
-                            {BudgetOptions.map((Option, Index) => (
-                                <option value={Option.label} key={Index}>
-                                    {Option.label}
+                    <div className="PageContent__GetInTouch__Form__Field">
+                        <div className="PageContent__GetInTouch__Form__Field__Label">
+                            {props.Form.Budget.Label}
+                        </div>
+                        <div className="PageContent__GetInTouch__Form__Field__Container">
+                            <select
+                                id="budget"
+                                name="budget"
+                                value={formik.values.budget}
+                                placeholder={props.Form.Budget.Placeholder}
+                                className="PageContent__GetInTouch__Form__Field__Container__Input"
+                                onChange={formik.handleChange}
+                                onFocus={(e: any) => {
+                                    e.target.classList.add("Focused");
+                                }}
+                                onBlur={(e: any) => {
+                                    e.target.classList.remove("Focused");
+                                    formik.handleBlur;
+                                }}
+                            >
+                                <option value={""} disabled>
+                                    {props.Form.Interest.Placeholder}
                                 </option>
-                            ))}
-                        </select>
+                                {BudgetOptions.map((Option, Index) => (
+                                    <option value={Option.label} key={Index}>
+                                        {Option.label}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                        <div className="PageContent__GetInTouch__Form__Field__Error">
+                            {formik.touched.budget && formik.errors.budget ? (
+                                <div>{formik.errors.budget}</div>
+                            ) : null}
+                        </div>
                     </div>
-                    <div className="PageContent__GetInTouch__Form__Field__Error">
-                        {formik.touched.budget && formik.errors.budget ? (
-                            <div>{formik.errors.budget}</div>
-                        ) : null}
+                    <div className="PageContent__GetInTouch__Form__Field">
+                        <div className="PageContent__GetInTouch__Form__Field__Label">
+                            {props.Form.Message.Label}
+                        </div>
+                        <div className="PageContent__GetInTouch__Form__Field__Container">
+                            <textarea
+                                id="message"
+                                name="message"
+                                value={formik.values.message}
+                                rows={6}
+                                placeholder={props.Form.Message.Placeholder}
+                                className="PageContent__GetInTouch__Form__Field__Container__Input"
+                                onChange={formik.handleChange}
+                                onFocus={(e: any) => {
+                                    e.target.classList.add("Focused");
+                                }}
+                                onBlur={(e: any) => {
+                                    e.target.classList.remove("Focused");
+                                    formik.handleBlur;
+                                }}
+                            />
+                        </div>
+                        <div className="PageContent__GetInTouch__Form__Field__Error">
+                            {formik.touched.message && formik.errors.message ? (
+                                <div>{formik.errors.message}</div>
+                            ) : null}
+                        </div>
                     </div>
+                </form>
+                <div className="PageContent__GetInTouch__FormAction">
+                    <LoadingButton
+                        size="small"
+                        onClick={formik.handleSubmit}
+                        startIcon={isLoading ? null : <SendIcon />}
+                        loading={isLoading}
+                        loadingPosition="center"
+                        variant="contained"
+                        className={`DefaultButton Blue ${
+                            isLoading ? "Loading" : ""
+                        }`}
+                    >
+                        <span>{!isLoading ? props.Form.Button : " "}</span>
+                    </LoadingButton>
                 </div>
-                <div className="PageContent__GetInTouch__Form__Field">
-                    <div className="PageContent__GetInTouch__Form__Field__Label">
-                        {props.Form.Message.Label}
-                    </div>
-                    <div className="PageContent__GetInTouch__Form__Field__Container">
-                        <textarea
-                            id="message"
-                            name="message"
-                            value={formik.values.message}
-                            rows={6}
-                            placeholder={props.Form.Message.Placeholder}
-                            className="PageContent__GetInTouch__Form__Field__Container__Input"
-                            onChange={formik.handleChange}
-                            onFocus={(e: any) => {
-                                e.target.classList.add("Focused");
-                            }}
-                            onBlur={(e: any) => {
-                                e.target.classList.remove("Focused");
-                                formik.handleBlur;
-                            }}
-                        />
-                    </div>
-                    <div className="PageContent__GetInTouch__Form__Field__Error">
-                        {formik.touched.message && formik.errors.message ? (
-                            <div>{formik.errors.message}</div>
-                        ) : null}
-                    </div>
-                </div>
-            </form>
-            <div className="PageContent__GetInTouch__FormAction">
-                <DefaultButton bgColor="Blue" onClick={formik.handleSubmit}>
-                    {props.Form.Button}
-                </DefaultButton>
+                <AnimatePresence>
+                    {showModal ? (
+                        <motion.div
+                            className="PageContent__GetInTouch__Modal"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                            onMouseDown={handleClickOutside}
+                        >
+                            <motion.div
+                                ref={messageRef}
+                                className="PageContent__GetInTouch__Modal__Message"
+                                initial={{ y: -100 }}
+                                animate={{ y: 0 }}
+                                exit={{ y: -100 }}
+                                transition={{ duration: 0.3 }}
+                            >
+                                <div className="PageContent__GetInTouch__Modal__Message__Title">
+                                    {props.Modal.Title}
+                                </div>
+                                <div className="PageContent__GetInTouch__Modal__Message__Subtitle">
+                                    {props.Modal.Subtitle}
+                                </div>
+                                <div className="PageContent__GetInTouch__Modal__Message__Icons"></div>
+                            </motion.div>
+                        </motion.div>
+                    ) : null}
+                </AnimatePresence>
             </div>
-        </div>
+        </>
     );
 }

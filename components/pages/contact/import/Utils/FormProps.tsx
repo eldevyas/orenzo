@@ -40,6 +40,10 @@ interface Properties {
         };
         Button: string;
     };
+    Modal: {
+        Title: string;
+        Subtitle: string;
+    };
 }
 
 export type { Properties };
