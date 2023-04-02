@@ -1,14 +1,22 @@
 import React, { useState, useEffect } from "react";
 import Header from "../../layout/header";
 import Image from "next/image";
-import LandingSection from "./content/1- LandingSection";
-import TrustedPartners from "./content/2- Partners";
-import AboutUs from "./content/3- About us";
-import BusinessPerformance from "./content/4- Business Perfomance";
-import Services from "./content/5- Services";
-import Testimonials from "./content/7- Testimonials";
-import LetsTalk from "./content/8- Let's Talk";
-import Mailing from "./content/9- Mailing";
+import dynamic from "next/dynamic";
+//
+//
+// Code Splitting Technique
+const LandingSection = dynamic(() => import("./content/1- LandingSection"));
+const TrustedPartners = dynamic(() => import("./content/2- Partners"));
+const AboutUs = dynamic(() => import("./content/3- About us"));
+const BusinessPerformance = dynamic(
+    () => import("./content/4- Business Perfomance")
+);
+const Services = dynamic(() => import("./content/5- Services"));
+const Testimonials = dynamic(() => import("./content/7- Testimonials"));
+const LetsTalk = dynamic(() => import("./content/8- Let's Talk"));
+const Mailing = dynamic(() => import("./content/9- Mailing"));
+//
+//
 import Footer from "../../layout/footer";
 import Scroll_Indicator from "../../core/Scroll-Indicator";
 import Background from "../../core/Background";

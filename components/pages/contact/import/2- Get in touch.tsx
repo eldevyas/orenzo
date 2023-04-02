@@ -438,7 +438,9 @@ export default function GetInTouch(props: Properties) {
                         <div className="PageContent__GetInTouch__FormAction">
                             <LoadingButton
                                 size="small"
-                                onClick={formik.handleSubmit}
+                                onClick={(e: any) => {
+                                    formik.handleSubmit(e);
+                                }}
                                 startIcon={isLoading ? null : <SendIcon />}
                                 loading={isLoading}
                                 loadingPosition="center"
