@@ -20,8 +20,11 @@ const Mailing = dynamic(() => import("./content/9- Mailing"));
 import Footer from "../../layout/footer";
 import Scroll_Indicator from "../../core/Scroll-Indicator";
 import Background from "../../core/Background";
+import Head from "next/head";
+import { useTranslation } from "next-i18next";
 
 export default function HomePage() {
+    const { t } = useTranslation("common");
     const Section_1 = React.useRef<HTMLDivElement>(null);
     const Section_2 = React.useRef<HTMLDivElement>(null);
     const Section_3 = React.useRef<HTMLDivElement>(null);
@@ -33,6 +36,13 @@ export default function HomePage() {
 
     return (
         <div className="HomePage">
+            <Head>
+                <title>{t("home.head.title")}</title>
+                <meta
+                    name="description"
+                    content={t("home.head.meta.description")}
+                />
+            </Head>
             <Background data-theme="light" no-interaction />
             <div className="Section Section__1" ref={Section_1}>
                 <Header />

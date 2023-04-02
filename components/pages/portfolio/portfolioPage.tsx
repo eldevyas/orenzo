@@ -6,6 +6,7 @@ import Mailing from "../home/content/9- Mailing";
 import Card from "./import/1- Card";
 import Notice from "./import/2- Notice";
 import Gallery from "./import/3- Gallery";
+import Head from "next/head";
 
 export default function PortfolioPage() {
     const { t } = useTranslation("common");
@@ -28,11 +29,18 @@ export default function PortfolioPage() {
     return (
         <>
             <div className="PortfolioPage">
+                <Head>
+                    <title>{t("portfolio.head.title")}</title>
+                    <meta
+                        name="description"
+                        content={t("portfolio.head.meta.description")}
+                    />
+                </Head>
                 <Header data-theme="dark" />
                 <div className="PageContent">
                     <Card {...Properties.Card} />
                     <Notice {...Properties.Notice} />
-                    <Gallery {...Properties.Gallery}/>
+                    <Gallery {...Properties.Gallery} />
                     <LetsTalk />
                     <Mailing />
                 </div>

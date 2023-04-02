@@ -8,6 +8,7 @@ import WhyUs from "./imports/5- Why Us";
 import LetsTalk from "../../home/content/8- Let's Talk";
 import FAQ from "./../global/FAQ";
 import { useTranslation } from "next-i18next";
+import Head from "next/head";
 
 export default function Page() {
     const { t } = useTranslation("common");
@@ -210,6 +211,13 @@ export default function Page() {
     return (
         <div className="MarketingPage">
             <Header />
+            <Head>
+                <title>{t("services.marketing.head.title")}</title>
+                <meta
+                    name="description"
+                    content={t("services.marketing.head.meta.description")}
+                />
+            </Head>
 
             <div className="PageContent">
                 <Card {...MainCardData} />

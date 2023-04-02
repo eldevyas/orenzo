@@ -8,6 +8,7 @@ import Card from "./imports/1. Card";
 import Team from "./imports/3. Team";
 import Mailing from "../home/content/9- Mailing";
 import Video from "./imports/2. Video";
+import Head from "next/head";
 //
 //
 //
@@ -35,6 +36,13 @@ const AboutPage = () => {
     const MainCardData: any = {};
     return (
         <div className="PageContent">
+            <Head>
+                <title>{t("about.head.title")}</title>
+                <meta
+                    name="description"
+                    content={t("about.head.meta.description")}
+                />
+            </Head>
             <Card {...Properties!.MainCard} />
             <Slogan text={Properties!.Notice} />
             {/* Video needs to be here*/}

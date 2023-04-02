@@ -7,10 +7,10 @@ import SelectedProjects from "../global/Projects";
 import Cases from "../design/imports/7 - Selected Projects";
 import LetsTalk from "../../home/content/8- Let's Talk";
 import FAQ from "../global/FAQ";
-import { ParallaxProvider } from "react-scroll-parallax";
 import useScrollSnap from "react-use-scroll-snap";
 import { useRef } from "react";
 import { useTranslation } from "next-i18next";
+import Head from "next/head";
 
 export default function DevelopmentPage() {
     const scrollRef = useRef(null);
@@ -205,18 +205,22 @@ export default function DevelopmentPage() {
     return (
         <div className="DevelopmentPage" id="DevelopmentPage" ref={scrollRef}>
             <Header data-theme="dark" />
-
+            <Head>
+                <title>{t("services.development.head.title")}</title>
+                <meta
+                    name="description"
+                    content={t("services.development.head.meta.description")}
+                />
+            </Head>
             <div className="PageContent">
-                <ParallaxProvider>
-                    <Title {...TitleProperties} />
-                    <TechnologyStack {...TechnologyStackProperties} />
-                    <Cases {...CasesProperties} />
-                    <WhyUs {...WhyUsData} />
-                    <LetsTalk />
-                    <FAQ {...FAQData} />
-                    {/*
-                     */}
-                </ParallaxProvider>
+                <Title {...TitleProperties} />
+                <TechnologyStack {...TechnologyStackProperties} />
+                <Cases {...CasesProperties} />
+                <WhyUs {...WhyUsData} />
+                <LetsTalk />
+                <FAQ {...FAQData} />
+                {/*
+                 */}
             </div>
 
             <Footer data-theme="dark" />

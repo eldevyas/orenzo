@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React, { useState, useRef, useEffect } from "react";
-import { Parallax } from "react-scroll-parallax";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import { Trans, useTranslation } from "react-i18next";
@@ -10,104 +9,102 @@ function IMacImage(props: any) {
 
     return (
         <>
-            <Parallax speed={-5}>
-                <div className="Image">
-                    <div>
-                        <svg
-                            width="1920px"
-                            height="1905px"
-                            viewBox="0 0 1920 1905"
-                            version="1.1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlnsXlink="http://www.w3.org/1999/xlink"
+            <div className="Image">
+                <div>
+                    <svg
+                        width="1920px"
+                        height="1905px"
+                        viewBox="0 0 1920 1905"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlnsXlink="http://www.w3.org/1999/xlink"
+                    >
+                        <defs>
+                            <rect
+                                id="path-1"
+                                x="0"
+                                y="0"
+                                width="866"
+                                height="538"
+                                rx="27"
+                            ></rect>
+
+                            <motion.rect
+                                id="path-2"
+                                x="0"
+                                y="0"
+                                width="866"
+                                height="538"
+                                rx="27"
+                                style={{
+                                    height: Height,
+                                }}
+                            ></motion.rect>
+                        </defs>
+                        <g
+                            id="Artboard"
+                            stroke="none"
+                            strokeWidth="1"
+                            fill="none"
+                            fillRule="evenodd"
                         >
-                            <defs>
-                                <rect
-                                    id="path-1"
-                                    x="0"
-                                    y="0"
-                                    width="866"
-                                    height="538"
-                                    rx="27"
-                                ></rect>
-
-                                <motion.rect
-                                    id="path-2"
-                                    x="0"
-                                    y="0"
-                                    width="866"
-                                    height="538"
-                                    rx="27"
-                                    style={{
-                                        height: Height,
-                                    }}
-                                ></motion.rect>
-                            </defs>
+                            <image
+                                id="iMac"
+                                x="0"
+                                y="0"
+                                width="1920"
+                                height="1905"
+                                xlinkHref="/img/assets/development/iMac.png"
+                            ></image>
                             <g
-                                id="Artboard"
-                                stroke="none"
-                                strokeWidth="1"
-                                fill="none"
-                                fillRule="evenodd"
+                                id="Screen"
+                                transform="translate(521.000000, 496.000000)"
                             >
+                                <mask id="mask-1" fill="white">
+                                    <use xlinkHref="#path-1"></use>
+                                </mask>
+                                <use
+                                    id="Mask"
+                                    fill="#000000"
+                                    xlinkHref="#path-2"
+                                ></use>
                                 <image
-                                    id="iMac"
-                                    x="0"
+                                    id="Preview"
+                                    mask="url(#mask-1)"
+                                    x="-1.1937118e-12"
                                     y="0"
-                                    width="1920"
-                                    height="1905"
-                                    xlinkHref="/img/assets/development/iMac.png"
+                                    width="866.666667"
+                                    height="650"
+                                    xlinkHref="/img/assets/development/output.png"
                                 ></image>
-                                <g
-                                    id="Screen"
-                                    transform="translate(521.000000, 496.000000)"
-                                >
-                                    <mask id="mask-1" fill="white">
-                                        <use xlinkHref="#path-1"></use>
-                                    </mask>
-                                    <use
-                                        id="Mask"
-                                        fill="#000000"
-                                        xlinkHref="#path-2"
-                                    ></use>
-                                    <image
-                                        id="Preview"
-                                        mask="url(#mask-1)"
-                                        x="-1.1937118e-12"
-                                        y="0"
-                                        width="866.666667"
-                                        height="650"
-                                        xlinkHref="/img/assets/development/output.png"
-                                    ></image>
-                                </g>
-
-                                <g
-                                    id="Screen"
-                                    transform="translate(521.000000, 496.000000)"
-                                >
-                                    <mask id="mask-2" fill="white">
-                                        <use xlinkHref="#path-2"></use>
-                                    </mask>
-                                    <use
-                                        id="Mask"
-                                        fill="#000000"
-                                        xlinkHref="#path-2"
-                                    ></use>
-                                    <image
-                                        id="Code"
-                                        mask="url(#mask-2)"
-                                        x="0"
-                                        y="-15"
-                                        width="866"
-                                        height="650"
-                                        xlinkHref="https://uploads-ssl.webflow.com/609124aa26f8d4863c88a6d9/611f7cb09740e27d145063e0_code_down.svg"
-                                    />
-                                </g>
                             </g>
-                        </svg>
-                    </div>
+
+                            <g
+                                id="Screen"
+                                transform="translate(521.000000, 496.000000)"
+                            >
+                                <mask id="mask-2" fill="white">
+                                    <use xlinkHref="#path-2"></use>
+                                </mask>
+                                <use
+                                    id="Mask"
+                                    fill="#000000"
+                                    xlinkHref="#path-2"
+                                ></use>
+                                <image
+                                    id="Code"
+                                    mask="url(#mask-2)"
+                                    x="0"
+                                    y="-15"
+                                    width="866"
+                                    height="650"
+                                    xlinkHref="https://uploads-ssl.webflow.com/609124aa26f8d4863c88a6d9/611f7cb09740e27d145063e0_code_down.svg"
+                                />
+                            </g>
+                        </g>
+                    </svg>
                 </div>
-            </Parallax>
+            </div>
         </>
     );
 }

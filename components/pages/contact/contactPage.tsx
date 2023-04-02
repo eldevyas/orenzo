@@ -9,6 +9,7 @@ import FAQ from "../services/global/FAQ";
 import { useTranslation } from "next-i18next";
 import GetInTouch from "./import/2- Get in touch";
 import { Formik, Form, Field } from "formik";
+import Head from "next/head";
 
 const ContactPage = (props: {
     showWhatsApp: boolean;
@@ -187,6 +188,13 @@ const ContactPage = (props: {
     return (
         <div className="ContactPage">
             {/* <div className="Background"></div> */}
+            <Head>
+                <title>{t("contact.head.title")}</title>
+                <meta
+                    name="description"
+                    content={t("contact.head.meta.description")}
+                />
+            </Head>
             <Background />
             <Header data-theme="dark" />
             <div className="PageContent">
