@@ -1,4 +1,7 @@
 interface Properties {
+    showWhatsApp: boolean;
+    showCalendly: boolean;
+    showForm: boolean;
     Title: string;
     Description: string;
     Form: {

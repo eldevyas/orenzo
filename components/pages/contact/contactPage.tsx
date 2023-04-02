@@ -10,7 +10,11 @@ import { useTranslation } from "next-i18next";
 import GetInTouch from "./import/2- Get in touch";
 import { Formik, Form, Field } from "formik";
 
-const ContactPage = () => {
+const ContactPage = (props: {
+    showWhatsApp: boolean;
+    showCalendly: boolean;
+    showForm: boolean;
+}) => {
     const { t } = useTranslation("common");
     const Properties = {
         Alternatives: {
@@ -186,8 +190,18 @@ const ContactPage = () => {
             <Background />
             <Header data-theme="dark" />
             <div className="PageContent">
-                <Alternatives {...Properties.Alternatives} />
-                <GetInTouch {...Properties.GetInTouch} />
+                <Alternatives
+                    {...Properties.Alternatives}
+                    showForm={props.showForm}
+                    showWhatsApp={props.showWhatsApp}
+                    showCalendly={props.showCalendly}
+                />
+                <GetInTouch
+                    {...Properties.GetInTouch}
+                    showForm={props.showForm}
+                    showWhatsApp={props.showWhatsApp}
+                    showCalendly={props.showCalendly}
+                />
                 <FAQ {...Properties.FAQ} />
                 <Mailing />
             </div>

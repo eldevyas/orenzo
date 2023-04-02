@@ -6,6 +6,7 @@ import { IoCalendarSharp } from "react-icons/io5";
 export default function Alternatives(props: any) {
     const now = new Date();
     const hour = now.getHours();
+    console.log(props);
 
     let Title = props.Title;
     let Description = props.Description;
@@ -16,7 +17,6 @@ export default function Alternatives(props: any) {
         // Replace "Bonjour" with "Bonsoir" in the evening
         Title = Title.replace("Bonjour", "Bonsoir");
     }
-
 
     let Cards = {
         WhatsApp: {
@@ -69,52 +69,56 @@ export default function Alternatives(props: any) {
                 ref={CardsRef}
                 onMouseMove={handleMouseMove}
             >
-                <div
-                    className="PageContent__Alternatives__Cards__Card"
-                    ref={CardTwo}
-                >
-                    <div className="PageContent__Alternatives__Cards__Card__Content">
-                        <div className="PageContent__Alternatives__Cards__Card__Content__Text">
-                            <div className="PageContent__Alternatives__Cards__Card__Content__Text__Title">
-                                {Cards.Calendly.Title}
+                {props.showCalendly ? (
+                    <div
+                        className="PageContent__Alternatives__Cards__Card"
+                        ref={CardTwo}
+                    >
+                        <div className="PageContent__Alternatives__Cards__Card__Content">
+                            <div className="PageContent__Alternatives__Cards__Card__Content__Text">
+                                <div className="PageContent__Alternatives__Cards__Card__Content__Text__Title">
+                                    {Cards.Calendly.Title}
+                                </div>
+                                <div className="PageContent__Alternatives__Cards__Card__Content__Text__Description">
+                                    {Cards.Calendly.Description}
+                                </div>
                             </div>
-                            <div className="PageContent__Alternatives__Cards__Card__Content__Text__Description">
-                                {Cards.Calendly.Description}
-                            </div>
+                            <Button
+                                variant="text"
+                                className="PageContent__Alternatives__Cards__Card__Content__ActionButton"
+                                startIcon={<IoCalendarSharp />}
+                                dir="ltr"
+                            >
+                                {Cards.Calendly.Button}
+                            </Button>
                         </div>
-                        <Button
-                            variant="text"
-                            className="PageContent__Alternatives__Cards__Card__Content__ActionButton"
-                            startIcon={<IoCalendarSharp />}
-                            dir="ltr"
-                        >
-                            {Cards.Calendly.Button}
-                        </Button>
                     </div>
-                </div>
-                <div
-                    className="PageContent__Alternatives__Cards__Card"
-                    ref={CardOne}
-                >
-                    <div className="PageContent__Alternatives__Cards__Card__Content">
-                        <div className="PageContent__Alternatives__Cards__Card__Content__Text">
-                            <div className="PageContent__Alternatives__Cards__Card__Content__Text__Title">
-                                {Cards.WhatsApp.Title}
+                ) : null}
+                {props.showWhatsApp ? (
+                    <div
+                        className="PageContent__Alternatives__Cards__Card"
+                        ref={CardOne}
+                    >
+                        <div className="PageContent__Alternatives__Cards__Card__Content">
+                            <div className="PageContent__Alternatives__Cards__Card__Content__Text">
+                                <div className="PageContent__Alternatives__Cards__Card__Content__Text__Title">
+                                    {Cards.WhatsApp.Title}
+                                </div>
+                                <div className="PageContent__Alternatives__Cards__Card__Content__Text__Description">
+                                    {Cards.WhatsApp.Description}
+                                </div>
                             </div>
-                            <div className="PageContent__Alternatives__Cards__Card__Content__Text__Description">
-                                {Cards.WhatsApp.Description}
-                            </div>
+                            <Button
+                                variant="text"
+                                className="PageContent__Alternatives__Cards__Card__Content__ActionButton"
+                                startIcon={<BsWhatsapp />}
+                                dir="ltr"
+                            >
+                                {Cards.WhatsApp.Button}
+                            </Button>
                         </div>
-                        <Button
-                            variant="text"
-                            className="PageContent__Alternatives__Cards__Card__Content__ActionButton"
-                            startIcon={<BsWhatsapp />}
-                            dir="ltr"
-                        >
-                            {Cards.WhatsApp.Button}
-                        </Button>
                     </div>
-                </div>
+                ) : null}
             </div>
         </div>
     );
