@@ -10,6 +10,8 @@ export default function Footer(props: any) {
     const { locale } = useRouter();
     const { t } = useTranslation("common");
 
+    const Router = useRouter();
+
     let Links: { title: string; href: string }[] = [
         {
             title: t("header.links.home"),
@@ -61,7 +63,11 @@ export default function Footer(props: any) {
 
                         <p>{t("footer.Info.description")}</p>
 
-                        <DefaultButton bgColor="Red">
+                        <DefaultButton
+                            bgColor="Red"
+                            onClick={() => {
+                                return Router.push("/contact");
+                            }}>
                             {t("footer.Info.button")}
                         </DefaultButton>
                     </div>

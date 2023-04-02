@@ -539,18 +539,18 @@
                     "title": "Ce qui nous <RedSpan>démarque</RedSpan> ?",
                     "description": "Nos services vous aident à créer des produits numériques et à résoudre vos problèmes de manière objective, stratégique, technologique et analytique. Notre service a également un grand attrait car il a une belle combinaison de couleurs et un concept minimaliste.",
                     "cards": {
-                        "0": {
-                            "title": "+20k",
-                            "description": "Engagements actifs"
-                        },
-                        "1": {
-                            "title": "+10k",
-                            "description": "Clients heureux"
-                        },
-                        "2": {
-                            "title": "+5k",
-                            "description": "Entreprises de confiance"
-                        }
+                      "0": {
+                        "title": "+20",
+                        "description": "Engagements actifs"
+                      },
+                      "1": {
+                        "title": "+100",
+                        "description": "Clients heureux"
+                      },
+                      "2": {
+                        "title": "+10",
+                        "description": "Entreprises de confiance"
+                      }
                     }
                 },
                 "BestServices": {

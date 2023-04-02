@@ -1,6 +1,8 @@
 import React from "react";
 import { OutlinedButton } from "../../../core/buttons";
+import { useRouter } from "next/router";
 import { Trans, useTranslation } from "react-i18next";
+
 
 const HandDrawnLineRed = () => {
     return (
@@ -109,6 +111,7 @@ const HandDrawnLineTwo = () => {
 
 export default function LetsTalk() {
     const { t } = useTranslation("common");
+    const Router = useRouter();
 
     return (
         <>
@@ -118,16 +121,10 @@ export default function LetsTalk() {
                         <Trans
                             i18nKey="home.content.Contact.title"
                             components={{
-                                BlueSpan: (
-                                    <span className="SpanHighlightBlue" />
-                                ),
-                                BlueDot: (
-                                    <span className="colorDot" color="blue" />
-                                ),
+                                BlueSpan: <span className="SpanHighlightBlue" />,
+                                BlueDot: <span className="colorDot" color="blue" />,
                                 RedSpan: <span className="SpanHighlightRed" />,
-                                RedDot: (
-                                    <span className="colorDot" color="red" />
-                                ),
+                                RedDot: <span className="colorDot" color="red" />,
                                 br: <br />,
                             }}
                         />
@@ -136,23 +133,23 @@ export default function LetsTalk() {
                         <Trans
                             i18nKey="home.content.Contact.description"
                             components={{
-                                BlueSpan: (
-                                    <span className="SpanHighlightBlue" />
-                                ),
-                                BlueDot: (
-                                    <span className="colorDot" color="blue" />
-                                ),
+                                BlueSpan: <span className="SpanHighlightBlue" />,
+                                BlueDot: <span className="colorDot" color="blue" />,
                                 RedSpan: <span className="SpanHighlightRed" />,
-                                RedDot: (
-                                    <span className="colorDot" color="red" />
-                                ),
+                                RedDot: <span className="colorDot" color="red" />,
                             }}
                         />
                     </p>
                 </div>
 
                 <div className="Buttons">
-                    <OutlinedButton bgColor="red">
+
+                    <OutlinedButton
+                        bgColor="red"
+                        onClick={() => {
+                            return Router.push("/contact");
+                        }}
+                    >
                         {t("home.content.Contact.button")}
                     </OutlinedButton>
                 </div>
