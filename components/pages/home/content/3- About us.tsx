@@ -2,9 +2,12 @@ import React from "react";
 import Image from "next/image";
 import { DefaultButton } from "./../../../core/buttons";
 import { Trans, useTranslation } from "react-i18next";
+import { useRouter } from "next/router";
+
 
 export default function AboutUs() {
     const { t } = useTranslation("common");
+    const Router = useRouter();
 
     return (
         <>
@@ -44,6 +47,9 @@ export default function AboutUs() {
                             bgColor="Blue"
                             elevation={0}
                             style={{ boxShadow: "none" }}
+                            onClick={() => {
+                                return Router.push("/contact");
+                            }}
                         >
                             {t("home.content.AboutUs.button")}
                         </DefaultButton>
