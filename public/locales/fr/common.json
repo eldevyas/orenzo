@@ -539,18 +539,18 @@
                     "title": "Ce qui nous <RedSpan>démarque</RedSpan> ?",
                     "description": "Nos services vous aident à créer des produits numériques et à résoudre vos problèmes de manière objective, stratégique, technologique et analytique. Notre service a également un grand attrait car il a une belle combinaison de couleurs et un concept minimaliste.",
                     "cards": {
-                      "0": {
-                        "title": "+20",
-                        "description": "Engagements actifs"
-                      },
-                      "1": {
-                        "title": "+100",
-                        "description": "Clients heureux"
-                      },
-                      "2": {
-                        "title": "+10",
-                        "description": "Entreprises de confiance"
-                      }
+                        "0": {
+                            "title": "+20",
+                            "description": "Engagements actifs"
+                        },
+                        "1": {
+                            "title": "+100",
+                            "description": "Clients heureux"
+                        },
+                        "2": {
+                            "title": "+10",
+                            "description": "Entreprises de confiance"
+                        }
                     }
                 },
                 "BestServices": {
@@ -605,7 +605,53 @@
                     }
                 },
                 "FAQ": {
-                    "title": "FAQ"
+                    "title": "FAQ",
+                    "questions": {
+                        "0": {
+                            "question": "Combien de temps faut-il pour démarrer ?",
+                            "answer": "Notre délai d'exécution est ultra-rapide. Juste une semaine après la signature et nous sommes là avec la réunion de lancement pour le lancer."
+                        },
+                        "1": {
+                            "question": "Quel est votre processus de travail typique ?",
+                            "answer": "Tout commence par prendre une tasse de café, se détendre avec des amis et passer du temps de qualité sur la PlayStation (je plaisante !). Nous commençons toujours un projet par une analyse, apprenons les exigences et faisons des estimations qui seront partagées dans la proposition de prix. Ensuite, c'est parti pour signer, démarrer et faire passer votre entreprise au niveau supérieur avec une pincée de notre magie du design."
+                        },
+                        "2": {
+                            "question": "Travaillez-vous au forfait ou en régie ?",
+                            "answer": "La flexibilité est la clé du succès dans ce monde fou, nous essayons donc de proposer une solution appropriée pour chaque cas spécifique que nous traitons. Plus les exigences seront claires et détaillées, plus nos estimations seront précises. C'est ce qui se rapproche le plus du modèle à prix fixe."
+                        },
+                        "3": {
+                            "question": "Comment démarrez-vous généralement de nouvelles collaborations ?",
+                            "answer": "Chaque nouvel engagement commence par un appel d'introduction et le remplissage du dossier de conception/de marque. Si vous avez un projet sympa en tête, n'hésitez pas à nous contacter à hello@orenzo.co"
+                        },
+                        "4": {
+                            "question": "Travaillez-vous uniquement avec de grandes entreprises ? Nous sommes une start-up en démarrage.",
+                            "answer": "Nous sommes tous pour la construction d'un monde sans frontières, nous sommes donc ouverts à travailler avec n'importe quel projet que nous rencontrons. Soit dit en passant, nous croyons aux startups, et l'une de celles que nous avons aidé à développer à partir de zéro a été vendue à https://entercom.com/"
+                        },
+                        "5": {
+                            "question": "Combien de temps faudra-t-il pour obtenir une estimation de votre part ?",
+                            "answer": "Nous détestons vous faire attendre. Mettre en place une équipe, effectuer des recherches et des analyses préliminaires et vous revenir avec le contrat prendra jusqu'à 24 heures à partir du moment où nous apprenons ce qui est nécessaire. L'efficacité est l'une des valeurs clés d'Orenzo."
+                        },
+                        "6": {
+                            "question": "Avez-vous un engagement minimum ?",
+                            "answer": "Nous ne fixons aucun seuil d'entrée pour les personnes qui souhaitent travailler avec nous. Mais nous croyons toujours qu'un produit qui doit être conçu ne peut pas être fabriqué en quelques jours. Après tout, nous avons besoin de temps pour rechercher, analyser et élaborer une stratégie. Nous avons donc fixé une durée minimale de projet à 30 heures et nous vous attendons !"
+                        },
+                        "7": {
+                            "question": "Quelle est la durée moyenne d'un projet ?",
+                            "answer": "Notre équipe travaille à temps plein sur chaque projet, la durée globale dépendra donc fortement de l'estimation initiale. En moyenne, nos projets durent de 2 semaines à 5 mois."
+                        },
+                        "8": {
+                            "question": "Peut-on commencer la conception sans wireframes ?",
+                            "answer": "Les wireframes aident à construire UX sans distractions. Le wireframe est une partie essentielle du processus de conception et nous ne recommandons pas de l'éliminer. En ayant tout peaufiné au stade du wireframing, nous pouvons éviter de nombreux amendements et révisions au stade de la conception, ce qui permet d'économiser du temps et de l'argent."
+                        },
+                        "9": {
+                            "question": "Quels modèles Orenzo utilise-t-il pour créer le design ?",
+                            "answer": "Nous n'utilisons pas de modèles ou de kits prédéfinis car ils n'ont tout simplement pas d'âme. Nous nous engageons à construire des solutions entièrement personnalisées et basées sur des produits qui répondront aux attentes des utilisateurs cibles. Chaque pixel et ligne est conçu avec amour et passion par nos esprits créatifs."
+                        },
+                        "10": {
+                            "question": "Par où commencer avec mon entreprise si j'ai une idée ?",
+                            "answer": "Hé, vous êtes au bon endroit ! Veuillez nous contacter et nous vous aiderons dans l'idéation, la conception et le développement. Cycle complet sur nous, pas de tracas pour vous. Facile, non ?"
+                        }
+                    }
                 }
             }
         }
@@ -675,43 +721,43 @@
             "Title": "Nous serions ravis de vous entendre, prenons contact👇🏻",
             "Description": "Nous sommes là pour vous aider à donner vie à vos idées ! 😊",
             "Form": {
-              "Name": {
-                "Label": "Nom complet",
-                "Placeholder": "Saisissez votre nom"
-              },
-              "Number": {
-                "Label": "Numéro de téléphone",
-                "Placeholder": "Entrez votre numéro de téléphone"
-              },
-              "Email": {
-                "Label": "Votre e-mail",
-                "Placeholder": "Entrez votre email"
-              },
-              "Interest": {
-                "Label": "Intérêt",
-                "Placeholder": "Choisissez une option",
-                "Options": {
-                  "Design": "Désign",
-                  "Development": "Développement",
-                  "Marketing": "Marketing",
-                  "Other": "Autre"
-                }
-              },
-              "Budget": {
-                "Label": "Budget du projet",
-                "Placeholder": "Choisissez votre budjet",
-                "Options": {
-                  "-1000": "Moins de 10,000 Dh",
-                  "1000-5000": "10,000 Dh à 50,000 Dh",
-                  "5000-10000": "50,000 Dh à 100,000 Dh",
-                  "+10000": "+100,000 Dh"
-                }
-              },
-              "Message": {
-                "Label": "Message",
-                "Placeholder": "Faites-nous en savoir plus sur votre projet"
-              },
-              "Button": "Entrer en contact"
+                "Name": {
+                    "Label": "Nom complet",
+                    "Placeholder": "Saisissez votre nom"
+                },
+                "Number": {
+                    "Label": "Numéro de téléphone",
+                    "Placeholder": "Entrez votre numéro de téléphone"
+                },
+                "Email": {
+                    "Label": "Votre e-mail",
+                    "Placeholder": "Entrez votre email"
+                },
+                "Interest": {
+                    "Label": "Intérêt",
+                    "Placeholder": "Choisissez une option",
+                    "Options": {
+                        "Design": "Désign",
+                        "Development": "Développement",
+                        "Marketing": "Marketing",
+                        "Other": "Autre"
+                    }
+                },
+                "Budget": {
+                    "Label": "Budget du projet",
+                    "Placeholder": "Choisissez votre budjet",
+                    "Options": {
+                        "-1000": "Moins de 10,000 Dh",
+                        "1000-5000": "10,000 Dh à 50,000 Dh",
+                        "5000-10000": "50,000 Dh à 100,000 Dh",
+                        "+10000": "+100,000 Dh"
+                    }
+                },
+                "Message": {
+                    "Label": "Message",
+                    "Placeholder": "Faites-nous en savoir plus sur votre projet"
+                },
+                "Button": "Entrer en contact"
             }
         }
     }
