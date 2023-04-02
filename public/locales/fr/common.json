@@ -701,64 +701,70 @@
         }
     },
     "contact": {
-        "Alternatives": {
-            "Title": "Bonjour👋🏻, hâte de discuter de votre projet ?",
-            "Description": "Pas de soucis! Vous pouvez nous contacter sur WhatsApp 📱 ou planifier une réunion sur Calendly 🗓️ en quelques clics. C'est si facile! Mais si vous préférez remplir le formulaire, c'est cool aussi. Nous sommes là pour vous aider à donner vie à vos idées ! 😊",
-            "Cards": {
-                "WhatsApp": {
-                    "Title": "Besoin d'une aide rapide?",
-                    "Description": "Nous ne sommes qu'à un message de vous ! Cliquez sur le bouton ci-dessous pour entrer en contact avec notre équipe via WhatsApp.",
-                    "Button": "Contactez-nous"
-                },
-                "Calendly": {
-                    "Title": "Planifier une réunion",
-                    "Description": "Vous souhaitez discuter de votre projet en détail ? Cliquez sur le bouton ci-dessous pour planifier une réunion avec notre équipe sur Calendly.",
-                    "Button": "Planifier maintenant"
-                }
-            }
-        },
-        "GetInTouch": {
-            "Title": "Nous serions ravis de vous entendre, prenons contact👇🏻",
-            "Description": "Nous sommes là pour vous aider à donner vie à vos idées ! 😊",
-            "Form": {
-                "Name": {
-                    "Label": "Nom complet",
-                    "Placeholder": "Saisissez votre nom"
-                },
-                "Number": {
-                    "Label": "Numéro de téléphone",
-                    "Placeholder": "Entrez votre numéro de téléphone"
-                },
-                "Email": {
-                    "Label": "Votre e-mail",
-                    "Placeholder": "Entrez votre email"
-                },
-                "Interest": {
-                    "Label": "Intérêt",
-                    "Placeholder": "Choisissez une option",
-                    "Options": {
-                        "Design": "Désign",
-                        "Development": "Développement",
-                        "Marketing": "Marketing",
-                        "Other": "Autre"
-                    }
-                },
-                "Budget": {
-                    "Label": "Budget du projet",
-                    "Placeholder": "Choisissez votre budjet",
-                    "Options": {
-                        "-1000": "Moins de 10,000 Dh",
-                        "1000-5000": "10,000 Dh à 50,000 Dh",
-                        "5000-10000": "50,000 Dh à 100,000 Dh",
-                        "+10000": "+100,000 Dh"
-                    }
-                },
-                "Message": {
-                    "Label": "Message",
-                    "Placeholder": "Faites-nous en savoir plus sur votre projet"
-                },
-                "Button": "Entrer en contact"
-            }
+      "head": {
+        "title": "Bonjour👋🏻, hâte de discuter de votre projet ?",
+        "meta": {
+          "description": ""
         }
+      },
+      "Alternatives": {
+        "Title": "Bonjour👋🏻, hâte de discuter de votre projet ?",
+        "Description": "Pas de soucis! Vous pouvez nous contacter sur WhatsApp 📱 ou planifier une réunion sur Calendly 🗓️ en quelques clics. C'est si facile! Mais si vous préférez remplir le formulaire, c'est cool aussi. Nous sommes là pour vous aider à donner vie à vos idées ! 😊",
+        "Cards": {
+          "WhatsApp": {
+            "Title": "Besoin d'une aide rapide?",
+            "Description": "Nous ne sommes qu'à un message de vous ! Cliquez sur le bouton ci-dessous pour entrer en contact avec notre équipe via WhatsApp.",
+            "Button": "Contactez-nous"
+          },
+          "Calendly": {
+            "Title": "Planifier une réunion",
+            "Description": "Vous souhaitez discuter de votre projet en détail ? Cliquez sur le bouton ci-dessous pour planifier une réunion avec notre équipe sur Calendly.",
+            "Button": "Planifier maintenant"
+          }
+        }
+      },
+      "GetInTouch": {
+        "Title": "Nous serions ravis de vous entendre, prenons contact👇🏻",
+        "Description": "Nous sommes là pour vous aider à donner vie à vos idées ! 😊",
+        "Form": {
+          "Name": {
+            "Label": "Nom complet",
+            "Placeholder": "Saisissez votre nom"
+          },
+          "Number": {
+            "Label": "Numéro de téléphone",
+            "Placeholder": "Entrez votre numéro de téléphone"
+          },
+          "Email": {
+            "Label": "Votre e-mail",
+            "Placeholder": "Entrez votre email"
+          },
+          "Interest": {
+            "Label": "Intérêt",
+            "Placeholder": "Choisissez une option",
+            "Options": {
+              "Design": "Désign",
+              "Development": "Développement",
+              "Marketing": "Marketing",
+              "Other": "Autre"
+            }
+          },
+          "Budget": {
+            "Label": "Budget du projet",
+            "Placeholder": "Choisissez votre budjet",
+            "Options": {
+              "-1000": "Moins de 10,000 Dh",
+              "1000-5000": "10,000 Dh à 50,000 Dh",
+              "5000-10000": "50,000 Dh à 100,000 Dh",
+              "+10000": "+100,000 Dh"
+            }
+          },
+          "Message": {
+            "Label": "Message",
+            "Placeholder": "Faites-nous en savoir plus sur votre projet"
+          },
+          "Button": "Entrer en contact"
+        }
+      }
     }
 }

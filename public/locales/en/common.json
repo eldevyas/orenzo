@@ -701,6 +701,12 @@
         }
     },
     "contact": {
+        "head": {
+            "title": "Hey👋🏻, can't wait to chat about your project?",
+            "meta": {
+              "description": ""
+            }
+          },
         "Alternatives": {
             "Title": "Hey👋🏻, can't wait to chat about your project?",
             "Description": "No worries! You can hit us up on WhatsApp 📱 or schedule a meeting on Calendly 🗓️ with just a few clicks. It's that easy! But if you'd rather fill out the form, that's cool too. We're here to help you bring your ideas to life! 😊",
