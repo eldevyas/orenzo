@@ -85,7 +85,7 @@ export default function GetInTouch(props: Properties) {
         }
     };
 
-    const formik: any = useFormik({
+    const formik = useFormik({
         initialValues: {
             fullName: "",
             Number: "",
@@ -113,7 +113,6 @@ export default function GetInTouch(props: Properties) {
             budget: any;
             message: any;
         }) => {
-            alert(JSON.stringify(values, null, 2));
             setLoading(true);
             axios
                 .post(
@@ -129,6 +128,7 @@ export default function GetInTouch(props: Properties) {
                 )
                 .then(function (response) {
                     console.log(response);
+                    formik.resetForm();
                     handleOpenModal();
                 })
                 .catch(function (error) {
