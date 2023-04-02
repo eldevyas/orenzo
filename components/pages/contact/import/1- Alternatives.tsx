@@ -54,6 +54,43 @@ export default function Alternatives(props: any) {
         }
     };
 
+    const OpenWhatsApp = () => {
+        // Replace the phone number with your own
+        const whatsappNumbers = ["212610206030", "212688509556"];
+        const randomIndex = Math.floor(Math.random() * whatsappNumbers.length);
+        const randomNumber = whatsappNumbers[randomIndex];
+        // Set the message based on the user's language
+        let message;
+
+        const userLang =
+            (navigator as any).language || (navigator as any).userLanguage; // Get the user's language
+        if (userLang.includes("fr")) {
+            // If the user's language is French
+            message = "Bonjour! Je voudrais prendre contact.";
+        } else if (userLang.includes("en")) {
+            // If the user's language is English
+            message = "Hi! I'd like to get in touch.";
+        } else {
+            // If the user's language is anything else (including Arabic)
+            message = "مرحبًا! أود الاتصال بكم.";
+        }
+
+        // Create the WhatsApp URL
+        const url = `https://wa.me/${randomNumber}?text=${encodeURIComponent(
+            message
+        )}`;
+
+        // Open the URL in a new window
+        window.open(url, "_blank");
+    };
+    const OpenCalendly = () => {
+        // Create the WhatsApp URL
+        const url = "https://calendly.com/orenzo/30min";
+
+        // Open the URL in a new window
+        window.open(url, "_blank");
+    };
+
     return (
         <div className="PageContent__Alternatives">
             <div className="PageContent__Alternatives__Heading TorchLightEffect">
@@ -88,6 +125,7 @@ export default function Alternatives(props: any) {
                                 className="PageContent__Alternatives__Cards__Card__Content__ActionButton"
                                 startIcon={<IoCalendarSharp />}
                                 dir="ltr"
+                                onClick={OpenCalendly}
                             >
                                 {Cards.Calendly.Button}
                             </Button>
@@ -113,6 +151,7 @@ export default function Alternatives(props: any) {
                                 className="PageContent__Alternatives__Cards__Card__Content__ActionButton"
                                 startIcon={<BsWhatsapp />}
                                 dir="ltr"
+                                onClick={OpenWhatsApp}
                             >
                                 {Cards.WhatsApp.Button}
                             </Button>
