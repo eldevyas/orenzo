@@ -67,12 +67,12 @@ export default function Alternatives(props: any) {
         if (userLang.includes("fr")) {
             // If the user's language is French
             message = "Bonjour! Je voudrais prendre contact.";
-        } else if (userLang.includes("en")) {
+        } else if (userLang.includes("ar")) {
             // If the user's language is English
-            message = "Hi! I'd like to get in touch.";
+            message = "مرحبًا! أود الاتصال بكم.";
         } else {
             // If the user's language is anything else (including Arabic)
-            message = "مرحبًا! أود الاتصال بكم.";
+            message = "Hi! I'd like to get in touch.";
         }
 
         // Create the WhatsApp URL
@@ -92,73 +92,77 @@ export default function Alternatives(props: any) {
     };
 
     return (
-        <div className="PageContent__Alternatives">
-            <div className="PageContent__Alternatives__Heading TorchLightEffect">
-                <div className="PageContent__Alternatives__Heading__Title">
-                    {Title}
-                </div>
-                <div className="PageContent__Alternatives__Heading__Description">
-                    {Description}
-                </div>
-            </div>
-            <div
-                className="PageContent__Alternatives__Cards"
-                ref={CardsRef}
-                onMouseMove={handleMouseMove}
-            >
-                {props.showCalendly ? (
-                    <div
-                        className="PageContent__Alternatives__Cards__Card"
-                        ref={CardTwo}
-                    >
-                        <div className="PageContent__Alternatives__Cards__Card__Content">
-                            <div className="PageContent__Alternatives__Cards__Card__Content__Text">
-                                <div className="PageContent__Alternatives__Cards__Card__Content__Text__Title">
-                                    {Cards.Calendly.Title}
-                                </div>
-                                <div className="PageContent__Alternatives__Cards__Card__Content__Text__Description">
-                                    {Cards.Calendly.Description}
-                                </div>
-                            </div>
-                            <Button
-                                variant="text"
-                                className="PageContent__Alternatives__Cards__Card__Content__ActionButton"
-                                startIcon={<IoCalendarSharp />}
-                                dir="ltr"
-                                onClick={OpenCalendly}
-                            >
-                                {Cards.Calendly.Button}
-                            </Button>
+        <>
+            {props.showWhatsApp || props.showCalendly ? (
+                <div className="PageContent__Alternatives">
+                    <div className="PageContent__Alternatives__Heading TorchLightEffect">
+                        <div className="PageContent__Alternatives__Heading__Title">
+                            {Title}
+                        </div>
+                        <div className="PageContent__Alternatives__Heading__Description">
+                            {Description}
                         </div>
                     </div>
-                ) : null}
-                {props.showWhatsApp ? (
                     <div
-                        className="PageContent__Alternatives__Cards__Card"
-                        ref={CardOne}
+                        className="PageContent__Alternatives__Cards"
+                        ref={CardsRef}
+                        onMouseMove={handleMouseMove}
                     >
-                        <div className="PageContent__Alternatives__Cards__Card__Content">
-                            <div className="PageContent__Alternatives__Cards__Card__Content__Text">
-                                <div className="PageContent__Alternatives__Cards__Card__Content__Text__Title">
-                                    {Cards.WhatsApp.Title}
-                                </div>
-                                <div className="PageContent__Alternatives__Cards__Card__Content__Text__Description">
-                                    {Cards.WhatsApp.Description}
+                        {props.showCalendly ? (
+                            <div
+                                className="PageContent__Alternatives__Cards__Card"
+                                ref={CardTwo}
+                            >
+                                <div className="PageContent__Alternatives__Cards__Card__Content">
+                                    <div className="PageContent__Alternatives__Cards__Card__Content__Text">
+                                        <div className="PageContent__Alternatives__Cards__Card__Content__Text__Title">
+                                            {Cards.Calendly.Title}
+                                        </div>
+                                        <div className="PageContent__Alternatives__Cards__Card__Content__Text__Description">
+                                            {Cards.Calendly.Description}
+                                        </div>
+                                    </div>
+                                    <Button
+                                        variant="text"
+                                        className="PageContent__Alternatives__Cards__Card__Content__ActionButton"
+                                        startIcon={<IoCalendarSharp />}
+                                        dir="ltr"
+                                        onClick={OpenCalendly}
+                                    >
+                                        {Cards.Calendly.Button}
+                                    </Button>
                                 </div>
                             </div>
-                            <Button
-                                variant="text"
-                                className="PageContent__Alternatives__Cards__Card__Content__ActionButton"
-                                startIcon={<BsWhatsapp />}
-                                dir="ltr"
-                                onClick={OpenWhatsApp}
+                        ) : null}
+                        {props.showWhatsApp ? (
+                            <div
+                                className="PageContent__Alternatives__Cards__Card"
+                                ref={CardOne}
                             >
-                                {Cards.WhatsApp.Button}
-                            </Button>
-                        </div>
+                                <div className="PageContent__Alternatives__Cards__Card__Content">
+                                    <div className="PageContent__Alternatives__Cards__Card__Content__Text">
+                                        <div className="PageContent__Alternatives__Cards__Card__Content__Text__Title">
+                                            {Cards.WhatsApp.Title}
+                                        </div>
+                                        <div className="PageContent__Alternatives__Cards__Card__Content__Text__Description">
+                                            {Cards.WhatsApp.Description}
+                                        </div>
+                                    </div>
+                                    <Button
+                                        variant="text"
+                                        className="PageContent__Alternatives__Cards__Card__Content__ActionButton"
+                                        startIcon={<BsWhatsapp />}
+                                        dir="ltr"
+                                        onClick={OpenWhatsApp}
+                                    >
+                                        {Cards.WhatsApp.Button}
+                                    </Button>
+                                </div>
+                            </div>
+                        ) : null}
                     </div>
-                ) : null}
-            </div>
-        </div>
+                </div>
+            ) : null}
+        </>
     );
 }
