@@ -28,7 +28,7 @@ const AboutPage = () => {
             SecondDescription: t("about.content.Team.SecondDescription"),
         },
         Video: {
-            Source: "https://www.youtube.com/watch?v=A4Wrgh9XCkc",
+            Source: "/vid/Explainer.mp4",
         },
     });
 

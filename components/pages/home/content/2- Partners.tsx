@@ -7,16 +7,16 @@ export default function TrustedPartners() {
     var Companies: any[] = [];
     //
     //
-    Companies[0] = "/img/assets/partners/First.png";
-    Companies[1] = "/img/assets/partners/Second.png";
-    Companies[2] = "/img/assets/partners/Third.png";
-    Companies[3] = "/img/assets/partners/Fourth.png";
-    Companies[4] = "/img/assets/partners/Fifth.png";
-    Companies[5] = "/img/assets/partners/Sixth.png";
-    Companies[6] = "/img/assets/partners/Seventh.png";
-    Companies[7] = "/img/assets/partners/Eighth.png";
-    Companies[8] = "/img/assets/partners/Ninth.png";
-    Companies[9] = "/img/assets/partners/Tenth.png";
+    Companies[0] = "/img/assets/partners/logos/First.png";
+    Companies[1] = "/img/assets/partners/logos/Second.png";
+    Companies[2] = "/img/assets/partners/logos/Third.png";
+    Companies[3] = "/img/assets/partners/logos/Fourth.png";
+    Companies[4] = "/img/assets/partners/logos/Fifth.png";
+    Companies[5] = "/img/assets/partners/logos/Sixth.png";
+    Companies[6] = "/img/assets/partners/logos/Seventh.png";
+    Companies[7] = "/img/assets/partners/logos/Eighth.png";
+    Companies[8] = "/img/assets/partners/logos/Ninth.png";
+    Companies[9] = "/img/assets/partners/logos/Tenth.png";
     //
     //
     const { t } = useTranslation("common");

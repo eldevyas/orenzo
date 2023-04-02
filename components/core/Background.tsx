@@ -91,7 +91,8 @@ export default function Background(props: any) {
                 window.removeEventListener("mousemove", handleMouseMove);
             }
         };
-    });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <div

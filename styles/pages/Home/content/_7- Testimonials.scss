@@ -156,6 +156,13 @@
                         border-radius: 50px;
                         overflow: hidden;
                         aspect-ratio: 1/1;
+                        .InnerImage {
+                            position: absolute;
+                            width: 55% !important;
+                            height: 55% !important;
+                            min-width: 20px !important;
+                            min-height: 20px !important;
+                        }
                     }
                     .Name {
                         display: flex;
@@ -178,40 +185,6 @@
                         }
                     }
                 }
-            }
-        }
-    }
-    .Summary {
-        min-width: 100px;
-        min-height: 20px;
-        margin: 2.5rem 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        transform: scale(0.75);
-        .Index {
-            width: 20px;
-            height: 20px;
-            border: 1px solid $C4;
-            opacity: 0.5;
-            border-radius: 50px;
-            &:hover {
-                border: none;
-                background-color: $C4;
-                opacity: 0.25;
-                cursor: pointer;
-            }
-        }
-        .Index.Active {
-            opacity: 1;
-            background-color: $C4;
-            &:hover {
-                border: none;
-                background-color: $C4;
-                opacity: 0.75;
-                cursor: default;
             }
         }
     }
